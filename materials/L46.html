@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>初高中学校委托管理与教学运营行业 · 决策报告（2026.10）</title>
+<style>
+  :root{
+    --ink:#1a2332; --ink2:#4a5568; --ink3:#8494a8;
+    --bg:#f4f6f9; --card:#ffffff; --line:#e3e8ef;
+    --accent:#1f5fa8; --accent-bg:#eaf2fb;
+    --red:#c0392b; --red-bg:#fdecea;
+    --amber:#b7791f; --amber-bg:#fdf3e3;
+    --green:#1e7e4d; --green-bg:#e8f6ef;
+    --mono:"SF Mono",Menlo,Consolas,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.75;font-size:15px}
+  .wrap{max-width:1120px;margin:0 auto;padding:32px 24px 80px}
+  header.report-head{background:linear-gradient(135deg,#14324f 0%,#1f5fa8 100%);color:#fff;border-radius:16px;padding:40px 44px;margin-bottom:24px}
+  header.report-head .tag{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:2px 14px;font-size:12px;letter-spacing:1px;margin-bottom:14px}
+  header.report-head h1{font-size:28px;line-height:1.4;margin-bottom:10px}
+  header.report-head p.sub{opacity:.88;font-size:14px;max-width:860px}
+  header.report-head .meta{margin-top:18px;font-size:12.5px;opacity:.72;font-family:var(--mono)}
+  nav.toc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 24px;margin-bottom:28px;font-size:13.5px}
+  nav.toc b{color:var(--ink2);margin-right:8px}
+  nav.toc a{color:var(--accent);text-decoration:none;margin-right:16px;white-space:nowrap;line-height:2}
+  nav.toc a:hover{text-decoration:underline}
+  section{margin-bottom:34px}
+  h2.sec{font-size:21px;padding-left:14px;border-left:5px solid var(--accent);margin-bottom:16px;line-height:1.4}
+  h3{font-size:16.5px;margin:22px 0 10px;color:#14324f}
+  h4{font-size:14.5px;margin:16px 0 8px;color:#33475f}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px 28px}
+  .verdict{background:#14324f;color:#fff;border-radius:12px;padding:28px 32px}
+  .verdict h3{color:#ffd97a;margin:0 0 14px;font-size:17px}
+  .verdict ol{padding-left:20px}
+  .verdict li{margin-bottom:12px;font-size:14.5px;line-height:1.8}
+  .verdict li b{color:#ffd97a}
+  .ansbox{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0}
+  @media(max-width:820px){.ansbox{grid-template-columns:1fr}}
+  .ans{border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;background:#fff;padding:18px 20px;font-size:13.8px}
+  .ans h4{margin:0 0 8px;font-size:15px;color:#14324f}
+  .ans ol,.ans ul{padding-left:20px}
+  .ans li{margin-bottom:6px}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:14px;margin:20px 0}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .kpi .num{font-size:22px;font-weight:700;color:var(--accent);font-family:var(--mono);letter-spacing:-.5px;line-height:1.25}
+  .kpi .lbl{font-size:12.5px;color:var(--ink2);margin-top:4px;line-height:1.5}
+  .kpi .src{font-size:11px;color:var(--ink3);margin-top:6px}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0;background:#fff}
+  th{background:#f0f4f9;text-align:left;padding:9px 12px;border:1px solid var(--line);color:#33475f;font-weight:600}
+  td{padding:9px 12px;border:1px solid var(--line);vertical-align:top}
+  tr:nth-child(even) td{background:#fafbfc}
+  .scroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:#fff;margin:14px 0}
+  .scroll table{margin:0;min-width:1500px;font-size:12.8px}
+  .scroll th,.scroll td{border-left:none;border-right:1px solid var(--line);border-top:none}
+  .scroll th{position:sticky;top:0;z-index:2;background:#e9eff7}
+  .scroll td:first-child,.scroll th:first-child{position:sticky;left:0;z-index:1;background:#f7f9fc;font-weight:600;min-width:132px;box-shadow:1px 0 0 var(--line)}
+  .scroll th:first-child{z-index:3;background:#e9eff7}
+  .scroll td{font-size:12.6px;line-height:1.65}
+  .alert{border-radius:10px;padding:14px 18px;margin:14px 0;font-size:13.5px;line-height:1.7}
+  .alert.red{background:var(--red-bg);border:1px solid #f2c7c0}
+  .alert.red b{color:var(--red)}
+  .alert.amber{background:var(--amber-bg);border:1px solid #eed9ae}
+  .alert.amber b{color:var(--amber)}
+  .alert.green{background:var(--green-bg);border:1px solid #bfe3cf}
+  .alert.green b{color:var(--green)}
+  .alert.blue{background:var(--accent-bg);border:1px solid #c4d9ef}
+  .alert.blue b{color:var(--accent)}
+  .tag-src{display:inline-block;font-size:10.5px;font-family:var(--mono);padding:0 6px;border-radius:4px;vertical-align:middle;margin-left:4px;white-space:nowrap}
+  .t1{background:#e8f6ef;color:#1e7e4d;border:1px solid #bfe3cf}
+  .t2{background:#eaf2fb;color:#1f5fa8;border:1px solid #c4d9ef}
+  .t3{background:#fdf3e3;color:#b7791f;border:1px solid #eed9ae}
+  .t4{background:#fdecea;color:#c0392b;border:1px solid #f2c7c0}
+  .ev{display:inline-block;font-size:10.5px;font-family:var(--mono);padding:0 6px;border-radius:4px;white-space:nowrap;border:1px solid}
+  .ev-a{background:#e8f6ef;color:#1e7e4d;border-color:#bfe3cf}
+  .ev-b{background:#fdf3e3;color:#b7791f;border-color:#eed9ae}
+  .ev-c{background:#f1f3f6;color:#6b7787;border-color:#dde3ea}
+  ul.tight,ol.tight{padding-left:22px;font-size:14px}
+  ul.tight li,ol.tight li{margin-bottom:7px}
+  .footnote{font-size:12px;color:var(--ink3);margin-top:10px}
+  .legend{display:flex;flex-wrap:wrap;gap:10px;font-size:12.5px;color:var(--ink2);margin:10px 0}
+  details{margin:10px 0;border:1px solid var(--line);border-radius:10px;background:#fff;padding:0}
+  details summary{cursor:pointer;padding:12px 18px;font-weight:600;font-size:14px;color:#33475f}
+  details .body{padding:0 18px 16px;font-size:13.5px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:14px;margin:14px 0}
+  .pcard{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;font-size:13.2px;line-height:1.7}
+  .pcard h4{margin:0 0 4px;font-size:15px}
+  .pcard .st{font-size:11.5px;font-family:var(--mono);color:var(--ink3);margin-bottom:8px}
+  .pcard.ok{border-top:4px solid var(--green)}
+  .pcard.warn{border-top:4px solid var(--amber)}
+  .pcard.no{border-top:4px solid var(--red)}
+  hr.soft{border:none;border-top:1px dashed var(--line);margin:22px 0}
+  .kv{font-size:13.2px;line-height:1.8}
+  .kv b{color:#14324f}
+</style>
+<meta content="noindex,nofollow" name="robots"/><style>#material-library-bar{all:initial;display:block;position:relative;z-index:10000;background:#f2efe6;color:#293b35;border-bottom:1px solid #b8b9ad;padding:14px 4vw;font:15px/1.65 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}#material-library-bar a{color:#225e4b;text-decoration:underline;margin-right:18px}#material-library-bar .ml-note{display:block;padding:8px 0 0;color:#55462b;font-size:14px}#material-library-bar strong{font-weight:700} @media print{#material-library-bar{display:block!important;position:static!important}}
+/* 资料库手机阅读修正：只约束页面宽度，表格保留局部横向滚动。 */
+@media(max-width:720px){
+  #material-library-bar{box-sizing:border-box;max-width:100%;overflow-wrap:anywhere}
+  body{overflow-wrap:anywhere}
+  .wrap,.panel,.rp,.card,.rp .card,.pcard,.rp .pcard,.ans,.rp .ans,.body,.rp details .body,.scroll,.rp .scroll,nav.tabbar{min-width:0;max-width:100%}
+  .cards,.rp .cards{grid-template-columns:minmax(0,1fr)}
+  .cards>*,.rp .cards>*,.ansbox>*,.rp .ansbox>*{min-width:0}
+  table,.rp table{display:block;width:100%;max-width:100%;overflow-x:auto}
+  .scroll table,.rp .scroll table{display:table;max-width:none}
+  nav.toc a,.rp nav.toc a{white-space:normal;overflow-wrap:anywhere}
+  pre,img,svg,iframe{max-width:100%}
+}
+</style></head>
+<body><div id="material-library-bar"><a href="../index.html">返回全部材料</a><a href="../sources.html">来源明细</a><strong>L46 · 历史研究底稿</strong><span class="ml-note">历史研究资料按原调研时点保留。本文为研究加工材料；完整来源见资料明细。关键纠错另行标示，其他外链未在本轮逐条重验。</span></div>
+<div class="wrap">
+<header class="report-head">
+<div class="tag">尽调级 · 决策版 · 对照矩阵</div>
+<h1>初高中学校委托管理与教学运营行业<br/>——两个核心问题的证据化回答</h1>
+<p class="sub">样本：天立国际控股、海亮教育、上海世外（均瑶）、云南长水（第一高中 FHS）；对照组：山东师大基础教育集团（含鲁甸崇文中学退出案）、深圳南山为明学校、衡水异地分校系统级退出、两则托管合同判例、广南县政府购买项目流标案。证据以年报、政府采购/中标/合同公告、财政决算、裁判文书、教育局公示为主；<b>企业自述与独立核验全程分列</b>。</p>
+<div class="meta">调研日期 2026-10 ｜ 数据截止 2026-10-14 ｜ 7 个模块底稿 · 5 家机构 · 4 类对照样本 ｜ 证据分档：一手 / 二手 / 自述 / 缺口</div>
+</header>
+<nav class="toc">
+<b>目录</b>
+<a href="#c0">一页纸结论</a><a href="#c1">1 先统一口径</a><a href="#c2">2 生意成立的条件</a><a href="#c3">3 为什么有的能扩到几十所</a><a href="#c4">4 对照矩阵（主交付）</a><a href="#c5">5 样本速览</a><a href="#c6">6 失败机制清单</a><a href="#c7">7 企业自述 vs 独立核验</a><a href="#c8">8 数据缺口</a><a href="#c9">9 行动建议</a>
+</nav>
+<!-- ================= 0 ================= -->
+<section id="c0">
+<h2 class="sec">一页纸结论</h2>
+<div class="ansbox">
+<div class="ans">
+<h4>问一：哪些条件使这门生意成立？</h4>
+<p style="margin-bottom:8px">不是"有没有品牌"，而是<b>五件事同时成立</b>：</p>
+<ol>
+<li><b>学段选对</b>：只能是营利性高中/中职，或非营利高中；义务教育和非营利幼儿园是禁令区。</li>
+<li><b>合同签对</b>：许可证/法人/公章/财务/预算核心权不实质让渡，学费进学校对公账户，<b>费用流"委托方→受托方"</b>。</li>
+<li><b>付费方可靠</b>：地方政府财政付费（政采/部门预算）＞ 家长学费；且接受 KPI 绑定与年度可终止。</li>
+<li><b>能派出校长</b>：合同层面强制"校长须市外引进/须教育局任命"，有硬资质门槛。</li>
+<li><b>结果可量化</b>：升学率/竞赛成绩是可定价的凭证，也是对赌条款的标的。</li>
+</ol>
+<p class="footnote">前 4 条有合同/判例级证据；第 5 条有政采 KPI 条款证据；<b>"培养一名合格校长的周期"没有任何第三方数据</b>——这是全行业最大的可量化缺口。</p>
+</div>
+<div class="ans">
+<h4>问二：为什么有的能扩到几十所，有的只经营几个？</h4>
+<p style="margin-bottom:8px">分水岭不在钱，而在<b>三件事</b>：</p>
+<ol>
+<li><b>品牌方是否持续在场</b>——衡水、北大附中、华清都是品牌方主动撤离或被动脱钩后项目崩解；天立/海亮用自有品牌，不会自己撤自己。</li>
+<li><b>扩散方式</b>——头部全部是"<b>轻派驻（1–3 人/校）+ 方法/题库/师训标准化 + 1 个核心校辐射 N 个成员校</b>"，没有一家是"每校满配团队"。所以"能力复制"复制的是方法，不是人。</li>
+<li><b>回款与期限结构</b>——政府付费 + 预付 40%/留质保金的项目能滚动；依赖家长学费 + 私收 + 无预付款的项目，一遇到生源或政策波动就断。</li>
+</ol>
+<p class="footnote">反证：长水在"衡水品牌失效 + IPO 融资断裂"两个支点同时断裂后即失速（退市、去衡水化、高补校被停止办学）。</p>
+</div>
+</div>
+<div class="verdict">
+<h3>六条判断（按决策权重排序）</h3>
+<ol>
+<li><b>这门生意的合规底线不是"托管范围"，而是"控制权归属"。</b>判例已经画好线：保留许可证/法人/公章/财务/预算审批 = 合法；一旦"全托管 + 资质移交 + 对公账户由受托方管理 + 以对方名义招生收费" = 变相出租办学许可证，<b>合同自始无效，管理费诉求被驳回</b>（灵璧案 (2024)皖13民终3268号、广州芳华案、开封伯伦案）。</li>
+<li><b>"覆盖校数"是营销口径，不是经营口径。</b>同一家机构同一年份同时出现过 54 / 84 / 177 / 201 所四个数字（海亮）；世外托管校自述"近 60 所"而第三方只核到 31 所。凡是"XX 所学校"，必须追问：签约还是已开业？含不含幼儿园？是派驻团队还是只卖课程？日期是哪天？</li>
+<li><b>规模化的真实形态是"轻派驻"。</b>政采合同证实：世外派驻 1 名执行校长 + 2–3 名骨干；海亮"核心校 2–3 人、成员校不派驻"；天立派驻校长 + 人事/课程/财务部长（属较重）。<b>校数增长不等于管理深度增长</b>。</li>
+<li><b>收入确定性来自财政，不是家长。</b>可核验的单校年费全部来自政府侧：景东一中 800 万/年、天立威信一中 1000 万/学年、天立郁南 750 万/年 + 380 万激励、海亮剑阁 1500 万/3 年、世外义乌 1975 万/年、丽水 2 校 3000 万。民办端"学费分成"型托管<b>几乎没有合同级公开证据</b>。</li>
+<li><b>托管校是"有期限资产"，不是护城河。</b>世外奉贤 2 校 5 年期满于 2023 年结束（政府文件）；长沙集团化办学明确"6 年一轮、最多 2 轮、到期退出"；海亮柳河九中 3 年期满收官。<b>续约能力才是护城河</b>。</li>
+<li><b>对 AI 教育 SaaS 的判断：系统目前是"降本工具"，还不是"合同标的"。</b>在政采合同里，<b>没有任何一份把"教学系统/AI 平台"列为托管服务标的</b>；"集中教研 + 题库教案课件共享"本身还是公办集团化办学的标准动作（延安、三亚、宁都、砀山政府文件），<b>不构成民办托管方的护城河</b>。这既是空白机会（可主动设计"管理输出 + SaaS"捆绑包），也是风险提示（市场尚未形成单独为系统付费的习惯）。</li>
+</ol>
+</div>
+<div class="kpis">
+<div class="kpi"><div class="num">18 → 23 所</div><div class="lbl">天立托管校（已运营，FY2025 → FY2026H1）；托管收入 1.156 亿元、占集团 3.22%</div><div class="src">一手·年报</div></div>
+<div class="kpi"><div class="num">54 / 84 / 177 / 201</div><div class="lbl">海亮同一年份的四个"学校数"口径——口径漂移的标本</div><div class="src">自述 vs 官网 vs 官媒</div></div>
+<div class="kpi"><div class="num">1–3 人</div><div class="lbl">单校实际派驻管理团队规模（政采合同核验）</div><div class="src">一手·政采</div></div>
+<div class="kpi"><div class="num">80 万 – 2,000 万</div><div class="lbl">单校/单项目年费区间（元），差异首先来自口径而非服务</div><div class="src">10+ 政采/预算案例</div></div>
+<div class="kpi"><div class="num">40% 预付</div><div class="lbl">政采常见付款结构：秋季预付 40% + 学年末考核后付余款；或留 15–20% 质保金</div><div class="src">一手·政采合同</div></div>
+<div class="kpi"><div class="num">+137%</div><div class="lbl">天立 FY2025 贸易应收增速（校数同期 +80%），其中 2,748 万元来自地方政府</div><div class="src">一手·年报</div></div>
+</div>
+<div class="legend">
+<span><span class="ev ev-a">已证实</span> 一手合同/判决/政府文件，或 ≥2 独立信源交叉</span>
+<span><span class="ev ev-b">仅自述</span> 企业官网/宣传/高管访谈/研报测算</span>
+<span><span class="ev ev-c">推测</span> 间接推算（已写明逻辑）</span>
+<span><span class="tag-src t4">缺口</span> 公开渠道找不到，本文明确标注缺失</span>
+</div>
+</section>
+<!-- ================= 1 ================= -->
+<section id="c1">
+<h2 class="sec">1 ｜ 先统一口径：不做这一步，后面所有"校数"都不可比</h2>
+<div class="card">
+<h3>1.1 五维拆分（本报告全部数字按此口径标注）</h3>
+<table>
+<tr><th>维度</th><th>拆分项</th><th>判定要点</th><th>常见误用（须警惕）</th></tr>
+<tr>
+<td><b>a) 阶段</b></td><td>签约 / 已运营</td>
+<td>已运营 = 首批学生实际入学开学；签约未开学单独计；未过筹设审批的不计入</td>
+<td>集团宣传"覆盖 200+ 所学校"多为签约口径（含待筹建）。海亮 2025 年 11 月"178 所"vs 官网 2026 年 8 月"54+ 所"即口径混用</td>
+</tr>
+<tr>
+<td><b>b) 权属</b></td><td>自营（举办者/持证） / 托管（受托不持证）</td>
+<td>办学许可证持有方 = 自营；不持证仅受托 = 托管。母公司持股 ≠ 自营，需穿透到许可证法人</td>
+<td>长水官网把"政府提供校舍、长水作举办者"（持证）与"学校性质不变、长水仅派团队"（不持证）都叫"合作办学"，法律性质完全不同</td>
+</tr>
+<tr>
+<td><b>c) 形态</b></td><td>管理输出（派驻团队） / 特许经营·品牌授权</td>
+<td>管理输出 = 派驻校长/管理团队并签劳动合同；特许 = 只授权品牌名 + 课程 + 年度督导</td>
+<td>把"加盟校/挂牌校/联盟校"全算作"管理输出"是常见夸大。衡水早期模式、青鸟同文连平属混合形态</td>
+</tr>
+<tr>
+<td><b>d) 颗粒</b></td><td>学校数（法人主体） / 学段数（合同标的）</td>
+<td>完全中学（初高中合一）= 1 校但 = 2 学段；按合同标的拆分</td>
+<td>天立年报"58 所学校"内含 30 所义务教育"受影响业务"（已剔除合并报表），绝不能等同于 58 所自营或 18 所托管</td>
+</tr>
+<tr>
+<td><b>e) 深度</b></td><td>产品销售（系统/课程/师训） / 整校交付（派驻接管日常）</td>
+<td>整校交付 = 合同标的含"派驻管理团队、输出管理体系"</td>
+<td>海亮"教育服务覆盖 300 万师生"含科技产品、师训、研学等泛覆盖，整校托管只是其中一小部分</td>
+</tr>
+</table>
+<h3>1.2 判定"合法托管 / 违规托管"的三道关（司法口径）</h3>
+<table>
+<tr><th>关</th><th>合法侧</th><th>越界侧</th><th>证据</th></tr>
+<tr><td><b>第一关：核心控制权是否保留</b>（最高位）</td><td>办学许可证、法定代表人、印章、对公账户、年度预算审批权<b>未让渡</b></td><td>任一项实质让渡 → 向"出租出借办学许可证"滑动</td><td>灵璧案、芳华案、伯伦案（无效）vs 湖南高中部案、怀柔昂立案（有效）<span class="tag-src t1">一手</span></td></tr>
+<tr><td><b>第二关：托管范围是否合理</b></td><td>部分学段 + 教学管理 + 核心权保留</td><td>"全学段 + 全环节（教学/行政/财务/人事/招生）+ 资质移交" = 100% 越界</td><td>怀柔昂立案 ((2015)朝民(商)初10089号)<span class="tag-src t1">一手</span></td></tr>
+<tr><td><b>第三关：财务是否规范</b></td><td>学费、住宿费等全部进学校对公账户；受托方收管理费</td><td>受托方私收费用、私设账外户、对公账户由受托方管理</td><td>灵璧案"对公账户由乙方管理"→无效；湖南案私人收费→根本违约<span class="tag-src t1">一手</span></td></tr>
+</table>
+<div class="alert blue">
+<b>一条常被忽略的判别法：看现金流方向。</b>合法托管的费用流是"<b>委托方 → 受托方</b>"（政府/举办者付管理费）；一旦变成"<b>受托方 → 委托方</b>"（付租金/承包费），就向"租赁/承包经营"滑动，极易被认定无效（灵璧案每年 100 万"托管费"由受托方向委托方支付，被认定为租金）。
+    </div>
+<h3>1.3 政策边界：为什么只有高中/中职段能做</h3>
+<table>
+<tr><th>维度</th><th>义务教育段</th><th>高中 / 中职段</th></tr>
+<tr><td>营利性</td><td><b style="color:var(--red)">禁止</b>（民促法 §19）</td><td>允许，可按公司法分配结余</td></tr>
+<tr><td>协议控制 / 兼并收购</td><td><b style="color:var(--red)">禁止</b>（条例 §13 第四款）</td><td>不禁止</td></tr>
+<tr><td>关联交易</td><td><b style="color:var(--red)">一律禁止</b>（条例 §45 第一款）</td><td>允许但须公开、公平、公允 + 披露 + 年度审查</td></tr>
+<tr><td>招生 / 收费</td><td>审批机关辖区内、不得考试；可被限价</td><td>设区市内为主；营利性可自主定价</td></tr>
+<tr><td>趋势</td><td>持续压降，政府购买学位 2025 年已降至 463.33 万人</td><td>唯一仍在扩张的民办基础教育学段（2021→2025 校数 +995 所）</td></tr>
+</table>
+<p class="footnote">依据：民促法（2018 第三次修正）§19/§50；民促法实施条例（国务院令 741 号，2021-09-01 施行）§13/§45/§58/§62/§64；教育部 2024、2025 年全国教育事业发展统计公报。<span class="tag-src t1">一手</span></p>
+</div>
+</section>
+<!-- ================= 2 ================= -->
+<section id="c2">
+<h2 class="sec">2 ｜ 问一：哪些条件使这门生意成立</h2>
+<div class="card">
+<p style="font-size:13.8px;margin-bottom:6px">下表 8 条，每条给出：成立所需条件、可核验证据、反例、证据强度。<b>前 4 条为不可谈判项，缺一即不可做。</b></p>
+<table>
+<tr><th style="width:15%">条件</th><th style="width:30%">具体口径</th><th style="width:32%">证据 / 反例</th><th style="width:12%">证据强度</th></tr>
+<tr>
+<td><b>C1 学段选对</b></td>
+<td>只承接营利性高中/中职或非营利高中；不碰义务教育（含初中部）与非营利幼儿园</td>
+<td>制度依据：民促法 §19 + 条例 §13/§45/§62。<br/>反例：海亮 2021-09 起丧失 11 所义务教育学校控制权、计提减值 2.52 亿元，2022 财年起停止向仙桃一中、新昌南瑞（均含义务教育）提供服务</td>
+<td><span class="ev ev-a">已证实</span></td>
+</tr>
+<tr>
+<td><b>C2 合同签对</b></td>
+<td>许可证/法人/公章/财务/预算核心权保留；费用流"委托方→受托方"；学费进学校对公账户；回避"全托管 + 资质移交"字样</td>
+<td>无效侧：灵璧案（全托管含"办学有效资质"+ 对公账户由乙方管理，年托管费 100 万）→协议无效、诉求驳回；芳华案承包 7 年→无效；伯伦案→无效并返还 10 万。<br/>有效侧：湖南高中部托管案（仅高中部 + 学校保留名称/人事/财务/公章）→有效；怀柔昂立案（法定代表人未退出经营）→有效</td>
+<td><span class="ev ev-a">已证实</span><br/><span class="footnote">（一手判决）</span></td>
+</tr>
+<tr>
+<td><b>C3 付费方可靠</b></td>
+<td>优先地方政府财政付费（政采/部门预算）；接受考核挂钩、年度可终止；不依赖家长学费分成</td>
+<td>景东一中"每年不低于 360 万托管经费"、2026 预算"委托业务费 800 万"；天立威信一中 1000 万/学年（县财政决算）；海亮剑阁 1500 万/3 年（合同含"年度评估不合格有权终止"）。<br/>反面：民办端"学费分成"型托管<b>未见合同级公开证据</b></td>
+<td><span class="ev ev-a">已证实</span><br/><span class="tag-src t4">民办端缺口</span></td>
+</tr>
+<tr>
+<td><b>C4 现金流结构可承受</b></td>
+<td>争取预付 + 控制质保金比例；预先评估"财政拨付延迟不视为违约"条款</td>
+<td>成都高新区幼儿园/攀枝花仁和区：秋季预付 40% + 学年末考核后付余款（E 等/D 等自动终止）；天津西青富力中学：预留 15–20% 作考核保证金；郁南合同："采购人向财政部门申请支付即视为按期付款"；伊金霍洛旗："最终结算以教体局实际拨付金额确定…乙方不得要求承担逾期付款违约责任"</td>
+<td><span class="ev ev-a">已证实</span></td>
+</tr>
+<tr>
+<td><b>C5 能派出校长</b></td>
+<td>合同层面强制"校长须市外引进 / 须报教育局任命"；有硬资质门槛与人员备案要求</td>
+<td>义乌福田二小决算："乙方负责选派 1 名学校校长，选派人员须从市外引进"；龙岩新罗区未来城：校长由中标人推选、区教育局依法聘任；长春 97 中招标："教学校长须高级及以上职称 + 三年以上副校长经历"；天津西青：派驻人员须报采购方备案、未经许可不得更换</td>
+<td><span class="ev ev-a">已证实</span><br/><span class="tag-src t4">培养周期缺口</span></td>
+</tr>
+<tr>
+<td><b>C6 结果可量化</b></td>
+<td>升学率/竞赛成绩必须可被写入合同 KPI，成为定价与对赌的标的</td>
+<td>天立郁南合同：管理服务费 750 万/年（第二年起年涨 0.5%）+ 激励经费 380 万/年（引进骨干教师 ≤80 万/年）；质量对赌：特控线上线率每差/超 1% 赔/奖 5 万、本科率每 1% 赔/奖 2 万、录取清北 100 万/人</td>
+<td><span class="ev ev-a">已证实</span></td>
+</tr>
+<tr>
+<td><b>C7 品牌方持续在场 + 物业不依赖政府</b></td>
+<td>用自有品牌而非"借来的名校 IP"；校舍自有或长期租赁，不依赖政府物业到期续签</td>
+<td>反例：南山为明学校 25 年运营后因"国有教育配套用地租赁到期 + 公参民整改"双重触发终止（2025-04-06 学生接收方案）；衡水中学 2019-10-16 官方声明"2017-05 后未与任何学校合作"，衡水一中 2022 更名泰华中学</td>
+<td><span class="ev ev-a">已证实</span></td>
+</tr>
+<tr>
+<td><b>C8 教研与数字化不是护城河，只是入场券</b></td>
+<td>不要把"能输出教研/题库"当核心竞争力；差异化只能来自可量化结果 + 政府关系 + 成本结构</td>
+<td>"集中教研 + 统一题库/教案/课件共享"是<b>公办集团化办学的标准动作</b>（延安市教育局"集团大教研"、三亚吉阳区"1+X 课程包"、宁都、砀山）。<br/>数字化侧：天立"AI 效率提升超 90%"为企业自述；<b>政采合同未见把 AI 系统列为托管标的的条款</b></td>
+<td><span class="ev ev-a">已证实</span><br/><span class="footnote">（公办普遍做法）</span></td>
+</tr>
+</table>
+<div class="alert amber">
+<b>两个"必须有但拿不到"的关键参数（如实标注为缺口）：</b><br/>
+      ① <b>校长/骨干培养周期</b>——所有数字（海亮"最短 3 年"、天立"储备 1–3 年"、锻造营"半年可外派"）均出自企业或招聘口径，"半年可外派"与"最短 3 年"在同一机构内部互相矛盾；<b>无任何第三方数据</b>。这直接决定扩校速度上限，无法量化。<br/>
+      ② <b>托管业务独立成本/毛利率</b>——天立年报只有"一个经营分部"，海亮已退市，世外无独立财报，长水退市后不再披露。<b>券商"托管毛利率 60–70%"只是测算，不能当事实引用。</b>
+</div>
+</div>
+</section>
+<!-- ================= 3 ================= -->
+<section id="c3">
+<h2 class="sec">3 ｜ 问二：为什么有的能扩到几十所，有的只经营几个</h2>
+<div class="card">
+<h3>3.1 扩张能力的真实构成（按证据强度排序）</h3>
+<table>
+<tr><th style="width:20%">要素</th><th style="width:38%">可核验事实</th><th style="width:30%">反证 / 边界</th><th style="width:12%">强度</th></tr>
+<tr>
+<td><b>① 政府关系与购买意愿</b></td>
+<td>世外总裁徐俭为徐汇区教育局原副局长，托管起点（2013 康健外国语）即"政府委托"；海亮 178 所主战场为公办县域；天立 2024–2026 年密集签约全部为县/区政府项目</td>
+<td>制度入口：条例 §58（政府可购买服务委托承担教育任务）+ "十四五"县中提升计划。<br/>但依赖关系意味着<b>离开该政府任期即归零</b>，且项目多为 3–5 年制</td>
+<td><span class="ev ev-a">已证实</span></td>
+</tr>
+<tr>
+<td><b>② 轻派驻 + 方法标准化</b></td>
+<td>世外秀湖"3+15+5"（派驻 3 名管理人员）、义乌仅 1 名校长；海亮微山/象州模式"核心校派驻 2–3 名、成员校不派驻"；天立派驻校长 + 人事/课程质量/财务部长（较重）</td>
+<td>没有任何一家是"每校满配团队"。海亮自述"派驻管理团队 90 余个、资深从业者 240 余人"服务 178 所学校 —— 即<b>广度靠 1 个核心校团队辐射 N 个成员校</b>，代价是成员校质量一致性风险</td>
+<td><span class="ev ev-a">已证实</span></td>
+</tr>
+<tr>
+<td><b>③ 可外派校长池</b></td>
+<td>天立招聘公告"储备中小学校长在区域学校储备 1–3 年，选拔合格者全国派遣"；国信研报"储备 40–50 位校长"（2023-08）；海亮自述"储备校长近 200 人"</td>
+<td>储备量自述与"派驻仅 90 余个团队"存在张力；海亮把校长培养做成产品（"百校兴教"锻造营，四大资源库 + 对外输出），是"能力可复制"最强的组织证据，但<b>仍是自述</b></td>
+<td><span class="ev ev-b">仅自述</span></td>
+</tr>
+<tr>
+<td><b>④ 品牌方不主动撤离</b></td>
+<td>天立/海亮/世外/长水均为自有品牌自营输出，不存在"品牌方撤出"问题</td>
+<td><b>对照组的头号杀手</b>：衡水中学 2017-05 起不再合作、2019-10-16 严正声明；北大附中 2022 与深圳分校脱钩；山东师大"华清"品牌下的鲁甸项目终止。<b>借来的品牌 = 有到期日的资产</b></td>
+<td><span class="ev ev-a">已证实</span></td>
+</tr>
+<tr>
+<td><b>⑤ 资本耐久度</b></td>
+<td>天立截至 2026-02 现金及等价物 9.65 亿元，资本开支只用于自有校；托管业务<b>未见垫资/代建证据</b>——即托管本身是轻资产、不需大额投入</td>
+<td>长水反例：FY2021 资产负债率 115.09%（资不抵债）、2022Q3 现金 2.6 亿元 vs 负债约 4 亿元、"鲤鱼计划"累计 2.6 亿元；靠 IPO 融资支撑自建校，退市后扩张失速。<b>重资产扩张与轻资产托管是两门生意</b></td>
+<td><span class="ev ev-a">已证实</span></td>
+</tr>
+<tr>
+<td><b>⑥ 合规审查能力</b></td>
+<td>头部四家的公开合同均以"政府购买服务/委托管理"名义，核心权保留，学费进对公账户 —— 看不到"全托管 + 资质移交"结构</td>
+<td>小团队死于合同本身：灵璧案、芳华案、伯伦案全部因协议结构违法导致<b>既收不到钱又失办学权</b>。这是"1–2 所就崩"的最直接机制</td>
+<td><span class="ev ev-a">已证实</span></td>
+</tr>
+</table>
+<h3>3.2 成功样本 vs 失败样本的分水岭（5 项全过才可能规模化）</h3>
+<table>
+<tr><th>变量</th><th>头部四家（M2–M5）</th><th>对照/失败样本（M6）</th></tr>
+<tr><td>品牌方</td><td>自有品牌，持续在场</td><td>衡中（主动停止合作）、北大附中（公参民脱钩）、华清（鲁甸项目终止）</td></tr>
+<tr><td>物业</td><td>自有或长期租赁（南京溧水 20 年、政府提供校舍）</td><td>南山为明（国有教育配套用地租赁到期）、衡水分校（房地产资本断裂）</td></tr>
+<tr><td>协议合规</td><td>核心权保留，政采/委托管理名义</td><td>灵璧案（全托管 + 资质移交 + 对公账户由乙方管理 → 无效）</td></tr>
+<tr><td>回款</td><td>政府财政付费，含预付/质保金条款</td><td>湖南案（受托方私收学费不入对公账户 → 委托方被评"不合格学校"）</td></tr>
+<tr><td>团队</td><td>180–5,000 人量级，内部培养骨干</td><td>创始人/个人信誉绑定，核心一走即崩（谢某某为自然人受托）</td></tr>
+<tr><td>政策依赖</td><td>不依赖"公参民"结构、不依赖跨省掐尖</td><td>衡水分校（跨省掐尖 2024 年被彻底禁止）；深圳"民转公"加速（2024–2025 至少 8 所转公/终止）</td></tr>
+</table>
+<div class="alert red">
+<b>最重要的一条反直觉结论：扩校的瓶颈不是钱，是"可外派校长池 + 政府关系"。</b>头部机构的托管业务本身是轻资产（不垫资、不代建、不自持物业），所以钱不是约束；真正的约束是<b>能派出去且能被教育局任命的校长数量</b>——而这个数量在行业里没有任何第三方数据。这也解释了为什么"托管校数"会随合同到期而波动（世外奉贤 5 年期满结束、长沙集团化 6 年一轮到期退出）。
+    </div>
+</div>
+</section>
+<!-- ================= 4 ================= -->
+<section id="c4">
+<h2 class="sec">4 ｜ 对照矩阵（主交付物）</h2>
+<div class="card">
+<p style="font-size:13.6px;margin-bottom:8px">
+      同口径横向对照。每格均标注口径与日期；<b>标注"缺口"处即公开渠道找不到，未做推算填补</b>。
+      横向滚动查看完整列。
+    </p>
+<div class="scroll">
+<table>
+<thead>
+<tr>
+<th>机构 / 样本</th>
+<th>① 同口径项目规模<br/>（签约 / 已运营 · 自营 / 托管 · 校数 / 学段 · 日期）</th>
+<th>② 典型项目责任结构<br/>（谁持证 / 谁派人 / 谁收钱）</th>
+<th>③ 团队来源与培养周期</th>
+<th>④ 总部支持成本</th>
+<th>⑤ 单校收益<br/>（可核验口径）</th>
+<th>⑥ 续约与退出</th>
+<th>⑦ 证据缺口</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>天立国际控股</b><br/>01773.HK<br/><span class="footnote">上市 · 有年报</span></td>
+<td>托管（不持证、派驻团队）：<b>18 所 / 40 学段</b>（已运营，2025-08-31 年报）；<b>23 所</b>（FY2026H1，2026-02-28）。<br/>托管收入 <b>1.156 亿元</b>（FY2025），占集团收入 3.22%。<br/>校网 58 所 = 30 所义务教育"受影响业务"（已剥离合并）+ 18 所托管 + 自营高中。<br/>覆盖 36 城 17 省<span class="tag-src t1">一手·年报</span></td>
+<td>政府/举办者<b>持办学许可证、任法定代表人、持印章与对公账户、定招生与收费标准</b>；天立派驻校长 + 人事部长 + 课程质量部长 + 财务部长（象山案例，招聘公告）。<br/>学费进学校对公账户，天立收"基础委托管理费"，<b>费用流：政府 → 天立</b><span class="tag-src t1">一手·招聘公告/政府决算</span></td>
+<td>渠道：校招 + 公开招 + 线上 + 向公办/其他民办物色成熟教师。<br/>体系："七步工作法" + 双通道晋升（专业五级/管理四级）+ 青蓝工程；2025 年人均培训 32.47 小时、覆盖率 100%。<br/>周期：<b>储备校长"1–3 年"</b>（招聘公告）；研报推测提前 2 年。<br/>存量：<b>40–50 位储备校长</b>（2023-08，研报）</td>
+<td><b>不可独立核算</b>：年报仅"一个经营分部"。<br/>集团员工成本 FY2025 <b>5.17 亿元</b>（全集团口径）。<br/>自有全职教师 2,610 名（FY2025 末），<b>不含托管校派驻教师</b><span class="tag-src t1">一手·年报</span></td>
+<td>券商口径：<b>642 万/校/年</b>（期末 18 所）、826 万（平均口径）、289 万/学段。<br/><b>实际核验</b>：威信一中 <b>1,000 万/学年</b>（完全中学，县财政决算）；郁南蔡朝焜纪念中学 <b>750 万/年管理服务费 + 380 万/年激励</b>（另含对赌条款）<span class="tag-src t1">一手·财政决算/政采</span></td>
+<td>南京溧水签 <b>20 年</b>长约（2026-04-08 公告）。<br/><b>无公开的托管合同终止/不续约记录</b>（年报、披露易、裁判文书网均未见）。<br/><b>风险信号</b>：贸易应收 FY2025 <b>4,343 万元（+137%）</b>，其中来自委托费的 <b>2,748 万元"主要来自地方政府"</b>；年报称"管理及特许经营费付款并无固定信贷期"</td>
+<td>托管分部成本/毛利；单份合同学段单价拆分；续约率与终止率；派驻人数台账；"质量共建校"与"整校托管"的口径界定；托管校升学提升的量化<span class="tag-src t4">缺口</span></td>
+</tr>
+<tr>
+<td><b>海亮教育</b><br/>（原 HLG，2022-09 退市）<br/><span class="footnote">已退市 · 无年报</span></td>
+<td>自述"学校综合管理服务"：<b>177 / 178 所</b>（2025-07 官网、2025-11 官媒；23–24 省 88–99 县）；官网"综合管理服务"专页 <b>2026-08 仅 54+</b>；百度百科 2025-08 <b>84 所</b>；企业号 2026-09 <b>201 所（含园所）</b>。<br/>自营：10 余所特色高中 + 30+ 幼儿园 + 3 特教（在校生近 6 万）。<br/><b>学段数、公办/民办拆分从未公开</b></td>
+<td>公办县域为主，合同均写"<b>四不变</b>"：学校公办属性、教师公办身份、资产权属、招生方式不变（部分加"财务运行机制不变"）。海亮<b>不持证、不享资产收益、不改招生</b>，仅获"管理权 + 部分人事任免权"（峨边案例政府明确授权校长人事/财务管理权）。<br/>收费走财政，<b>费用流：政府 → 海亮</b>（投标主体为明德咨询/未来星/优才教育等<b>多个不同法人</b>）</td>
+<td>机构：海亮教育研究院（9 个二级院）+ 儿童发展研究院；华东师大"未来校长班"（721 模式，学员挂职县域校长助理）；杭师大教师发展学校。<br/>周期：自述"从校长助理到校长<b>最短 3 年</b>"；锻造营宣传"<b>半年可外派</b>"——<b>同一机构两个口径矛盾</b>。<br/>存量：储备校长"近 200 人"、双一流毕业生 1,300+、清北 130+（均自述）</td>
+<td><b>未披露</b>（退市后无分部数据）。<br/>间接线索：综合管理服务含"6 大类 103 项"，重交付重人力；研发侧"硕博研究员 1,100+、专家名师 500+"——<b>总部固定成本不低，需靠校数摊薄</b>。<br/>推算：178 校 / 90 余个派驻团队 ≈ <b>单校 2–3 人</b><span class="tag-src t3">推测</span></td>
+<td><b>景东一中 800 万元/年</b>（2026 部门预算"委托业务费"，且"与上年一致"；县文件曾定"每年不低于 360 万"）；<br/>剑门关高中示范区 <b>1,500 万</b>（至 2029 春，年度考核不合格可终止）；<br/>容城一中 <b>660 万/2 年</b>；南皮一中 <b>660 万/3 年</b>；<br/>2 例非整校：大丰高中竞赛课程 138.9 万、眉山师训 41.6 万<span class="tag-src t1">一手·政采/预算</span></td>
+<td>续约（正面）：石屏一中 2022-06 首签 → <b>2025-01 续签</b>；抚远一中一期届满 <b>续签第二期</b>；蒲县"提前续约"。<br/>期满收官：柳河九中 3 年期满结束（公益托管，投入 600 余万元）。<br/>合规被动退出：<b>2022 财年起停止向仙桃一中、新昌南瑞提供服务</b>（义务教育关联交易禁令）；2021-09 丧失 11 所义务教育校控制权，计提减值 2.52 亿元；2022-09 私有化退市。<br/><b>未见经营性失败退出、未见与地方政府的欠款诉讼</b></td>
+<td>托管财务（收入/成本/毛利）；学段分布；派驻团队总人数与人均成本；民办整校托管可核验案例（公开案例几乎全为公办）；整体续约率；负面信息可得性（企业明确以"零舆情"推进退市，对"无负面"结论须打折）<span class="tag-src t4">缺口</span></td>
+</tr>
+<tr>
+<td><b>上海世外教育集团</b><br/>（均瑶集团）<br/><span class="footnote">非上市 · 无财报</span></td>
+<td>官网权属四分类：母体校 2 所 / <b>直属校 16 所</b>（民办，世外为举办者）/ <b>托管校 40+ 所</b>（以公办为主）/ 服务支持校 1 所。<br/>托管校数口径互斥：王均金 2024-10"<b>托管近 60 所</b>"；周雁 2025-10"近 50 所"；第三方媒体核到 <b>31 所（其中 29 所公办）</b>/ 47 所。<br/>"XX 世外学校"（民办·世外举办）与"世外教育附属 XX 学校"（公办·政府举办）<b>是两种生意</b></td>
+<td>公办校委托管理：<b>政府举办、政府付费</b>；世外派驻<b>执行校长 1 名 + 管理骨干 2–3 名</b>（秀湖"3+15+5"、义乌仅 1 名校长），教师以本地编制/本地招聘为主，靠"浸润式送培"造血。<br/>收费科目：<b>品牌使用费 + 服务资源费（或"校长聘用费"）</b>，走财政/政采，<b>费用流：政府 → 世外</b></td>
+<td>机构：集团教师发展中心（"五大学程"培训）+ 3 个研究院（智慧教育 / 智慧学校与区域发展 / 智慧高质量教学）+ 世外智慧教育科技（"智教耘"AI 平台）。<br/>周期：<b>无披露</b>。见习教师"伴随式培训"2026 学年 250+ 名。<br/>专家：省市级特级校长/教师 20 余位 → 40 余位（官网口径自身上调）</td>
+<td><b>无独立财报</b>。<br/>唯一有审计数的关联主体：<b>世外智慧教育科技 2025 年净利润 754 万元</b>（爱建集团关联交易公告）——证明教育科技系统在集团内可独立盈利。<br/>集团主体工商口径：员工 59 人、营业收入 2.13 亿元（企查查估算，无审计报告）</td>
+<td>义乌福田二小"上海世外合作费"<b>1,975 万元/年</b>（= 品牌使用费 + 服务资源费）：<br/>丽水莲都 2 校打包中标 <b>3,000 万元</b>；<br/>苍南 3 校 <b>1,000 万元/年</b>（品牌授权费 + 校长聘用费，减免式）；<br/>青浦徐和路幼儿园 <b>100 万元/年</b>；<br/>萧山"教育评价服务"743.26 万（非整校）<span class="tag-src t1">一手·财政决算/政采</span></td>
+<td><b>明确的期满退出案例</b>：上海奉贤阳光外国语学校 + 育贤小学 5 年委托管理期（2018-09-01 至 2023-08-31）<b>2023 年 6 月起结束</b>（区政府文件）。<br/>虹口培华学校 2023 与三校合并为欧阳学校，2024-07-16 注销。<br/>合同期限多为 <b>3–5 年</b>（项目制），与天立 20 年长约形成鲜明对比。<br/>风险事件：奉贤临港外国语学校 2024-11 食堂食品安全事件（区教育局立案调查）</td>
+<td>托管业务独立财务；权威托管校清单（40+/50/60 vs 31/47）；派驻人员总数与编制归属；到期节奏与流失率；多数项目金额与期限未公开；办学成效无第三方量化评估<span class="tag-src t4">缺口</span></td>
+</tr>
+<tr>
+<td><b>云南长水教育集团</b><br/>（第一高中 FHS.US，2022-11 退市）<br/><span class="footnote">已退市 · 无年报</span></td>
+<td><b>整校委托管理（不持证）：5 所</b>（FHS 2022 年报"5 个委托管理项目"，退市前最后一次权威披露）；自营/合办约 25 所；高补 3–5 所。<br/>历史序列：2021-09 首次出现 1 个"公立托管"项目 → 2022 年达 5 所。<br/>自述"30 余所学校、5 万在校生、5,000 教师"（<b>无统计截止日期</b>）；招股书口径为 19 所 / 25,867 人 / 1,969 教师（2020-09-30）</td>
+<td>官方自述四类模式，法律关系完全不同：<br/>① 与衡水合作办学（品牌 + 管理输出）；<br/><b>② 与政府合作办学 → 长水为举办者、持办学许可证</b>（政府出校舍）；<br/><b>③ 全面委托管理 → 学校性质与举办者不变，长水仅派团队（不持证）</b>；<br/>④ 校企合作/混合所有制；⑤ 教学资源输出（不派驻）</td>
+<td>核心管理层<b>高度依赖河北（衡水/石家庄）系</b>：桑海勇、丁业胜、郭浩宇、钱金滔、梁超等均出自衡水中学或石家庄二中。<br/>教师引进："鲤鱼计划"（2020 起 3 期，<b>累计投入 2.6 亿元</b>，清北博士 50 万起薪）；"百余名河北名师"。<br/>培养：校长任职资格培训班 + 长水干部学院 + 名校长工作室（2024 年起 40 余名完成）。<br/>周期：<b>未披露</b></td>
+<td><b>未披露</b>（退市后无强制披露）。<br/>集团财务（退市前）：FY2021 资产负债率 <b>115.09%</b>（资不抵债）；FY2022 持续经营毛利率 37.6%；2022Q3 现金 2.6 亿元 vs 合同负债+贷款+应付款约 4 亿元。</td>
+<td><b>托管费金额全部未公开</b>（罗平五中 15 年协议、元江一中均只披露签约事实，未披露金额）——<b>单校收益不可核验</b>。<br/>可对照的自营学费：呈贡/西山本部 <b>3.0 万元/年</b>（当地公办一级一等约 1,400 元/年，<b>21 倍</b>）；玉溪 1.88 万元/年；镇雄阶梯收费 580–16,000 元/年</td>
+<td><b>退出/收缩密集</b>：2021 年底云南 13 校区"去衡水化"更名；2021-09 剥离义务教育部（非持续经营业务亏损 1,086 万元）；<b>2022-11 成都衡实高补因无证办学 + 违规学科培训被停止办学</b>；大同/贵阳高补陆续退出；<b>2022-11-07 被纽交所强制退市</b>（市值从 2.9 亿美元跌至 798.92 万美元）；2025-12 归入"一高科技集团"对外口径<br/>政策处置：2019 年昆明市教体局就"人籍分离、空挂学籍"约谈董事长、取消年检优秀等次、核减次年招生计划；2021 年西山区教育局就招生不实信息发声明</td>
+<td>退市后（2023–2026）全部财务数据；托管业务独立核算；罗平/元江托管费金额；储备校长规模与培养周期；"5,000 教师"与招股书 1,969 名的差额来源；与衡水 2014 联合办学协议的期限/费用/失效条款；退市前证券集体诉讼结果<span class="tag-src t4">缺口</span></td>
+</tr>
+<tr>
+<td><b>山东师大基础教育集团</b><br/><span class="footnote">甲类 · 高校型</span></td>
+<td>自述"<b>120 余所合作学校</b>"（90% 位于农村或城乡接合部）、覆盖山东 12 地市 + 云/新/藏/蒙/琼/甘 6 省份、<b>8 万余名学生</b>（中国教育报 2026-01）。<br/><b>100% 为受托管理/品牌输出</b>——集团本身不持办学许可证。<br/><b>学段数未披露</b>；派驻型 vs 项目支持型未拆分</td>
+<td>"3Z 模式"= 政府 + 智慧方 + 资本方三方合作：<br/>举办者/持证方 = 资本方（如云南基煌教育投资）；<br/>品牌与管理方 = 山东师大基础教育集团（输出品牌 + 管理 + 师训 + 课程 + 派驻团队，统一校训）；<br/>政府 = 提供土地校舍、政策、生源与专项补贴。<br/>治理：董事会领导下的校长负责制；"集团聘、学校用"</td>
+<td>180 余人管理骨干<b>均为内部培养</b>（"五多"机制：多地域/多校区/多学段/多岗位/多学科）。<br/>周期：<b>未披露</b>。<br/>总校长苗禾鸣（"教育就是服务""学生立场"）</td>
+<td><b>未披露</b>：集团非上市、非独立法人，从未公布收入或利润数据，定位更接近"教育帮扶"而非纯商业项目</td>
+<td><b>无可核验的单校收费</b><span class="tag-src t4">缺口</span></td>
+<td><b>已核验的退出案例</b>：旗下"昭通市山师华清鲁甸崇文中学"2023 年停止办学，<b>2025-03-20 昭通市教体局公示注销办学许可证</b>（公示期 03-20 至 03-28）；终止方式为"举办者与县政府<b>合同终止协议</b>"（协商终止，非行政处罚）。<br/>同集团云南另 3 所（安宁/蒙自/剑川）仍在运营——<b>同一团队、不同项目、结果不同</b>。<br/>集团对外仍以"120+ 合作校、20+ 县中帮扶典型案例"宣传，<b>官网未提鲁甸退出</b></td>
+<td>除鲁甸外的其他退出项目；学段构成；派驻 vs 项目支持拆分；收入/利润。<br/><b>核心提示：120+ 合作校的"分母真实性"与真实退出率均不可核验</b><span class="tag-src t4">缺口</span></td>
+</tr>
+<tr>
+<td><b>深圳南山为明学校</b><br/>（原北大附中深圳南山分校）<br/><span class="footnote">丙类 · 国有民办</span></td>
+<td>1 校 / 12 年一贯制（小学+初中+高中+国际部）；<b>运营 25 年</b>（2000-05 开学 → 2025-04 终止方案）</td>
+<td>场地/物业方 = 南山区政府（国有教育配套用地）；办学方（持证）= 北京为明教育集团；冠名授权方 = 北大附中（25 年）→ 2022-12-05 更名为"深圳市南山为明学校"，与北大附中脱钩。<br/><b>非整校托管</b>：为明自营持证，北大附中仅品牌 + 课程资源，<b>未派驻整校团队</b></td>
+<td>不适用（自营为主）</td>
+<td><b>未披露</b></td>
+<td>不适用</td>
+<td><b>2025-04-06 终止</b>：学生由南二外同泽学校全部接收、教师可申请择优录用（待遇与公办相同）、课程做衔接调研；原校址收归国有、办学许可证失效。<br/><b>触发</b>：国有教育配套用地租赁到期 + 公参民整改双重叠加。<br/>大背景：深圳 2024–2025 年至少 8 所民办校集中转公/终止</td>
+<td>为明集团法人/财务清算；旗下其他校区是否受影响；国际部与高中部（不在无条件接收范围）学生安置<span class="tag-src t4">缺口</span></td>
+</tr>
+<tr>
+<td><b>衡水中学异地分校</b><br/><span class="footnote">丙类 · 系统级退出</span></td>
+<td>高峰 <b>21+ 所分校</b>，覆盖 10 省（2014–2017 鼎盛期，全为高中学段）。<br/>2017-05 起衡中不再与任何学校合作（衡中 2019-10-16 严正声明；衡水市政府人大答复一致）。<br/>仅山西/湖南/江西 3+1 所被独立核验为已终止（其余负责人拒访）</td>
+<td>品牌方 = 衡水中学/衡水一中（品牌授权 + 短期师训 + 考纲课程输出）；资本方 = 泰华集团及各地房地产开发商（建校 + 出资）；地方政府 = 土地 + 政策 + 生源；运营方 = 资本方成立的教育公司或民非。<br/><b>以品牌授权为主</b>，非完整整校托管</td>
+<td>不适用（不派驻成建制团队）</td>
+<td><b>未披露</b></td>
+<td>不适用</td>
+<td><b>系统级退出（四重叠加）</b>：<br/>· 政策：公参民整改 + 2024 年河北明确民办普高仅能在审批地招生、<b>彻底禁止跨省跨市掐尖</b>；<br/>· 品牌：衡中主动停止合作，衡水一中 2022 更名"衡水泰华中学"；<br/>· 资本：房地产资金链断裂，校园建设融资困难；<br/>· 结果：衡水一中"三年级"清北录取 <b>275 → 45 人</b>；衡水市 2025 年民办高中普惠生 <b>-45.2%</b>、自费生 <b>-38.1%</b></td>
+<td>除 3+1 所外的具体终止名单与时点；存量分校中"原合同继续"者的实际状态<span class="tag-src t4">缺口</span></td>
+</tr>
+<tr>
+<td><b>判例样本</b><br/>（丁类 · 小团队）</td>
+<td>均为 <b>1 校 / 1 学段</b>：<br/>· 湖南某校 v 谢某某《高中部托管协议》（2018-12 签，10 年）；<br/>· 灵璧某中专 v 上海某公司《学校委托管理协议书》（2021-08 签，5 年，"全托管"）；<br/>· 广州芳华（2008 起承包 7 年）；<br/>· 开封伯伦（合作办学实为出租）</td>
+<td><b>合法侧</b>（湖南案）：仅<b>高中部</b>教学托管、10 年期；学校保留名称、人事任免、财务管理、行政公章；学费必须缴学校对公账户；受托方每年向学校支付目标管理费（前 3 年 80 万/年，此后年递增 5%）——该付费方向看似"承包"，但法院认为"谢某某行使的教学管理职责仅为学校整体教学工作的一部分，学校对校园仍具实质控制权"，故认定<b>合法有效</b>。<br/><b>违法侧</b>（灵璧案）："全托管"含"相关办学有效资质"；乙方财务独立运行、<b>对公账户由乙方管理</b>；乙方每年付甲方 100 万——被判"名为委托管理，实为租用办学许可证"</td>
+<td>无体系：受托方为自然人或单一公司，<b>无培养体系、无储备池</b></td>
+<td><b>无</b></td>
+<td>湖南案：80 万/年（前 3 年）→ 递增 5%；<br/>灵璧案：100 万/年（被驳回）；<br/>芳华案：承包期资产增值 222 万余元，判付补偿 160 万余元</td>
+<td><b>全部在 1–5 年内解体</b>：<br/>· 湖南案：运营 1 年即因受托方私收学费不入对公账户 → 学校被评"不合格学校" → 判决解除协议；<br/>· 灵璧案：运营 10 个月后纠纷 → 协议<b>自始无效</b>，100 万托管费诉求被驳回；<br/>· 芳华案：协议无效</td>
+<td>律师整理判例按行业惯例隐去当事人信息，<b>部分无法回溯原审案号</b>；除山东师大（高校背书型）外，纯商业化小型托管团队<b>几乎完全不可观察</b><span class="tag-src t4">缺口</span></td>
+</tr>
+<tr>
+<td><b>广南县一中</b><br/>政府购买民办高中教育服务<br/><span class="footnote">乙类 · 未落地</span></td>
+<td><b>0</b>——2024-11-08 开标，2024-11-11 因"递交投标文件的供应商不足三家"作流标处理</td>
+<td>形式应为政府购买管理服务（采购人为广南县教体局，标的 1 校 1 学段）</td>
+<td>不适用</td>
+<td>不适用</td>
+<td>项目预算未在终止公告中披露<span class="tag-src t4">缺口</span></td>
+<td><b>未落地</b>：不是合同终止，而是<b>无供应商响应</b>——说明西部贫困县即使有政府资金，市场化教育管理团队也不一定愿意下沉</td>
+<td>是否已重新招标；"政府购买民办高中教育服务"的具体标的定义<span class="tag-src t4">缺口</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="footnote">矩阵说明：①规模列为该项目/机构在 2026-10-14 前可核验的最佳口径；②责任结构以政采合同/教育局公告/招聘公告等一手材料为准；③培养周期一列中凡标注"未披露"者，即公开渠道确实找不到，未做推算填补；④"总部支持成本"列中"不可独立核算"是行业共同特征，非本报告未查。</p>
+<h3>4.1 附矩阵 A：单校收费口径对照（★ 禁止直接横比）</h3>
+<table>
+<tr><th>项目</th><th>付费方</th><th>收费结构</th><th>金额</th><th>性质</th><th>档位</th></tr>
+<tr><td>天立 · 云南威信一中</td><td>县教体局</td><td>基础委托管理费（完全中学，含初+高）</td><td><b>1,000 万元/学年</b></td><td>固定</td><td>一手·县财政决算</td></tr>
+<tr><td>天立 · 广东郁南蔡朝焜纪念中学</td><td>县委/县政府/教育局</td><td>管理服务费 + 激励经费 + 质量对赌</td><td><b>750 万 + 380 万/年</b></td><td>固定 + 绩效</td><td>一手·政采文件</td></tr>
+<tr><td>海亮 · 云南景东一中</td><td>县政府</td><td>"委托业务费"（部门预算）</td><td><b>800 万元/年</b>（县文件曾定"不低于 360 万/年"）</td><td>固定</td><td>一手·政府预算</td></tr>
+<tr><td>海亮 · 四川剑门关高中示范区</td><td>剑阁县教育局</td><td>公开招标，合同期至 2029 春</td><td><b>1,500 万元</b>（约 500 万/年）</td><td>固定 + 年度考核可终止</td><td>一手·政采</td></tr>
+<tr><td>海亮 · 河北容城一中 / 南皮一中</td><td>容城县/南皮县</td><td>单一来源 / 公开招标</td><td><b>各 660 万元</b>（2 年 / 3 年）</td><td>固定</td><td>一手·政采</td></tr>
+<tr><td>世外 · 浙江义乌福田二小</td><td>义乌市教育局</td><td><b>品牌使用费 + 服务资源费</b></td><td><b>1,975 万元/年</b></td><td>固定（含品牌作价）</td><td>一手·教育局决算</td></tr>
+<tr><td>世外 · 浙江丽水莲都（2 校打包）</td><td>区教育局</td><td>中标合同</td><td><b>3,000 万元</b>（跨年）</td><td>固定</td><td>一手·政采</td></tr>
+<tr><td>世外 · 浙江苍南（3 校）</td><td>县政府</td><td>品牌授权费 + 校长聘用费（减免式）</td><td><b>1,000 万元/年</b></td><td>固定（实际减免）</td><td>一手·县政府</td></tr>
+<tr><td>世外 · 上海青浦徐和路幼儿园</td><td>区财政局</td><td>"世外托管经费"</td><td><b>100 万元/年</b></td><td>固定</td><td>一手·区财政</td></tr>
+<tr><td>云南文投 · 巧家五中</td><td>县教体局</td><td>中标，3 学年（一年一签）</td><td><b>794.55 万元</b></td><td>固定 + 年度续签</td><td>一手·政采</td></tr>
+<tr><td>龙岩新罗区未来城实验学校</td><td>区教育局</td><td>采购意向 + 招标</td><td><b>400 万元/学年</b>（3 学年）</td><td>固定</td><td>一手·政采</td></tr>
+<tr><td>长春新区致远学校</td><td>长春新区教育局</td><td>单一来源</td><td><b>600 万元</b>（2 年）</td><td>固定</td><td>一手·政采</td></tr>
+<tr><td>长水 · 罗平五中 / 元江一中</td><td>县政府</td><td>全面委托管理（15 年协议 / 2021 签约）</td><td><b>金额未公开</b></td><td>—</td><td><span class="tag-src t4">缺口</span></td></tr>
+</table>
+<div class="alert amber">
+<b>为什么不能横比：</b>义乌 1,975 万含"品牌使用费"；天立郁南 750 万是纯管理服务费且激励单列；景东 800 万含不含后勤未知；丽水 3,000 万是 2 校跨年合同总额；罗平/元江干脆不披露。<b>差异之大首先来自口径，其次才是服务内容。</b>任何用"单校平均托管费"做市场规模测算的做法都应被追问口径。
+    </div>
+<h3>4.2 附矩阵 B：权限授予对照（政采合同逐项读出）</h3>
+<table>
+<tr><th>权限</th><th>受托方拥有</th><th>与委托方共管</th><th>委托方保留</th><th>佐证（一手文件）</th></tr>
+<tr><td>办学许可证</td><td>❌</td><td>—</td><td>✅</td><td>灵璧案：托管资产含"办学有效资质"即被认定出租许可证 → 无效</td></tr>
+<tr><td>法定代表人</td><td>⚠️ 部分项目由派驻校长兼任</td><td>—</td><td>—</td><td>龙岩新罗区未来城："校长同时兼任学校法定代表人"；天立象山由政府委派党建书记</td></tr>
+<tr><td>校长任免</td><td>✅ 提名/推选</td><td>✅ 报教育局聘任</td><td>✅ 任命权</td><td>龙岩"中标人推选、教育局依法聘任"；义乌"选派 1 名市外校长"</td></tr>
+<tr><td>中层/编外人员聘任</td><td>✅</td><td>—</td><td>—</td><td>龙岩：可决定聘任、考核与解聘中层干部、编外教师及职工</td></tr>
+<tr><td>公办在编教师</td><td>❌</td><td>✅</td><td>✅ 编制保留</td><td>巧家五中："原教师编制身份、人事关系和社会保险关系不变"</td></tr>
+<tr><td>财务 / 对公账户</td><td>❌</td><td>✅ 双方共同委派</td><td>✅ 审计权</td><td>龙岩："财务人员由双方共同委派，采购人有权随机审计"；灵璧案"对公账户由乙方管理"→无效</td></tr>
+<tr><td>公章</td><td>⚠️ 部分项目交受托方保管</td><td>—</td><td>✅ 期满收回</td><td>龙岩："学校公章交由中标人妥善保管及合法合理使用…期满由采购人收回"</td></tr>
+<tr><td>招生</td><td>❌</td><td>✅ 按政策</td><td>✅ 定政策</td><td>巧家五中"可面向全县招生"；天津西青"按招生政策组织、需提前报批"</td></tr>
+<tr><td>课程 / 教学安排</td><td>✅</td><td>✅ 按主管部门要求</td><td>—</td><td>龙岩："课程设置、教学安排由中标人及委派校长根据主管部门要求实施"</td></tr>
+<tr><td>学费收费</td><td>❌</td><td>—</td><td>✅ 进对公账户/政府定价</td><td>湖南案：学费必须缴学校对公账户；灵璧案私收 → 违约</td></tr>
+</table>
+<div class="alert blue">
+<b>灰色区提示：</b>龙岩新罗区未来城项目把<b>公章交给中标人保管、并让派驻校长兼任法定代表人</b>——这与"核心控制权未让渡 = 合法"的司法判准存在张力，但<b>目前未见因该写法被判无效的公开判例</b>，属"政采实践领先于司法表述"的灰色地带。<b>不同地方政采的授权尺度差异极大，必须逐份审合同，不能拿一家模板套用。</b>
+</div>
+</div>
+</section>
+<!-- ================= 5 ================= -->
+<section id="c5">
+<h2 class="sec">5 ｜ 样本速览卡</h2>
+<div class="cards">
+<div class="pcard ok">
+<h4>天立国际控股</h4>
+<div class="st">托管 18→23 所 · 上市公司、有年报</div>
+<div class="kv">
+<b>能规模化的原因：</b>自有品牌（20+ 年办学史 + 可量化成绩）+ 全部为政府付费项目 + 1,000 万元级单校合同 + 20 年长约试点。<br/>
+<b>最硬的一手证据：</b>威信一中 1,000 万元/学年（县财政决算）；郁南 750 万 + 380 万对赌（政采文件）。<br/>
+<b>最硬的风险：</b>贸易应收 FY2025 +137%（2,748 万元来自地方政府），年报"付款并无固定信贷期"。<br/>
+<b>不可核验：</b>托管分部成本、学段单价拆分、续约率。
+      </div>
+</div>
+<div class="pcard ok">
+<h4>海亮教育</h4>
+<div class="st">自述 177–178 所 · 已退市、无年报</div>
+<div class="kv">
+<b>能规模化的原因：</b>世界 500 强集团背书 + 公办县域主战场（规避学费限价与关联交易禁令）+ "1+N"核心校带成员校 + 校长培养产品化（锻造营）。<br/>
+<b>最硬的一手证据：</b>景东一中 800 万元/年（政府预算）、剑阁 1,500 万/3 年（合同含"年度考核不合格可终止"）。<br/>
+<b>结构性问题：</b>派驻团队仅 90 余个服务 178 校 → 成员校无驻校团队，质量一致性风险。<br/>
+<b>不可核验：</b>托管财务、学段分布、真实续约率；且企业有强公关动机（"零舆情"退市），"无负面"须打折。
+      </div>
+</div>
+<div class="pcard warn">
+<h4>上海世外（均瑶）</h4>
+<div class="st">托管校争 40+ / 50 / 60，第三方核到 31 · 非上市</div>
+<div class="kv">
+<b>它不是"真托管"玩家：</b>核心是①自办民办"世外学校"（重资产重品牌）②受托管理公办校（轻派驻、政府购买、项目制，多为 3–5 年）。<br/>
+<b>关键的"到期"证据：</b>奉贤 2 校 5 年期满 2023-06 结束（区政府文件）。<br/>
+<b>对 AI SaaS 的含义：</b>世外智慧（全资科技子公司）2025 年净利 754 万元，是"教育科技系统可在集团内独立盈利"的唯一审计数佐证——<b>既是对手，也是接口</b>。
+      </div>
+</div>
+<div class="pcard no">
+<h4>云南长水（第一高中 FHS）</h4>
+<div class="st">托管仅 5 所 · 已退市</div>
+<div class="kv">
+<b>为什么失速（最清晰的失速样本）：</b>三个支点先后断裂——① 衡水品牌 2019-10-16 被官方声明否认可用、2021 年底被迫"去衡水化"；② 2021-09 剥离义务教育部；③ 2022-11 被纽交所强制退市。<br/>
+<b>财务：</b>FY2021 资产负债率 115.09%；2022Q3 现金 2.6 亿元 vs 负债约 4 亿元。<br/>
+<b>政策记录密集：</b>2019 年昆明市教体局约谈 + 取消年检优秀；2022 年成都高补因无证办学被停止办学。<br/>
+<b>不宜作为对标模型</b>：其"衡水模式 + 高收费 + 政府合作"组合在 2021 年后已遇政策天花板。
+      </div>
+</div>
+<div class="pcard warn">
+<h4>山东师大基础教育集团（甲类对照）</h4>
+<div class="st">120+ 合作校 · 已退出 1 所</div>
+<div class="kv">
+<b>价值：</b>行业里罕见的"集团仍运营、旗下有项目已退出"的内部对比——同一团队、不同项目、不同结果。<br/>
+<b>退出事实：</b>鲁甸崇文中学 2023 年停办、2025-03-20 教体局公示注销办学许可证，终止方式为"合同终止协议"（协商终止）。<br/>
+<b>机制：</b>3Z 模式下政府/智慧方/资本方任一方资金链断裂即触发终止；且集团官网对外<b>未提该退出</b>。
+      </div>
+</div>
+<div class="pcard no">
+<h4>失败对照组（丙类 + 丁类）</h4>
+<div class="st">南山为明 / 衡水分校 / 判例 / 广南流标</div>
+<div class="kv">
+<b>南山为明：</b>25 年后终止，因国有教育配套用地到期 + 公参民整改——"物业 + 品牌"双重到期。<br/>
+<b>衡水分校：</b>系统级退出，政策 + 品牌 + 资本 + 招生四重叠加，清北录取 275→45 人。<br/>
+<b>判例：</b>合法 vs 违法的唯一分水岭是"控制权是否让渡"，与托管范围大小无关。<br/>
+<b>广南流标：</b>"不足三家"——有政府预算也未必有承接方，供给端本身稀薄。
+      </div>
+</div>
+</div>
+</section>
+<!-- ================= 6 ================= -->
+<section id="c6">
+<h2 class="sec">6 ｜ 失败机制清单（每条标证据强度）</h2>
+<div class="card">
+<h3>6.1 政策与制度机制</h3>
+<table>
+<tr><th>编号</th><th>机制</th><th>样本</th><th>强度</th></tr>
+<tr><td>P1</td><td>"公参民"治理 + 冠名清理：公办名校以冠名方式参与举办的民办校须转公或更名，冠名终止后学校难独立存活</td><td>南山为明；衡水分校</td><td><span class="ev ev-a">已证实</span></td></tr>
+<tr><td>P2</td><td>国有教育配套用地到期回收：以国有物业办学的"国有民办"学校在租约到期时无法续签</td><td>南山为明</td><td><span class="ev ev-a">已证实</span></td></tr>
+<tr><td>P3</td><td>跨省/跨市掐尖招生整治：2024 年河北明确民办普高仅能在审批地招生，超级中学失去生源虹吸能力</td><td>衡水分校</td><td><span class="ev ev-a">已证实</span></td></tr>
+<tr><td>P4</td><td>"出租出借办学许可证"红线：含办学资质移交的协议被认定无效</td><td>灵璧案、芳华案、伯伦案</td><td><span class="ev ev-a">已证实</span></td></tr>
+<tr><td>P5</td><td>"6 个独立"要求（独立法人、校园校舍设备、专任教师队伍、财会核算、招生、毕业证发放）：很多"国有民办"校无法满足 → 转公或终止</td><td>南山为明 + 全国公参民清理</td><td><span class="ev ev-a">已证实</span></td></tr>
+</table>
+<h3>6.2 财务与回款机制</h3>
+<table>
+<tr><th>编号</th><th>机制</th><th>样本</th><th>强度</th></tr>
+<tr><td>F1</td><td>学费被受托方/校长私收 → 委托方学校被主管部门评为不合格 → 回款断裂</td><td>湖南谢某某案</td><td><span class="ev ev-a">已证实</span></td></tr>
+<tr><td>F2</td><td>核心控制权旁落 → 财务权旁落 → 触发"出租出借"红线 → 合同无效、收入归零</td><td>灵璧案</td><td><span class="ev ev-a">已证实</span></td></tr>
+<tr><td>F3</td><td>3Z 模式下任一方资金链断裂即触发"合同终止"</td><td>鲁甸崇文中学</td><td><span class="ev ev-a">已证实</span></td></tr>
+<tr><td>F4</td><td>房地产融资难 → 教育地产模式崩盘</td><td>衡水分校</td><td><span class="ev ev-a">已证实</span></td></tr>
+<tr><td>F5</td><td>财政拨付延迟风险被合同系统性转嫁给受托方（"申请支付即视为按期付款"）</td><td>郁南、伊金霍洛旗政采合同</td><td><span class="ev ev-a">已证实</span></td></tr>
+<tr><td>F6</td><td>回款变慢的财务信号：应收增速 &gt; 校数增速</td><td>天立 FY2025 应收 +137% vs 校数 +80%</td><td><span class="ev ev-a">已证实</span></td></tr>
+</table>
+<h3>6.3 团队与治理机制</h3>
+<table>
+<tr><th>编号</th><th>机制</th><th>样本</th><th>强度</th></tr>
+<tr><td>G1</td><td>小型团队严重依赖创始人/核心骨干，核心一走即崩</td><td>判例样本；一土学校（非托管但机制同）</td><td><span class="ev ev-b">已证实（个案）+ 推测</span></td></tr>
+<tr><td>G2</td><td>换帅/派驻团队更替后质量下滑</td><td>闽侯二中：委托后原校长调离、聘退休教师任执行校长，高考成绩不如托管前，教育局指"与法规相悖"</td><td><span class="ev ev-a">已证实</span></td></tr>
+<tr><td>G3</td><td>名师供给断裂 → 模式空转</td><td>长水核心管理依赖衡水/石家庄系；"鲤鱼计划"累计投 2.6 亿元</td><td><span class="ev ev-a">已证实</span></td></tr>
+<tr><td>G4</td><td>轻派驻导致成员校质量一致性风险</td><td>海亮"核心校 2–3 人 + 成员校不派驻"；世外派驻 1–3 人</td><td><span class="ev ev-a">已证实 + 推测</span></td></tr>
+</table>
+<h3>6.4 商业可持续性机制</h3>
+<table>
+<tr><th>编号</th><th>机制</th><th>样本</th><th>强度</th></tr>
+<tr><td>B1</td><td>首批毕业生质量决定后续生源：接 1–2 所学校需 3 年才见首届高考成绩，成绩不达预期则后续无生可招</td><td>鲁甸退出</td><td><span class="ev ev-c">推测</span></td></tr>
+<tr><td>B2</td><td>县/区财政薄弱 → 补贴随换届变化</td><td>鲁甸、广南流标</td><td><span class="ev ev-c">推测 / 部分一手</span></td></tr>
+<tr><td>B3</td><td>品牌授权方主动撤离 → 对合作校致命</td><td>衡水中学；北大附中</td><td><span class="ev ev-a">已证实</span></td></tr>
+<tr><td>B4</td><td>项目到期即结束：托管校是有期限资产，不是永久护城河</td><td>世外奉贤 5 年期满；长沙集团化 6 年一轮到期退出；海亮柳河九中 3 年收官</td><td><span class="ev ev-a">已证实</span></td></tr>
+<tr><td>B5</td><td>协议被判无效 → 收入归零且无法主张</td><td>灵璧案</td><td><span class="ev ev-a">已证实</span></td></tr>
+</table>
+<h3>6.5 退出速度分布（可用于判断"看起来还行"的项目实际剩余期限）</h3>
+<table>
+<tr><th>速度</th><th>样本</th><th>备注</th></tr>
+<tr><td>极快（≤1 年）</td><td>湖南谢某某案（1 年）、灵璧案（10 个月）、广南流标（3 天）</td><td>协议纠纷 / 采购无响应</td></tr>
+<tr><td>中速（1–5 年）</td><td>鲁甸崇文中学（约 6 年）、世外奉贤（满 5 年正常结束）</td><td>招生 / 政策叠加</td></tr>
+<tr><td>慢（5–10 年）</td><td>衡水分校（2014–2017 高峰 → 2024 全面收紧）</td><td>政策 + 品牌 + 资本多重叠加</td></tr>
+<tr><td>极慢（25 年）</td><td>北大附中深圳南山分校（2000 → 2025）</td><td>物业 + 品牌双重到期</td></tr>
+</table>
+</div>
+</section>
+<!-- ================= 7 ================= -->
+<section id="c7">
+<h2 class="sec">7 ｜ 企业自述 vs 独立核验（关键差异清单）</h2>
+<div class="card">
+<table>
+<tr><th style="width:20%">议题</th><th style="width:32%">企业自述</th><th style="width:38%">独立核验</th><th style="width:10%">是否一致</th></tr>
+<tr><td>托管规模</td><td>海亮 177–178 所 / 长水"30 余所学校、5 万在校生、5,000 教师" / 世外"托管近 60 所"</td><td>海亮官网另页 54+ 所；长水招股书 19 所 / 25,867 人 / 1,969 教师；世外第三方核到 31 所（29 公办）</td><td style="color:var(--red)"><b>不一致</b></td></tr>
+<tr><td>"全面托管"的实际派驻</td><td>"派驻管理团队""全面托管"</td><td>政采合同显示派驻 1–3 人（世外秀湖 3 人、义乌 1 人）；海亮核心校 2–3 人、成员校不派驻</td><td style="color:var(--red)"><b>不一致</b></td></tr>
+<tr><td>回款状况</td><td>天立年报"管理及特许经营费付款并无固定信贷期"（暗示无拖欠）</td><td>应收 FY2025 +137%，其中 2,748 万元来自地方政府；合同普遍含"财政延迟不视为违约"</td><td style="color:var(--amber)"><b>表面无拖欠，实际回款压力上升</b></td></tr>
+<tr><td>合同期限</td><td>天立南京溧水 20 年长约</td><td>世外奉贤 5 年期满结束；长沙集团化 6 年一轮到期退出</td><td style="color:var(--amber)"><b>长约是例外，短约是常态</b></td></tr>
+<tr><td>权限范围</td><td>"自主办学""充分授权"</td><td>公办项目主流为"四不变"（属性/编制/资产/招生不变）；仅个案（龙岩）交公章 + 校长兼法人</td><td style="color:var(--amber)"><b>主流保留核心权，极端授权是个案</b></td></tr>
+<tr><td>校长培养周期</td><td>海亮"最短 3 年"、"半年可外派"；天立"储备 1–3 年"</td><td><b>无任何第三方数据</b>；同一机构两个口径互相矛盾</td><td style="color:var(--red)"><b>仅自述</b></td></tr>
+<tr><td>教研输出</td><td>各集团官网均称"统一教研/课程输出"</td><td>政府文件证实"集中教研 + 题库教案课件共享"是<b>公办集团化办学普遍做法</b>（延安、三亚、宁都、砀山）</td><td style="color:var(--amber)"><b>有输出，但非民办独有</b></td></tr>
+<tr><td>AI / 数字化</td><td>天立"启鸣云校接入 107 所学校、25 万+ 师生""效率提升超 90%"</td><td><b>未见任何政采合同把 AI 系统列为托管标的</b>；107 校含自有校 + 外部合作，非全部托管标的</td><td style="color:var(--red)"><b>合同层面未证实</b></td></tr>
+<tr><td>托管业务盈利性</td><td>研报测算"毛利率 60–70%"</td><td>天立只有"一个经营分部"；海亮退市；世外无财报；长水退市 —— <b>全部不可独立核算</b></td><td style="color:var(--red)"><b>仅券商测算</b></td></tr>
+<tr><td>负面信息</td><td>海亮"零舆情"退市；长水官网不提 2019 约谈与义务教育部剥离；山东师大官网不提鲁甸退出</td><td>均有政府文件/媒体独立记载</td><td style="color:var(--amber)"><b>企业侧存在系统性披露缺省</b></td></tr>
+</table>
+<div class="alert red">
+<b>尽调方法论结论：</b>判断一家托管机构，<b>第一份要看的文件不是年报/官网，而是"托管合同 + 政采公告 + 教育局公示"</b>——权责边界、收费结构、付款节奏、KPI 对赌、派驻要求全在合同里，且<b>不随公关口径漂移</b>。
+    </div>
+</div>
+</section>
+<!-- ================= 8 ================= -->
+<section id="c8">
+<h2 class="sec">8 ｜ 数据缺口：明确找不到的东西</h2>
+<div class="card">
+<p style="font-size:13.6px">以下为本报告<b>检索后确认公开渠道无法获得</b>的信息，未做推算填补。凡引用本报告时涉及这些项，应标注"缺口"而非引用任何估值。</p>
+<table>
+<tr><th style="width:26%">缺口</th><th style="width:44%">为什么重要</th><th style="width:30%">影响</th></tr>
+<tr><td><b>校长/骨干培养周期的第三方数据</b></td><td>直接决定"扩校速度上限"，是所有商业模型的关键输入</td><td>无法量化扩张天花板；企业口径（3 年 / 1–3 年 / 半年）互斥且无第三方验证</td></tr>
+<tr><td><b>托管业务独立成本与毛利率</b></td><td>天立只有单一经营分部；海亮、长水已退市；世外无独立财报</td><td>任何"托管毛利 60–70%"都只能是券商估算，不能作为事实</td></tr>
+<tr><td><b>民办端（学费分成型）托管收费</b></td><td>公开案例几乎全为政府财政付费</td><td>民办校之间的市场化托管<b>无合同级证据</b>，其真实定价与风险不可评估</td></tr>
+<tr><td><b>"AI 系统/教学平台"作为托管合同标的的条款</b></td><td>直接关系 AI 教育 SaaS 能否嵌入托管生态</td><td>政采文件未检索到任何一例；说明市场尚未形成"为系统单独付费"的习惯</td></tr>
+<tr><td><b>托管校数的五维拆分</b>（签约/运营 · 公办/民办 · 管理输出/品牌授权 · 学校/学段）</td><td>海亮、世外从未公开；长水自述无时点</td><td>"覆盖校数"无法转为可比的经营指标</td></tr>
+<tr><td><b>学段分布</b>（高中/初中/小学/幼儿园各多少）</td><td>海亮完全缺失；天立只披露托管学段总数</td><td>无法计算真实学段单价与结构</td></tr>
+<tr><td><b>整体续约率与终止率</b></td><td>天立年报无披露；海亮仅有石屏/抚远/蒲县等点状正面案例</td><td>"存量校数"与"续约能力"无法分离</td></tr>
+<tr><td><b>小型商业化托管团队清单与存活率</b></td><td>不可上市、不披露、无政府公告</td><td>行业底层团队的真实存活率<b>几乎完全不可观察</b>——这意味着选择小型合作方时几乎无外部信号</td></tr>
+<tr><td><b>衡水分校除山西/湖南/江西外</b>的具体终止名单与时点</td><td>其余负责人拒绝采访</td><td>系统级退出规模被低估</td></tr>
+<tr><td><b>山东师大基础教育集团除鲁甸外的退出清单</b></td><td>集团未披露</td><td>"120+ 合作校"的真实风险被低估</td></tr>
+<tr><td><b>长水托管费金额</b>（罗平五中 15 年协议、元江一中）</td><td>政府公示均未披露金额</td><td>其"全面委托管理"业务的定价不可核验</td></tr>
+<tr><td><b>判例样本原审案号</b></td><td>律师整理时按行业惯例隐去当事人信息</td><td>部分判例的法律可援引性受影响</td></tr>
+<tr><td><b>天立托管合同终止/不续约记录</b></td><td>年报未披露；裁判文书网未见天立 v 政府纠纷</td><td>"无退出"既可能是事实，也可能是不可见</td></tr>
+</table>
+</div>
+</section>
+<!-- ================= 9 ================= -->
+<section id="c9">
+<h2 class="sec">9 ｜ 行动建议（面向 AI 教育 SaaS 委托方）</h2>
+<div class="card">
+<div class="alert red">
+<b>一票否决项（任一命中即终止合作/投资）：</b>
+<ol class="tight" style="margin-top:8px">
+<li>存量托管合同含"全托管 / 全权承包 + 办学资质移交 + 对公账户由受托方管理"结构（= 合同随时可能被判无效）；</li>
+<li>托管标的以<b>义务教育（初中/小学）</b>为主体；</li>
+<li>受托方"校数"含大量幼儿园、签约未开学项目或"泛服务覆盖"，无法按五维口径拆出真实已运营托管校数；</li>
+<li>收费依赖家长学费分成，且无"学费进学校对公账户"的制度安排；</li>
+<li>无任何可核验的政采/预算/财政付费案例，全部收入来自关联方或自述；</li>
+<li>核心团队为创始人 1–2 人、无储备校长池、无本地师资培养机制。</li>
+</ol>
+</div>
+<h3>9.1 六条可执行建议</h3>
+<table>
+<tr><th style="width:22%">建议</th><th style="width:44%">具体做法</th><th style="width:34%">依据</th></tr>
+<tr>
+<td><b>① 尽调从合同开始，不从 PPT 开始</b></td>
+<td>索取 3–5 份代表性托管合同（可脱敏），核三项：<b>费用流方向</b>（委托方→受托方？）、<b>公章/法人/对公账户归属</b>、<b>预付比例与质保金</b>。再看收费口径是否含品牌费/激励。</td>
+<td>判例（灵璧/芳华/伯伦）证明结构违法 = 全部诉求驳回；政采合同条款不随公关口径漂移</td>
+</tr>
+<tr>
+<td><b>② 把"校数"折算成五个数</b></td>
+<td>要求对方提供：已运营 vs 签约、自营 vs 托管、校数 vs 学段数、管理输出 vs 品牌授权、整校交付 vs 产品销售——五个维度分别列示并注明日期。</td>
+<td>海亮同年四口径（54/84/177/201）、世外自述 60 vs 第三方 31，均因口径混用</td>
+</tr>
+<tr>
+<td><b>③ 优先与"政府付费型"项目方合作</b></td>
+<td>其回款来自财政预算（景东 800 万/年"与上年一致"）+ 政采合同（预付 40%/质保金 15–20%），比"家长学费分成"稳定得多；同时要求把"财政拨付延迟不视为违约"纳入自身风险测算。</td>
+<td>10+ 政采/预算一手案例</td>
+</tr>
+<tr>
+<td><b>④ 定位为"降本工具"而非"托管分包商"</b></td>
+<td>不做整校托管（那是重人力、重政府关系、强地域性的生意）；把 AI/系统做成托管方的降本与结果工具，并把"SaaS 订阅"主动写进合同标的，抢占目前空白的"系统付费"位置。</td>
+<td>"集中教研/题库共享"是公办集团化标准动作，教研本身不构成护城河；而"AI 提效"叙事已被接受（天立自述效率提升 90%）；世外智慧 2025 净利 754 万证明系统可独立盈利</td>
+</tr>
+<tr>
+<td><b>⑤ 对标时按"签约/运营/到期"三态计量</b></td>
+<td>要求对方披露未来 24 个月<b>到期合同清单</b>与续约安排。世外奉贤 5 年期满结束、长沙"6 年一轮最多 2 轮"是明确先例。</td>
+<td>存量校数不是护城河，续约能力才是</td>
+</tr>
+<tr>
+<td><b>⑥ 观察三个先行指标</b></td>
+<td>(a) 应收/收入比是否持续上升（天立 FY2025 已从 18.4 升至 43.4 百万）；(b) 是否出现"停止向某校提供服务"（海亮 2022 年停服仙桃一中、新昌南瑞）；(c) 是否有政府处置记录（长水 2019 约谈、2022 成都停办）。</td>
+<td>均为可公开检索的一手信号</td>
+</tr>
+</table>
+<h3>9.2 一句话回答"要不要进这个赛道"</h3>
+<div class="alert green">
+<b>作为"整校托管运营方"进入：不建议。</b>这是一个<b>重政府关系、重本地化师资、单校 80 万–2,000 万元、项目 3–5 年到期、且合规红线一旦踩中即合同无效</b>的生意；头部四家的护城河是"自有品牌 + 政府关系 + 可外派校长池"，而不是课程或系统，<b>这三样都不能靠钱短时间买到</b>。<br/>
+<b>作为"给托管方与被托管校提供教学-教研-评价数字化"的工具方进入：有条件可行。</b>缺口恰好在这里——政采合同至今<b>没有任何一例把教学系统列为托管标的</b>。切入路径建议：先做 1–2 个政府付费型托管校的"降本 + 结果可视化"样板，把"AI 提效"从叙事变成合同条款里的 KPI 支撑项，再横向复制。<b>避免与托管方做相互持股</b>（关联交易与独立性风险，详见前期行业尽调报告）。
+    </div>
+</div>
+</section>
+<section>
+<hr class="soft"/>
+<p class="footnote">
+<b>证据分档口径：</b><span class="tag-src t1">一手</span> 年报 / 政府采购与中标合同 / 财政决算与部门预算 / 裁判文书 / 教育局公示与政府文件；<span class="tag-src t2">二手</span> 券商研报 / 权威媒体 / 律所判例整理；<span class="tag-src t3">估算/自述</span> 企业官网宣传、招聘公告、高管访谈、第三方推算；<span class="tag-src t4">缺口</span> 公开渠道找不到，明确标注缺失，未做填补。<br/>
+<b>本报告的立场：</b>不因某机构覆盖校数多而推定其成功；不用集团利润推算托管业务利润；不用"单校平均托管费"推算行业规模。<br/>
+<b>免责：</b>本报告为行业尽调分析，不构成法律意见或投资建议；涉及合同结构合规性的事项应咨询执业律师。
+  </p>
+</section>
+</div>
+</body>
+</html>

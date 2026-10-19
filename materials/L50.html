@@ -1,0 +1,3756 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>民办校整体委托管理 · 模块调研合集（2026.10）</title>
+<style>
+  :root{
+    --ink:#1a2332; --ink2:#4a5568; --ink3:#8494a8;
+    --bg:#f4f6f9; --card:#ffffff; --line:#e3e8ef;
+    --accent:#1f5fa8; --accent-bg:#eaf2fb;
+    --red:#c0392b; --red-bg:#fdecea;
+    --amber:#b7791f; --amber-bg:#fdf3e3;
+    --green:#1e7e4d; --green-bg:#e8f6ef;
+    --mono:"SF Mono",Menlo,Consolas,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+       background:var(--bg);color:var(--ink);line-height:1.78;font-size:15px}
+  .wrap{max-width:1120px;margin:0 auto;padding:28px 22px 90px}
+
+  header.rhead{background:linear-gradient(135deg,#14324f 0%,#1f5fa8 100%);color:#fff;
+    border-radius:16px;padding:30px 36px;margin-bottom:18px}
+  header.rhead .tag{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.32);
+    border-radius:20px;padding:2px 13px;font-size:12px;letter-spacing:1px;margin-bottom:12px}
+  header.rhead h1{font-size:25px;font-weight:700;letter-spacing:.5px}
+  header.rhead p{margin-top:8px;font-size:13.5px;color:rgba(255,255,255,.82)}
+
+  nav.tabbar{position:sticky;top:0;z-index:30;display:flex;gap:8px;overflow-x:auto;
+    background:rgba(244,246,249,.94);backdrop-filter:blur(8px);padding:12px 2px;margin-bottom:16px;
+    border-bottom:1px solid var(--line);scrollbar-width:thin}
+  nav.tabbar::-webkit-scrollbar{height:6px}
+  nav.tabbar::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:3px}
+  button.tab{flex:0 0 auto;text-align:left;background:var(--card);border:1px solid var(--line);
+    border-radius:11px;padding:9px 15px;cursor:pointer;transition:.16s;font-family:inherit;color:var(--ink)}
+  button.tab:hover{border-color:#b9cfe8;background:#fbfdff}
+  button.tab.active{background:var(--accent);border-color:var(--accent);color:#fff;
+    box-shadow:0 4px 14px rgba(31,95,168,.28)}
+  button.tab .tab-t{display:block;font-size:14px;font-weight:600;white-space:nowrap}
+  button.tab .tab-s{display:block;font-size:11px;color:var(--ink3);margin-top:2px;white-space:nowrap}
+  button.tab.active .tab-s{color:rgba(255,255,255,.78)}
+
+  .panel{animation:fade .22s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+  .panel[hidden]{display:none}
+
+  details.toc{background:var(--card);border:1px solid var(--line);border-radius:11px;
+    padding:10px 16px;margin-bottom:18px;font-size:13.5px}
+  details.toc summary{cursor:pointer;font-weight:600;color:var(--accent);font-size:13px;letter-spacing:.5px}
+  details.toc ul{list-style:none;margin:10px 0 4px;padding-left:0;columns:2;column-gap:28px}
+  details.toc ul ul{padding-left:14px;columns:1;margin:2px 0}
+  details.toc li{margin:3px 0;break-inside:avoid}
+  details.toc a{color:var(--ink2);text-decoration:none}
+  details.toc a:hover{color:var(--accent);text-decoration:underline}
+  @media(max-width:720px){details.toc ul{columns:1}}
+
+  article.md-body{background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:30px 34px 40px;box-shadow:0 1px 3px rgba(16,32,64,.04)}
+  .md-body h1{font-size:22px;font-weight:700;line-height:1.5;padding-bottom:14px;margin-bottom:20px;
+    border-bottom:2px solid var(--accent-bg)}
+  .md-body h2{font-size:18px;font-weight:700;margin:34px 0 14px;padding-left:12px;
+    border-left:4px solid var(--accent);line-height:1.5}
+  .md-body h3{font-size:15.5px;font-weight:700;margin:24px 0 10px;color:#25405f}
+  .md-body h4{font-size:14.5px;font-weight:600;margin:18px 0 8px;color:var(--ink2)}
+  .md-body p{margin:10px 0}
+  .md-body ul,.md-body ol{margin:10px 0 10px 4px;padding-left:22px}
+  .md-body li{margin:5px 0}
+  .md-body li>ul,.md-body li>ol{margin:4px 0}
+  .md-body strong{color:#132a45;font-weight:700}
+  .md-body a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(31,95,168,.3);
+    word-break:break-all}
+  .md-body a:hover{border-bottom-color:var(--accent)}
+  .md-body code{font-family:var(--mono);font-size:12.5px;background:#f0f3f8;border:1px solid var(--line);
+    border-radius:5px;padding:1px 5px;color:#2c4a6b}
+  .md-body pre{background:#f7f9fc;border:1px solid var(--line);border-radius:10px;
+    padding:14px 16px;overflow-x:auto;margin:14px 0}
+  .md-body pre code{background:none;border:none;padding:0;font-size:12.5px;line-height:1.6}
+  .md-body blockquote{margin:14px 0;padding:10px 16px;background:#fbfcfe;
+    border-left:3px solid #b9cfe8;border-radius:0 8px 8px 0;color:var(--ink2);font-size:14px}
+  .md-body blockquote p{margin:4px 0}
+  .md-body hr{border:none;border-top:1px dashed var(--line);margin:26px 0}
+  .md-body table{width:100%;border-collapse:collapse;margin:16px 0;font-size:13.2px;
+    display:block;overflow-x:auto;white-space:normal}
+  .md-body thead{background:#eef3f9}
+  .md-body th{text-align:left;font-weight:700;padding:9px 12px;border:1px solid var(--line);
+    white-space:nowrap;color:#22405f}
+  .md-body td{padding:8px 12px;border:1px solid var(--line);vertical-align:top}
+  .md-body tbody tr:nth-child(even){background:#fafcfe}
+  .md-body tbody tr:hover{background:var(--accent-bg)}
+
+  .foot{margin-top:26px;text-align:center;font-size:12px;color:var(--ink3);line-height:1.9}
+  .to-top{position:fixed;right:22px;bottom:24px;width:42px;height:42px;border-radius:50%;
+    background:var(--accent);color:#fff;border:none;cursor:pointer;font-size:17px;
+    box-shadow:0 6px 18px rgba(31,95,168,.34);opacity:0;pointer-events:none;transition:.25s}
+  .to-top.show{opacity:1;pointer-events:auto}
+  @media(max-width:720px){
+    .wrap{padding:16px 12px 70px}
+    header.rhead{padding:22px 20px}header.rhead h1{font-size:20px}
+    article.md-body{padding:20px 16px 30px}
+  }
+</style>
+<meta content="noindex,nofollow" name="robots"/><style>#material-library-bar{all:initial;display:block;position:relative;z-index:10000;background:#f2efe6;color:#293b35;border-bottom:1px solid #b8b9ad;padding:14px 4vw;font:15px/1.65 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}#material-library-bar a{color:#225e4b;text-decoration:underline;margin-right:18px}#material-library-bar .ml-note{display:block;padding:8px 0 0;color:#55462b;font-size:14px}#material-library-bar strong{font-weight:700} @media print{#material-library-bar{display:block!important;position:static!important}}
+/* 资料库手机阅读修正：只约束页面宽度，表格保留局部横向滚动。 */
+@media(max-width:720px){
+  #material-library-bar{box-sizing:border-box;max-width:100%;overflow-wrap:anywhere}
+  body{overflow-wrap:anywhere}
+  .wrap,.panel,.rp,.card,.rp .card,.pcard,.rp .pcard,.ans,.rp .ans,.body,.rp details .body,.scroll,.rp .scroll,nav.tabbar{min-width:0;max-width:100%}
+  .cards,.rp .cards{grid-template-columns:minmax(0,1fr)}
+  .cards>*,.rp .cards>*,.ansbox>*,.rp .ansbox>*{min-width:0}
+  table,.rp table{display:block;width:100%;max-width:100%;overflow-x:auto}
+  .scroll table,.rp .scroll table{display:table;max-width:none}
+  nav.toc a,.rp nav.toc a{white-space:normal;overflow-wrap:anywhere}
+  pre,img,svg,iframe{max-width:100%}
+}
+</style></head>
+<body><div id="material-library-bar"><a href="../index.html">返回全部材料</a><a href="../sources.html">来源明细</a><strong>L50 · 历史研究底稿</strong><span class="ml-note">历史研究资料按原调研时点保留。本文为研究加工材料；完整来源见资料明细。关键纠错另行标示，其他外链未在本轮逐条重验。</span></div>
+<div class="wrap">
+<header class="rhead">
+<span class="tag">尽调级调研 · 原始模块合集</span>
+<h1>民办学校整体委托管理 · 6 大模块调研</h1>
+<p>2026 年 10 月 ｜ 每条数据带信源分级（一手 / 二手 / 估算）｜ 点击上方标签切换模块</p>
+</header>
+<nav class="tabbar" role="tablist">
+<button aria-selected="true" class="tab active" data-target="p1" role="tab"><span class="tab-t">政策与合规红线</span><span class="tab-s">合法性边界 · 学段差异 · 判例 · 2024-26 新规</span></button>
+<button aria-selected="false" class="tab" data-target="p2" role="tab"><span class="tab-t">行业大盘与商业模式</span><span class="tab-s">规模测算 · 收费结构 · 转型历程</span></button>
+<button aria-selected="false" class="tab" data-target="p3" role="tab"><span class="tab-t">竞争格局</span><span class="tab-s">玩家清单 · 海亮深拆 · 暴雷样本</span></button>
+<button aria-selected="false" class="tab" data-target="p4" role="tab"><span class="tab-t">交易结构与先例</span><span class="tab-s">合同结构 · 托管费区间 · 尽调清单</span></button>
+<button aria-selected="false" class="tab" data-target="p5" role="tab"><span class="tab-t">重点省份深挖</span><span class="tab-s">浙江 / 广东 / 河南</span></button>
+<button aria-selected="false" class="tab" data-target="p6" role="tab"><span class="tab-t">SaaS 机会与谈判</span><span class="tab-s">客户画像 · 合作阶梯 · 20 问</span></button>
+</nav>
+<main>
+<section class="panel" id="p1" role="tabpanel">
+<details class="toc" open=""><summary>本模块目录</summary><div class="toc">
+<ul>
+<li><a href="#p1-_2">一、核心法规条款（已逐条核对原文）</a><ul>
+<li><a href="#p1-11-20162018">1.1 《民办教育促进法》（2016年修正，2018年再修正，现行有效）</a></li>
+<li><a href="#p1-12-7412021-09-01">1.2 《民办教育促进法实施条例》（国务院令第741号，2021-09-01 施行）</a></li>
+</ul>
+</li>
+<li><a href="#p1-_3">二、学段差异</a></li>
+<li><a href="#p1-_4">三、"公参民"治理：禁令与现状</a></li>
+<li><a href="#p1-2026-10">四、分类登记：过渡期与完成度（截至2026-10）</a></li>
+<li><a href="#p1-_5">五、委托管理合同的司法效力：公开判例与报道</a></li>
+<li><a href="#p1-2024-2026">六、2024-2026 最新动态</a></li>
+<li><a href="#p1-_6">七、结论：哪里能做、红线在哪里</a><ul>
+<li><a href="#p1-71">7.1 当前合法可做的空间</a></li>
+<li><a href="#p1-72">7.2 红线清单</a></li>
+<li><a href="#p1-73">7.3 对委托方的合作建议（合规视角）</a></li>
+</ul>
+</li>
+<li><a href="#p1-_7">信源清单表</a></li>
+<li><a href="#p1-_8">数据缺口与存疑点</a></li>
+</ul>
+</div>
+</details>
+<article class="md-body"><h1 id="p1-_1">民办学校整体委托管理：政策与合规红线调研</h1>
+<p><strong>调研日期</strong>：2026年10月8日
+<strong>委托背景</strong>：AI 教育 SaaS 公司（客户以民办 K12 学校为主）拟与经营"民办学校整体委托管理"业务的销售代理商开展合作（含相互投资），本报告评估其政策与合规风险。
+<strong>信源档位说明</strong>：【一手】法规原文/政府文件/官网；【二手】行业报告/权威媒体/律所解读；【估算】推算（含逻辑）；【弱】自媒体/律师文集/聚合站，仅作线索。</p>
+<hr/>
+<h2 id="p1-_2">一、核心法规条款（已逐条核对原文）</h2>
+<h3 id="p1-11-20162018">1.1 《民办教育促进法》（2016年修正，2018年再修正，现行有效）</h3>
+<table>
+<thead>
+<tr>
+<th>条款</th>
+<th>关键原文</th>
+<th>对委托管理/合作的影响</th>
+<th>档位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第十九条</td>
+<td>"民办学校的举办者可以自主选择设立非营利性或者营利性民办学校。<strong>但是，不得设立实施义务教育的营利性民办学校</strong>。非营利性民办学校的举办者不得取得办学收益，学校的办学结余全部用于办学。"</td>
+<td>义务教育民办校只能非营利 → 举办者不能分红，托管费/服务费成为唯一变相获利通道，因此成为监管重点</td>
+<td>【一手】[NPC]</td>
+</tr>
+<tr>
+<td>第五十三条</td>
+<td>民办学校分立、合并须财务清算后报审批机关批准</td>
+<td>学校层面并购属行政许可事项，非纯商业行为</td>
+<td>【一手】[NPC]</td>
+</tr>
+<tr>
+<td>第五十四条</td>
+<td>举办者变更须财务清算、经理事会同意、报审批机关核准</td>
+<td>相互投资若导致举办者/实控人变更，触发审批</td>
+<td>【一手】[NPC]</td>
+</tr>
+<tr>
+<td>第六十二条第(七)项</td>
+<td>禁止"伪造、变造、买卖、<strong>出租、出借办学许可证</strong>"，情节严重可吊销办学许可证</td>
+<td>司法实践中"全托管"常被认定为变相出租出借许可证 → 合同无效（见第五节）</td>
+<td>【一手】[NPC]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="p1-12-7412021-09-01">1.2 《民办教育促进法实施条例》（国务院令第741号，2021-09-01 施行）</h3>
+<p>以下原文均经中国政府网/教育部官网核实：</p>
+<table>
+<thead>
+<tr>
+<th>条款</th>
+<th>关键原文（摘录）</th>
+<th>合规含义</th>
+<th>档位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>第十三条</strong></td>
+<td>"同时举办或者实际控制多所民办学校的，举办者或者实际控制人应当具备……条件与能力，并对所举办民办学校承担管理和监督职责……不得改变所举办或者实际控制的非营利性民办学校的性质，直接或者间接取得办学收益；也不得滥用市场支配地位，排除、限制竞争。<strong>任何社会组织和个人不得通过兼并收购、协议控制等方式控制实施义务教育的民办学校、实施学前教育的非营利性民办学校。</strong>"</td>
+<td><strong>最核心红线</strong>。托管方若通过托管协议取得义务教育学校或非营利性幼儿园的"实际控制"，即违反本条。注意：非营利性高中、中职、高校未被列入该款禁止范围（律所解读亦确认此点【二手】君合）</td>
+<td>【一手】[国务院/教育部]</td>
+</tr>
+<tr>
+<td><strong>第四十五条</strong></td>
+<td>"<strong>实施义务教育的民办学校不得与利益关联方进行交易</strong>。其他民办学校与利益关联方进行交易的，应当遵循公开、公平、公允的原则，合理定价、规范决策……民办学校应当建立利益关联方交易的信息披露制度……按年度对关联交易进行审查。前款所称利益关联方是指民办学校的举办者、实际控制人、校长、理事、董事、监事、财务负责人等以及与上述组织或者个人之间存在互相控制和影响关系、可能导致民办学校利益被转移的组织或者个人。"</td>
+<td>义务教育民办校：<strong>任何</strong>关联交易（含向托管方支付管理费）均被禁止；其他学段：关联交易允许但须公允+披露+年度审查。托管方若与学校存在"互相控制和影响关系"即落入"利益关联方"定义</td>
+<td>【一手】[国务院/教育部]</td>
+</tr>
+<tr>
+<td>第七条</td>
+<td>"实施义务教育的公办学校不得举办或者参与举办民办学校，也不得转为民办学校。其他公办学校不得举办或者参与举办营利性民办学校。但是，实施职业教育的公办学校可以……举办或者参与举办实施职业教育的营利性民办学校。公办学校举办或者参与举办民办学校……<strong>不得仅以品牌输出方式参与办学</strong>……举办或者参与举办非营利性民办学校，<strong>不得以管理费等方式取得或者变相取得办学收益</strong>。"</td>
+<td>公办学校侧的限制；职业教育是唯一允许"公办+营利"的例外</td>
+<td>【一手】[国务院/教育部]</td>
+</tr>
+<tr>
+<td>第十二条</td>
+<td>举办者变更须签变更协议，"不得涉及学校的法人财产"；举办者为法人的，<strong>控股股东和实际控制人变更的，应当报主管部门备案并公示</strong></td>
+<td>相互投资若触及举办者法人的控股权变化 → 备案+公示义务</td>
+<td>【一手】[国务院/教育部]</td>
+</tr>
+<tr>
+<td>第二十六条</td>
+<td>义务教育民办学校决策机构成员须具中国国籍，且应有审批机关委派代表</td>
+<td>义务教育学校治理结构受行政深度介入</td>
+<td>【一手】[国务院]</td>
+</tr>
+<tr>
+<td><strong>第六十二条第(四)项</strong></td>
+<td>举办者及实控人等"与实施义务教育的民办学校进行关联交易，或者与其他民办学校进行关联交易损害国家利益、学校利益和师生权益的"——责令限期改正、没收违法所得；情节严重 <strong>1至5年内不得新成为举办者/实控人/决策监督机构成员</strong>；情节特别严重、社会影响恶劣的 <strong>永久禁入</strong></td>
+<td>违反第四十五条的罚则，含行业禁入，对托管方和合作方均为重大风险</td>
+<td>【一手】[广东政务服务网引原文]</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="p1-_3">二、学段差异</h2>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>义务教育（小学/初中）</th>
+<th>学前（幼儿园）</th>
+<th>普通高中</th>
+<th>中职/职业教育</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>营利性</td>
+<td><strong>禁止</strong>（民促法§19）【一手】</td>
+<td>可登记营利性，但普惠园须非营利、收费政府指导价（学前教育法§24）【一手】</td>
+<td>可选营利或非营利【一手】</td>
+<td>可选营利；国家鼓励企业参与举办（条例§9）【一手】</td>
+</tr>
+<tr>
+<td>兼并收购/协议控制</td>
+<td><strong>全面禁止</strong>（条例§13末款）【一手】</td>
+<td>非营利性园<strong>禁止</strong>（条例§13）；学前教育法§35 进一步禁止社会资本通过兼并收购控制公办园、非营利民办园【一手】</td>
+<td>营利性/非营利性均未列入§13禁令；但非营利校不得被变相取得办学收益（§13第3款）【一手+二手解读】</td>
+<td>同高中；政策最宽松，职业教育为唯一允许公办学校参与举办营利性民办校的学段（条例§7）【一手】</td>
+</tr>
+<tr>
+<td>关联交易</td>
+<td><strong>一律禁止</strong>（条例§45）【一手】</td>
+<td>允许，须公允+披露+年度审查【一手】</td>
+<td>同学前【一手】</td>
+<td>同学前【一手】</td>
+</tr>
+<tr>
+<td>新设审批</td>
+<td>多地"原则上不再审批"（如宿迁市政府 2025-12《宿迁市民办教育管理规定》第三条【一手】；云南省办法第十条【一手】）</td>
+<td>正常审批，普惠导向</td>
+<td>正常审批，但部分地区学位已现空余、规划调控（【二手】君合统计解读）</td>
+<td>鼓励</td>
+</tr>
+<tr>
+<td>规模调控</td>
+<td>民办义务教育在校生占比压至 <strong>5%以内</strong>（各省目标；2024年全国占比3.70%（不含政府购买学位），学校数占比5.08%）【一手：教育部2024统计公报】</td>
+<td>普惠性幼儿园覆盖率90.8%（2023）【一手：教育部答记者问】</td>
+<td>民办高中逆势增长（2024年在校生588.49万人，占20.14%）【一手】</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="p1-_4">三、"公参民"治理：禁令与现状</h2>
+<p><strong>2021-08-25 教育部等八部门《关于规范公办学校举办或者参与举办民办义务教育学校的通知》</strong>【一手：教育部官网通稿】要点：</p>
+<ul>
+<li>三类规范对象：公办校单独举办、与地方政府/机构合作举办、与社会组织/个人合作举办（含以品牌、管理等无形资产参与）的民办义务教育学校；</li>
+<li>处理路径：公办单独/与公有主体合办的<strong>应转公办</strong>；与社会资本合办的符合"六独立"可继续民办但<strong>公办校逐步退出</strong>，也可转公；不符合"六独立"且整改不到位的转公或终止；</li>
+<li><strong>各地不得再审批设立新的"公参民"学校；公办学校不得以举办者变更、集团办学、品牌输出等方式变相举办民办义务教育学校</strong>；</li>
+<li>民办义务教育学校不得利用公办学校品牌开展宣传；力争两年左右（约至2023年）完成。</li>
+</ul>
+<p><strong>现状（截至2025-2026）</strong>：
+- 全国民办义务教育在校生占比已降至目标区间（2024年全国3.70%（不含政府购买学位）；临汾等地公开确认完成省定5%以内目标）【一手：教育部2024统计公报；二手：腾讯新闻转地方报道】；
+- 大量"公参民"学校已转公（成都盐道街外语学校、惠州京师实验学校等案例）【二手：中国教师报2025-07】；
+- 含义：代理商若其托管学校历史上是"公参民"校或仍使用公办品牌/资源，存在被要求切割、转公的历史遗留风险；"公办品牌+民营托管"模式已被明令禁止。</p>
+<hr/>
+<h2 id="p1-2026-10">四、分类登记：过渡期与完成度（截至2026-10）</h2>
+<ul>
+<li><strong>国家层面未设统一过渡期</strong>：2016年修法决定明确授权"具体办法由省、自治区、直辖市制定"，教育部当年答记者问确认"不设置统一的过渡期……一校一策"【一手：NPC修法决定、新华社】。</li>
+<li><strong>各省进度不一</strong>：如江西省要求现有民办学校2022年7月底前完成分类登记（义务教育学校2022年4月25日前）【一手：南昌市教育局方案引江西省办法】；广东省民办高校分类登记长期滞后，2025-11 才就《广东省现有民办高校分类登记实施细则》等四个配套文件公开征求意见，2026-08 印发《广东省民办学校重大事项变更与退出办法》（2026-09-01施行）【一手：广东省教育厅公告；二手：三个皮匠报告引述】。</li>
+<li><strong>辟谣提示</strong>：2026年市场流传"2026年底前全国所有民办学校必须完成分类登记、过渡期彻底结束"的说法，全国工商联民办教育出资者商会监事长马学雷公开指其"无任何权威法律、政策与官方文件支撑，纯属谣言"；民促法、实施条例及《民办学校分类登记实施细则》（教发〔2016〕19号）均无2026年截止条款【弱→但作者为行业协会负责人，指向性强】。<strong>截至本报告调研，未在教育部官网检索到"2026年底分类登记截止"的全国性文件，应视为未证实。</strong></li>
+<li><strong>对交易的影响</strong>：目标学校（尤其高中、高校）可能尚未完成分类登记，其法人属性、资产权属（划拨土地、财政投入、捐赠资产）未厘清，是相互投资前的尽调要点；选择营利性需补缴土地出让金、缴纳相关税费（江西方案/广东征求意见稿均有细化）【一手】。</li>
+</ul>
+<hr/>
+<h2 id="p1-_5">五、委托管理合同的司法效力：公开判例与报道</h2>
+<table>
+<thead>
+<tr>
+<th>案件</th>
+<th>要旨</th>
+<th>结果</th>
+<th>档位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>广州芳华小学/中学承包协议案（（2014）穗荔法民二初字第1200号；二审（2015）穗中法民二终字第950号；广州市教育局穗教行复〔2017〕第1号复议决定书引用）</td>
+<td>民办中小学整体"承包"给个人经营、收取承包费，法院认定实质是<strong>出租教育资质、出租办学许可证</strong>，违反法律强制性规定</td>
+<td>承包协议<strong>无效</strong>；场地设施返还</td>
+<td>【一手：行政复议决定书原文转述生效判决】</td>
+</tr>
+<tr>
+<td>山东淄博"出借办学许可证合作协议"案（淄川区法院"般阳法苑"发布，涉2023年《合作协议》）</td>
+<td>名为学校间托管，实为以对方名义招生、以其公章收费，法院认定系出借办学许可证从事经营活动</td>
+<td>合作协议<strong>无效</strong>，腾退交还</td>
+<td>【二手：法院官方新媒体发布，经网易转载】</td>
+</tr>
+<tr>
+<td>安徽某中专 vs 上海某公司"全托管"案（二审维持）</td>
+<td>约定全校园托管5年、年托管费100万元；法院认定"全托管"包含办学资质移交使用，名为委托管理实为租用办学许可证，与出租许可证无实质区别</td>
+<td>协议<strong>自始无效</strong>，学校方收取托管费的诉求被驳回</td>
+<td>【弱：律师文集转述，案号未披露，需谨慎引用】</td>
+</tr>
+<tr>
+<td>对照案例：某高中部托管协议（同一律师文集）</td>
+<td>托管方仅输出管理服务、未触及办学权核心控制权（资质、招生主体、收费主体不变）</td>
+<td>法院认定<strong>合法有效</strong>，判违约方承担责任</td>
+<td>【弱：同上】</td>
+</tr>
+</tbody>
+</table>
+<p><strong>司法实践规律</strong>（基于上述案件的归纳，属分析而非新数据）：合同效力分水岭在于<strong>是否转移办学权核心控制权</strong>——办学资质、招生名义、收费账户、决策权仍归学校的"管理服务输出型"托管一般有效；"全托管"、以托管方名义招生收费、按学费分成或固定高额承包费的模式，高概率被认定为变相出租出借办学许可证（民促法§62(七)）而无效，且托管费诉求不受保护。</p>
+<hr/>
+<h2 id="p1-2024-2026">六、2024-2026 最新动态</h2>
+<ol>
+<li><strong>《学前教育法》</strong>（2024-11-08通过，<strong>2025-06-01已施行</strong>）【一手：人民网河南转主席令全文；gov.cn教育部答记者问】：
+   - 第三十四条：不得利用财政性经费/国有资产/集体资产/捐赠资产举办或参与举办<strong>营利性</strong>民办园；<strong>公办园不得转制为民办园</strong>；公办园不得举办或参与举办营利性民办园。
+   - 第三十五条：<strong>社会资本不得通过兼并收购等方式控制公办幼儿园、非营利性民办幼儿园</strong>；幼儿园不得直接或间接作为企业资产在境内外上市；上市公司不得股市融资投资营利性民办园、不得购买营利性民办园资产。
+   - 影响：学前阶段托管/投资红线从行政法规（条例§13）升级为<strong>法律</strong>；非营利性民办园的委托管理若构成"控制"即违法，营利性幼儿园虽可投资但上市公司通道被彻底封死。</li>
+<li><strong>民促法修法动向</strong>：截至2026-10，未检索到全国人大常委会启动《民办教育促进法》再次修订的公开信息；地方立法活跃——天津市2026年立法计划修订《天津市民办教育促进条例》（2026-07 市政府常务会通过修订草案，强化财务监管与关联交易审查）【一手：天津人大/司法局】。</li>
+<li><strong>地方对委托管理/集团化办学的最新要求</strong>：
+   - 安徽省教育厅《关于规范义务教育学校集团化办学管理的通知》（皖教基〔2025〕2号，2025年）【一手】：允许"对口帮扶（委托管理）"作为集团化模式之一；但明确四个"不得"——不得仅以品牌输出、挂牌更名组建集团；<strong>不得以集团化办学名义违规举办"公参民"学校；不得将公办学校委托非公办学校、民营企业管理</strong>；不得变相抢挖生源。民办学校组建或参与集团化办学须符合法律法规、<strong>不得改变法人属性</strong>。
+   - 宿迁市《民办教育管理规定》（2025-12-11）【一手】：原则上不再审批新民办义务教育学校；举办者变更须提交财务资产清算报告报审批机关核准。
+   - 多地2024年起对民办义务教育学校开展专项审计，重点查财务合规与关联交易【二手：君合】。</li>
+<li><strong>监管趋势</strong>：资金监管三方协议（教育部门+学校+银行）、收费专户、年检与信用档案联动（天津修订草案、多地实践）【一手/二手】。</li>
+</ol>
+<hr/>
+<h2 id="p1-_6">七、结论：哪里能做、红线在哪里</h2>
+<h3 id="p1-71">7.1 当前合法可做的空间</h3>
+<table>
+<thead>
+<tr>
+<th>学段</th>
+<th>委托管理可否做</th>
+<th>条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>营利性高中、中职</td>
+<td><strong>可做，政策空间最大</strong></td>
+<td>①托管合同限于管理服务输出，不转移办学资质、招生与收费主体、学校决策权；②收费（托管费）属关联交易，须公开公平公允、合理定价、规范决策、信息披露、接受年度审查（条例§45）；③不构成对学校的"实际控制"以规避审批；④职业教育方向有明确政策鼓励</td>
+</tr>
+<tr>
+<td>非营利性高中</td>
+<td>可做但收益受限</td>
+<td>同上①③④；且不得通过托管安排"直接或间接取得办学收益"（条例§13第3款），托管费定价公允性将被重点审查</td>
+</tr>
+<tr>
+<td>营利性幼儿园</td>
+<td>谨慎可做</td>
+<td>不得触碰学前教育法§35（上市公司禁入）；普惠园政府指导价</td>
+</tr>
+<tr>
+<td>义务教育（小学/初中）</td>
+<td><strong>整体委托管理模式基本不可行</strong></td>
+<td>见红线</td>
+</tr>
+<tr>
+<td>非营利性幼儿园</td>
+<td><strong>不可做控制型托管</strong></td>
+<td>见红线</td>
+</tr>
+</tbody>
+</table>
+<h3 id="p1-72">7.2 红线清单</h3>
+<ol>
+<li><strong>义务教育民办校</strong>：不得设立营利性（民促法§19）；不得被任何主体以兼并收购、协议控制等方式控制（条例§13末款）；<strong>不得发生任何关联交易</strong>（条例§45）——托管方收取管理费若构成关联方交易即违法，责任人可被没收违法所得并处1-5年直至<strong>永久行业禁入</strong>（条例§62(四)）。</li>
+<li><strong>非营利性幼儿园</strong>：同上被禁止兼并收购/协议控制（条例§13 + 学前教育法§35，已上升为法律）。</li>
+<li><strong>"全托管"≈出租出借办学许可证</strong>：司法实践认定合同无效，托管费不受保护，学校方还面临警告直至吊销许可证（民促法§62(七)）。</li>
+<li><strong>公办资源不得进入该模式</strong>：公办校不得委托民营企业管理（安徽2025口径）；不得以品牌输出获取收益（条例§7）；"公参民"不得新设、存量须切割或转公。</li>
+<li><strong>相互投资的特别风险</strong>：投资义务教育学校举办者股权即可能构成"实际控制"触发条例§13禁令；举办者法人的控股股东/实控人变更须备案公示（条例§12）；学校分立合并、举办者变更均为行政许可事项（民促法§53-54），不是纯商业交易。</li>
+<li><strong>隐性风险</strong>：目标学校未完成分类登记的，资产权属（划拨地、财政投入、捐赠资产）未厘清，投资估值与交割存在重大不确定性；"2026年底分类登记大限"传言未获官方证实，但地方（如广东2025-2026）正在收口，窗口期在收窄。</li>
+</ol>
+<h3 id="p1-73">7.3 对委托方的合作建议（合规视角）</h3>
+<ul>
+<li>与托管代理商的相互投资应<strong>避开义务教育学段与公办幼儿园、非营利性幼儿园的任何股权/协议控制安排</strong>；</li>
+<li>可探讨的结构：聚焦于<strong>营利性高中/中职</strong>的托管服务合作；SaaS 公司向学校（含义务教育学校）提供软件技术服务本身不属于被禁止行为，但若 SaaS 公司与托管代理商相互持股后形成对义务教育学校的"利益关联方"网络，则 SaaS 服务费也可能落入条例§45的关联交易审查甚至禁止范围——<strong>相互投资可能把委托方的存量义务教育 SaaS 业务拖入关联交易红线，这是本次合作最容易被忽视的风险点</strong>；</li>
+<li>交易前尽调：目标学校的学段属性、分类登记状态、是否涉"公参民"历史、现有托管合同条款（对照"全托管"无效要素）。</li>
+</ul>
+<hr/>
+<h2 id="p1-_7">信源清单表</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>信源</th>
+<th>URL</th>
+<th>档位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>中国政府网：《民办教育促进法实施条例》（国务院令第741号）全文</td>
+<td><a href="https://www.gov.cn/zhengce/content/2021-05/14/content_5606463.htm" rel="noopener noreferrer" target="_blank">https://www.gov.cn/zhengce/content/2021-05/14/content_5606463.htm</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>2</td>
+<td>教育部官网：《民办教育促进法实施条例》</td>
+<td><a href="https://www.moe.gov.cn/jyb_sjzl/sjzl_zcfg/zcfg_jyxzfg/202110/t20211029_575965.html" rel="noopener noreferrer" target="_blank">https://www.moe.gov.cn/jyb_sjzl/sjzl_zcfg/zcfg_jyxzfg/202110/t20211029_575965.html</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>3</td>
+<td>全国人大常委会：2016年修改民促法决定</td>
+<td><a href="http://www.npc.gov.cn/npc/c2/c30834/201905/t20190521_274231.html" rel="noopener noreferrer" target="_blank">http://www.npc.gov.cn/npc/c2/c30834/201905/t20190521_274231.html</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>4</td>
+<td>教育部：规范"公参民"学校部署通稿（2021-08-25）</td>
+<td><a href="https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202108/t20210825_554174.html" rel="noopener noreferrer" target="_blank">https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202108/t20210825_554174.html</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>5</td>
+<td>教育部：不再审批设立新的"公参民"学校（通知要点）</td>
+<td><a href="https://www.moe.gov.cn/jyb_xwfb/s5147/202108/t20210826_554390.html" rel="noopener noreferrer" target="_blank">https://www.moe.gov.cn/jyb_xwfb/s5147/202108/t20210826_554390.html</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>6</td>
+<td>人民网四川：八部门发文规范"公参民"学校（细则报道）</td>
+<td><a href="https://sc.people.com.cn/n2/2021/0826/c345515-34884661.html" rel="noopener noreferrer" target="_blank">https://sc.people.com.cn/n2/2021/0826/c345515-34884661.html</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>7</td>
+<td>《学前教育法》全文（主席令第34号，人民网河南转载）</td>
+<td><a href="http://henan.people.com.cn/BIG5/n2/2024/1128/c351638-41057098.html" rel="noopener noreferrer" target="_blank">http://henan.people.com.cn/BIG5/n2/2024/1128/c351638-41057098.html</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>8</td>
+<td>中国政府网：教育部就学前教育法答记者问</td>
+<td><a href="https://www.gov.cn/zhengce//202411/content_6986243.htm" rel="noopener noreferrer" target="_blank">https://www.gov.cn/zhengce//202411/content_6986243.htm</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>9</td>
+<td>教育部：2024年全国教育事业发展统计公报</td>
+<td><a href="https://www.moe.gov.cn/jyb_sjzl/sjzl_fztjgb/202506/t20250611_1193760.html" rel="noopener noreferrer" target="_blank">https://www.moe.gov.cn/jyb_sjzl/sjzl_fztjgb/202506/t20250611_1193760.html</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>10</td>
+<td>广东政务服务网：条例§45、§62行政处罚办事指南（引原文）</td>
+<td><a href="https://static.gdzwfw.gov.cn/portal/wk-pdf?code=11440204006955940R444021101W000&amp;template=guide-v2" rel="noopener noreferrer" target="_blank">https://static.gdzwfw.gov.cn/portal/wk-pdf?code=11440204006955940R444021101W000&amp;template=guide-v2</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>11</td>
+<td>南昌市教育局：现有民办学校分类登记工作方案（引江西省办法）</td>
+<td><a href="https://edu.nc.gov.cn/ncjyj/gfxwj/202310/c34cba1045d44d188b921009da9e27a7.shtml" rel="noopener noreferrer" target="_blank">https://edu.nc.gov.cn/ncjyj/gfxwj/202310/c34cba1045d44d188b921009da9e27a7.shtml</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>12</td>
+<td>广东省教育厅：民办高校分类管理改革配套文件征求意见公告（2025-11）</td>
+<td><a href="https://www.gd.gov.cn/hdjlpt/yjzj/answer/47281" rel="noopener noreferrer" target="_blank">https://www.gd.gov.cn/hdjlpt/yjzj/answer/47281</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>13</td>
+<td>安徽省政府公报：省教育厅规范义务教育集团化办学通知（皖教基〔2025〕2号）</td>
+<td><a href="https://www.ah.gov.cn/szf/zfgb/565448941.html" rel="noopener noreferrer" target="_blank">https://www.ah.gov.cn/szf/zfgb/565448941.html</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>14</td>
+<td>宿迁市政府：民办教育管理规定（2025-12-11）</td>
+<td><a href="https://suqian.gov.cn/zfb/zcfg/202512/4f4feeff0e5b4bcf889636755161eaf4.shtml" rel="noopener noreferrer" target="_blank">https://suqian.gov.cn/zfb/zcfg/202512/4f4feeff0e5b4bcf889636755161eaf4.shtml</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>15</td>
+<td>天津市人大：《天津市民办教育促进条例（修订草案）》及说明（2026-07）</td>
+<td><a href="https://www.tjrd.gov.cn/flfg/system/2026/07/22/030037532.shtml" rel="noopener noreferrer" target="_blank">https://www.tjrd.gov.cn/flfg/system/2026/07/22/030037532.shtml</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>16</td>
+<td>广州市教育局：穗教行复〔2017〕第1号行政复议决定书（转述承包协议无效判决）</td>
+<td><a href="https://jyj.gz.gov.cn/gk/xzfyjdgk/content/post_2583871.html" rel="noopener noreferrer" target="_blank">https://jyj.gz.gov.cn/gk/xzfyjdgk/content/post_2583871.html</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>17</td>
+<td>淄川法院"般阳法苑"：出借办学许可证合作协议效力认定（网易转载）</td>
+<td><a href="https://c.m.163.com/news/a/K8VGFAVJ0514IHS9.html" rel="noopener noreferrer" target="_blank">https://c.m.163.com/news/a/K8VGFAVJ0514IHS9.html</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>18</td>
+<td>君合律所：民促法实施条例正式公布解读</td>
+<td><a href="https://junhe.com/legal-updates/1455" rel="noopener noreferrer" target="_blank">https://junhe.com/legal-updates/1455</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>19</td>
+<td>君合律所：教育统计公报解读</td>
+<td><a href="https://www.junhe.com/legal-updates/2725" rel="noopener noreferrer" target="_blank">https://www.junhe.com/legal-updates/2725</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>20</td>
+<td>中国教师报（搜狐转载）："公参民"学校转公记（2025-07）</td>
+<td><a href="https://it.sohu.com/a/914313586_243614" rel="noopener noreferrer" target="_blank">https://it.sohu.com/a/914313586_243614</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>21</td>
+<td>上海市民办教育协会：民办中小学"大退潮"专家谈</td>
+<td><a href="http://www.shmbjy.org/detail24116.html" rel="noopener noreferrer" target="_blank">http://www.shmbjy.org/detail24116.html</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>22</td>
+<td>熊武林律师团队文集：委托管理与出租出借办学许可边界</td>
+<td><a href="https://xiongwulin.66law.cn/wenji_1583662.aspx" rel="noopener noreferrer" target="_blank">https://xiongwulin.66law.cn/wenji_1583662.aspx</a></td>
+<td>弱</td>
+</tr>
+<tr>
+<td>23</td>
+<td>"民教热讯"（马学雷）：辟谣"2026分类登记大限"</td>
+<td>（微信公众号文章，经搜索快照获取，无稳定URL）</td>
+<td>弱（作者为行业协会负责人）</td>
+</tr>
+<tr>
+<td>24</td>
+<td>三个皮匠报告：民办教育制度体系与发展现状</td>
+<td><a href="https://www.sgpjbg.com/news/6837772.html" rel="noopener noreferrer" target="_blank">https://www.sgpjbg.com/news/6837772.html</a></td>
+<td>弱（聚合站，数据已与教育部公报复核）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="p1-_8">数据缺口与存疑点</h2>
+<ol>
+<li><strong>"2026年底分类登记全国统一截止"未获官方证实</strong>：教育部官网无此文件，行业协会人士公开辟谣；但自媒体与部分行业报告言之凿凿。建议以教育部/各省教育厅正式文件为准持续跟踪。</li>
+<li><strong>委托管理合同纠纷的系统判例数据缺失</strong>：裁判文书网公开文书检索受限，本报告仅获取3起可核实案件+1起对照案例，样本不足以做统计推断；安徽中专案案号未披露，细节依赖律师文集（弱信源）。</li>
+<li><strong>各省对"民办学校委托管理备案/审批"的专门规定未形成统一口径</strong>：多数省份通过集团化办学、年检、关联交易审查间接监管，未检索到省级"托管合同强制备案"的普遍性规定；安徽、宿迁为点状样本，不能推及全国。</li>
+<li><strong>"实际控制"的认定标准无司法解释</strong>：条例§13的"协议控制""实际控制"如何界定（投票权？人事权？财务权？），无官方细则，执法裁量空间大——这本身即是风险。</li>
+<li><strong>民办义务教育政府购买学位政策对托管费定价的影响</strong>：2024年政府购买学位在校生514.86万人，接受政府购买学位的学校收费与成本受政府约束，托管费空间被进一步压缩，具体执行口径各省不一，未逐一核实。</li>
+</ol></article>
+</section>
+<section class="panel hidden" id="p2" role="tabpanel">
+<details class="toc" open=""><summary>本模块目录</summary><div class="toc">
+<ul>
+<li><a href="#p2-1">1. 概念界定与业态分类</a><ul>
+<li><a href="#p2-11">1.1 定义边界</a></li>
+<li><a href="#p2-12">1.2 主要业态分类</a></li>
+</ul>
+</li>
+<li><a href="#p2-2">2. 市场规模</a><ul>
+<li><a href="#p2-21">2.1 民办教育大盘（官方统计）</a></li>
+<li><a href="#p2-22">2.2 委托管理渗透率与市场规模测算</a></li>
+</ul>
+</li>
+<li><a href="#p2-3">3. 商业模式拆解</a><ul>
+<li><a href="#p2-31">3.1 收费结构</a></li>
+<li><a href="#p2-32">3.2 成本结构</a></li>
+<li><a href="#p2-33">3.3 盈利逻辑</a></li>
+</ul>
+</li>
+<li><a href="#p2-4">4. 行业发展历程与关键时间节点</a></li>
+<li><a href="#p2-5">5. 需求侧分析：谁在买托管服务</a></li>
+<li><a href="#p2-6">6. 供给侧分析：教育集团为什么做轻资产输出</a></li>
+<li><a href="#p2-7">7. 对委托方合作评估的初步启示（本模块视角）</a></li>
+<li><a href="#p2-_2">信源清单表</a></li>
+<li><a href="#p2-_3">数据缺口与存疑点</a></li>
+</ul>
+</div>
+</details>
+<article class="md-body"><h1 id="p2-_1">中国民办学校整体委托管理行业：行业大盘与商业模式</h1>
+<p><strong>模块</strong>：行业大盘与商业模式 | <strong>调研日期</strong>：2026年10月 | <strong>调研目的</strong>：为 AI 教育 SaaS 公司评估与"民办学校托管方"合作/相互投资提供行业底稿</p>
+<blockquote>
+<p>信源档位：<strong>【一手】</strong>政府统计/招股书/年报/官网；<strong>【二手】</strong>券商研报/行业报告/权威媒体；<strong>【估算】</strong>推算（含逻辑说明）。软文、加盟推广站一律降权并注明。</p>
+</blockquote>
+<hr/>
+<h2 id="p2-1">1. 概念界定与业态分类</h2>
+<h3 id="p2-11">1.1 定义边界</h3>
+<p><strong>"学校整体委托管理"（托管办学 / 教育管理输出）</strong>：拥有成熟教育品牌和管理体系的机构（托管方）接受学校举办者或地方政府的委托，对学校的日常运营进行全面管理，输出校长及管理团队、课程体系、教学质量监控、教师培训、招生策略等标准化服务，收取管理费/托管费，<strong>不承担学校资产投入与产权风险</strong>，属轻资产服务。【二手：招商证券、华西证券研报】</p>
+<p><strong>边界排除</strong>：
+- <strong>不覆盖"课后托管机构"</strong>（校外托育/晚托班，面向家庭按学期收取千元级代管费），与本调研的"整校委托管理"完全不同。
+- <strong>区别于单纯的品牌加盟/特许经营</strong>：特许授权只输出品牌与课程，不派驻管理团队；整体委托管理则派驻校长与核心团队、实质负责运营结果。
+- <strong>区别于"购买学位"</strong>：政府向民办校购买学位是财政购买就学名额，不涉及管理权转移（但常在同一县域合作语境中并存）。</p>
+<h3 id="p2-12">1.2 主要业态分类</h3>
+<table>
+<thead>
+<tr>
+<th>业态</th>
+<th>委托方</th>
+<th>服务内容</th>
+<th>收费方式</th>
+<th>代表案例</th>
+<th>档位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>① 整校委托运营（民办校）</td>
+<td>民办校举办者（地产商、国企、基金、地方城投）</td>
+<td>品牌+管理团队+课程+招生升学体系全输出</td>
+<td>品牌使用费（一次性/年度）+ 学费比例分成或利润分成</td>
+<td>平和教育托管光华中学（2024年6月到期"和平分手"）</td>
+<td>【二手：澎湃新闻】</td>
+</tr>
+<tr>
+<td>② 轻资产管理输出（县域民办/公办高中为主）</td>
+<td>县政府/教育局、学校举办者</td>
+<td>派驻5人左右管理团队，输出课程体系、教研、师训</td>
+<td>按学段按年固定管理费（小学/初中/高中约300/400/500万元/年）+ 质量目标奖励</td>
+<td>天立国际、海亮教育"明德兴教计划"</td>
+<td>【二手：招商/华泰/华西研报】</td>
+</tr>
+<tr>
+<td>③ 政府委托管理公办校 / 购买服务</td>
+<td>地方教育局（公办学校性质、经费机制不变）</td>
+<td>公民办教师轮岗、管理输出、教研共享</td>
+<td>财政预算支付的固定托管费</td>
+<td>上海世外托管嘉定云翔中小学（2022）、无锡新安中小学（2021）、徐汇康健外国语（2013起）；青浦教育局委托兰生中学管理思源小学/中学（2022）</td>
+<td>【一手：世外官网；二手：人民日报客户端、中新网、大湾区教育年度报告】</td>
+</tr>
+<tr>
+<td>④ 品牌授权（轻中之轻）</td>
+<td>学校举办者</td>
+<td>品牌使用+课程体系，不派驻完整团队</td>
+<td>品牌授权费</td>
+<td>天立特许早教中心模式（招股书）</td>
+<td>【一手：天立招股书】</td>
+</tr>
+<tr>
+<td>⑤ 课程+管理团队输出（部分托管）</td>
+<td>学校</td>
+<td>课程、教研、师训，不接管全面运营</td>
+<td>服务费/课程费</td>
+<td>海亮"海班慧""鸿儒教研"等科服产品</td>
+<td>【一手：海亮官网/公司资料】</td>
+</tr>
+</tbody>
+</table>
+<p>法律实务界将民办校委托管理归纳为5种类型：品牌与管理输出型（最常见）、风险共担型（保证金/"人头费"机制）、政府主导型（三方协议）、资本整合型、混合型；纠纷高发点集中在办学资质、权责划分、利益分配。【二手：顶端新闻转引教育法律师文章】</p>
+<hr/>
+<h2 id="p2-2">2. 市场规模</h2>
+<h3 id="p2-21">2.1 民办教育大盘（官方统计）</h3>
+<p>《2024年全国教育事业发展统计公报》（教育部，2025-06-11发布）【一手】：</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>数值</th>
+<th>占比</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>各级各类民办学校总数</td>
+<td><strong>15.28万所</strong>（较上年减少约1.44万所）</td>
+<td>占全国学校总数 32.52%</td>
+</tr>
+<tr>
+<td>民办学校在校生</td>
+<td><strong>4621.59万人</strong></td>
+<td>占全国在校生 16.13%</td>
+</tr>
+<tr>
+<td>民办幼儿园</td>
+<td>13.55万所 / 在园幼儿1508.00万</td>
+<td>园数占53.48%</td>
+</tr>
+<tr>
+<td><strong>民办义务教育阶段学校</strong></td>
+<td><strong>9,576所 / 在校生1,105.95万</strong>（含政府购买学位514.86万）</td>
+<td>校数占义务教育学校5.08%</td>
+</tr>
+<tr>
+<td><strong>民办普通高中</strong></td>
+<td><strong>4,819所 / 在校生588.49万</strong></td>
+<td>校数占普通高中30.59%，在校生占20.14%</td>
+</tr>
+<tr>
+<td>民办中职</td>
+<td>2,100所 / 244.18万</td>
+<td>—</td>
+</tr>
+<tr>
+<td>民办高校</td>
+<td>803所 / 本专科在校生1,052.24万</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>K12口径（小学+初中+高中）民办校合计约1.44万所，是本行业核心标的池。</strong> 公办中小学约21万所（2023年：小学14.35万+初中5.23万+高中1.54万）是政府委托管理的潜在标的池。【一手：教育部公报；二手：华泰研报引2023年数据】</p>
+<h3 id="p2-22">2.2 委托管理渗透率与市场规模测算</h3>
+<p><strong>渗透率：未找到官方或弗若斯特沙利文级别的权威渗透率数据。</strong> 可用侧面数据：</p>
+<ul>
+<li>主要参与者托管学校合计约200所（海亮约111–141所、上海世外约48所、爱立诚6所、嘉祥3所等），按华泰证券"有托管需求学校约2,112所"的假设，<strong>CR合计市占率不足10%，市场处于早期蓝海</strong>。【二手：华泰证券研报（经三个皮匠转载，降权参考）】</li>
+<li>海亮教育综合管理服务：截至2024年3月覆盖全国19省44市64县<strong>111所学校</strong>、服务学生超19万【二手：大湾区教育年度报告】；截至2025年11月覆盖23省88县、<strong>服务学校178所</strong>、派驻管理团队90余个、惠及学生28.8万【二手：人民网】。公司宣传资料另有"260余所学校"口径（2025年，含轻服务），口径不一，见存疑点。</li>
+</ul>
+<p><strong>市场规模公开测算（均为假设驱动的量级估计，非机构正式口径）</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>测算方</th>
+<th>核心假设</th>
+<th>测算结果</th>
+<th>档位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>华泰证券</td>
+<td>全国21.12万所公办中小学中长尾1%有托管需求（2,112所）×每校2学段×每学段300万元/年</td>
+<td><strong>约127亿元/年</strong></td>
+<td>【估算（券商假设）】</td>
+</tr>
+<tr>
+<td>华西证券</td>
+<td>每个地级市2所学校×2-3学段×每学段400-500万元/年</td>
+<td><strong>约60–90亿元/年</strong></td>
+<td>【估算（券商假设）】</td>
+</tr>
+<tr>
+<td>第三方股票分析（KoalaGains，可信度低）</td>
+<td>民办校学费总收入×管理费率3-8%</td>
+<td>民办K12管理服务费市场政策前约100–200亿元</td>
+<td>【估算，低权重，仅作区间参照】</td>
+</tr>
+<tr>
+<td>弗若斯特沙利文（成实外2017年报引用）</td>
+<td>民办基础教育行业总收益（非托管口径）</td>
+<td>2016年2,416亿元→2021年预测4,665亿元</td>
+<td>【二手：年报引弗若斯特沙利文，但为民办教育大盘而非托管细分】</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>注意</strong>：未检索到弗若斯特沙利文/灼识针对"民办学校委托管理"细分市场的独立公开测算。现有量化均为券商情景假设，实际当前市场收入规模远小于潜在空间——以头部公司推算：天立FY25托管收入预测约1.32亿元（华泰），全行业当前实际收入量级估计在10–30亿元区间【估算：头部3-4家合计托管校约200-400所×单校年托管费300-1000万元】。</p>
+</blockquote>
+<hr/>
+<h2 id="p2-3">3. 商业模式拆解</h2>
+<h3 id="p2-31">3.1 收费结构</h3>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>收费水平</th>
+<th>适用场景</th>
+<th>档位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>固定管理费（按学段/年）</td>
+<td>小学约300万、初中约400万、高中约500万元/年（天立口径）；单学段均价约400万元</td>
+<td>公办托管（财政预算拨款）、县域托管</td>
+<td>【二手：招商证券】</td>
+</tr>
+<tr>
+<td>固定管理费+绩效奖励</td>
+<td>基础托管费+按约定质量目标（升学率等）完成情况收取奖励费</td>
+<td>公办/民办托管</td>
+<td>【二手：华泰证券】</td>
+</tr>
+<tr>
+<td>学费比例分成</td>
+<td>学校所有方每年按学费一定比例支付给托管方作为管理佣金（参考区间3-8%，来源可信度低）</td>
+<td>民办整校托管（国际化学校常见）</td>
+<td>【估算：澎湃+KoalaGains，低权重】</td>
+</tr>
+<tr>
+<td>利润分成</td>
+<td>民办托管下与举办者按约定比例分成办学结余</td>
+<td>民办校托管（天立民办托管线）</td>
+<td>【二手：招商证券】</td>
+</tr>
+<tr>
+<td>品牌授权费</td>
+<td>一次性大额品牌使用费+年度费用</td>
+<td>"大品牌+托管"模式</td>
+<td>【二手：澎湃新闻】</td>
+</tr>
+<tr>
+<td>"人头费"/保证金（反向）</td>
+<td>托管方按每生学费固定比例上交所有方，或缴纳履约保证金</td>
+<td>风险共担型</td>
+<td>【二手：澎湃/顶端新闻】</td>
+</tr>
+</tbody>
+</table>
+<h3 id="p2-32">3.2 成本结构</h3>
+<ul>
+<li><strong>主要成本为派驻团队人力</strong>：典型配置为每校5人左右核心管理团队（校长、教务主任等），托管方承担其薪酬。【二手：华泰研报】</li>
+<li>集团层面分摊：课程体系研发、师训体系、品牌、督导。</li>
+<li><strong>无校舍资本开支、无折旧摊销</strong>（对比自建学校单校资本开支约2.5–5亿元；天立自建约3.5亿元/4,300学额）。【二手：华西研报】</li>
+</ul>
+<h3 id="p2-33">3.3 盈利逻辑</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>数据</th>
+<th>档位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>天立托管业务毛利率</td>
+<td>50%–60%</td>
+<td>【二手：招商证券】</td>
+</tr>
+<tr>
+<td>天立FY23托管净利率</td>
+<td>约57%（FY23托管收入0.39–0.40亿元）</td>
+<td>【二手：华西/招商证券】</td>
+</tr>
+<tr>
+<td>天立FY23–FY25托管扩张</td>
+<td>FY23托管7校→FY25初托管18所、33个学段，意向储备100+个</td>
+<td>【二手：招商/华泰】</td>
+</tr>
+<tr>
+<td>天立托管收入预测</td>
+<td>FY25–27：1.32/2.92/4.12亿元（华泰）；FY24–27管理及特许费0.71/1.91/3.03/4.11亿元（国泰君安）</td>
+<td>【估算：券商预测】</td>
+</tr>
+<tr>
+<td>海亮历史参照</td>
+<td>2017年通过轻资产协议一次性纳入十余所运营管理学校，控制/运营达23所、学生55,733人；FY2017后净利润年均增速36%+（疫情年除外）</td>
+<td>【二手：南方+】</td>
+</tr>
+</tbody>
+</table>
+<p><strong>盈利逻辑总结</strong>：托管业务本质是把已验证的办学体系（品牌+课程+管理SOP+升学渠道）以接近零边际资本投入的方式复制，收入稳定（多年期合同）、净利率显著高于自营校；对集团还有三重战略价值——打通小初高生源输送、低成本进入新城市建立口碑、为课程/信息化/后勤等"多支业务"打开渗透空间。【二手：华泰证券】</p>
+<hr/>
+<h2 id="p2-4">4. 行业发展历程与关键时间节点</h2>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>事件</th>
+<th>行业影响</th>
+<th>档位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2016-11</td>
+<td>《民办教育促进法》修订通过（2017-09-01施行）</td>
+<td>确立营利/非营利分类管理；<strong>不得设立实施义务教育的营利性民办学校</strong>——义务教育学费不能直接并表，教育集团转而通过VIE+服务费协议获取收益</td>
+<td>【一手】</td>
+</tr>
+<tr>
+<td>2017</td>
+<td>海亮教育与海亮集团签约，轻资产托管十余所关联学校</td>
+<td>上市教育集团"轻资产化"先声：以运营管理服务费替代学费并表</td>
+<td>【二手：南方+】</td>
+</tr>
+<tr>
+<td>2018-04</td>
+<td>民促法实施条例修订草案公开征求意见</td>
+<td>市场首次预警收紧</td>
+<td>【一手】</td>
+</tr>
+<tr>
+<td>2018-08</td>
+<td>司法部发布《送审稿》</td>
+<td>"集团化办学不得通过兼并收购、加盟连锁、协议控制等方式控制非营利性民办学校"引发行业震动，港股教育股大跌；重资产并购模式逻辑动摇</td>
+<td>【一手】</td>
+</tr>
+<tr>
+<td>2018-11</td>
+<td>中央深改委学前教育新规</td>
+<td>民办园不得打包上市，学前并购通道关闭</td>
+<td>【一手】</td>
+</tr>
+<tr>
+<td>2021-04-07签署 / 05-14公布 / <strong>2021-09-01施行</strong></td>
+<td>《民办教育促进法实施条例》（国务院令第741号）</td>
+<td><strong>任何组织和个人不得通过兼并收购、协议控制等方式控制义务教育民办学校；义务教育民办学校不得与利益关联方交易</strong>；公办学校不得仅以品牌输出方式参与办学。VIE并表模式终结</td>
+<td>【一手：司法部答记者问】</td>
+</tr>
+<tr>
+<td>2021-09</td>
+<td>海亮教育剥离11所义务教育学校（捐赠公益基金会）、确认减值2.52亿元，后完成私有化退市（约3.7亿美元）；同月首次托管公办高中（山东龙口一中崇实学部、云南景东一中），启动"明德兴教计划"转型县域托管</td>
+<td><strong>标志性转型案例：从重资产办学集团→教育科技服务/托管服务商</strong></td>
+<td>【一手：年报/公司公告；二手：南方+、百度百科】</td>
+</tr>
+<tr>
+<td>2021-09起</td>
+<td>博实乐、枫叶、成实外等港股/美股教育集团普遍剥离或失去K9学校控制权</td>
+<td>行业集体转向：高中自营+托管输出+职业教育+海外</td>
+<td>【二手：综合】</td>
+</tr>
+<tr>
+<td>2022–2024</td>
+<td>托管向"学区化、县域整体托管"升级：海亮两年服务19省44市64县111校；世外托管上海嘉定、无锡新吴公办校；青浦教育局委托兰生中学管公办校</td>
+<td>需求主力从民办校扩展到<strong>地方政府购买服务托管公办校</strong></td>
+<td>【二手】</td>
+</tr>
+<tr>
+<td>2023–2025</td>
+<td>天立托管7校→18校33学段、意向100+；海亮科服2025年覆盖23省88县178所学校</td>
+<td>托管成为上市教育集团"第二增长曲线"，行业进入加速期</td>
+<td>【二手：券商研报、人民网】</td>
+</tr>
+</tbody>
+</table>
+<p><strong>主线</strong>：2016修法打开分类管理→资本借VIE+服务费变现→2018送审稿预警→2021实施条例封堵义务教育资本化→<strong>教育集团从重资产并购/并表全面转向轻资产管理输出</strong>，托管由"并表工具"演变为独立商业模式。</p>
+<hr/>
+<h2 id="p2-5">5. 需求侧分析：谁在买托管服务</h2>
+<table>
+<thead>
+<tr>
+<th>买方类型</th>
+<th>动因</th>
+<th>典型场景</th>
+<th>档位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>地方政府/教育局（公办校托管）</strong></td>
+<td>提升县域中高考成绩、补齐优质教育资源短板；低线城市教育经费与质量错配（2022年地市高中生均经费：东部发达4-6万元 vs 广西河南等约1.2万元）；公办校"不得仅以品牌输出参与办学"反而给专业教育管理公司腾出空间</td>
+<td>县中振兴、新建公办校高起点办学；天立公办托管线（本科率83.5% vs 四川省43%的升学落差是核心卖点）</td>
+<td>【二手：华西/招商研报】</td>
+</tr>
+<tr>
+<td><strong>缺乏办学能力的学校所有方</strong></td>
+<td>地产商、国企、城投、基金有资金场地但无教育基因，需要品牌+管理体系+招生升学渠道保障办学成功</td>
+<td>地方城投新建国际学校委托知名教育集团</td>
+<td>【二手：澎湃/顶端新闻】</td>
+</tr>
+<tr>
+<td><strong>新建校/转型校</strong></td>
+<td>无毕业生记录、家长信任难建立，借成熟品牌快速起量</td>
+<td>平和托管光华模式</td>
+<td>【二手：澎湃】</td>
+</tr>
+<tr>
+<td><strong>县域民办校</strong></td>
+<td>民办义务教育占比被压缩（民办义务教育校仅占5.08%）、独立生存空间收窄，需要引入体系对抗公办竞争或应对规范要求</td>
+<td>县域K12、民办高中</td>
+<td>【一手：公报+推算】</td>
+</tr>
+<tr>
+<td><strong>乡村/薄弱校（公益+政策驱动）</strong></td>
+<td>乡村教育振兴、浙江山区26县、革命老区政策资源</td>
+<td>海亮"明德兴教""森林计划"</td>
+<td>【二手：人民网】</td>
+</tr>
+</tbody>
+</table>
+<p><strong>需求驱动因素归纳</strong>：①教育资源区域错配（根本动因）；②"县中塌陷"与地方政府升学政绩压力；③民办校规范整治后中小举办者生存能力不足；④新建校冷启动难题；⑤政策鼓励义务教育优质均衡（托管被官方认可为均衡化工具——《2022-2023全国民办义务教育发展年度报告》明确肯定该模式）。</p>
+<hr/>
+<h2 id="p2-6">6. 供给侧分析：教育集团为什么做轻资产输出</h2>
+<ol>
+<li><strong>规避义务教育并购与并表限制（首要动因）</strong>：2021实施条例禁止并购/协议控制义务教育民办校、禁止K9关联交易，重资产扩张和VIE变现通道关闭，管理费模式成为<strong>唯一合规的规模化变现路径</strong>（对非营利高中、公办校托管不在被禁之列）。【一手：条例条文】</li>
+<li><strong>现金流与资本效率</strong>：无资本开支（vs 自建单校2.5-5亿元）、扩张不受资金约束、净利率50%+、ROE高，且收入为多年期合同、抗周期。【二手：华西/华泰】</li>
+<li><strong>品牌与体系变现</strong>：20余年积累的办学SOP、课程、师训、升学渠道是沉没的体系资产，托管将其边际成本近乎零地复制变现。</li>
+<li><strong>生源与生态战略</strong>：托管校成为高中部生源池（天立小-初-高输送）、新课程/信息化产品的试验田与销售渠道——<strong>对委托方（AI教育SaaS）的启示：托管方天然是其 SaaS 产品的渠道与落地场景</strong>。【二手：华泰+分析】</li>
+<li><strong>政策合法性</strong>：托管公办校契合义务教育优质均衡与县中振兴的国家叙事，获得政府关系与公益声誉回报。</li>
+</ol>
+<hr/>
+<h2 id="p2-7">7. 对委托方合作评估的初步启示（本模块视角）</h2>
+<ul>
+<li>托管方（教育管理公司）手握数十至上百所学校的<strong>实质运营决策权</strong>，是 SaaS 产品进入学校的高效渠道，渠道价值真实存在。</li>
+<li>但行业当前实际收入体量小（估算10-30亿元级）、渗透率极低、格局未定；头部托管方（海亮、天立、世外）均背靠大型集团，<strong>独立中小托管方的持续经营能力与合规性需逐案尽调</strong>（委托管理纠纷高发：权责、利益分配、资质问题）。</li>
+<li>政策风险点：义务教育段托管的收费合规性（公办托管费须走财政购买服务程序；民办K9托管费安排须避免触碰关联交易禁令）。</li>
+</ul>
+<hr/>
+<h2 id="p2-_2">信源清单表</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>信源</th>
+<th>URL</th>
+<th>档位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>教育部《2024年全国教育事业发展统计公报》</td>
+<td><a href="https://www.moe.gov.cn/jyb_sjzl/sjzl_fztjgb/202506/t20250611_1193760.html" rel="noopener noreferrer" target="_blank">https://www.moe.gov.cn/jyb_sjzl/sjzl_fztjgb/202506/t20250611_1193760.html</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>2</td>
+<td>司法部/教育部就《民促法实施条例》修订答记者问</td>
+<td><a href="https://www.moj.gov.cn/pub/sfbgw/zwxxgk/fdzdgknr/fdzdgknrjdhy/202105/t20210516_392923.html" rel="noopener noreferrer" target="_blank">https://www.moj.gov.cn/pub/sfbgw/zwxxgk/fdzdgknr/fdzdgknrjdhy/202105/t20210516_392923.html</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>3</td>
+<td>天立教育招股书（申请版本，港交所，2018，含弗若斯特沙利文行业口径）</td>
+<td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2018/0712/ltn20180712101_c.pdf" rel="noopener noreferrer" target="_blank">https://www1.hkexnews.hk/listedco/listconews/sehk/2018/0712/ltn20180712101_c.pdf</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>4</td>
+<td>海亮集团2023年公司债券年报（教育板块模式与剥离说明，上交所）</td>
+<td><a href="https://static.sse.com.cn/disclosure/bond/announcement/company/c/new/2024-04-30/188893_20240430_0EJ6.pdf" rel="noopener noreferrer" target="_blank">https://static.sse.com.cn/disclosure/bond/announcement/company/c/new/2024-04-30/188893_20240430_0EJ6.pdf</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>5</td>
+<td>上海世外教育集团官网（托管公办历程）</td>
+<td><a href="https://www.shwfl.edu.cn/about" rel="noopener noreferrer" target="_blank">https://www.shwfl.edu.cn/about</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>6</td>
+<td>博实乐官网/百度百科（服务园校数）</td>
+<td><a href="https://www.brightscholar.com/about_us.html" rel="noopener noreferrer" target="_blank">https://www.brightscholar.com/about_us.html</a></td>
+<td>一手（官网口径）</td>
+</tr>
+<tr>
+<td>7</td>
+<td>华泰证券研报（托管市场空间127亿测算，经三个皮匠转载）</td>
+<td><a href="https://www.sgpjbg.com.cn/labels/shimeshixuexiaotuoguanyewuyunzuomoshishishimeminbanjiaoyujituanqingzichanzhuanxingfenxi/1/7003217.html" rel="noopener noreferrer" target="_blank">https://www.sgpjbg.com.cn/labels/shimeshixuexiaotuoguanyewuyunzuomoshishishimeminbanjiaoyujituanqingzichanzhuanxingfenxi/1/7003217.html</a></td>
+<td>二手（转载，降权）</td>
+</tr>
+<tr>
+<td>8</td>
+<td>招商证券天立首次覆盖（托管费率、公办/民办托管模式）</td>
+<td><a href="https://bg.sgpjbg.com/labels/xuexiaotuoguanyewushishime/1/7075808.html" rel="noopener noreferrer" target="_blank">https://bg.sgpjbg.com/labels/xuexiaotuoguanyewushishime/1/7075808.html</a></td>
+<td>二手（转载，降权）</td>
+</tr>
+<tr>
+<td>9</td>
+<td>华西证券（托管办学定义、60-90亿测算、FY23净利率57%）</td>
+<td><a href="https://www.sgpjbg.com/labelsyh/shimeshituoguanbanxue/1/7084989.html" rel="noopener noreferrer" target="_blank">https://www.sgpjbg.com/labelsyh/shimeshituoguanbanxue/1/7084989.html</a></td>
+<td>二手（转载，降权）</td>
+</tr>
+<tr>
+<td>10</td>
+<td>国泰君安天立报告（托管收入预测）</td>
+<td><a href="https://www.sgpjbg.com.cn/labels/jiaoyutuoguanshishime/1/7063825.html" rel="noopener noreferrer" target="_blank">https://www.sgpjbg.com.cn/labels/jiaoyutuoguanshishime/1/7063825.html</a></td>
+<td>二手（转载，降权）</td>
+</tr>
+<tr>
+<td>11</td>
+<td>澎湃新闻《揭秘学校托管的"三角关系"》</td>
+<td><a href="https://thepaper.cn/newsDetail_forward_26236246" rel="noopener noreferrer" target="_blank">https://thepaper.cn/newsDetail_forward_26236246</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>12</td>
+<td>南方+《民办学校上市公司转向轻资产运营：海亮教育"放弃"六成自有学校》</td>
+<td><a href="https://static.nfnews.com/content/202111/25/c5973605.html" rel="noopener noreferrer" target="_blank">https://static.nfnews.com/content/202111/25/c5973605.html</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>13</td>
+<td>顶端新闻《民办学校委托管理：5种常见类型+4大纠纷诱因》</td>
+<td><a href="http://www.topnews.cn/news/145DDFE548BE4478" rel="noopener noreferrer" target="_blank">http://www.topnews.cn/news/145DDFE548BE4478</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>14</td>
+<td>《2022-2023全国民办义务教育发展年度报告》（含海亮111校口径、公民办托管特征）</td>
+<td><a href="https://www.dwqedu.com/show-40.html" rel="noopener noreferrer" target="_blank">https://www.dwqedu.com/show-40.html</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>15</td>
+<td>人民日报客户端《上海世外教育集团托管公办嘉定云翔中小学》</td>
+<td><a href="https://www.peopleapp.com/rmharticle/30027163082" rel="noopener noreferrer" target="_blank">https://www.peopleapp.com/rmharticle/30027163082</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>16</td>
+<td>中新网《无锡新吴沪上引智》（世外托管公办新安中小学）</td>
+<td><a href="https://m.chinanews.com/wap/detail/chs/zw/190009.shtml" rel="noopener noreferrer" target="_blank">https://m.chinanews.com/wap/detail/chs/zw/190009.shtml</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>17</td>
+<td>人民网《海亮科服入围人民社会责任案例》（178所/28.8万学生口径）</td>
+<td><a href="https://zj.people.com.cn/BIG5/n2/2025/1102/c370990-41398952.html" rel="noopener noreferrer" target="_blank">https://zj.people.com.cn/BIG5/n2/2025/1102/c370990-41398952.html</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>18</td>
+<td>中伦/国浩律所条例解读</td>
+<td><a href="https://www.zhonglun.com/research/articles/8508.html" rel="noopener noreferrer" target="_blank">https://www.zhonglun.com/research/articles/8508.html</a> 等</td>
+<td>二手</td>
+</tr>
+<tr>
+<td>19</td>
+<td>成实外教育2017年报（引弗若斯特沙利文民办基础教育规模）</td>
+<td><a href="http://pdf.dfcfw.com/pdf/H2_AN201804271132318648_1.pdf" rel="noopener noreferrer" target="_blank">http://pdf.dfcfw.com/pdf/H2_AN201804271132318648_1.pdf</a></td>
+<td>一手（年报）</td>
+</tr>
+<tr>
+<td>20</td>
+<td>KoalaGains（博实乐第三方学校管理市场估算，可信度低）</td>
+<td><a href="http://koalagains.com/stocks/NYSE/BEDU" rel="noopener noreferrer" target="_blank">http://koalagains.com/stocks/NYSE/BEDU</a></td>
+<td>估算（低权重）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="p2-_3">数据缺口与存疑点</h2>
+<ol>
+<li><strong>无权威细分市场规模</strong>：未找到弗若斯特沙利文/灼识对"民办学校委托管理"市场的独立公开测算，现有60-90亿/127亿均为券商情景假设，不可当作实际市场规模。建议向弗若斯特沙利文/灼识购买定制数据。</li>
+<li><strong>渗透率无公开数据</strong>：托管学校总数无官方统计，"主要玩家合计约200所、市占率&lt;10%"来自券商推算。</li>
+<li><strong>海亮服务学校数口径冲突</strong>：111所（2024.3，县域综合管理服务口径）/178所（2025.11人民网）/"260余所"（2025公司宣传资料，疑含轻量服务与产品客户），主体口径不一致，引用时须注明。</li>
+<li><strong>托管费占学费比例的权威区间缺失</strong>：3-8%仅为低可信来源估算；固定费模式（300-500万/学段）有招商证券背书但样本集中于天立。</li>
+<li><strong>天立/海亮最新托管数据</strong>多为2024-2025券商或媒体口径，天立FY2025年报原文未直接核验（本调研经转载获取）。</li>
+<li><strong>民办校托管 vs 公办托管的收入结构占比</strong>全行业无公开拆分。</li>
+</ol></article>
+</section>
+<section class="panel hidden" id="p3" role="tabpanel">
+<details class="toc" open=""><summary>本模块目录</summary><div class="toc">
+<ul>
+<li><a href="#p3-tldr">一、核心结论（TL;DR）</a></li>
+<li><a href="#p3-_2">二、玩家分类全景</a><ul>
+<li><a href="#p3-21-a-k12">2.1 A 类：上市/曾上市民办教育集团的管理输出业务（K12 为主）</a></li>
+<li><a href="#p3-22-b">2.2 B 类：高校附属基础教育集团（合作办学）</a></li>
+<li><a href="#p3-23-c">2.3 C 类：专业第三方民办校托管/管理公司（非上市区域玩家）</a></li>
+<li><a href="#p3-24-d">2.4 D 类：其他背景玩家</a></li>
+</ul>
+</li>
+<li><a href="#p3-k12">三、标杆深拆：海亮教育（重资产 K12 → 轻资产管理输出）</a></li>
+<li><a href="#p3-_3">四、风险样本：暴雷/收缩案例</a><ul>
+<li><a href="#p3-41-bright-scholar-nysebedu">4.1 博实乐（Bright Scholar，原 NYSE:BEDU）——退市</a></li>
+<li><a href="#p3-42-1317hk">4.2 枫叶教育（1317.HK）——债务违约 + 长期停牌</a></li>
+<li><a href="#p3-43-6068hk">4.3 光正教育（6068.HK，即原睿见教育）——持续收缩</a></li>
+<li><a href="#p3-44">4.4 非上市托管/合作办学爆雷样本</a></li>
+</ul>
+</li>
+<li><a href="#p3-20252026">五、格局判断（2025–2026）</a></li>
+<li><a href="#p3-_4">六、信源清单表</a></li>
+<li><a href="#p3-_5">七、数据缺口与存疑点</a></li>
+</ul>
+</div>
+</details>
+<article class="md-body"><h1 id="p3-_1">民办校整体委托管理行业竞争格局：玩家清单与画像</h1>
+<ul>
+<li>模块编号：03（竞争格局——玩家清单与画像）</li>
+<li>调研日期：2026-10-08</li>
+<li>委托背景：AI 教育 SaaS 公司（客户为中国民办 K12 学校）评估其代理商（民办校整体委托管理方）合作/相互投资对象的行业地位</li>
+<li>信源档位标注：【一手】= 年报/招股书/公告/官网/政府网站；【二手】= 权威媒体/券商研报；【估算】= 推算并注明逻辑；【D-待核】= 商业媒体/聚合站，仅作线索</li>
+</ul>
+<hr/>
+<h2 id="p3-tldr">一、核心结论（TL;DR）</h2>
+<ol>
+<li><strong>行业在 2021 年《民促法实施条例》后完成了一次"强制性出清 + 被动转型"</strong>：义务教育段民办学校不得被协议控制/关联交易，上市 K12 集团集体剥离义务教育学校，幸存者把"管理输出/托管"从附属业务升级为主业或第二曲线。2025–2026 年行业处于<strong>结构性出清后期、轻资产业务局部扩张</strong>阶段：重资产办学继续收缩（枫叶、博实乐、光正），而县域公办学校托管/综合管理服务和营利性高中托管在扩张（海亮、天立）。</li>
+<li><strong>格局高度分散、头部刚刚成形</strong>。按"托管/管理输出学校数"排，海亮教育科技服务集团（县域综合管理服务约 178 所学校，2025 年）【二手】和北师大教育集团（合作办学学校约 70–80 所）【一手】是最大的两个管理输出方，但两者商业模式、客户（公办 vs 民办）差异极大；上市公司中天立国际托管 23 所学校/40 个学段（2025 年秋）【二手】、成实外教育管理项下 13 所学校【一手】，体量小一个数量级。腰尾部是大量无公开数据的区域性第三方托管公司，纠纷高发。</li>
+<li><strong>风险样本密集</strong>：博实乐 2025 年 12 月私有化退市【二手】；枫叶教育可转债违约、无法汇出资金赎回、长期停牌【一手公告】；光正教育（原睿见教育）收入三年复合 -22%【一手】；非上市层面出现一土致知学校资金链断裂（2025 年底）【二手】等托管/合作办学爆雷。<strong>对委托方的含义：评估托管方合作对象时，"持续经营能力 + 资金监管"应作为一票否决项。</strong></li>
+</ol>
+<hr/>
+<h2 id="p3-_2">二、玩家分类全景</h2>
+<h3 id="p3-21-a-k12">2.1 A 类：上市/曾上市民办教育集团的管理输出业务（K12 为主）</h3>
+<table>
+<thead>
+<tr>
+<th>公司</th>
+<th>上市状态（2026-10）</th>
+<th>托管/管理输出校数（口径）</th>
+<th>覆盖区域</th>
+<th>合作模式</th>
+<th>收费水平</th>
+<th>最新财务</th>
+<th>状态备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>海亮教育科技服务集团</strong>（原纳斯达克 HLG）</td>
+<td>2021 年私有化退市，非上市【二手】</td>
+<td>县域综合管理服务 <strong>178 所学校</strong>、23 省 88 县（截至 2025 年 7 月）【二手：腾讯新闻/人民网】；官网口径"合作学校 177 所、24 省 99 区县"（截至 2025 年）【一手：官网】；对政府自荐口径"26 省 112 县 240 余所学校"（2026 年，含"管理和服务"，口径最宽）【一手：政府网站留言】</td>
+<td>全国 23–26 省，以中西部县域为主</td>
+<td>向公办县域学校派驻管理团队（90+ 团队、240+ 人），整校托管/县域教育生态共建；不改学校性质</td>
+<td>未披露</td>
+<td>非上市无公开报表；退市前 FY2021 营收 13.76 亿元【二手：百度百科引年报】</td>
+<td>见第四部分深拆</td>
+</tr>
+<tr>
+<td><strong>天立国际</strong>（1773.HK）</td>
+<td>港股上市</td>
+<td>托管 <strong>18 所学校/40 个学段</strong>（FY2025 末，FY2024 为 10 所）；2025 年秋季已签约 <strong>23 所学校</strong>【二手：国信/华西研报、公司业绩】</td>
+<td>校网遍布川、蒙、鲁、豫、冀、黔、赣、浙、滇、甘、皖、桂、粤、陕、沪、渝、鄂 36 城【一手：年报】</td>
+<td>"自营+托管双渠道"；向第三方学校输出教学管理，收管理及特许经营费</td>
+<td>FY2025 管理及特许经营费收入 <strong>1.16 亿元</strong>（+93.9%）；单校收费约 644 万元/年、单学段约 289 万元/年【二手：华西证券测算】</td>
+<td>FY2025（截至 2025-08-31）收入 35.89 亿元 +8.1%，净利 6.48 亿元 +16.5%【一手：年报】</td>
+<td>上市公司中托管扩张最激进者，规划"每年新增约 20 个学段"【二手】</td>
+</tr>
+<tr>
+<td><strong>成实外教育</strong>（1565.HK）</td>
+<td>港股上市</td>
+<td>自有学校 15 所（高中 7、大学 2、非学历 5、美国 1）；<strong>教育管理服务项下学校 13 所</strong>（高中 1、幼儿园 7、K9 2、K12 1、初高中 2，截至 2025-08-31）【一手：年报】</td>
+<td>四川为主</td>
+<td>教育管理及咨询服务</td>
+<td>教育管理及咨询服务费收入 2161 万元（-0.6%）【一手：年报】</td>
+<td>FY2025 收入 10.84 亿元 +13.5%，归母净利 5770 万元 +28.2%；杠杆率 249%（偏高）【一手：年报】</td>
+<td>管理服务收入占比仅约 2%，仍以重资产为主</td>
+</tr>
+<tr>
+<td><strong>枫叶教育</strong>（1317.HK）</td>
+<td>港股上市，<strong>长期停牌中</strong>（2026 年 8–9 月公告"续停牌"）【一手：公司公告】</td>
+<td>自营 27 所（中国 19、海外 8，截至 2026-02-28）【一手：2026 中报】；轻资产为"枫叶世界学校课程授权"：土耳其 1 所、蒙古 1 所、国内 2 所采纳课程【一手：中报】</td>
+<td>中国+新加坡+马来西亚</td>
+<td>从"自建金字塔"转"倒金字塔"：高中 + 课程授权 + 大学衔接</td>
+<td>未披露</td>
+<td>H1 FY2026 收入 5.63 亿元 -11.2%，净利 1.18 亿元；总借款 14.5 亿元【一手：中报】</td>
+<td>见第五部分风险样本</td>
+</tr>
+<tr>
+<td><strong>光正教育</strong>（6068.HK，原名<strong>睿见教育</strong>，2022 年前后更名）</td>
+<td>港股上市</td>
+<td>已无义务教育学校并表；转型"学校供应链 + 综合教育服务"，旗下运营基础教育学校近 20 所（粤/鲁/川/辽/闽）【二手：腾讯新闻引官网】；筹建中山高中（5000 学位）【一手：年报】</td>
+<td>广东为主</td>
+<td>分拆高中独立持牌 + 供应链/综合教育服务</td>
+<td>未披露</td>
+<td>FY2025 收入 1.31 亿元 -27.7%，净利 3830 万元 -60.3%；三年收入复合 -22.2%【一手：年报】</td>
+<td>即检索目标中的"睿见教育"，同一家公司</td>
+</tr>
+<tr>
+<td><strong>宇华教育</strong>（6169.HK）</td>
+<td>港股上市</td>
+<td><strong>基本无 K12 托管业务</strong>；现有 9 所学校 = 4 所大学/职业学院 + 5 所高中（截至 2025-08-31）【一手：年报】</td>
+<td>河南、湖南、山东</td>
+<td>重资产自营</td>
+<td>—</td>
+<td>FY2025 收入 24.97 亿元 +5.4%，经调整纯利 9.14 亿元 +95.6%【一手：年报】</td>
+<td>已转型高等教育，K12 仅余高中</td>
+</tr>
+<tr>
+<td><strong>中国春来</strong>（1969.HK）</td>
+<td>港股上市</td>
+<td><strong>纯民办高教</strong>（河南 4 所、湖北 2 所、参与江苏 1 所），10.99 万在校生【一手：年报】</td>
+<td>豫、鄂、苏</td>
+<td>自营高校</td>
+<td>—</td>
+<td>FY2025 收入 17.91 亿元 +9.8%，净利 8.36 亿元【一手：年报】</td>
+<td>与本调研主题（K12 托管）相关性低，列入仅为排除口径</td>
+</tr>
+<tr>
+<td><strong>博实乐</strong>（原 NYSE:BEDU）</td>
+<td><strong>2025-12-16 私有化退市</strong>【二手：瑞恩资本/36氪】</td>
+<td>退市前国内幼儿园及 K12 运营服务收入 -54.6%（FY2024 Q4），重心转海外学校（FY2024 海外收入占 54.2%）【二手】</td>
+<td>广东佛山总部+海外（英国等）</td>
+<td>地产系（碧桂园关联）自营+并购</td>
+<td>—</td>
+<td>FY2024 持续经营收入 17.55 亿元，调整后净利 110 万元【二手】</td>
+<td>见第五部分风险样本</td>
+</tr>
+<tr>
+<td><strong>凯文教育</strong>（002659.SZ，A股，海淀国资背景）</td>
+<td>A 股上市</td>
+<td>为北京海淀/朝阳 2 所凯文学校提供运营管理服务（资产租赁+教育咨询+品牌许可）；第三方输出：上海奉贤博华双语学校（主导运营高中学段）等【一手：年报/中国证券报】</td>
+<td>北京、上海</td>
+<td>国资"资产+服务"模式：学校举办者变更后收取运营管理费</td>
+<td>2025H1 营收 1.71 亿元 +12.5%【二手：国信研报】</td>
+<td>2026 年海淀国资拟收购 28.84% 股权（进行中）【二手：同花顺】</td>
+<td>"国资壳 + 管理服务"的特殊样本</td>
+</tr>
+</tbody>
+</table>
+<p><strong>口径提示（三查）：</strong>
+- 天立"58 所学校"是<strong>自有+托管合计校网</strong>，其中托管 18 所（FY2025 末）；"23 所"是 2025 年秋季<strong>已签约</strong>口径，含未开学项目【主体口径+时态】。
+- 海亮三个数字（177/178/240+）分别对应"合作学校""县域综合管理服务学校""管理和服务学校"三个口径与不同时间点，<strong>不可混用</strong>【主体口径+时间口径】。
+- 成实外"13 所教育管理服务项下学校"含 7 所幼儿园，K12 整校托管实际仅 6 所左右【主体口径】。</p>
+<h3 id="p3-22-b">2.2 B 类：高校附属基础教育集团（合作办学）</h3>
+<table>
+<thead>
+<tr>
+<th>集团</th>
+<th>规模（口径/时间）</th>
+<th>覆盖</th>
+<th>模式</th>
+<th>收费</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>北师大教育集团</strong></td>
+<td>合作办学学校 <strong>70 余所</strong>（官网口径，20 余省份）【一手：官网，经新学说转引】；2020 年官方口径 78 所、26 省、17.5 万学生【一手：北师大新闻网】；2023 年白名单列合作学校 53 所（含筹建 7 所）+ 教育部县中托管 5 所 + 委托管理 6 所【一手：北师大基础教育处白名单 PDF】</td>
+<td>全国 20–26 省</td>
+<td>与地方政府合作、"政府+企业+高校"三方共建、直属、委托管理、教育部县中托管</td>
+<td>未公开</td>
+<td>2021 年后收缩整改"名校办民校"，建立白名单制度，不再新批民办冠名【二手：新学说，D-待核部分评论】</td>
+</tr>
+<tr>
+<td><strong>华东师大教育集团</strong>（2017 年成立）</td>
+<td>附属学校/幼儿园 <strong>58 所</strong>、14 省（2022 年口径）【二手：澎湃新闻】；近年"总量控制、质量为先"，年度新增约 10 所成员校【一手：华东师大官网】</td>
+<td>上海 9 区 + 长三角、海南、江西、云南等</td>
+<td>成员校/合作办学，公办为主</td>
+<td>未公开</td>
+<td>正常运营，节奏稳健</td>
+</tr>
+<tr>
+<td><strong>东北师大（附校工作办公室）</strong></td>
+<td>基础教育合作学校约 <strong>14–15 所</strong>（2019–2020 年招聘会口径）【一手：东北师大官网】</td>
+<td>吉林、辽宁、北京、浙江、广东、云南等</td>
+<td>"U-G-S"校地合作</td>
+<td>未公开</td>
+<td>正常运营，体量小于前两所</td>
+</tr>
+<tr>
+<td><strong>华中师大</strong></td>
+<td>未找到统一口径的公开总数；合作办学以华师一附中体系、海南/深圳等地附属校形式存在</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td><strong>数据缺口</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>口径提示：</strong> 高校系"附属学校"多数为<strong>公办性质</strong>，高校输出品牌与教研，按 2021 年规范要求不得再新办民办冠名校；它们与民办托管公司在"县域公办校托管"赛道上直接竞争（北师大白名单中"教育部县中托管"与海亮的县域业务是同一种生意）。</p>
+<h3 id="p3-23-c">2.3 C 类：专业第三方民办校托管/管理公司（非上市区域玩家）</h3>
+<table>
+<thead>
+<tr>
+<th>公司</th>
+<th>规模</th>
+<th>模式</th>
+<th>状态/备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>为明教育</strong>（北京为明教育投资有限公司，1999 年成立）</td>
+<td>15 所小学、12 所初中、9 所高中、6 个国际部、近 40 所幼儿园，在校学生 5 万+（截至 2025 年，覆盖深圳/广州/成都/重庆/武汉/贵阳/青岛/天津/北京/苏州/太原/南昌/大连）【一手：官网/北大就业网招聘页】</td>
+<td>自创品牌实体办学为主，兼做委托管理；原为"北大附中南山分校"运营方起家</td>
+<td>正常运营；属"实体办学 + 管理输出"混合型</td>
+</tr>
+<tr>
+<td>其他区域性托管公司</td>
+<td><strong>未找到有规模的、可核验的公开清单</strong>。大量玩家以"XX 教育管理/教育集团"名义在单一地市运营 1–5 所托管校，无官网披露</td>
+<td>与民办学校举办者签托管协议、与地方政府签公办托管</td>
+<td>司法文书显示此类托管纠纷高发（见 5.4）【二手：今日头条法律专栏，D-待核作线索】</td>
+</tr>
+</tbody>
+</table>
+<p><strong>数据缺口：</strong> 第三方非上市托管公司缺乏行业协会统计或权威榜单，公开渠道（搜索引擎、裁判文书、政府采购公告）只能拼出碎片。建议后续用"政府采购网 托管 公办学校 中标"口径另行摸底（本模块未执行）。</p>
+<h3 id="p3-24-d">2.4 D 类：其他背景玩家</h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>代表</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>地产系</td>
+<td>博实乐（碧桂园系）——见 5.1，已退市收缩；万科梅沙教育（深圳，自营国际学校为主，未见规模化托管输出的公开数据）</td>
+<td>地产系整体随地产资金链退潮，<strong>未找到</strong>地产系 2025–2026 年仍在扩张托管业务的公开证据</td>
+</tr>
+<tr>
+<td>出版/传媒系</td>
+<td><strong>中南传媒等出版集团开展民办校整体托管：未找到公开数据</strong>；华东师大集团理事单位含华东师大出版社，但属高校系</td>
+<td>数据缺口，倾向判断为"不构成一类成规模玩家"</td>
+</tr>
+<tr>
+<td>国资系</td>
+<td>凯文教育（海淀国资）、各地城投/教投公司接手民办校转公或托管</td>
+<td>国资进场是 2024–2026 的新趋势，多为个案承接而非市场化扩张【二手】</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="p3-k12">三、标杆深拆：海亮教育（重资产 K12 → 轻资产管理输出）</h2>
+<p><strong>转型时间线</strong>【一手+二手】：
+- 1995–2015：重资产自建，2015 年纳斯达克上市（首个美股民办基础教育集团），巅峰时自有校 41 所（2021 财年末），运营管理学校 27 所，FY2021 营收 13.76 亿元、净利 4.83 亿元【二手：年报数据，经百度百科/中新经纬转引】。
+- 2021-09-01：《民促法实施条例》生效，丧失对 11 所义务教育学校的控制权（占自有校 64.7%），确认减值约 2.52 亿元，义务教育业务重分类为终止经营【一手：公司财报口径，经中新经纬转引】。
+- 2021-12：创始人冯海良发出私有化要约；2022 年以约 3.69 亿美元完成私有化退市——<strong>国内第一家主动退市的民办基础教育集团</strong>【二手：中新经纬】。
+- 2021–2022：将 11 所义务教育学校<strong>捐赠</strong>给浙江嘉行慈善基金会，彻底切割关联交易【二手：人民日报采访海亮副总裁彭蕾】。
+- 2023：更名"海亮教育科技服务集团"，定位从"民办教育运营商"改为"教育科技服务提供商"；组建 1100+ 人教育研发团队【二手：人民网】。
+- 2024–2026：县域公办校综合管理服务快速放量：与武汉海淀外国语、山西潞城、西藏那曲色尼区等签约；2026 年 2 月签约整体运营温州慧中公学（学前到高中）【二手：百度百科大事记，D-待核逐条】。</p>
+<p><strong>当前管理输出规模与结构</strong>（注意口径，见 2.1 口径提示）：
+- 县域乡村教育振兴条线：<strong>178 所学校、23 省 88 县、90+ 派驻团队、服务 28.8 万学生 + 1.9 万教师</strong>（截至 2025 年 7–11 月）【二手：腾讯新闻 2025-10；人民网浙江 2025-11，两源同口径互证】。
+- 实体办学板块（自有）：30 余所 K12 学校 + 30 余所幼儿园 + 40 余家 AI 教育机构 + 3 家特教机构，在校学生超 6 万人【一手：官网，2025 年口径】。
+- 模式：向县域公办校派驻整建制管理团队（校长+骨干），打包输出管理、教研、师训、AI 教育大模型（"海班慧"/海亮科服大模型），按项目向地方政府收费；口号"服务一所学校，树起一面旗帜，孕育一片森林"【二手：人民网/北青网】。
+- <strong>收入结构：数据缺口</strong>。私有化后无公开财报；县域综合管理服务收入规模、单价（每县/每校收费）未找到公开数据。券商与媒体均无可靠估算，本报告不做臆测。
+- 可佐证的收入侧线索：海亮科服已服务"全国 200+ 区县"的政府/机构客户（含轻量级产品服务）【一手：官网】。</p>
+<p><strong>对委托方的参考意义</strong>：海亮是当前"公办县域托管"赛道事实上的头部，与委托方代理商所做的"民办校整体委托管理"客群不同（公办 vs 民办），但其"管理团队 + 教研 + AI 产品"打包模式正是 AI SaaS 的天然渠道。</p>
+<hr/>
+<h2 id="p3-_3">四、风险样本：暴雷/收缩案例</h2>
+<h3 id="p3-41-bright-scholar-nysebedu">4.1 博实乐（Bright Scholar，原 NYSE:BEDU）——退市</h3>
+<ul>
+<li>时间线：2017-05 纽交所上市（发行价 10.5 美元/ADS，募资 1.575 亿美元）→ 2021 年双减/实施条例后剥离国内义务教育业务、转向海外 → 私有化拉锯约三年半 → <strong>2025-12-16 完成简式合并私有化，每股现金对价 0.575 美元，从纽交所退市</strong>【二手：瑞恩资本、格隆汇、36氪】。</li>
+<li>买方团：董事长周红儒、CEO 牛若磊 + 三家合计持股 78.2% 的股东（均与碧桂园创始家族关联）【二手：瑞恩资本】。</li>
+<li>退市前状态：FY2024 持续经营收入 17.55 亿元（-0.96%），国内幼儿园及 K12 运营收入 -54.6%，海外学校收入占 54.2%；退市市值仅约 6675 万美元，较发行价跌逾 94%【二手：公司财报/雪球】。</li>
+<li>原因：政策切断义务教育并表 + 母公司碧桂园流动性危机传导 + 股价长期低迷丧失融资功能。</li>
+</ul>
+<h3 id="p3-42-1317hk">4.2 枫叶教育（1317.HK）——债务违约 + 长期停牌</h3>
+<ul>
+<li>债务：1.25 亿美元 2026 年到期 2.25% 可转债；因外汇管制<strong>无法将资金汇出境外</strong>，无法支付相关事件认沽期权付款（2026-09 公告赎回通知涉及本金 2020 万美元，未偿本金总额 7500 万美元）；正与约 80% 债券持有人协商修订与豁免【一手：公司公告，经阿斯达克转述】。</li>
+<li>交易状态：2026 年 8 月公告"续停牌"；2026 年内多次因债券事项停牌【一手：公司公告】。</li>
+<li>经营收缩：学校数从 2024 年 31 所 → 2025-08 27 所 → 2026-02 27 所（中国 19 + 海外 8）；学生 8709 → 7887 人（-9.4%）；国内幼儿园持续关闭；商誉 21.12 亿元悬顶【一手：2025 年报、2026 中报】。</li>
+<li>转型：枫叶世界学校课程授权（土耳其/蒙古/国内各 1–2 所）+ 大学 1+3 衔接 + 社会餐饮，但"业绩贡献低"【二手：智通财经/星岛】。</li>
+</ul>
+<h3 id="p3-43-6068hk">4.3 光正教育（6068.HK，即原睿见教育）——持续收缩</h3>
+<ul>
+<li>2021-08-31 义务教育业务终止并表，收入从 FY2021 的 22.64 亿元坍缩至 FY2025 的 1.31 亿元（三年复合 -22.2%）；FY2025 净利 3830 万元（-60.3%），不派息；员工仅 137 人【一手：年报】。</li>
+<li>出路尝试：学校供应链批发 + 综合教育服务 + 分拆高中独立持牌（筹建中山 5000 学位高中）【一手：年报】。</li>
+<li>2026-01-02 年报披露后股价单日一度跌逾 16%【二手：腾讯新闻】。</li>
+</ul>
+<h3 id="p3-44">4.4 非上市托管/合作办学爆雷样本</h3>
+<ul>
+<li><strong>北京一土致知学校（2025 年底）</strong>：合作办学模式下（一土品牌方 + 致知资质方合并）现金流断裂，教师欠薪、社保断缴、欠餐费 200 余万元被停餐；约 500 名学生、学费 18.8–19.8 万/年。症结：轻资产品牌方深度依赖"壳资源"、承担对方历史债务（4200 万元债务承担 + 50% 股权质押对赌）【二手：三联生活周刊 2025-12，含财新信源】。<strong>这是"品牌管理方与资质方合作"模式风险的典型教材。</strong></li>
+<li><strong>托管协议纠纷司法样本</strong>：贵州某中学托管案——受托方（苏州某公司）公款私存、招生不达标、双方互诉均被驳回；律师界总结委托管理 4 大纠纷诱因（法律定位模糊/举办者急功近利/资金链脆弱/合同条款不完善）【二手：顶端新闻/今日头条法律专栏，D-待核作线索】。</li>
+<li>公办托管争议：云南姚安一中事件引发对"公办学校民办托管"模式的舆论纠偏讨论（财政付费托管的监管与廉政风险）【D-待核：今日头条评论，仅作舆情线索】。</li>
+<li><strong>"非上市托管公司卷款跑路"的权威媒体公开报道：本轮未检索到可坐实的案例</strong>（仅见纠纷判决与欠薪事件），列为数据缺口。</li>
+</ul>
+<hr/>
+<h2 id="p3-20252026">五、格局判断（2025–2026）</h2>
+<ol>
+<li><strong>集中度低、两类"头部"并存</strong>：管理输出校数口径下，海亮（约 178 所县域校）与北师大系（70–80 所）构成第一梯队，但均以<strong>公办校</strong>为主要服务对象；上市公司梯队（天立托管 23 所签约、成实外管理 13 所）和为明（15 校自营为主）构成第二梯队；再往下是数以百计无公开数据的区域托管商。<strong>没有一家公司同时垄断"民办校托管"这个细分——该细分本身高度碎片化</strong>【估算：综合上述各表，逻辑为各家披露数量对比】。</li>
+<li><strong>分化方向</strong>：头部（海亮、天立）2025–2026 仍在扩张托管盘子（天立计划每年 +20 学段；海亮县域校两年内从 ~84 所增至 178 所）；腰尾部持续出清（博实乐退市、枫叶违约、光正收缩、一土爆雷）【一手+二手】。</li>
+<li><strong>扩张 vs 出清</strong>：<strong>重资产办学整体出清后期</strong>（出生人口下降 + 公办普高扩招，民办 K12 生源收缩，天立 FY2026 招生增速已从 30% 降至 8%【二手：国信研报】）；<strong>轻资产管理输出处于政策驱动型扩张期</strong>，但需求主力已从"民办校花钱买管理"转向"地方政府花钱买县域教育质量"（县中振兴、教育部县中托管计划）——买单方的变化意味着回款依赖地方财政，账期和廉政合规风险上升【估算：基于海亮/天立/北师大客户结构】。</li>
+<li><strong>收费基准</strong>（供评估合作对象报价合理性）：天立托管单校约 644 万元/年、单学段约 289 万元/年（FY2025，民办高中托管）【二手：华西证券】；成实外教育管理及咨询费年收入 2161 万元/13 所，单校约 166 万元/年（含幼儿园，偏轻服务）【估算：年报数据相除】。</li>
+</ol>
+<hr/>
+<h2 id="p3-_4">六、信源清单表</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>信源</th>
+<th>URL</th>
+<th>档位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>天立国际 FY2025 年报（港交所）</td>
+<td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1230/2025123000329_c.pdf" rel="noopener noreferrer" target="_blank">https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1230/2025123000329_c.pdf</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>2</td>
+<td>天立国际 FY2025 年度业绩公告（收益分拆：管理及特许经营费 1.156 亿）</td>
+<td><a href="https://www.hkexnews.hk/listedco/listconews/sehk/2025/1128/2025112802159_c.pdf" rel="noopener noreferrer" target="_blank">https://www.hkexnews.hk/listedco/listconews/sehk/2025/1128/2025112802159_c.pdf</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>3</td>
+<td>华西证券天立 FY2025 点评（托管单校/学段收费测算）</td>
+<td><a href="https://gu.qq.com/resources/shy/news/detail-v2/index.html#/?id=res817926338019" rel="noopener noreferrer" target="_blank">https://gu.qq.com/resources/shy/news/detail-v2/index.html#/?id=res817926338019</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>4</td>
+<td>国信证券天立点评（托管 18 所、招生降速）</td>
+<td><a href="https://www.fxbaogao.com/detail/5141713" rel="noopener noreferrer" target="_blank">https://www.fxbaogao.com/detail/5141713</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>5</td>
+<td>海亮教育科技服务集团公司简介（官网）</td>
+<td><a href="https://www.hailiangedu.com/news-detail.html?id=601" rel="noopener noreferrer" target="_blank">https://www.hailiangedu.com/news-detail.html?id=601</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>6</td>
+<td>腾讯新闻：海亮县域 178 校/23 省 88 县（2025-07 口径）</td>
+<td><a href="https://news.qq.com/rain/a/20251010A05K4V00" rel="noopener noreferrer" target="_blank">https://news.qq.com/rain/a/20251010A05K4V00</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>7</td>
+<td>人民网浙江：海亮科服 178 校、90+ 团队（2025-11）</td>
+<td><a href="https://zj.people.com.cn/BIG5/n2/2025/1102/c370990-41398952.html" rel="noopener noreferrer" target="_blank">https://zj.people.com.cn/BIG5/n2/2025/1102/c370990-41398952.html</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>8</td>
+<td>鄂温克旗政府网站海亮自荐口径（240 余校/26 省 112 县）</td>
+<td><a href="https://ewenke.gov.cn/InFeedback/show/15586.html" rel="noopener noreferrer" target="_blank">https://ewenke.gov.cn/InFeedback/show/15586.html</a></td>
+<td>一手（政府网站，企业自荐口径）</td>
+</tr>
+<tr>
+<td>9</td>
+<td>中新经纬：海亮私有化退市</td>
+<td><a href="https://www.jwview.com/jingwei/html/m/05-12/482306.shtml" rel="noopener noreferrer" target="_blank">https://www.jwview.com/jingwei/html/m/05-12/482306.shtml</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>10</td>
+<td>人民日报：海亮转型三件大事（彭蕾采访）</td>
+<td><a href="https://finance.people.com.cn/BIG5/n1/2023/1228/c1004-40148667.html" rel="noopener noreferrer" target="_blank">https://finance.people.com.cn/BIG5/n1/2023/1228/c1004-40148667.html</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>11</td>
+<td>成实外教育 FY2025 年度业绩公告（港交所）</td>
+<td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1127/2025112701873_c.pdf" rel="noopener noreferrer" target="_blank">https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1127/2025112701873_c.pdf</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>12</td>
+<td>光正教育（睿见）FY2025 年报（港交所）</td>
+<td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1211/2025121100611_c.pdf" rel="noopener noreferrer" target="_blank">https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1211/2025121100611_c.pdf</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>13</td>
+<td>宇华教育 FY2025 年报（港交所）</td>
+<td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1219/2025121900530_c.pdf" rel="noopener noreferrer" target="_blank">https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1219/2025121900530_c.pdf</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>14</td>
+<td>中国春来 FY2025 年度业绩公告/年报（港交所）</td>
+<td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1128/2025112801935_c.pdf" rel="noopener noreferrer" target="_blank">https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1128/2025112801935_c.pdf</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>15</td>
+<td>枫叶教育 2026 中报（可转债、27 校）</td>
+<td><a href="https://newsfile.futunn.com/public/NN-PersistNoticeAttachment/7781/20260514/12158755-0.PDF" rel="noopener noreferrer" target="_blank">https://newsfile.futunn.com/public/NN-PersistNoticeAttachment/7781/20260514/12158755-0.PDF</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>16</td>
+<td>枫叶教育债券赎回/续停牌公告（阿斯达克转述）</td>
+<td><a href="https://www.aastocks.com/sc/stocks/analysis/stock-aafn-con/01317/hk6/now.1201078/hk-stock-news" rel="noopener noreferrer" target="_blank">https://www.aastocks.com/sc/stocks/analysis/stock-aafn-con/01317/hk6/now.1201078/hk-stock-news</a> 等</td>
+<td>一手（公告）/二手（转述）</td>
+</tr>
+<tr>
+<td>17</td>
+<td>枫叶 FY2025 分析（智通/星岛）</td>
+<td><a href="https://stnn.cc/c/2025-11-26/4018506.shtml" rel="noopener noreferrer" target="_blank">https://stnn.cc/c/2025-11-26/4018506.shtml</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>18</td>
+<td>博实乐私有化退市（瑞恩资本/格隆汇/维基镜像）</td>
+<td><a href="https://m.gelonghui.com/community/post/5692389" rel="noopener noreferrer" target="_blank">https://m.gelonghui.com/community/post/5692389</a> 等</td>
+<td>二手</td>
+</tr>
+<tr>
+<td>19</td>
+<td>博实乐 FY2024 财报（东方财富/智通转述）</td>
+<td><a href="https://caifuhao.eastmoney.com/news/20241125221709951224610" rel="noopener noreferrer" target="_blank">https://caifuhao.eastmoney.com/news/20241125221709951224610</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>20</td>
+<td>北师大基础教育合作学校名单/白名单（校方 PDF）</td>
+<td><a href="https://basicedu.bnu.edu.cn/docs/2023-05/d56f015da0e641b2bd57aa019b974460.pdf" rel="noopener noreferrer" target="_blank">https://basicedu.bnu.edu.cn/docs/2023-05/d56f015da0e641b2bd57aa019b974460.pdf</a> 等</td>
+<td>一手</td>
+</tr>
+<tr>
+<td>21</td>
+<td>北师大新闻网：78 所合作校（2020 口径）</td>
+<td><a href="https://news.bnu.edu.cn/zx/ttgz/118327.htm" rel="noopener noreferrer" target="_blank">https://news.bnu.edu.cn/zx/ttgz/118327.htm</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>22</td>
+<td>华东师大教育集团成员校/新增 10 校（校方官网）</td>
+<td><a href="https://www.ecnu.edu.cn/info/1094/61912.htm" rel="noopener noreferrer" target="_blank">https://www.ecnu.edu.cn/info/1094/61912.htm</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>23</td>
+<td>澎湃新闻：华东师大 58 所附校（2022 口径）</td>
+<td><a href="https://m.thepaper.cn/newsDetail_forward_18381681" rel="noopener noreferrer" target="_blank">https://m.thepaper.cn/newsDetail_forward_18381681</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>24</td>
+<td>东北师大基础教育合作学校招聘会（校方官网）</td>
+<td><a href="https://www.nenu.edu.cn/info/4881/255511.htm" rel="noopener noreferrer" target="_blank">https://www.nenu.edu.cn/info/4881/255511.htm</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>25</td>
+<td>为明教育官网/北大就业网招聘页</td>
+<td><a href="http://www.weimingedu.com/ArticleList.aspx" rel="noopener noreferrer" target="_blank">http://www.weimingedu.com/ArticleList.aspx</a></td>
+<td>一手（企业宣传口径，需甄别）</td>
+</tr>
+<tr>
+<td>26</td>
+<td>凯文教育年报摘要（中国证券报）</td>
+<td><a href="https://epaper.cs.com.cn/zgzqb/html/2025-04/25/nw.D110000zgzqb_20250425_1-B146.htm" rel="noopener noreferrer" target="_blank">https://epaper.cs.com.cn/zgzqb/html/2025-04/25/nw.D110000zgzqb_20250425_1-B146.htm</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>27</td>
+<td>三联生活周刊：一土致知暴雷</td>
+<td><a href="https://www.lifeweek.com.cn/h5/article/detail.do?artId=258705" rel="noopener noreferrer" target="_blank">https://www.lifeweek.com.cn/h5/article/detail.do?artId=258705</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>28</td>
+<td>顶端新闻/今日头条：民办校委托管理纠纷案例</td>
+<td><a href="http://www.topnews.cn/news/145DDFE548BE4478" rel="noopener noreferrer" target="_blank">http://www.topnews.cn/news/145DDFE548BE4478</a></td>
+<td>D-待核（法律专栏，仅作线索）</td>
+</tr>
+<tr>
+<td>29</td>
+<td>新学说：北师大合作办学整改分析</td>
+<td><a href="https://www.xinxueshuo.cn/article/21302.html" rel="noopener noreferrer" target="_blank">https://www.xinxueshuo.cn/article/21302.html</a></td>
+<td>D-待核（行业媒体）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="p3-_5">七、数据缺口与存疑点</h2>
+<ol>
+<li><strong>海亮教育私有化后财务全貌缺失</strong>：管理输出收入、单校/单县收费、利润率均无公开数据；其"178 所/177 所/240 余所"三个口径并存，本报告已分别标注，但仍需向公司直接核实最新签约口径。</li>
+<li><strong>第三方非上市托管公司全景缺失</strong>：无行业协会统计、无权威榜单；为明之外未能坐实第二家有规模的全国性民办校托管商。"非上市托管公司跑路"未检索到权威媒体坐实案例（仅有纠纷判决与欠薪事件）。</li>
+<li><strong>华中师大合作办学总数</strong>：未找到统一口径公开数据。</li>
+<li><strong>中南传媒等出版系托管</strong>：未找到任何公开证据，倾向判断不成规模，但无法证伪。</li>
+<li><strong>枫叶教育最终债务处置结果</strong>（债券修订/豁免谈判结果、是否退市）：截至检索日仍在进行中。</li>
+<li><strong>天立"23 所签约托管校"名单与开学进度</strong>：公告口径为"已签约"，实际开学数存疑。</li>
+<li>博实乐私有化后国内剩余学校（广东碧桂园学校等）的运营主体与托管关系：退市后无披露义务，未找到公开数据。</li>
+</ol></article>
+</section>
+<section class="panel hidden" id="p4" role="tabpanel">
+<details class="toc" open=""><summary>本模块目录</summary><div class="toc">
+<ul>
+<li><a href="#p4-1">1. 民办校委托管理合同的典型结构</a><ul>
+<li><a href="#p4-11">1.1 五种常见合作类型（二手，律师行业总结）</a></li>
+<li><a href="#p4-12">1.2 合同期限</a></li>
+<li><a href="#p4-13">1.3 托管费定价模式与区间（本模块核心）</a></li>
+<li><a href="#p4-14">1.4 权责划分（判例与模板归纳）</a></li>
+<li><a href="#p4-15">1.5 保证金/抵押安排</a></li>
+<li><a href="#p4-16">1.6 退出与违约条款</a></li>
+</ul>
+</li>
+<li><a href="#p4-2">2. 托管方财务画像（上市教育集团管理输出业务）</a><ul>
+<li><a href="#p4-21-1773hk">2.1 天立国际控股（1773.HK）</a></li>
+<li><a href="#p4-22-hlgus">2.2 海亮教育（HLG.US，已私有化退市）</a></li>
+<li><a href="#p4-23-saas">2.3 财务画像总结（对 SaaS 方的含义）</a></li>
+</ul>
+</li>
+<li><a href="#p4-3">3. 教育科技公司 × 民办教育集团合作/相互投资先例</a></li>
+<li><a href="#p4-4">4. 风险案例</a><ul>
+<li><a href="#p4-41">4.1 托管合同纠纷判例</a></li>
+<li><a href="#p4-42">4.2 托管方/举办方资金链断裂波及学校</a></li>
+</ul>
+</li>
+<li><a href="#p4-5-saas">5. "SaaS 公司 × 民办校托管方"相互投资：结构选项分析</a><ul>
+<li><a href="#p4-51">5.1 合规前提（必须先满足的硬约束）</a></li>
+<li><a href="#p4-52">5.2 五种结构对比</a></li>
+<li><a href="#p4-53">5.3 建议路径（基于上述事实）</a></li>
+</ul>
+</li>
+<li><a href="#p4-6-20">6. 与托管方谈合作前必须核实的尽调问题清单（20 条）</a></li>
+<li><a href="#p4-7">7. 信源清单表</a></li>
+<li><a href="#p4-8">8. 数据缺口与存疑点</a></li>
+</ul>
+</div>
+</details>
+<article class="md-body"><h1 id="p4-04">04 交易结构、财务与合作先例调研</h1>
+<blockquote>
+<p>调研目的：为 AI 教育 SaaS 公司（委托方）评估"是否与民办学校托管方合作/相互投资、以什么结构合作"提供事实依据。
+调研日期：2026 年 10 月。信源三档：<strong>一手</strong>＝年报/判决书/公告/官网；<strong>二手</strong>＝行业报告/权威媒体；<strong>估算</strong>＝推算（注明逻辑）。找不到的写"未找到公开数据"。</p>
+</blockquote>
+<hr/>
+<h2 id="p4-1">1. 民办校委托管理合同的典型结构</h2>
+<h3 id="p4-11">1.1 五种常见合作类型（二手，律师行业总结）</h3>
+<p>据顶端新闻/网易转载的教育法律行业文章（源真法律人·熊武林律师团队），民办学校委托管理分 5 类：①品牌与管理输出型（最常见，学校所有方多为地产商/国企/基金，托管方输出品牌+管理+校长与骨干教师，收品牌使用费或学费分成）；②风险共担型（托管方缴保证金、办学质量/生源不达标扣减；或托管方按每生学费固定比例上交"人头费"）；③政府主导型（三方协议：政府+所有方+托管方）；④资本整合型；⑤其他过渡形态。【二手】</p>
+<h3 id="p4-12">1.2 合同期限</h3>
+<table>
+<thead>
+<tr>
+<th>案例/出处</th>
+<th>期限</th>
+<th>档位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(2022)晋07民终2962号，山西晋中某书院《合作办学协议书》</td>
+<td><strong>15 年</strong>（2020-08-10 至 2035-08-10）</td>
+<td>一手（裁判文书网存档）</td>
+</tr>
+<tr>
+<td>(2024)皖13民终3268号，安徽灵璧某中专《学校委托管理协议书》</td>
+<td><strong>5 年</strong>（三届学生，2021-09 至 2026-09）</td>
+<td>一手（判决书评析）</td>
+</tr>
+<tr>
+<td>湖南某学校《高中部托管协议》判例</td>
+<td><strong>10 年</strong></td>
+<td>一手（律师引述生效判例）</td>
+</tr>
+<tr>
+<td>上海平和教育集团×民办光华中学</td>
+<td>多年期，2024-06-30 到期"和平分手"，设"后续管理期"</td>
+<td>二手（澎湃）</td>
+</tr>
+<tr>
+<td>行业模板（第一范文网/瑞文网托管协议范本）</td>
+<td>"N 个教学周期"，按学年滚动，期满协商续签</td>
+<td>二手（模板，仅作结构参考）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>结论</strong>：常见 3–15 年，以 5–10 年居多；到期多设"过渡期/后续管理期"安排。期限过长（如 15 年）在纠纷中易放大解约争议。</p>
+<h3 id="p4-13">1.3 托管费定价模式与区间（本模块核心）</h3>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>公开实例</th>
+<th>数值</th>
+<th>档位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>固定管理费（公办托管）</strong></td>
+<td>天立国际公办托管：小学/初中/高中学段平均约 <strong>300/400/500 万元/年/学段</strong>，财政拨款支付</td>
+<td>300–500 万/学段/年</td>
+<td>二手（招商证券研报，三个皮匠转载）</td>
+</tr>
+<tr>
+<td><strong>固定费+绩效（民办托管）</strong></td>
+<td>行业模板：基础管理费第 1/2/3 年 100/150/200 万元阶梯；绩效管理费＝当年办学结余×25% − 基础管理费（结余 25% ≤ 基础费时只收基础费）</td>
+<td>100–200 万/年保底 + 结余 25% 封顶线</td>
+<td>二手（合同模板，仅作结构参考）</td>
+</tr>
+<tr>
+<td><strong>办学结余分成</strong></td>
+<td>晋中案：2020–2023 年托管方支配结余 <strong>70%</strong>、举办方 30%；2023 年后托管方 <strong>60%</strong>、举办方 40%</td>
+<td>结余的 60–70% 归托管方支配</td>
+<td>一手（判决书）</td>
+</tr>
+<tr>
+<td><strong>固定"反向托管费"（学校向承包方收）</strong></td>
+<td>灵璧案：受托公司每年向学校付 100 万/学年，学校资产+资质整体移交——被法院认定"名为托管实为出租办学许可"，<strong>合同无效</strong></td>
+<td>100 万/学年</td>
+<td>一手（判决书）</td>
+</tr>
+<tr>
+<td><strong>固定目标管理费（部分托管）</strong></td>
+<td>湖南高中部托管案：前 3 年 80 万/年，之后每年递增 5%（仅高中部教学托管，学校保留人事/财务/公章）</td>
+<td>80 万/年 +5%/年</td>
+<td>一手（律师引述判例）</td>
+</tr>
+<tr>
+<td><strong>按学费比例分成（品牌+托管）</strong></td>
+<td>澎湃《揭秘学校托管的"三角关系"》：所有方先付一大笔品牌使用费，再"每年分多少比例的学费或者利润"给托管方</td>
+<td>比例未公开，<strong>未找到公开统一区间</strong></td>
+<td>二手（澎湃）</td>
+</tr>
+<tr>
+<td><strong>管理输出总收入倒算</strong></td>
+<td>海亮教育 FY2021 对外运营管理服务收入 6,000 万元 / 27 所运营管理学校 ≈ <strong>222 万元/校/年</strong>（估算＝总收入÷校数，含不同服务深度的学校，仅作量级参考）</td>
+<td>≈222 万/校/年</td>
+<td>估算</td>
+</tr>
+<tr>
+<td><strong>管理及特许经营费倒算</strong></td>
+<td>天立 FY2026H1 托管收入 0.78 亿元 / 23 所托管学校 ≈ <strong>68 万/校/半年</strong>（估算，含新签学校爬坡期，口径偏保守）</td>
+<td>≈130–150 万/校/年量级</td>
+<td>估算</td>
+</tr>
+</tbody>
+</table>
+<p><strong>区间判断（综合）</strong>：单体校托管费量级多在 <strong>100–500 万元/年</strong>；头部品牌+全权托管可达学费收入的显著比例或以结余 60–70% 分成，但此类深度分成结构在义务教育非营利校中合规风险极高（见 §4 幸福柳分校案）。</p>
+<h3 id="p4-14">1.4 权责划分（判例与模板归纳）</h3>
+<ul>
+<li><strong>人事</strong>：校长通常由托管方委派（模板合同明确"校长由乙方担任"），骨干教师由托管方带入并承担其薪资（澎湃）。董事会席位常按出资/委托关系分配（模板：7 席，举办方 4 + 托管方 3，董事长由举办方担任）。【二手】</li>
+<li><strong>财务</strong>：合规结构要求学费全部缴入学校对公（备案）账户、统一预算管理；<strong>财务控制权是否移交是法院区分"合法托管"与"出租资质"的核心</strong>（灵璧案二审：对公账户由受托方管理、费用自由支配＝实控权转移＝合同无效）。【一手】</li>
+<li><strong>招生/课程</strong>：托管方负责招生渠道与课程体系输出；政府主导型由教育局监督招生合规。晋中案判决书显示当地教育局对招生计划有硬性指标管控。【一手】</li>
+<li><strong>红线</strong>：决策机构控制权、财务控制权、公章控制权、办学主导权"四权"不得整体让渡，否则被认定出租/出借办学许可证（民促法第 62 条），合同无效+行政处罚风险（华让律所杨捷评析）。【二手（律师评析，基于多判例）】</li>
+</ul>
+<h3 id="p4-15">1.5 保证金/抵押安排</h3>
+<ul>
+<li>风险共担型中托管方向所有方缴纳<strong>保证金</strong>，办学质量/生源不达标可扣减（行业总结）。【二手】</li>
+<li>晋中案：协议约定举办方收取的押金、预收款一律转交托管方支配（实质是资金归集安排，后成为争议焦点）。【一手】</li>
+<li>一土×致知案：<strong>股权质押</strong>——一土方将持有的超 50% 股权质押给致知方，业绩不达标质押股权归对方（财新/三联报道），该安排后成为爆雷导火索之一。【二手（三联生活周刊引财新）】</li>
+</ul>
+<h3 id="p4-16">1.6 退出与违约条款</h3>
+<ul>
+<li>晋中案《合作办学协议书》列明双方各自的解除权情形（拖欠费用、委派校长渎职/违法、未经书面同意以学校名义借款担保融资、举办方重大债务纠纷拖累学校、政府不同意托管等），违约金 <strong>100 万元</strong>。【一手】</li>
+<li>平和×光华：到期不续签，设"后续管理期"过渡——头部品牌托管到期退出的代表性软着陆方式。【二手】</li>
+<li>湖南高中部案：受托方私收学费不入对公账户、致学校年检不合格，构成根本违约，法院判解除合同。【一手（律师引述判例）】</li>
+</ul>
+<hr/>
+<h2 id="p4-2">2. 托管方财务画像（上市教育集团管理输出业务）</h2>
+<h3 id="p4-21-1773hk">2.1 天立国际控股（1773.HK）</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>FY2025（截至 2025-08-31）</th>
+<th>FY2026H1（截至 2026-02 前后）</th>
+<th>档位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>总收益</td>
+<td>35.89 亿元（+8.1%）</td>
+<td>21.43 亿元（+14.2%）</td>
+<td>一手（年报/业绩）</td>
+</tr>
+<tr>
+<td>整体毛利率</td>
+<td>33.8%（+0.1pct）</td>
+<td>35.2%（−2.4pct，低毛利产品销售占比上升所致）</td>
+<td>一手/二手（国信证券）</td>
+</tr>
+<tr>
+<td><strong>管理及特许经营费收入</strong></td>
+<td><strong>1.16 亿元（+93.9%）</strong>，占总收入约 3.2%</td>
+<td><strong>0.78 亿元（+38.7%）</strong></td>
+<td>一手（年报分部）/二手（国信）</td>
+</tr>
+<tr>
+<td>托管学校数</td>
+<td>FY2025 新增 8 所</td>
+<td><strong>累计 23 所</strong>，期内新增 5 所</td>
+<td>二手（国信/华西研报）</td>
+</tr>
+<tr>
+<td>托管业务毛利率</td>
+<td><strong>50–60%</strong>（招商证券首次覆盖研报口径）</td>
+<td>—</td>
+<td>二手</td>
+</tr>
+<tr>
+<td>公办托管定价</td>
+<td>小学/初中/高中约 300/400/500 万元/学段/年（固定费，财政拨款）</td>
+<td>—</td>
+<td>二手（招商证券）</td>
+</tr>
+<tr>
+<td>学生规模/现金流</td>
+<td>高中生 5.4 万→6 万（+11%）；FY2025 经营性现金流 8.53 亿元；现金 9.65 亿、借款 23.79 亿、负债权益比 23.9%</td>
+<td>—</td>
+<td>一手/二手</td>
+</tr>
+</tbody>
+</table>
+<p>要点：托管是天立"第二增长曲线"，规划每年新增约 20 个托管学段、2027 年落地 100+ 学段（招商证券预测，二手）；<strong>收入确认为"管理及特许经营费"单列分部</strong>，轻资产、不承担建校投入与资产风险。</p>
+<h3 id="p4-22-hlgus">2.2 海亮教育（HLG.US，已私有化退市）</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>数值</th>
+<th>档位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2021（截至 2021-06-30）对外学校运营管理服务收入</td>
+<td><strong>6,000 万元（+37.0%）</strong>，仅占总营收 13.76 亿的约 4.4%</td>
+<td>一手（财报，经济参考网转载）</td>
+</tr>
+<tr>
+<td>运营管理学校数/学生数</td>
+<td>27 所 / 43,897 人（自有学校学生的 1.6 倍）</td>
+<td>一手</td>
+</tr>
+<tr>
+<td>FY2021 整体毛利率</td>
+<td>47.0%（持续经营口径）</td>
+<td>一手</td>
+</tr>
+<tr>
+<td>运营管理 vs 自营毛利率</td>
+<td>"运营管理业务比自营学校毛利率更高"（业内人士）</td>
+<td>二手（21 世纪经济报道）</td>
+</tr>
+<tr>
+<td>后续调整</td>
+<td>2023 年 6 月业务架构调整，<strong>运营管理学校从海亮集团并表范围剥离至表外</strong>；2021/2023 先后剥离义务教育自营校与运营校</td>
+<td>一手（海亮集团信用评级报告，东方财富 PDF）</td>
+</tr>
+</tbody>
+</table>
+<p>要点：海亮是"轻资产管理输出"路径最早的大厂样本（2017 年起，0→27 校）；但管理输出收入体量小（单校年均约 222 万，估算），且在监管收紧后被调整出表——<strong>说明托管业务对上市主体的报表贡献与合规可持续性都存在天花板</strong>。</p>
+<h3 id="p4-23-saas">2.3 财务画像总结（对 SaaS 方的含义）</h3>
+<ul>
+<li>管理输出收入确认：按服务期分期确认管理费/特许经营费，轻资产、高毛利（50–60%，二手研报口径）、正现金流（学费预收制外溢）。</li>
+<li>天花板：头部集团托管收入占比仅 3–4%；单校年托管费 100–500 万量级。</li>
+<li>风险传导：托管方现金流高度依赖其母体/关联集团信用（见 §4 厚德书院案）。</li>
+</ul>
+<hr/>
+<h2 id="p4-3">3. 教育科技公司 × 民办教育集团合作/相互投资先例</h2>
+<p><strong>总体发现：公开渠道中，"教育科技公司 × 民办教育集团/托管方"的绝大多数合作是纯业务型（框架协议、产品采购、共建样板校）；未找到教育科技公司与民办 K12 教育集团"股权互换/互相持股"的公开披露案例（数据缺口，见 §8）。</strong></p>
+<table>
+<thead>
+<tr>
+<th>公司</th>
+<th>合作对象</th>
+<th>结构</th>
+<th>结果/状态</th>
+<th>档位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>科大讯飞</td>
+<td>春晖教育集团（湖北咸丰）、漳州立人教育集团、四川现代教育集团、厦门恒兴集团（华师希平双语）</td>
+<td><strong>战略合作框架协议</strong>+产品采购（数智作业、星火批阅机、智慧校园），共建"AI 大数据服务中心"/标杆校；无股权安排</td>
+<td>多为先服务 1–3 年后升级为集团级框架合作（如春晖已稳定服务 3 年）</td>
+<td>一手（讯飞官网新闻）/二手（中国日报、四川新闻网）</td>
+</tr>
+<tr>
+<td>校宝在线</td>
+<td>湖南恒雅教育集团（5 所学校）</td>
+<td>SaaS 业务合作（"百城百校"计划），智慧校园系统整校部署，授牌样板校</td>
+<td>2025-03 签约，预计 2025-09 完成 5 校系统搭建</td>
+<td>二手（新浪财经、新湖南）</td>
+</tr>
+<tr>
+<td>松鼠 Ai</td>
+<td>金培教育投资集团（汕头科利园实验学校）</td>
+<td>战略合作+"5A 级实验基地"授牌，输出可复制的 AI 融合案例</td>
+<td>2025-07 启动</td>
+<td>二手（中国网物联网频道，偏软文，降权）</td>
+</tr>
+<tr>
+<td>网易有道</td>
+<td>学校（进校）</td>
+<td>智能学习终端进校、课后服务"平台+课程+服务"方案、区域合伙人计划（市场/融资/培训支持）</td>
+<td>截至 2021 年底终端进入 26 省 300+ 学校；2023 年底四部门规范课后服务收费后行业进入调整期</td>
+<td>二手（网易、界面、新华传媒）</td>
+</tr>
+<tr>
+<td>好未来</td>
+<td>学校/行业（To B）</td>
+<td>"美校"品牌提供直播/教研/AI 系统方案</td>
+<td>转型方向之一，未披露与民办集团的股权合作</td>
+<td>二手（网易、人民日报客户端）</td>
+</tr>
+<tr>
+<td>ClassIn（翼鸥）/希沃</td>
+<td>—</td>
+<td><strong>本轮检索未找到其与民办教育集团股权或排他深度合作的公开案例</strong>；希沃以硬件/生态供应商身份出现在校宝等平台的协同名单</td>
+<td>—</td>
+<td>未找到公开数据</td>
+</tr>
+</tbody>
+</table>
+<p><strong>结论</strong>：行业通行实践是"业务合作（框架+采购）→ 标杆校共建 → 区域/集团级续约"三步走；相互投资层面无成熟公开先例可循，意味着委托方若做股权安排属于<strong>吃螃蟹行为，合规与估值定价都缺乏锚点</strong>。</p>
+<hr/>
+<h2 id="p4-4">4. 风险案例</h2>
+<h3 id="p4-41">4.1 托管合同纠纷判例</h3>
+<table>
+<thead>
+<tr>
+<th>案号/案件</th>
+<th>要点</th>
+<th>结果</th>
+<th>档位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(2022)晋07民终2962号（山西晋中）</td>
+<td>15 年全权托管+结余三七/四六分成；托管方委派校长卷入 800 万对外借款与教职工集资；举办方发函解约</td>
+<td>一审驳回托管方大部分诉请；托管方上诉。争议焦点：财务控制权未实际移交、"结余"定义、校长行为归属</td>
+<td>一手</td>
+</tr>
+<tr>
+<td>(2024)皖13民终3268号（安徽灵璧）</td>
+<td>学校将资产+资质整体移交，受托方每年付学校 100 万"托管费"、财务独立</td>
+<td>一二审均认定<strong>名为托管实为出租办学许可证，合同无效</strong>，托管费诉请驳回</td>
+<td>一手</td>
+</tr>
+<tr>
+<td>湖南某学校高中部托管案</td>
+<td>仅高中部教学托管，学校保留人事/财务/公章；受托方私收学费、学校年检不合格</td>
+<td>合同<strong>有效</strong>，受托方根本违约，判解除</td>
+<td>一手（律师引述生效判例）</td>
+</tr>
+<tr>
+<td>山师附中幸福柳分校系列案</td>
+<td>托管费/租赁费直接支付给学校出资人</td>
+<td>认定<strong>变相分配利润、损害非营利法人财产权，5 份协议全部无效</strong></td>
+<td>一手（判决书评析，环球律师网转载）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>判例要点</strong>：①结余分成、托管费支付给"人"而非"服务"、四权让渡，均可能触发合同无效；②非营利学校的托管费设计必须体现"购买服务"属性并保留学校实控权。</p>
+<h3 id="p4-42">4.2 托管方/举办方资金链断裂波及学校</h3>
+<table>
+<thead>
+<tr>
+<th>事件</th>
+<th>经过与结果</th>
+<th>档位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>深圳厚德书院关停（2024-07）</td>
+<td>邦德教育集团全资创办；双减后母体重创（被执行约 3.6 亿），学校学费被当集团"内部银行"抽走，预缴折扣+学费转个人账户；欠租超 1,000 万、被执行 1.71 亿，2024-07-12 关停，约 800 名学生由教育局分流</td>
+<td>二手（华夏时报、三联生活周刊、澎湃，多家交叉印证）</td>
+</tr>
+<tr>
+<td>云南美华国际高中停课（2018-12）</td>
+<td>与云师大附中终止合作后仍借牌招生；大股东上海美华股权被杭州警方冻结→资金链断裂→欠薪停课，100 余学生被安置</td>
+<td>一手（新华社调查）</td>
+</tr>
+<tr>
+<td>北京一土致知学校危机（2025 年末）</td>
+<td>两校合并：一土方承担致知 4,200 万历史债务+50% 股权质押对赌；现金流断裂、欠薪、断供餐费 200 余万；暴露合作前对历史债务与财务尽调不足</td>
+<td>二手（三联生活周刊，含财新报道细节）</td>
+</tr>
+<tr>
+<td>南洋教育集团崩溃（2005）</td>
+<td>教育储备金模式挤兑，济南/青岛校停办，大同/洛阳等校<strong>由各地政府接管</strong>，董事长涉嫌集资诈骗被通缉</td>
+<td>二手（MBA 智库转引当年报道）</td>
+</tr>
+<tr>
+<td>金山桥教育集团（徐州，2005–2006）</td>
+<td>资金链断裂→停水停电→群体上访→政府工作组进驻→三所学校被吊销许可证终止办学、资产拍卖</td>
+<td>二手（360 百科汇编，降权，仅作线索）</td>
+</tr>
+<tr>
+<td>21 世纪教育集团（1598.HK，2025）</td>
+<td>VIE 核心资产石家庄理工职业学院破产重整，港股停牌超 7 个月、年报难产、存退市风险；2025-09 官宣重整投资人由政府接管，2026-03 教学恢复</td>
+<td>二手（百度百科汇编，降权；停牌/重整事实可由港交所公告核实）</td>
+</tr>
+<tr>
+<td>Galaxy Global Education（中国背景集团英国学校，2026-07）</td>
+<td>Durham High（1884 年创校）、Ruthin School（1284 年创校）同日进入破产管理（administration），约 140 员工裁员；集团 4 所英国学校已关 3 所</td>
+<td>二手（Insolvency Insider UK）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>共性</strong>：①学校死因多为"治理"而非"经营"——举办者/托管方把学校现金流当集团资金池；②预缴折扣促销、学费进个人账户、供餐/租金欠付是爆雷前的领先信号；③最终兜底方是地方政府（分流学生、接管学校），托管合作关系中的第三方（如 SaaS 供应商）会被欠款与舆情牵连。</p>
+<hr/>
+<h2 id="p4-5-saas">5. "SaaS 公司 × 民办校托管方"相互投资：结构选项分析</h2>
+<h3 id="p4-51">5.1 合规前提（必须先满足的硬约束）</h3>
+<ul>
+<li>《民办教育促进法实施条例》（2021-09-01 施行）：<strong>任何社会组织和个人不得通过兼并收购、协议控制等方式控制实施义务教育的民办学校；实施义务教育的民办学校不得与利益关联方进行交易</strong>。【一手（21 世纪经济报道引述条例原文）】</li>
+<li>民办义务教育学费实行政府指导价、全部缴入备案账户，严禁关联方从学费/办学结余中取得收益、严禁关联交易转移办学收益，关联交易按年度审查（广州市 2024 年民办义务教育收费管理办法，属全国风向）。【一手（政府文件）】</li>
+<li>含义：<strong>义务教育学段学校本身不可成为股权投资标的</strong>；任何结构只能在"SaaS 公司 ↔ 托管方公司（企业法人）"层面进行，不能穿透到学校法人财产与学费现金流。高中/中职/高教学段空间相对大，但托管合同若涉资质让渡同样无效（灵璧案）。</li>
+</ul>
+<h3 id="p4-52">5.2 五种结构对比</h3>
+<table>
+<thead>
+<tr>
+<th>结构</th>
+<th>做法</th>
+<th>利</th>
+<th>弊</th>
+<th>合规风险</th>
+<th>尽调要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A 纯业务合作+年度框架</strong></td>
+<td>框架协议+按校/按年采购，标杆校共建（讯飞、校宝模式）</td>
+<td>零资本风险；退出成本最低；行业已有成熟范式</td>
+<td>绑定浅，代理商可随时换供应商；无渠道锁定</td>
+<td>最低；注意不得与义务教育学校构成利益关联方交易、收费不得变相进学费</td>
+<td>核实托管方与各校合同期限（决定续约基本盘）</td>
+</tr>
+<tr>
+<td><strong>B 渠道分成/独家代理</strong></td>
+<td>托管方作为区域/集团渠道，按销售额分成；可设排他</td>
+<td>绑定其校网渠道，收入与双方利益一致</td>
+<td>分成比例谈判难；渠道压货与回款风险</td>
+<td>中低；分成不得以学费为基数向学校收取（避免被认定从学校抽血），应向托管方公司结算</td>
+<td>托管方对旗下学校的实际控制力与排他处置权是否真实存在</td>
+</tr>
+<tr>
+<td><strong>C 合资公司</strong></td>
+<td>双方出资设 JV，面向托管校网做产品+服务运营</td>
+<td>深度绑定、共享收益；可将数据/产品资产沉淀在 JV</td>
+<td>治理僵局风险；退出难；教育行业 JV 无成熟先例</td>
+<td>中；JV 客户若是义务教育学校，需证明交易公允、非利益关联输送；注意数据合规（未成年人个人信息）</td>
+<td>托管方注入的"渠道资源"如何作价与考核； JV 与各学校的交易定价机制</td>
+</tr>
+<tr>
+<td><strong>D 小额股权互换</strong></td>
+<td>双方互持对方公司 1–5% 股权</td>
+<td>资本层面互信背书，锁定长期合作</td>
+<td><strong>无公开先例</strong>；估值难（托管方多为非上市、关联交易复杂）；对方爆雷时股权即沉没成本+声誉牵连</td>
+<td>中高；不得穿透持有义务教育学校权益；若托管方上市/拟上市，互换可能触发披露与同业审查</td>
+<td>托管方股权结构、实控人、或有负债、关联学校清单的全貌（见 §6）</td>
+</tr>
+<tr>
+<td><strong>E 可转债/期权</strong></td>
+<td>先债后股：借款/可转债给托管方公司，或约定业绩达标后按约定价入股</td>
+<td>先观察后下注，下行有债权保护；契合"先业务后资本"节奏</td>
+<td>条款设计复杂；托管方资产轻（无校舍产权），债权实际保障弱</td>
+<td>中；债转股行权时同样不得穿透学校权益；注意变相放贷与非法集资边界</td>
+<td>托管方可抵押资产极少，须以管理费应收账款质押+实控人连带担保补足</td>
+</tr>
+</tbody>
+</table>
+<h3 id="p4-53">5.3 建议路径（基于上述事实）</h3>
+<ol>
+<li><strong>先 A/B 后 C/E，慎做 D</strong>。行业先例全部停留在业务层（§3），直接股权互换缺乏估值锚且把委托方暴露在托管方债务与舆情风险下（§4 显示托管/教育集团爆雷频率不低）。</li>
+<li>若一定要资本绑定，<strong>可转债/期权（E）优于直接换股（D）</strong>：先 1–2 个学年业务验证 + 完成 §6 尽调，再决定是否行权。</li>
+<li>无论何种结构，<strong>交易对手只能是托管方公司，合同中明确"不介入任何学校法人财产、学费账户与办学结余分配"</strong>，并按公允原则与其旗下义务教育学校分别签约，规避利益关联方认定。</li>
+</ol>
+<hr/>
+<h2 id="p4-6-20">6. 与托管方谈合作前必须核实的尽调问题清单（20 条）</h2>
+<p><strong>财务与信用</strong>
+1. 托管方公司近三年审计报告、银行流水与纳税申报，管理费应收账款账龄与坏账。
+2. 实控人及母体集团全部对外负债、被执行/限高/股权冻结记录（企查查/天眼查+裁判文书网交叉核验）——参照厚德书院案"举办者关联方大额被执行＝红色信号"。
+3. 是否存在向旗下学校借款、占用学费、以学校资产对外担保的行为（查学校对公账户流水与担保登记）。
+4. 是否采用预缴折扣、个人账户收款等激进回款方式（爆雷领先信号）。
+5. 托管费定价结构：固定费/分成比例/绩效条款，是否有以学费为基数从学校抽走的安排（合规红线）。</p>
+<p><strong>学校资产与合同底稿</strong>
+6. 全部托管学校清单：举办者、学段（是否义务教育）、在校人数、学费标准、剩余合同期限、续约条件。
+7. 每份托管合同底稿：四权（决策/财务/公章/办学主导）归属是否清晰，是否存在被认定"名为托管实为出租资质"的条款（对照灵璧案）。
+8. 学校土地/校舍权属：自有/租赁/政府资产，是否存在产权瑕疵或未过户情形。
+9. 托管合同中的保证金、抵押、质押安排及当前状态（是否已被扣减或涉诉）。
+10. 是否存在股权质押对赌、历史债务承担等类似"一土×致知"的隐性条款。</p>
+<p><strong>合规与监管</strong>
+11. 旗下义务教育学校与托管方是否构成利益关联方，现有交易如何通过年度关联交易审查。
+12. 各学校办学许可证、年检结果、收费备案/政府指导价批复是否齐备有效。
+13. 当地教育局对托管模式的态度与既往监管记录（约谈、通报、招生计划核减）。
+14. 涉未成年人数据与校园数据的产品部署是否符合个人信息保护、教育移动互联网应用备案要求。</p>
+<p><strong>实控人与治理</strong>
+15. 实控人背景：教育行业履历、其他产业（地产/金融）敞口、个人征信与涉诉。
+16. 董事会/决策机制：我方合作事项需谁批准，实控人一言堂程度。
+17. 核心校长与管理团队的劳动关系归属（托管方公司 or 学校），离职率与激励安排——托管业务的真正资产是人。</p>
+<p><strong>业务与合作可行性</strong>
+18. 旗下学校信息化现状：现有 SaaS/硬件供应商、合同期限、替换成本与数据迁移难度。
+19. 托管方所声称"可排他导入的校网"中，多少所学校其合同赋予其实际采购决策权（vs 学校董事会自行决策）。
+20. 若托管方失去某校托管权（到期不续/解约），我方已部署产品与应收款的处置安排——要求"校随合同走"的补偿或回购条款。</p>
+<hr/>
+<h2 id="p4-7">7. 信源清单表</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>信源</th>
+<th>内容</th>
+<th>档位</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>天立国际控股 FY2025 年度报告（港交所披露易）</td>
+<td>收益 35.89 亿、毛利率 33.8%、分部收入</td>
+<td>一手</td>
+<td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1230/2025123000329_c.pdf" rel="noopener noreferrer" target="_blank">https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1230/2025123000329_c.pdf</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>国信证券研报（证券之星转载）</td>
+<td>天立 FY2026H1 托管收入 0.78 亿、23 所托管校</td>
+<td>二手</td>
+<td><a href="https://hk.stockstar.com/IG2026041300030357.shtml" rel="noopener noreferrer" target="_blank">https://hk.stockstar.com/IG2026041300030357.shtml</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>招商证券研报（三个皮匠转载）</td>
+<td>公办托管 300/400/500 万/学段/年、托管毛利率 50–60%</td>
+<td>二手</td>
+<td><a href="https://bg.sgpjbg.com/labels/xuexiaotuoguanyewushishime/1/7075808.html" rel="noopener noreferrer" target="_blank">https://bg.sgpjbg.com/labels/xuexiaotuoguanyewushishime/1/7075808.html</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>华西证券研报（发现报告转载）</td>
+<td>天立 FY2025 托管收入 1.16 亿（+93.9%）</td>
+<td>二手</td>
+<td><a href="https://fxbaogao.com/detail/5171996" rel="noopener noreferrer" target="_blank">https://fxbaogao.com/detail/5171996</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td>海亮教育 FY2021 财报新闻稿（经济参考网）</td>
+<td>运营管理收入 6,000 万、27 校、43,897 人</td>
+<td>一手</td>
+<td><a href="https://www.jjckb.cn/2021-11/13/c_1310308862.htm" rel="noopener noreferrer" target="_blank">https://www.jjckb.cn/2021-11/13/c_1310308862.htm</a></td>
+</tr>
+<tr>
+<td>6</td>
+<td>21 世纪经济报道</td>
+<td>海亮轻资产转型、运营管理毛利率更高、民促法实施条例解读</td>
+<td>二手</td>
+<td><a href="https://www.21jingji.com/article/20211125/herald/109c3d31b0365e43c4c4e266e85bf085.html" rel="noopener noreferrer" target="_blank">https://www.21jingji.com/article/20211125/herald/109c3d31b0365e43c4c4e266e85bf085.html</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td>海亮集团信用评级报告（东方财富 PDF）</td>
+<td>2023 年运营管理学校调整至表外</td>
+<td>一手</td>
+<td><a href="https://pdf.dfcfw.com/pdf/H2_AN202406281637029436_1.pdf" rel="noopener noreferrer" target="_blank">https://pdf.dfcfw.com/pdf/H2_AN202406281637029436_1.pdf</a></td>
+</tr>
+<tr>
+<td>8</td>
+<td>(2022)晋07民终2962号判决书（维基文库自裁判文书网存档导入）</td>
+<td>15 年托管、结余分成、违约金 100 万、解除权条款</td>
+<td>一手</td>
+<td><a href="https://zh.wikisource.org/wiki/××公司、程某等合同纠纷民事二审民事判决书" rel="noopener noreferrer" target="_blank">https://zh.wikisource.org/wiki/××公司、程某等合同纠纷民事二审民事判决书</a></td>
+</tr>
+<tr>
+<td>9</td>
+<td>杨捷律师案例评析（含 (2024)皖13民终3268号）</td>
+<td>名为托管实为出租资质→合同无效；四权判断标准</td>
+<td>二手（含一手判决书内容）</td>
+<td>元典智库评析文（经检索页转载）</td>
+</tr>
+<tr>
+<td>10</td>
+<td>熊武林律师团队</td>
+<td>湖南高中部托管判例；委托管理 vs 出租出借红线</td>
+<td>二手（含一手判例）</td>
+<td><a href="https://xiongwulin.66law.cn/wenji_1583662.aspx" rel="noopener noreferrer" target="_blank">https://xiongwulin.66law.cn/wenji_1583662.aspx</a></td>
+</tr>
+<tr>
+<td>11</td>
+<td>澎湃新闻《揭秘学校托管的"三角关系"》</td>
+<td>品牌+托管收费模式、平和×光华到期案例</td>
+<td>二手</td>
+<td><a href="https://thepaper.cn/newsDetail_forward_26236246" rel="noopener noreferrer" target="_blank">https://thepaper.cn/newsDetail_forward_26236246</a></td>
+</tr>
+<tr>
+<td>12</td>
+<td>顶端新闻/网易（源真法律人）</td>
+<td>委托管理 5 类型、保证金/人头费机制</td>
+<td>二手</td>
+<td><a href="https://www.163.com/dy/article/KMNDB1RK0518RSPT.html" rel="noopener noreferrer" target="_blank">https://www.163.com/dy/article/KMNDB1RK0518RSPT.html</a></td>
+</tr>
+<tr>
+<td>13</td>
+<td>学校委托管理协议模板（第一范文网/瑞文网）</td>
+<td>基础+绩效管理费结构、董事会席位</td>
+<td>二手（模板）</td>
+<td><a href="https://m.diyifanwen.com/fanwen/weituohetong/17691459.html" rel="noopener noreferrer" target="_blank">https://m.diyifanwen.com/fanwen/weituohetong/17691459.html</a></td>
+</tr>
+<tr>
+<td>14</td>
+<td>环球律师网（判决书评析）</td>
+<td>幸福柳分校案：托管费付给出资人＝变相分配利润→无效</td>
+<td>一手（判决书内容）</td>
+<td><a href="http://www.huanqiulawyer.com/article/2789.html" rel="noopener noreferrer" target="_blank">http://www.huanqiulawyer.com/article/2789.html</a></td>
+</tr>
+<tr>
+<td>15</td>
+<td>新华社</td>
+<td>云南美华国际高中停课调查</td>
+<td>一手</td>
+<td><a href="https://www.xinhuanet.com/politics/2019-01/07/c_1123957468.htm" rel="noopener noreferrer" target="_blank">https://www.xinhuanet.com/politics/2019-01/07/c_1123957468.htm</a></td>
+</tr>
+<tr>
+<td>16</td>
+<td>ima.qq.com 民办学校风险案例库（汇编华夏时报/三联/澎湃）</td>
+<td>厚德书院爆雷细节</td>
+<td>二手（媒体汇编，底层为权威媒体）</td>
+<td><a href="https://ima.qq.com/wiki/?shareId=d9c5086f" rel="noopener noreferrer" target="_blank">https://ima.qq.com/wiki/?shareId=d9c5086f</a>...</td>
+</tr>
+<tr>
+<td>17</td>
+<td>三联生活周刊</td>
+<td>一土致知学校危机、股权质押与债务承担条款</td>
+<td>二手</td>
+<td><a href="https://www.lifeweek.com.cn/h5/article/detail.do?artId=258705" rel="noopener noreferrer" target="_blank">https://www.lifeweek.com.cn/h5/article/detail.do?artId=258705</a></td>
+</tr>
+<tr>
+<td>18</td>
+<td>MBA 智库百科</td>
+<td>南洋教育集团崩溃案例</td>
+<td>二手</td>
+<td><a href="https://wiki.mbalib.com/wiki/中国最大民办教育集团崩溃" rel="noopener noreferrer" target="_blank">https://wiki.mbalib.com/wiki/中国最大民办教育集团崩溃</a></td>
+</tr>
+<tr>
+<td>19</td>
+<td>百度百科</td>
+<td>21 世纪教育集团破产重整停牌</td>
+<td>二手（降权）</td>
+<td><a href="https://baike.baidu.com/item/21世纪教育集团/3849799" rel="noopener noreferrer" target="_blank">https://baike.baidu.com/item/21世纪教育集团/3849799</a></td>
+</tr>
+<tr>
+<td>20</td>
+<td>Insolvency Insider UK</td>
+<td>Galaxy Global 英国学校破产管理</td>
+<td>二手</td>
+<td><a href="https://insolvency-insider.co.uk/p/galaxy-global-schools-enter-administration-after-abrupt-closures" rel="noopener noreferrer" target="_blank">https://insolvency-insider.co.uk/p/galaxy-global-schools-enter-administration-after-abrupt-closures</a></td>
+</tr>
+<tr>
+<td>21</td>
+<td>科大讯飞官网/中国日报/四川新闻网</td>
+<td>讯飞×春晖/立人/现代教育集团战略合作</td>
+<td>一手（官网）/二手（媒体）</td>
+<td><a href="https://edu.iflytek.com/about-us/news/company-news/2737" rel="noopener noreferrer" target="_blank">https://edu.iflytek.com/about-us/news/company-news/2737</a> 等</td>
+</tr>
+<tr>
+<td>22</td>
+<td>新浪财经/新湖南</td>
+<td>校宝在线×恒雅教育集团合作</td>
+<td>二手</td>
+<td><a href="https://finance.sina.cn/2025-03-14/detail-inepqsvq9935961.d.html" rel="noopener noreferrer" target="_blank">https://finance.sina.cn/2025-03-14/detail-inepqsvq9935961.d.html</a></td>
+</tr>
+<tr>
+<td>23</td>
+<td>中国网（物联网频道）</td>
+<td>松鼠 Ai×金培教育合作</td>
+<td>二手（软文降权）</td>
+<td><a href="https://iot.china.com.cn/content/2025-08/21/content_43208905.html" rel="noopener noreferrer" target="_blank">https://iot.china.com.cn/content/2025-08/21/content_43208905.html</a></td>
+</tr>
+<tr>
+<td>24</td>
+<td>网易/界面/人民日报客户端/新华传媒</td>
+<td>有道、好未来进校与课后服务行业调整</td>
+<td>二手</td>
+<td><a href="https://m.163.com/dy/article/HCQSTLB005129QAF.html" rel="noopener noreferrer" target="_blank">https://m.163.com/dy/article/HCQSTLB005129QAF.html</a> 等</td>
+</tr>
+<tr>
+<td>25</td>
+<td>广州市政府（穗发改规字〔2024〕10号）</td>
+<td>民办义务教育收费、备案账户、关联交易年度审查</td>
+<td>一手</td>
+<td><a href="https://www.gz.gov.cn/gzzcwjk/gzdata/content/post_10052878.html" rel="noopener noreferrer" target="_blank">https://www.gz.gov.cn/gzzcwjk/gzdata/content/post_10052878.html</a></td>
+</tr>
+<tr>
+<td>26</td>
+<td>阳光高考信息平台（2006）</td>
+<td>山西南洋国际学校被终止办学</td>
+<td>二手</td>
+<td><a href="https://gaokao.chsi.com.cn/gkxx/mb/dt/200603/20060315/401198.html" rel="noopener noreferrer" target="_blank">https://gaokao.chsi.com.cn/gkxx/mb/dt/200603/20060315/401198.html</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="p4-8">8. 数据缺口与存疑点</h2>
+<ol>
+<li><strong>"教育科技公司 × 民办教育集团"股权互换/互相持股的公开先例：未找到公开数据</strong>。现有公开案例全部为业务合作型。委托方若推进相互投资，属无先例交易，定价与合规设计需自创框架。</li>
+<li><strong>民办托管"按学费比例分成"的统一市场区间：未找到公开权威数据</strong>。澎湃仅描述机制未给比例；可查实例均为固定费或结余分成（100–500 万/年、结余 25%/60–70%）。若需精确比例区间，建议调取托管方真实合同底稿或通过行业访谈补足。</li>
+<li>天立"托管业务毛利率 50–60%"为招商证券研报估算口径，<strong>年报未单列托管分部毛利率</strong>（一手缺口）。</li>
+<li>海亮教育已于 2022 年前后私有化退市，FY2022 之后无公开分部数据；2023 年运营校出表后的托管业务最新规模无法核实。</li>
+<li>ClassIn（翼鸥）、希沃与民办教育集团的深度合作：<strong>本轮未检索到符合条件的公开案例</strong>，不排除存在未披露合作。</li>
+<li>21 世纪教育集团破产重整细节来源为百科汇编（降权），停牌/退市风险与重整进展应以港交所公告及公司公告为准再行核实。</li>
+<li>金山桥教育集团案例来源为 360 百科（降权），仅作历史风险模式参考，不宜作为决策依据引用。</li>
+</ol></article>
+</section>
+<section class="panel hidden" id="p5" role="tabpanel">
+<details class="toc" open=""><summary>本模块目录</summary><div class="toc">
+<ul>
+<li><a href="#p5-_2">一、浙江省</a><ul>
+<li><a href="#p5-1-2024-20242025-04">1. 民办教育规模（2024 学年，【一手】浙江省教育厅《2024年浙江省教育事业发展统计公报》，2025-04 发布）</a></li>
+<li><a href="#p5-2">2. 地方规定</a></li>
+<li><a href="#p5-3">3. 本地活跃玩家与典型案例</a></li>
+<li><a href="#p5-4">4. 政策执行松紧度评估</a></li>
+<li><a href="#p5-5">5. 风险与机会小结</a></li>
+</ul>
+</li>
+<li><a href="#p5-_3">二、广东省</a><ul>
+<li><a href="#p5-1-2024-2024edugdgovcn">1. 民办教育规模（2024 学年，【一手】广东省教育厅《2024年广东省教育事业发展统计公报》，edu.gd.gov.cn）</a></li>
+<li><a href="#p5-2_1">2. 地方规定</a></li>
+<li><a href="#p5-3_1">3. 本地活跃玩家与典型案例</a></li>
+<li><a href="#p5-4_1">4. 政策执行松紧度评估</a></li>
+<li><a href="#p5-5_1">5. 风险与机会小结</a></li>
+</ul>
+</li>
+<li><a href="#p5-_4">三、河南省</a><ul>
+<li><a href="#p5-1-2024-20242025-03">1. 民办教育规模（2024 学年，【一手】河南省教育厅《2024年河南省教育事业发展统计公报》，2025-03 发布）</a></li>
+<li><a href="#p5-2_2">2. 地方规定</a></li>
+<li><a href="#p5-3_2">3. 本地活跃玩家与典型案例</a></li>
+<li><a href="#p5-4_2">4. 政策执行松紧度评估</a></li>
+<li><a href="#p5-5_2">5. 风险与机会小结</a></li>
+</ul>
+</li>
+<li><a href="#p5-_5">四、三省对比表</a></li>
+<li><a href="#p5-_6">五、若合作方学校集中在某省，该省的核心风险点</a></li>
+<li><a href="#p5-_7">六、信源清单表</a></li>
+<li><a href="#p5-_8">七、数据缺口与存疑点</a></li>
+</ul>
+</div>
+</details>
+<article class="md-body"><h1 id="p5-_1">重点省份深挖：浙江 / 广东 / 河南 —— 民办校整体委托管理政策与市场状况</h1>
+<p><strong>调研目的</strong>：评估 AI 教育 SaaS 公司与"民办学校整体委托管理"代理商合作/相互投资的区域风险
+<strong>调研日期</strong>：2026-10-08
+<strong>信源档位标注</strong>：【一手】= 政府文件/统计公报/官网；【二手】= 行业报告/权威媒体；【估算】= 推算（附逻辑）。软文一律降权并注明。</p>
+<hr/>
+<h2 id="p5-_2">一、浙江省</h2>
+<h3 id="p5-1-2024-20242025-04">1. 民办教育规模（2024 学年，【一手】浙江省教育厅《2024年浙江省教育事业发展统计公报》，2025-04 发布）</h3>
+<table>
+<thead>
+<tr>
+<th>学段</th>
+<th>学校数</th>
+<th>在校生</th>
+<th>占全省同学段比例</th>
+<th>较上年趋势</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>民办普通高中</td>
+<td>260 所</td>
+<td>23.18 万人</td>
+<td>25.0%</td>
+<td>校数较 2022 年（246 所）略增</td>
+</tr>
+<tr>
+<td>民办中职（不含技工校）</td>
+<td>46 所</td>
+<td>7.12 万人</td>
+<td>14.9%</td>
+<td>持平</td>
+</tr>
+<tr>
+<td>民办普通初中</td>
+<td>160 所</td>
+<td>15.66 万人</td>
+<td>8.6%</td>
+<td>较 2022 年（203 所/18.89 万）明显收缩</td>
+</tr>
+<tr>
+<td>民办普通小学</td>
+<td>76 所</td>
+<td>19.15 万人</td>
+<td>4.6%</td>
+<td>较 2022 年（97 所/32.13 万）大幅收缩</td>
+</tr>
+<tr>
+<td>民办幼儿园</td>
+<td>2,710 所</td>
+<td>37.06 万人</td>
+<td>23.0%</td>
+<td>较 2022 年（4,303 所/73.43 万）腰斩</td>
+</tr>
+</tbody>
+</table>
+<p>口径说明：公报为全省口径、时点数据；义务教育段民办占比已被压至低位（初中 8.6%、小学 4.6%），市县级文件（丽水 2024 年鉴，【一手】）明确"纯民办义务教育学生占比确保控制在 5% 以内"。民办高中段（普高+中职合计约 30 万在校生）是浙江民办教育的实际主战场。</p>
+<h3 id="p5-2">2. 地方规定</h3>
+<ul>
+<li><strong>分类登记过渡期</strong>：浙政发〔2017〕48 号规定现有民办学校（2016-11-07 前设立）<strong>2022 年底前完成分类登记</strong>【一手】；配套《现有民办学校变更登记类型实施办法》（浙教计〔2018〕28 号）【一手】。</li>
+<li><strong>执行进度</strong>：截止期已过，但省级执行明显拖延。嘉宏教育（HK:01935）公告披露，按其办学所在地河南、浙江规定须于 2022 年底前完成分类登记，但"<strong>地方政府尚未启动注册工作</strong>"【二手：21 世纪经济报道，2023-05】。未找到浙江省级分类登记完成率的公开汇总数据（数据缺口）。</li>
+<li><strong>委托管理相关规定</strong>：浙江省层面<strong>未找到</strong>专门针对"民办学校委托管理"的省级规范性文件。正面依据为浙政发〔2017〕48 号"支持公办学校与民办学校相互购买管理服务、教学资源、科研成果"【一手】。温州（国家民办教育综合改革试点）走得更远：乐清市政府文件明确"探索不改变薄弱公办中小学公益属性的前提下由优质民办学校进行委托管理"【一手】。</li>
+<li><strong>市县层面收紧信号</strong>：《嘉兴市民办学校分类管理实施细则（试行）》（2025-05）规定"原则上不再新增审批民办义务教育学校""民办义务教育学校不得对外投资，其他民办学校 100 万元以上对外投资须论证+决策+备案"【一手】；《宁波市民办学校办学行为监管办法（试行）》（甬教终民〔2026〕66 号，2026-05-01 施行）将"非营利性学校变相分配结余""民办义务教育学校进行关联交易"列为<strong>年检直接不合格</strong>情形【一手】。</li>
+<li><strong>委托办学的合规范式</strong>（公办校场景）：温州瓯海区外国语学校初中分校委托办学项目（2021）确立"六不变"——公办性质、资产权属、教师身份、财政投入机制、督导责任、公益性不变，一年一考核、三年一评估【一手】。</li>
+</ul>
+<h3 id="p5-3">3. 本地活跃玩家与典型案例</h3>
+<table>
+<thead>
+<tr>
+<th>玩家</th>
+<th>模式</th>
+<th>案例</th>
+<th>信源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>海亮教育科技服务集团</strong>（总部诸暨，轻资产输出发源地代表）</td>
+<td>综合管理服务（品牌+管理+课程+师训+科技）输出给公办/民办校</td>
+<td>官网披露：综合管理服务覆盖 40+ 所学校、5+ 省份、在校师生 5 万+，业务覆盖 310+ 区县【二手，企业官网，降权：自我宣传】；2021 财年运营管理学校 27 所、学生 4.39 万【二手：经济参考报转财报】</td>
+<td>【二手】</td>
+</tr>
+<tr>
+<td>海亮"政府建校+委托运营"模式</td>
+<td>政府出资建设、海亮举办/运营</td>
+<td>杭州湘湖公学（萧山区政府出资 8.6 亿，2018）；金华海亮外国语学校、山东肥城海亮外国语学校（合作期 30 年）【二手：美通社，企业口径降权】</td>
+<td>【二手】</td>
+</tr>
+<tr>
+<td>海亮托管公办校</td>
+<td>公办校委托民办集团管理</td>
+<td>2018 年托管杭州萧山闻堰初中等 3 所公办校（10 年期）【二手】</td>
+<td>【二手】</td>
+</tr>
+<tr>
+<td>瑞安新纪元实验学校（民办）</td>
+<td>民办校托管乡村公办校</td>
+<td>2019 学年起托管芳庄乡学校，生源从一年级仅 3 人回升至 263 人【二手：人民日报】</td>
+<td>【二手】</td>
+</tr>
+<tr>
+<td>城乡教共体（政府主导）</td>
+<td>"共建型"= 乡镇学校委托城镇学校管理</td>
+<td>全省教共体结对 5,000 余所、覆盖 97% 城乡公办学校；共建型占 71%【一手：浙江省教育厅提案答复，2024-07】</td>
+<td>【一手】</td>
+</tr>
+</tbody>
+</table>
+<p>注：绿城育华、锦绣育才等浙江本土民办集团本轮未查到其对外整体委托管理的可核实公开数据，标注为数据缺口。</p>
+<h3 id="p5-4">4. 政策执行松紧度评估</h3>
+<ul>
+<li><strong>对委托管理本身</strong>：未发现浙江省叫停、整治民办学校委托管理的公开记录；相反，教共体（含委托管理成分）是省级推广的"教育共富"抓手，温州试点明文鼓励。<strong>态度总体宽容但有边界</strong>。</li>
+<li><strong>收紧方向集中在三处</strong>：① 义务教育段民办占比 5% 硬约束（丽水等地落实）；② 年检与资金监管趋严（宁波 2026 新规、余姚/乐清年检与换证+资金监管捆绑）；③ 民办义务教育关联交易属年检直接不合格——这意味着托管方若从被托管义务教育民办校收取管理费，存在被认定为变相分配办学收益/关联交易的合规风险。</li>
+<li>海亮 2021 年因《民促法实施条例》"协议控制义务教育民办校"禁令，对义务教育学校业务做终止经营处理并计提减值 2.52 亿元【二手：财报】，是浙江玩家踩线调整的标志性事件。</li>
+</ul>
+<h3 id="p5-5">5. 风险与机会小结</h3>
+<p><strong>机会</strong>：浙江是轻资产管理输出商业模式最成熟、政府接受度最高的省份，公办校委托（教共体/县中崛起/温州模式）通道畅通，民办高中段体量约 30 万在校生且政策允许营利性登记，SaaS 切入空间集中在高中段与公办托管校的科技服务采购。<strong>风险</strong>：义务教育段已基本封死（占比压至个位数、不再新批、关联交易红线）；分类登记"有截止期、无执行"造成托管标的法人属性与收益分配结构长期不确定；省级层面对"民办校整体委托管理"无专门规则，意味着合规模糊地带大、个案谈判色彩浓，一旦出舆情易被追溯为变相控制或变相分配结余。</p>
+<hr/>
+<h2 id="p5-_3">二、广东省</h2>
+<h3 id="p5-1-2024-2024edugdgovcn">1. 民办教育规模（2024 学年，【一手】广东省教育厅《2024年广东省教育事业发展统计公报》，edu.gd.gov.cn）</h3>
+<table>
+<thead>
+<tr>
+<th>学段</th>
+<th>学校数</th>
+<th>在校生</th>
+<th>占全省同学段比例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>各级各类民办学校合计</td>
+<td>1.45 万所（占 38.46%）</td>
+<td>675.15 万人（占 24.08%）</td>
+<td>—</td>
+</tr>
+<tr>
+<td>民办义务教育学校</td>
+<td>1,601 所（占 11.03%）</td>
+<td>276.73 万人（<strong>含政府购买学位 222.51 万人</strong>）</td>
+<td>剔除购买学位后纯民办占比仅 <strong>3.37%</strong></td>
+</tr>
+<tr>
+<td>民办普通高中</td>
+<td>328 所（占 27.52%）</td>
+<td>42.23 万人</td>
+<td>17.94%</td>
+</tr>
+<tr>
+<td>民办中职</td>
+<td>99 所（占 27.35%）</td>
+<td>25.15 万人</td>
+<td>25.69%</td>
+</tr>
+<tr>
+<td>民办幼儿园</td>
+<td>1.24 万所</td>
+<td>206.20 万人</td>
+<td>49.81%</td>
+</tr>
+</tbody>
+</table>
+<p>关键口径提示：广东民办义务教育 276.73 万在校生中约八成是政府购买学位，<strong>真实市场化民办义务教育体量约 54 万人</strong>【估算：276.73-222.51】。广州 2024 公报【一手】显示民办学校 1,529 所、较上年减 37 所，民办在校生 64.64 万、降 7.14%——持续收缩。历史上（2020）深圳民办义务教育占比超 30%、东莞达 60%【二手：首都师范大学学报引各市公报】，是压减重灾区。</p>
+<h3 id="p5-2_1">2. 地方规定</h3>
+<ul>
+<li><strong>分类登记</strong>：广东省政府 2018 年《关于鼓励社会力量兴办教育促进民办教育健康发展的实施意见》规定现有民办学校按"一市一策""一地一策"推进分类改革，<strong>不设过渡期；未明确选择之前，按非营利性学校对待</strong>【一手，广东省教育厅官方问答亦确认】。以 2017-08-31 为财务清查基准日；省五部门《关于民办学校分类登记的实施办法》明确分级登记（义务段/幼儿园县级、高中段市级、高校省级）【一手：清远市转发件】。</li>
+<li><strong>委托管理相关</strong>：《广东省实施〈民办教育促进法〉办法》第 33 条：县级政府委托民办学校承担义务教育任务的，应签委托协议并按同级公办生均经费标准拨款【一手】——这是"政府购买学位"的法规基础，也是托管收入的重要来源。省教育厅等四部门集团化办学指导意见"积极引导高水平非营利性民办学校、优质民办学校牵头组建教育集团"【二手：南方+引述】。</li>
+<li><strong>义务教育占比红线</strong>：各市县落实"民办义务教育在校生占比 5% 以内"，如湛江"十四五"规划【一手】、惠州大亚湾压减方案（2021 年底≤20%、2022 年底≤5%）【一手】。</li>
+</ul>
+<h3 id="p5-3_1">3. 本地活跃玩家与典型案例</h3>
+<table>
+<thead>
+<tr>
+<th>案例</th>
+<th>模式</th>
+<th>要点</th>
+<th>信源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>上海交大教育集团托管佛山惟德外国语实验学校（2022）</td>
+<td>省外教育集团对民办校"全方位管理"（品牌输出+课程植入+师训）</td>
+<td>原广外附设佛山外国语学校解约广外后转投上交教育集团，挂牌更名</td>
+<td>【二手：南方网】</td>
+</tr>
+<tr>
+<td>广州白云实验教育集团（2021）</td>
+<td>优质民办校为核心校托管公办校</td>
+<td>民办白云实验学校（广东实验中学托管背景）托管鸦岗小学、114 中两所公办校</td>
+<td>【二手：南方+/广州日报】</td>
+</tr>
+<tr>
+<td>东莞常平镇新朗实验学校（2025）</td>
+<td>政府购买学位 + 公办管理团队整建制进驻民办校</td>
+<td>振兴中学教育集团派驻校长、副校长、教导主任等核心岗位全面负责</td>
+<td>【二手：南方+】</td>
+</tr>
+<tr>
+<td>佛山南双山语湖实验学校（2025 前后）</td>
+<td>民办校托管民办校（镇域内）</td>
+<td>南海双语实验学校派驻执行校长和顾问团队，全面指导管理、制度、师资、财务</td>
+<td>【二手：南方+】</td>
+</tr>
+</tbody>
+</table>
+<p>特点：广东委托管理呈现"双向流动"——既有教育集团托管民办校，也有政府主导公办团队进驻民办校（公民办结对），后者实质上把民办校纳入公办管理体系，是纯市场型托管的替代性竞争。</p>
+<h3 id="p5-4_1">4. 政策执行松紧度评估</h3>
+<ul>
+<li><strong>执行力度三省最强</strong>：2021-2022 年公参民治理与 5% 压减在广深佛莞刚性落地；广州民办校数量、招生、报名连年下跌【二手：羊城晚报】；2024 年全省纯民办义务教育占比已压至 3.37%【一手】。</li>
+<li><strong>"不设过渡期+未选按非营利对待"</strong> 是全国最特殊的分类登记安排：大量存量民办校法律属性悬置，托管方尽调时无法仅凭登记状态判断学校真实属性与收益可分配性。</li>
+<li>未发现广东省叫停民办校间委托管理的公开记录；但政府购买学位+公办进驻模式表明，<strong>义务教育段托管的主导权已收归政府</strong>，市场化托管空间主要剩民办高中（42 万在校生）与中职。</li>
+</ul>
+<h3 id="p5-5_1">5. 风险与机会小结</h3>
+<p><strong>机会</strong>：民办教育体量全国第一（675 万在校生），民办高中+中职近 70 万在校生是托管与 SaaS 的主要池子；大湾区家长支付力强，上交教育集团等外地玩家入局说明市场开放。<strong>风险</strong>：① 义务教育段名义体量大但八成是购买学位学生，按"市场化民办"测算市场规模会严重高估；② 分类登记无过渡期、悬置状态普遍，相互投资的标的权属尽调难度三省最高；③ 政府"公办进驻民办"模式可能挤出市场化托管；④ 珠三角压减后的存量民办校本身面临生源与生存压力，托管标的质量分化大。</p>
+<hr/>
+<h2 id="p5-_4">三、河南省</h2>
+<h3 id="p5-1-2024-20242025-03">1. 民办教育规模（2024 学年，【一手】河南省教育厅《2024年河南省教育事业发展统计公报》，2025-03 发布）</h3>
+<table>
+<thead>
+<tr>
+<th>学段</th>
+<th>学校数</th>
+<th>在校生</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>各级各类民办学校合计</td>
+<td>1.69 万所</td>
+<td>522.48 万人</td>
+</tr>
+<tr>
+<td>民办小学</td>
+<td>1,391 所</td>
+<td>102.80 万人</td>
+</tr>
+<tr>
+<td>民办初中</td>
+<td>757 所</td>
+<td>71.35 万人</td>
+</tr>
+<tr>
+<td>民办普通高中</td>
+<td>552 所</td>
+<td>81.80 万人</td>
+</tr>
+<tr>
+<td>民办中职</td>
+<td>183 所</td>
+<td>23.33 万人</td>
+</tr>
+<tr>
+<td>民办高校</td>
+<td>56 所（本科 21 所）</td>
+<td>95.63 万人（本专科）</td>
+</tr>
+<tr>
+<td>民办幼儿园</td>
+<td>1.40 万所</td>
+<td>147.52 万人</td>
+</tr>
+</tbody>
+</table>
+<p>趋势：较 2023/24 学年（蓝皮书口径 1.89 万所/569.54 万【二手：河南民办教育发展报告 2024】）全面收缩。全省民办教育在校生占全省在校生总数约 21.7%（2023/24 学年口径，【二手：蓝皮书】）。民办普通高中 81.8 万在校生、县域密集，是河南最突出的结构特征。省级公报未直接给出民办义务教育占比，信阳市政协提案答复披露该市"民办义务教育规模占比稳定控制在 5% 以内"【一手】，郑州市 2021 年底占比为 13.40%（治理起点）【一手】。</p>
+<h3 id="p5-2_2">2. 地方规定</h3>
+<ul>
+<li><strong>分类登记</strong>：豫政〔2018〕6 号规定<strong>民办高校须 2022 年底前完成分类登记；其他学段分类登记时限由各省辖市、省直管县（市）自行决定</strong>【一手】——全国少见的"放权式"安排，导致进度碎片化（如济源要求 2020 年底前【一手】）。</li>
+<li><strong>执行进度</strong>：新高教集团（HK:02001）公告披露河南"对民办学校分类登记为营利性或非营利性学校的具体要求和程序尚不明确"【二手：21 世纪经济报道，2023-05】。未找到河南省分类登记完成率公开数据（数据缺口）。</li>
+<li><strong>委托管理相关</strong>：未找到河南省级关于民办学校委托管理的专门规定。相关监管抓手为：省教育厅 2022 年《民办学校决策机构成员备案管理办法（试行）》——实施义务教育的民办学校决策机构成员<strong>应当有审批机关委派的代表</strong>，成员变更须 15 个工作日内备案【一手】；基层实行属地管理（永城市由乡镇中心校负责民办校申办、变更、年检审核【一手】）。</li>
+<li><strong>义务教育占比红线</strong>：周口市文件明确"民办义务教育学生占比不超过 5% 的指标不反弹"，并点名鹿邑县 2025 年降至 5% 以内【一手】。</li>
+</ul>
+<h3 id="p5-3_2">3. 本地活跃玩家与典型案例</h3>
+<table>
+<thead>
+<tr>
+<th>案例</th>
+<th>模式</th>
+<th>要点</th>
+<th>信源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>周口市城乡一体化示范区海亮教育文昌教育集团</strong>（2025-04 揭牌）</td>
+<td>区政府引进海亮，"一总三分校"（文昌中学+桂园路初中+两所小学）十二年一贯</td>
+<td>公办属性、教师编制、资产权属、政策待遇"四不变"；海亮派遣校长团队；政府称经多轮考察衡水、天立、阳光等集团后选定海亮</td>
+<td>【一手：示范区管委会官网】+【二手：中原经济网】</td>
+</tr>
+<tr>
+<td>郑州育人教育集团托管长葛市天硕学校（2019）</td>
+<td>民办集团托管县域民办九年一贯制学校</td>
+<td>输出教学、课程、人员培训全方位管理</td>
+<td>【二手，集团宣传稿口径，降权】</td>
+</tr>
+<tr>
+<td>同济大学附属存志学校集团托管安阳殷都外国语中学（2020）</td>
+<td>民办集团托管公办初中</td>
+<td>派驻校长，输出师训与课堂改革</td>
+<td>【二手：安阳日报】</td>
+</tr>
+<tr>
+<td>长垣市第一初级中学×南洋学校联合办学（2015 起）</td>
+<td>公办校帮扶盘活滩区民办"空巢学校"</td>
+<td>输出理念/课改/管理模式，"公民办合作不是禁区，关键要合法合理"</td>
+<td>【二手：人民日报人民号】</td>
+</tr>
+</tbody>
+</table>
+<p>特点：河南是<strong>头部民办教育集团"公办托管"下沉县域的主战场</strong>（海亮周口模式为 2025 年最新样板），同时存在大量本土中小托管联盟，但后者公开信息少、软文多。</p>
+<h3 id="p5-4_2">4. 政策执行松紧度评估</h3>
+<ul>
+<li><strong>义务教育压减执行刚性</strong>：开封 2022 年核减民办招生计划 12,010 个、政府购买学位 103,499 个、民转公多管齐下，2022-09 前完成 5% 目标【一手：河南省政府门户】；郑州坚持"三个只减不增"、治理 22 所公参民学校【一手】；信阳 2025 年通过年检拟停办民办学校（含幼儿园）88 所【一手】。</li>
+<li><strong>执行尺度省内分化</strong>：安阳下属内黄县 2026 年招生文件写死"不超 5%"，而殷都区、汤阴县、林州市只提"公民同招"未写比例；省层基调被描述为"温和消化"而非集中清理【二手：今日头条自媒体分析，降权，仅作旁证】。</li>
+<li><strong>对公办委托民办集团</strong>：持欢迎态度（周口为管委会主导的政府行为），未见叫停记录；对民办校之间的委托管理无省级规则，依赖属地年检与决策机构备案间接约束。</li>
+<li>河南人口净流出全国第一、学龄人口萎缩，民办校自然出清加速（全省民办校一年减少约 2,000 所）——监管风险之外，<strong>生源风险是河南托管标的第一位的商业风险</strong>。</li>
+</ul>
+<h3 id="p5-5_2">5. 风险与机会小结</h3>
+<p><strong>机会</strong>：县域民办高中体量全国罕见（552 所/81.8 万在校生），县中振兴与地方政府引智需求旺盛，海亮周口模式提供了"政府背书的公办托管"可复制样板，SaaS 随托管集团下沉的渠道价值高。<strong>风险</strong>：① 分类登记时限下放地市、程序不明，标的法人属性与税务处理不确定性三省最高；② 生源净流出+民办校批量停办（信阳一年拟停 88 所），托管合同存续风险与应收账款风险高；③ 义务教育段 5% 红线下县域执行不一，政策口径随时可能收紧"反弹"；④ 本土中小托管集团信息透明度低，合作方尽调成本大。</p>
+<hr/>
+<h2 id="p5-_5">四、三省对比表</h2>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>浙江</th>
+<th>广东</th>
+<th>河南</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>民办学校总规模（2024）</td>
+<td>未给总数；中小学+中职约 542 所/65 万在校生【一手】</td>
+<td>1.45 万所/675.15 万【一手】</td>
+<td>1.69 万所/522.48 万【一手】</td>
+</tr>
+<tr>
+<td>民办普高在校生</td>
+<td>23.18 万（25.0%）【一手】</td>
+<td>42.23 万（17.94%）【一手】</td>
+<td>81.80 万【一手】</td>
+</tr>
+<tr>
+<td>民办义务教育占比</td>
+<td>小学 4.6%/初中 8.6%，持续压减【一手】</td>
+<td>纯民办 3.37%（另 222.51 万政府购买学位）【一手】</td>
+<td>未给省口径；市口径已压至 5% 内【一手】</td>
+</tr>
+<tr>
+<td>分类登记过渡期</td>
+<td>2022 年底截止，但执行拖延【一手+二手】</td>
+<td>不设过渡期，未选按非营利对待【一手】</td>
+<td>高校 2022 年底；其他学段时限下放地市【一手】</td>
+</tr>
+<tr>
+<td>委托管理专门规定</td>
+<td>无省级专规；温州试点鼓励【一手】</td>
+<td>政府委托民办承担义务教育有法可依（第 33 条）【一手】</td>
+<td>无省级专规；决策机构备案制间接约束【一手】</td>
+</tr>
+<tr>
+<td>监管松紧</td>
+<td>宽容（教共体省级推广），年检趋严</td>
+<td>最严（5% 刚性压减、公办进驻民办）</td>
+<td>义务教育压减刚性，公办托管欢迎</td>
+</tr>
+<tr>
+<td>托管市场主战场</td>
+<td>公办校托管+民办高中</td>
+<td>民办高中/中职+政府购买服务</td>
+<td>县域公办托管+民办高中</td>
+</tr>
+<tr>
+<td>头部玩家</td>
+<td>海亮（发源地）、本土公办集团</td>
+<td>上交教育集团等外来玩家+公办集团</td>
+<td>海亮等外来集团下沉+本土中小集团</td>
+</tr>
+</tbody>
+</table>
+<h2 id="p5-_6">五、若合作方学校集中在某省，该省的核心风险点</h2>
+<ul>
+<li><strong>集中在浙江</strong>：托管收费与"变相分配非营利学校结余/义务教育关联交易"的认定风险——年检趋严下，管理费定价与支付路径的合规结构设计是第一位；其次是分类登记久拖导致的标的法人属性不确定。</li>
+<li><strong>集中在广东</strong>：市场规模误判风险——义务教育民办在校生八成是政府购买学位，真实市场化盘子小；分类"悬置"状态下相互投资的股权/收益权尽调几乎无法穿透；公办进驻模式对市场化托管的挤出。</li>
+<li><strong>集中在河南</strong>：标的存续风险——生源净流出+年检停办常态化，托管学校本身可能两三年内萎缩或关停；分类登记程序不明使投资退出与资产分割缺乏规则依托；县域政策执行口径不一带来的合同履约不确定性。</li>
+</ul>
+<hr/>
+<h2 id="p5-_7">六、信源清单表</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>信源</th>
+<th>URL</th>
+<th>档位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2024年浙江省教育事业发展统计公报（浙江省教育厅）</td>
+<td><a href="https://jyt.zj.gov.cn（公报栏目，2025-04-15" rel="noopener noreferrer" target="_blank">https://jyt.zj.gov.cn（公报栏目，2025-04-15</a>）</td>
+<td>一手</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2022年浙江省教育事业发展统计公报</td>
+<td><a href="https://jyt.zj.gov.cn/art/2023/5/6/art_1229266680_5108701.html" rel="noopener noreferrer" target="_blank">https://jyt.zj.gov.cn/art/2023/5/6/art_1229266680_5108701.html</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>3</td>
+<td>浙政发〔2017〕48 号实施意见（省政府公报 PDF）</td>
+<td><a href="https://www.zj.gov.cn/attach/0/1801291233543315921.pdf" rel="noopener noreferrer" target="_blank">https://www.zj.gov.cn/attach/0/1801291233543315921.pdf</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>4</td>
+<td>浙教计〔2018〕28 号《现有民办学校变更登记类型实施办法》</td>
+<td><a href="https://jyt.zj.gov.cn/art/2018/5/4/art_1229106823_608524.html" rel="noopener noreferrer" target="_blank">https://jyt.zj.gov.cn/art/2018/5/4/art_1229106823_608524.html</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>5</td>
+<td>乐清市政府民办教育综合改革实施意见</td>
+<td><a href="http://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/.../3b40bfdfa58b4ca1a2c9e02bbf854a8f.pdf" rel="noopener noreferrer" target="_blank">http://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/.../3b40bfdfa58b4ca1a2c9e02bbf854a8f.pdf</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>6</td>
+<td>嘉兴市民办学校分类管理实施细则（2025）</td>
+<td><a href="https://jyj.jiaxing.gov.cn/art/2025/5/16/art_1229455800_2555198.html" rel="noopener noreferrer" target="_blank">https://jyj.jiaxing.gov.cn/art/2025/5/16/art_1229455800_2555198.html</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>7</td>
+<td>宁波市民办学校办学行为监管办法（2026）</td>
+<td><a href="https://www.ningbo.gov.cn/col/col1229897207/2026nd0607q/art/2026/art_35001b7616a743d8b380db4caff0e7e9.html" rel="noopener noreferrer" target="_blank">https://www.ningbo.gov.cn/col/col1229897207/2026nd0607q/art/2026/art_35001b7616a743d8b380db4caff0e7e9.html</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>8</td>
+<td>温州瓯海区外国语学校初中分校委托办学项目公示（2021）</td>
+<td><a href="https://www.ouhai.gov.cn/art/2021/5/28/art_1229691629_43846.html" rel="noopener noreferrer" target="_blank">https://www.ouhai.gov.cn/art/2021/5/28/art_1229691629_43846.html</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>9</td>
+<td>浙江省教育厅省政协 269 号提案答复（教共体）</td>
+<td><a href="https://jyt.zj.gov.cn/art/2024/7/15/art_1229266358_5329665.html" rel="noopener noreferrer" target="_blank">https://jyt.zj.gov.cn/art/2024/7/15/art_1229266358_5329665.html</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>10</td>
+<td>丽水市 2024 教育统计年鉴</td>
+<td><a href="https://www.lishui.gov.cn/art/2025/4/15/art_1229287001_5495977.html" rel="noopener noreferrer" target="_blank">https://www.lishui.gov.cn/art/2025/4/15/art_1229287001_5495977.html</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>11</td>
+<td>海亮教育科技服务集团官网</td>
+<td><a href="https://www.hailiangedu.com/?id=3" rel="noopener noreferrer" target="_blank">https://www.hailiangedu.com/?id=3</a></td>
+<td>二手（企业自述，降权）</td>
+</tr>
+<tr>
+<td>12</td>
+<td>海亮教育 2021 财年业绩（经济参考报）</td>
+<td><a href="https://www.jjckb.cn/2021-11/13/c_1310308862.htm" rel="noopener noreferrer" target="_blank">https://www.jjckb.cn/2021-11/13/c_1310308862.htm</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>13</td>
+<td>海亮轻资产布局（美通社 2018）</td>
+<td><a href="https://hailiang-cn.mediaroom.com/2018-04-10" rel="noopener noreferrer" target="_blank">https://hailiang-cn.mediaroom.com/2018-04-10</a></td>
+<td>二手（企业通稿，降权）</td>
+</tr>
+<tr>
+<td>14</td>
+<td>海亮集团 2023 债券年报（上交所）</td>
+<td><a href="https://static.sse.com.cn/disclosure/bond/announcement/company/c/new/2024-04-30/188893_20240430_0EJ6.pdf" rel="noopener noreferrer" target="_blank">https://static.sse.com.cn/disclosure/bond/announcement/company/c/new/2024-04-30/188893_20240430_0EJ6.pdf</a></td>
+<td>一手（法定披露）</td>
+</tr>
+<tr>
+<td>15</td>
+<td>瑞安新纪元托管芳庄学校（人民日报）</td>
+<td><a href="https://edu.people.com.cn/BIG5/n1/2021/0402/c1006-32067812.html" rel="noopener noreferrer" target="_blank">https://edu.people.com.cn/BIG5/n1/2021/0402/c1006-32067812.html</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>16</td>
+<td>2024年广东省教育事业发展统计公报</td>
+<td><a href="https://edu.gd.gov.cn/zwgknew/sjfb/content/post_4742679.html" rel="noopener noreferrer" target="_blank">https://edu.gd.gov.cn/zwgknew/sjfb/content/post_4742679.html</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>17</td>
+<td>2024年广州市教育事业发展统计公报</td>
+<td><a href="https://jyj.gz.gov.cn/gkmlpt/content/10/10335/post_10335647.html" rel="noopener noreferrer" target="_blank">https://jyj.gz.gov.cn/gkmlpt/content/10/10335/post_10335647.html</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>18</td>
+<td>广东省实施《民办教育促进法》办法</td>
+<td><a href="https://www.gd.gov.cn/zwgk/wjk/zcfgk/content/post_2524318.html" rel="noopener noreferrer" target="_blank">https://www.gd.gov.cn/zwgk/wjk/zcfgk/content/post_2524318.html</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>19</td>
+<td>广东省教育厅"分类登记是否有过渡期"问答</td>
+<td><a href="https://edu.gd.gov.cn/hdjlnew/dwzzk/xx/content/post_3378812.html" rel="noopener noreferrer" target="_blank">https://edu.gd.gov.cn/hdjlnew/dwzzk/xx/content/post_3378812.html</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>20</td>
+<td>广东省政府 2018 民办教育实施意见</td>
+<td><a href="https://www.gd.gov.cn/gkmlpt/content/0/146/post_146815.html" rel="noopener noreferrer" target="_blank">https://www.gd.gov.cn/gkmlpt/content/0/146/post_146815.html</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>21</td>
+<td>广东省五部门民办学校分类登记实施办法（清远转发）</td>
+<td><a href="https://www.qingxin.gov.cn/qxqpostfile/uploadFiles/e0b8b8408b1f11e99b6c00505680ec6b.pdf" rel="noopener noreferrer" target="_blank">https://www.qingxin.gov.cn/qxqpostfile/uploadFiles/e0b8b8408b1f11e99b6c00505680ec6b.pdf</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>22</td>
+<td>惠州大亚湾降低民办义务教育占比方案（2021）</td>
+<td><a href="https://www.dayawan.gov.cn/gkmlpt/content/4/4507/post_4507020.html" rel="noopener noreferrer" target="_blank">https://www.dayawan.gov.cn/gkmlpt/content/4/4507/post_4507020.html</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>23</td>
+<td>上交教育集团托管佛山惟德外校（南方网）</td>
+<td><a href="https://pc.nfapp.southcn.com/9249/6916456.html" rel="noopener noreferrer" target="_blank">https://pc.nfapp.southcn.com/9249/6916456.html</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>24</td>
+<td>东莞常平公办团队进驻民办新朗学校（南方+）</td>
+<td><a href="https://www.nfnews.com/content/5ypppakZyp.html" rel="noopener noreferrer" target="_blank">https://www.nfnews.com/content/5ypppakZyp.html</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>25</td>
+<td>广州白云实验教育集团（南方+/广州日报）</td>
+<td><a href="https://gdxk.southcn.com/xwbd/content/post_1226412.html" rel="noopener noreferrer" target="_blank">https://gdxk.southcn.com/xwbd/content/post_1226412.html</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>26</td>
+<td>佛山南双山语湖合作办学（南方+）</td>
+<td><a href="https://www.nfnews.com/content/v3aZeQB061.html" rel="noopener noreferrer" target="_blank">https://www.nfnews.com/content/v3aZeQB061.html</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>27</td>
+<td>2024年河南省教育事业发展统计公报（河南民办教育网转）</td>
+<td><a href="http://www.hnmbjy.com/hyyw/424.html" rel="noopener noreferrer" target="_blank">http://www.hnmbjy.com/hyyw/424.html</a></td>
+<td>一手（转载公报原文）</td>
+</tr>
+<tr>
+<td>28</td>
+<td>河南民办教育发展报告（2024，蓝皮书）</td>
+<td><a href="https://www.pishu.com.cn/skwx_ps/ps/bookdetail?SiteID=14&amp;ID=15648197" rel="noopener noreferrer" target="_blank">https://www.pishu.com.cn/skwx_ps/ps/bookdetail?SiteID=14&amp;ID=15648197</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>29</td>
+<td>豫政〔2018〕6 号实施意见</td>
+<td><a href="https://news.haedu.cn/shengnazixun/2018/0305/1022337.html" rel="noopener noreferrer" target="_blank">https://news.haedu.cn/shengnazixun/2018/0305/1022337.html</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>30</td>
+<td>济源市民办教育实施意见（2020 分类登记时限）</td>
+<td><a href="https://jiyuan.gov.cn/zwgk/zcwjk/jz1/t813752.html" rel="noopener noreferrer" target="_blank">https://jiyuan.gov.cn/zwgk/zcwjk/jz1/t813752.html</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>31</td>
+<td>河南省教育厅民办学校决策机构成员备案管理办法（2022）</td>
+<td><a href="https://jtj.pds.gov.cn/upload/files/2022/3/817141994.pdf" rel="noopener noreferrer" target="_blank">https://jtj.pds.gov.cn/upload/files/2022/3/817141994.pdf</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>32</td>
+<td>周口示范区海亮文昌教育集团官方问答</td>
+<td><a href="https://www.zksfq.gov.cn/sitesources/cxytsfq/page_pc/xwgl/ywgl/article1726fe0b095d4e1894537a7a5732371c.html" rel="noopener noreferrer" target="_blank">https://www.zksfq.gov.cn/sitesources/cxytsfq/page_pc/xwgl/ywgl/article1726fe0b095d4e1894537a7a5732371c.html</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>33</td>
+<td>周口示范区政企协同办学报道（中原经济网）</td>
+<td><a href="https://www.zyjjw.cn/xqarticle/2025-10-24/176127400916404.html" rel="noopener noreferrer" target="_blank">https://www.zyjjw.cn/xqarticle/2025-10-24/176127400916404.html</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>34</td>
+<td>开封民办义务教育专项整治（河南省政府门户）</td>
+<td><a href="https://m.henan.gov.cn/2022/09-28/2614432.html" rel="noopener noreferrer" target="_blank">https://m.henan.gov.cn/2022/09-28/2614432.html</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>35</td>
+<td>郑州市规范民办义务教育提案答复</td>
+<td><a href="https://public.zhengzhou.gov.cn/D1102X/6785802.jhtml" rel="noopener noreferrer" target="_blank">https://public.zhengzhou.gov.cn/D1102X/6785802.jhtml</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>36</td>
+<td>信阳市政协提案答复（年检停办 88 所）</td>
+<td><a href="https://oss.xinyang.gov.cn/xytyptfile/20251113/34ae3679d51540ebb1f7cdcba2848baf.pdf" rel="noopener noreferrer" target="_blank">https://oss.xinyang.gov.cn/xytyptfile/20251113/34ae3679d51540ebb1f7cdcba2848baf.pdf</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>37</td>
+<td>周口市义务教育优质均衡实施意见（5% 不反弹）</td>
+<td><a href="https://jtj.zhoukou.gov.cn/sitesources/jtj/page_pc/zwgk/fdzdgknr/ghjh/articlec46c55a9147c420bb465af90045852e1.html" rel="noopener noreferrer" target="_blank">https://jtj.zhoukou.gov.cn/sitesources/jtj/page_pc/zwgk/fdzdgknr/ghjh/articlec46c55a9147c420bb465af90045852e1.html</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>38</td>
+<td>营利性高校分类登记进展（21 世纪经济报道）</td>
+<td><a href="https://www.21jingji.com/article/20230511/herald/01ceb14c284c6271c65bbc7b3875e844.html" rel="noopener noreferrer" target="_blank">https://www.21jingji.com/article/20230511/herald/01ceb14c284c6271c65bbc7b3875e844.html</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>39</td>
+<td>郑州育人托管长葛天硕（集团宣传）</td>
+<td>原文无稳定 URL（育人集团官网稿）</td>
+<td>二手（软文，降权）</td>
+</tr>
+<tr>
+<td>40</td>
+<td>存志集团托管安阳殷都外国语中学（安阳日报）</td>
+<td><a href="https://www.ayrbs.com/epaper/html/2020-12/31/content_398171.htm" rel="noopener noreferrer" target="_blank">https://www.ayrbs.com/epaper/html/2020-12/31/content_398171.htm</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>41</td>
+<td>长垣公民办联合办学（人民日报人民号）</td>
+<td><a href="https://www.peopleapp.com/rmharticle/30030630067" rel="noopener noreferrer" target="_blank">https://www.peopleapp.com/rmharticle/30030630067</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>42</td>
+<td>安阳民办中小学分化分析（今日头条自媒体）</td>
+<td><a href="https://m.toutiao.com/article/7684028749932200463" rel="noopener noreferrer" target="_blank">https://m.toutiao.com/article/7684028749932200463</a></td>
+<td>估算/自媒体（降权，仅作旁证）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="p5-_8">七、数据缺口与存疑点</h2>
+<ol>
+<li><strong>浙江省各级各类民办学校总数与总在校生</strong>：2024 公报只分段给出，未给合计数；本报告未自行加总以避免口径错误。</li>
+<li><strong>三省分类登记完成率</strong>：浙江、河南均"有截止期但执行不明"，广东"不设过渡期"，均未找到省级完成率/营利性登记数量的官方汇总——这是本次调研最大缺口，直接影响相互投资标的的法律状态判断。</li>
+<li><strong>河南民办义务教育在校生全省占比</strong>：省公报未给义务教育总在校生拆分，无法计算精确占比；仅有市级 5% 达标口径。</li>
+<li><strong>浙江本土集团（绿城育华、锦绣育才等）对外托管规模</strong>：未找到可核实公开数据。</li>
+<li><strong>海亮最新托管学校数量</strong>：官网"40+ 所学校、5 万+在校生"截至 2023-12，为自我宣传口径，未获第三方审计数据交叉验证。</li>
+<li><strong>民办校之间委托管理的收费与备案实操</strong>：三省均无公开的管理费定价、备案通过率数据，合规模糊度只能定性评估。</li>
+<li>郑州育人、部分县域案例依赖企业宣传稿，已降权处理，建议尽调时以办学许可证、年检结论、备案文件核实。</li>
+</ol></article>
+</section>
+<section class="panel hidden" id="p6" role="tabpanel">
+<details class="toc" open=""><summary>本模块目录</summary><div class="toc">
+<ul>
+<li><a href="#p6-1-saas">1. 托管集团作为 SaaS 客户的画像</a><ul>
+<li><a href="#p6-11">1.1 头部托管方管理学校数量级</a></li>
+<li><a href="#p6-12">1.2 信息化预算与付费能力来源</a></li>
+<li><a href="#p6-13-vs">1.3 采购决策链：托管方统一采购 vs 学校自主采购</a></li>
+</ul>
+</li>
+<li><a href="#p6-2-saas">2. 教育 SaaS/教育科技公司进入民办教育集团的公开案例</a></li>
+<li><a href="#p6-3">3. 民办校信息化市场规模公开测算</a></li>
+<li><a href="#p6-4-aisaas">4. 合作模式选项与利弊（AI教育SaaS公司 × 民办校托管方）</a></li>
+<li><a href="#p6-5">5. 谈判要点</a><ul>
+<li><a href="#p6-51">5.1 谈判前信息清单（向对方/市场核实）</a></li>
+<li><a href="#p6-52">5.2 关键条款建议</a></li>
+<li><a href="#p6-53-20">5.3 向对方提的 20 个关键问题</a></li>
+</ul>
+</li>
+<li><a href="#p6-6-sam">6. 机会评估：托管体系 SAM 粗估</a></li>
+<li><a href="#p6-_1">信源清单表</a></li>
+<li><a href="#p6-_2">数据缺口与存疑点</a></li>
+</ul>
+</div>
+</details>
+<article class="md-body"><h1 id="p6-ai-saas">民办校托管行业 × AI 教育 SaaS：机会评估与合作谈判要点</h1>
+<p><strong>调研日期</strong>：2026年10月
+<strong>委托方背景</strong>：AI 教育 SaaS 公司，主要客户为中国民办学校（K12 为主）；某销售渠道代理商本身经营"民办学校整体委托管理"业务，提出含相互投资在内的合作意向。
+<strong>信源三档标注</strong>：【一手】= 年报/招股书/招标公告/官网；【二手】= 行业报告/产业媒体；【估算】= 推算（附逻辑）。软文一律降权标注。</p>
+<hr/>
+<h2 id="p6-1-saas">1. 托管集团作为 SaaS 客户的画像</h2>
+<h3 id="p6-11">1.1 头部托管方管理学校数量级</h3>
+<table>
+<thead>
+<tr>
+<th>托管方</th>
+<th>托管/运营管理学校数</th>
+<th>时间口径</th>
+<th>档位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>天立国际控股（1773.HK）</td>
+<td>FY2025（截至2025-08-31）向 <strong>18 所托管学校</strong>提供管理及特许经营服务；截至2025年秋季<strong>已签约 23 所学校、40 个学段</strong>；管理及特许经营收入 FY2025 同比 +93.9%（中报同比 +116.3%），毛利率超 50%</td>
+<td>2025年报/业绩公告</td>
+<td>【一手】<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1230/2025123000329_c.pdf" rel="noopener noreferrer" target="_blank">HKEX年报</a>、<a href="https://m.gelonghui.com/news/5127710" rel="noopener noreferrer" target="_blank">格隆汇转引券商研报</a>（二手）</td>
+</tr>
+<tr>
+<td>海亮教育</td>
+<td>2021财年运营管理民办学校 <strong>27 所</strong>（学生 43,897 人，为自有学校人数 1.6 倍），运营管理营收约 6000 万元</td>
+<td>2021财年（此后退市，未见更新公开口径）</td>
+<td>【二手】<a href="https://www.21jingji.com/article/20211125/herald/109c3d31b0365e43c4c4e266e85bf085.html" rel="noopener noreferrer" target="_blank">21世纪经济报道</a></td>
+</tr>
+<tr>
+<td>上海世外教育集团</td>
+<td>官网显示托管学校 <strong>31 所</strong>（其中 29 所为公办）</td>
+<td>2021年报道引用官网</td>
+<td>【二手】<a href="https://www.xinxueshuo.cn/article/21428.html" rel="noopener noreferrer" target="_blank">新学说</a></td>
+</tr>
+<tr>
+<td>光正教育</td>
+<td>自有 15 所 + 运营管理 10 所</td>
+<td>2021</td>
+<td>【二手】同上</td>
+</tr>
+<tr>
+<td>成实外教育</td>
+<td>自有 37 所 + 运营管理 7 所</td>
+<td>2021</td>
+<td>【二手】同上</td>
+</tr>
+<tr>
+<td>上海爱立诚</td>
+<td>沪浙两地托管 5 所</td>
+<td>官网（2021年转引）</td>
+<td>【二手】同上</td>
+</tr>
+<tr>
+<td>湖南恒雅教育集团（非上市区域集团样本）</td>
+<td>旗下 5 校 2025 年 3 月与校宝在线签署集团级战略合作</td>
+<td>2025-03</td>
+<td>【二手】<a href="https://finance.sina.com.cn/jjxw/2025-03-14/doc-inepqsvq9935961.shtml" rel="noopener noreferrer" target="_blank">新浪财经</a>（合作方通稿，软文性质，降权）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>量级结论</strong>：单个头部托管集团管理学校数量级为 <strong>个位数至 30 余所</strong>；全国性头部（天立、海亮级别）在 20–60 所区间；全行业估算（见第 6 节）头部托管体系合计可及学校数百至两三千所。托管业务正处扩张期——华泰证券研报估算托管业务潜在市场空间约百亿规模、头部市占率合计不到 10%（【二手】，<a href="https://hk.investing.com/news/stock-market-news/article-913229" rel="noopener noreferrer" target="_blank">investing.com 转引</a>）。</p>
+<h3 id="p6-12">1.2 信息化预算与付费能力来源</h3>
+<ul>
+<li><strong>托管费结构</strong>（付费能力的资金池）：公开的托管协议范本显示，委托管理费 = 基础管理费 + 绩效管理费，基础管理费示例为第一年 100 万 → 第二年 150 万 → 第三年及以后 <strong>200 万元/年/校</strong>，绩效管理费与学校办学结余挂钩（结余 25% 超出基础管理费部分补差）。【一手】<a href="https://m.diyifanwen.com/fanwen/weituohetong/20986599.html" rel="noopener noreferrer" target="_blank">学校委托管理协议书范本</a>（合同范本，非具体交易，仅作结构参考）。天立 FY2025 中报管理及特许经营费收入 0.56 亿元（18 所托管校）→ 校均约 300–600 万元/年量级（【估算】：0.56亿为半年收入、含特许经营费，校均年化 300 万+）。</li>
+<li><strong>信息化预算水平（估算）</strong>：民办校信息化年支出未见权威公开口径。参照公开招标样本：民办十二年一贯制学校单校智慧校园项目自筹资金 <strong>95.82 万元</strong>（河北巨鹿新华学校，2026，一次性建设项目，【一手】<a href="https://www.gxzbcg.cn/class2/893141.html" rel="noopener noreferrer" target="_blank">招标公告</a>）；公办校 AI 智慧校园设备购置单批 37.5 万元（深圳育才三中，【一手】<a href="https://www.szns.gov.cn/bsfw/ztfw/jypx/tzgg28/zbzbgg/content/post_12877153.html" rel="noopener noreferrer" target="_blank">招标公告</a>）。SaaS 订阅口径：校宝智慧校园/教培系统公开渠道报价基础版约 2800–6000 元/年、专业版 1.5–5 万元/年、大型连锁定制可超 10 万元/年（【二手】渠道评测站 <a href="https://www.beiing.net/cjwt/fqxoiw.html" rel="noopener noreferrer" target="_blank">校盈易对比文</a>、<a href="https://www.b2b168.org/wvs214399421.html" rel="noopener noreferrer" target="_blank">b2b168</a>，均为 D 级渠道信息，仅作线索）。</li>
+<li><strong>集团级采购证据</strong>：春来教育集团 2026-01 对旗下高校"数智化建设项目"公开招标，含数智校园公共平台 6 套 + 超融合服务器 6 套（【一手】<a href="https://bid.chunlaiedu.com/yicai-base/th_project/publicProjectDetail.html?projectid=2c9680829a6b5952019b9672c2a216d1&amp;newsid=2c9680829a6b5952019b968176f916e0&amp;ten=tender" rel="noopener noreferrer" target="_blank">集团招标平台</a>）——证明教育集团存在<strong>集团统筹、统一招标</strong>的采购形态。</li>
+</ul>
+<h3 id="p6-13-vs">1.3 采购决策链：托管方统一采购 vs 学校自主采购</h3>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>观察</th>
+<th>档位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>决策权法律归属</td>
+<td>学校为独立法人（董事会为最高权力机构，采购超预算需董事会审批）；托管方派驻校长，掌握日常运营与预算建议权</td>
+<td>【一手】托管协议范本</td>
+</tr>
+<tr>
+<td>实际决策形态</td>
+<td>三种并存：①托管方总部统一选型/统一招标（春来集团数智化招标、天立启鸣云校自研统一接入 107 校）；②托管方框定品牌目录、学校单签（校宝×恒雅"集团签约、5 校分别签署协议"模式）；③学校自主采购（单体民办校招标普遍）</td>
+<td>【一手】/【二手】混合</td>
+</tr>
+<tr>
+<td>合规约束</td>
+<td>义务教育阶段民办学校<strong>不得与利益关联方交易</strong>（《民促法实施条例》2021-09-01 施行）——若托管方与 SaaS 公司相互持股，托管方旗下义务教育学校向该 SaaS 采购可能构成关联交易，需"公平、公允、公开"+ 回避 + 公示 + 审计，甚至直接被禁；民办高中允许"三公"前提下的关联交易</td>
+<td>【一手】条例（经 <a href="https://www.21jingji.com/article/20211125/herald/109c3d31b0365e43c4c4e266e85bf085.html" rel="noopener noreferrer" target="_blank">21世纪经济报道</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1230/2025123000329_c.pdf" rel="noopener noreferrer" target="_blank">天立年报</a> 转述）</td>
+</tr>
+<tr>
+<td>付费方</td>
+<td>托管费分成模式下，信息化支出可从托管费预算列支（托管方付费意愿强、决策快），也可从学校法人经费列支（非营利学校结余不得分红，信息化是最常见的"合规花钱"通道之一）</td>
+<td>【估算】基于协议结构推演</td>
+</tr>
+</tbody>
+</table>
+<p><strong>对 SaaS 公司的含义</strong>：托管体系的关键决策人是<strong>托管方总部（集团教学/信息化条线）</strong>，一单可带多校；但义务教育学段的关联交易禁令是硬约束——这直接决定了第 4 节合作阶梯中"相互持股"档位的可行性边界。</p>
+<hr/>
+<h2 id="p6-2-saas">2. 教育 SaaS/教育科技公司进入民办教育集团的公开案例</h2>
+<table>
+<thead>
+<tr>
+<th>公司</th>
+<th>模式</th>
+<th>关键事实（含时间口径）</th>
+<th>档位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>校宝在线</strong></td>
+<td>民办校 SaaS 直客 + 集团签约</td>
+<td>官网口径：服务 26 万+ 机构和学校、1 亿+ 用户、年经办交易流水 700 亿元；"<strong>40% 的民办 &amp; 国际化学校在用校宝</strong>"（官网宣传口径，未见第三方验证）；2025-03 与湖南恒雅教育集团签约（集团+5 校，"百城百校"计划华中样板）；与灵通教育（34 校区）战略合作升级含数据资产开发、品牌联动</td>
+<td>【一手】<a href="https://www.xiaobaoonline.com/" rel="noopener noreferrer" target="_blank">官网</a>；【二手】<a href="https://finance.sina.com.cn/jjxw/2025-03-14/doc-inepqsvq9935961.shtml" rel="noopener noreferrer" target="_blank">新浪财经</a>、<a href="https://www.scjjrb.com/2025/04/24/99432903.html" rel="noopener noreferrer" target="_blank">四川经济网</a>（通稿软文，降权）</td>
+</tr>
+<tr>
+<td><strong>希沃（视源股份）</strong></td>
+<td>硬件带软件，公办为主、民办渗透</td>
+<td>官网：覆盖超 <strong>20 万间学校、300 万间教室</strong>、2600+ 高校、1000 万+ 教师（2026 口径；2023 年旧口径为 19.2 万所中小学/280 万教室，注意计数器更新）；课堂智能反馈系统截至 2024-12 建成 19 个示范区、覆盖 2000+ 学校（另一处 2025-03 报道称 5000+ 所，新旧口径并存）；民办案例：上海市民办丽英小学公开课应用</td>
+<td>【一手】<a href="https://www.seewo.com/about/introduce" rel="noopener noreferrer" target="_blank">官网</a>；【二手】<a href="https://ex.chinadaily.com.cn/exchange/partners/82/rss/channel/cn/columns/sz8srm/stories//WS67cfa597a310510f19eead81.html" rel="noopener noreferrer" target="_blank">中国日报</a>、<a href="https://m.people.cn/n4/2025/0327/c3521-21581434.html" rel="noopener noreferrer" target="_blank">人民网</a></td>
+</tr>
+<tr>
+<td><strong>ClassIn（翼鸥教育）</strong></td>
+<td>LMS/互动教室，机构+学校双线</td>
+<td>官网服务版本：免费版/基础版/商业版（限 2000 课时）/臻享版（预充值后付费、大客户专属方案）；招标价格样本：AI 交互与教学数据分析软件单套 <strong>27.8 万元</strong>、ClassIn 集成平台单套 <strong>64 万元</strong>（2026 年安徽高校中标公告）——可作单教室/单平台项目级定价锚点</td>
+<td>【一手】<a href="https://www.eeo.cn/cn/pricing" rel="noopener noreferrer" target="_blank">官网定价页</a>、<a href="http://www.ahzfcg.com.cn/cms/cmsNewsDetail/052c192564264b25ba05db5332dbae41" rel="noopener noreferrer" target="_blank">安徽中标公告</a>、<a href="http://www.ahggzyjt.cn/jyjg/004002/004002002/20260330/38d7453d-200d-44b0-b0b8-a4c500a7987e.html" rel="noopener noreferrer" target="_blank">安徽财大中标</a></td>
+</tr>
+<tr>
+<td><strong>科大讯飞</strong></td>
+<td>区域 ToG 大盘 + 校园全场景，近年明确进攻民办</td>
+<td>智慧教育产品服务 32 省、<strong>5 万余所学校、1.3 亿师生</strong>（2025-06 人民网/中国日报口径）；2025-11 深度参与中国民办教育西湖论坛，提出民办教育"三座大山"（师资成本/课程同质化/办学效益）并推 AI 学伴方案——表明头部 AI 厂商已把民办校列为目标客群</td>
+<td>【二手】<a href="https://ah.people.com.cn/BIG5/n2/2025/0625/c227767-41271186.html" rel="noopener noreferrer" target="_blank">人民网安徽</a>、<a href="https://caijing.chinadaily.com.cn/a/202511/10/WS69119424a310ceca48b7bf31.html" rel="noopener noreferrer" target="_blank">中国日报财经</a></td>
+</tr>
+<tr>
+<td><strong>松鼠Ai</strong></td>
+<td>智适应系统进民办校，"实验基地"联合品牌模式</td>
+<td>2025-07 与金培教育投资集团（广东汕头）战略合作，旗下科利园实验学校授"松鼠Ai 人工智能教育 5A 级实验基地"，每日 9 小时深度应用；宣称"输出可复制的 AI 融合案例，为全国民办学校提供参考"；历史试点：吉林白山崔云希望学校（2021）、贵州息烽木杉小学（2020）</td>
+<td>【二手】<a href="https://www.iyiou.com/news/202507221103663" rel="noopener noreferrer" target="_blank">亿欧</a>、<a href="https://iot.china.com.cn/content/2025-08/21/content_43208905.html" rel="noopener noreferrer" target="_blank">中国网物联</a>（企业通稿，降权；提分数据为企业自报，未经独立验证）</td>
+</tr>
+<tr>
+<td><strong>好未来（未来魔法校）/高思（爱学习）</strong></td>
+<td>ToB 内容+系统输出（主要面向教培机构，非全日制民办校）</td>
+<td>未来魔法校 2018 年上线，当年签约 100+ 机构；高思爱学习 2015 年上线，2019 年官网口径合作机构 5000+ 家。"双减"后 ToB 重心转向智能硬件/学习机，面向全日制民办校的系统化输出未见新的公开大盘数据</td>
+<td>【二手】<a href="https://new.qq.com/rain/a/20190807001819" rel="noopener noreferrer" target="_blank">腾讯深网</a>、<a href="https://capital.people.cn/n1/2018/0516/c406083-29992718.html" rel="noopener noreferrer" target="_blank">人民网</a></td>
+</tr>
+<tr>
+<td><strong>天立·启鸣达人（反向案例：托管集团自研 SaaS）</strong></td>
+<td>托管集团自建教育科技公司，对内赋能+对外创收</td>
+<td>启鸣数字驱动教学管理云平台接入 <strong>107 所学校、服务 25 万师生</strong>（2024 获高新技术企业认证）；天立 FY2025 年报明确"基础业务 + AI 教育科技"双轮驱动、AI 产品 To B/To G/社区 C 端商业化</td>
+<td>【一手】<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1230/2025123000329_c.pdf" rel="noopener noreferrer" target="_blank">天立2025年报</a>；【二手】<a href="https://www.baogaobox.com/insights/250608000011635.html" rel="noopener noreferrer" target="_blank">远瞻慧库转太平洋证券研报</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>案例启示</strong>：
+1. 集团级签约的标准动作是"<strong>集团框架协议 + 样板校授牌 + 分校区落地</strong>"（校宝×恒雅、松鼠Ai×金培同构）。
+2. 定价线索：SaaS 订阅 0.3–5 万元/校/年（校宝系）；项目制平台 28–96 万元/套（ClassIn 招标样本）；AI 智慧校园建设 37–96 万元/单项目（招标样本）。托管集团自研（天立启鸣）说明<strong>头部托管方有"不买而自建"选项</strong>——这既是竞争也是 SaaS 公司被并购/OEM 的机会。
+3. 科大讯飞等巨头已明确把民办校列为增量市场，窗口期存在但不会太长。</p>
+<hr/>
+<h2 id="p6-3">3. 民办校信息化市场规模公开测算</h2>
+<table>
+<thead>
+<tr>
+<th>口径</th>
+<th>数值</th>
+<th>来源与年份</th>
+<th>档位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中国教育信息化市场总收入</td>
+<td>2019 年 4020 亿元 → 2024E 6114 亿元（含硬件/综合方案/软件/内容）</td>
+<td>弗若斯特沙利文（载于 2021 年港股招股书行业概览）</td>
+<td>【二手】<a href="http://pdf.dfcfw.com/pdf/H2_AN202104301488825250_14.pdf" rel="noopener noreferrer" target="_blank">东方财富PDF</a></td>
+</tr>
+<tr>
+<td>其中软件服务</td>
+<td>2019 年 996 亿 → 2024E 1604 亿元</td>
+<td>同上</td>
+<td>【二手】同上</td>
+</tr>
+<tr>
+<td>教育信息化行业规模</td>
+<td>2023 年 5431 亿、2024 年 6464 亿、2025E 7000 亿；教育 SaaS/软件 2025E 破 1200 亿</td>
+<td>中国报告大厅《2025-2030年教育信息化行业报告》（聚合口径，准确性待核）</td>
+<td>【二手】<a href="https://cht.chinabgao.com/info/1297785.html" rel="noopener noreferrer" target="_blank">报告大厅</a>（聚合站，降权）</td>
+</tr>
+<tr>
+<td>K12 教育信息化</td>
+<td>2024 年约 2200 亿元、同比 +15.2%</td>
+<td>人人文库转载的"2025年可行性分析报告"，引用艾瑞预测但无法回溯原文</td>
+<td>【二手】<a href="https://www.renrendoc.com/paper/482592429.html" rel="noopener noreferrer" target="_blank">人人文库</a>（无法核实一手出处，存疑）</td>
+</tr>
+<tr>
+<td>AI+教育 B 端市场</td>
+<td>2023 年约 213 亿 → 2027E 约 476 亿元</td>
+<td>艾瑞研究院（经智通财经/investing.com 转引）</td>
+<td>【二手】<a href="https://hk.investing.com/news/stock-market-news/article-913229" rel="noopener noreferrer" target="_blank">investing.com</a></td>
+</tr>
+<tr>
+<td>智慧校园装备</td>
+<td>2024 年 1860 亿元</td>
+<td>转引"艾瑞《2024年中国智慧教育装备市场研究报告》"，无法回溯</td>
+<td>【二手】<a href="https://www.renrendoc.com/paper/504962905.html" rel="noopener noreferrer" target="_blank">人人文库</a>（存疑）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>民办 K12 底盘（一手）</strong>：教育部《2024年全国教育事业发展统计公报》（2025-06-11 发布）——民办义务教育学校 <strong>9576 所</strong>、在校生 1105.95 万人（含政府购买学位 514.86 万）；民办普通高中 <strong>4819 所</strong>、在校生 588.49 万人。合计民办 K12 约 <strong>1.44 万所学校、1694 万在校生</strong>。【一手】<a href="https://big5.www.gov.cn/gate/big5/www.moe.gov.cn/jyb_sjzl/sjzl_fztjgb/202506/t20250611_1193760.html" rel="noopener noreferrer" target="_blank">教育部公报</a></p>
+<p><strong>民办 K12 信息化/AI SaaS 市场粗估（估算）</strong>：
+- 按 K12 信息化 2200 亿（2024，存疑口径）× 民办 K12 在校生占比（1694 万 / 约 1.9 亿 K12 在校生 ≈ 9%）→ 民办 K12 信息化约 <strong>200 亿元/年</strong>量级（估算，硬件为主）。
+- 其中 SaaS/软件按 25–30% 结构占比 → 民办 K12 软件与服务约 <strong>50–60 亿元/年</strong>（估算）。
+- 纯 AI SaaS 增量：按生均年付费 100–300 元 × 1694 万在校生 → <strong>17–51 亿元/年</strong>潜在空间（估算，渗透率未折扣前的天花板口径）。</p>
+<hr/>
+<h2 id="p6-4-aisaas">4. 合作模式选项与利弊（AI教育SaaS公司 × 民办校托管方）</h2>
+<table>
+<thead>
+<tr>
+<th>档位</th>
+<th>结构</th>
+<th>利（对SaaS公司）</th>
+<th>弊/风险</th>
+<th>对估值与后续融资的影响</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L1 纯供应商折扣</strong></td>
+<td>集团框架协议，旗下校按折扣价采购，学校/托管方付费</td>
+<td>无股权纠缠，合规最干净；义务教育校也可合规交易（第三方交易不受关联方禁令约束）</td>
+<td>绑定浅，托管方可随时换供应商；折扣侵蚀毛利</td>
+<td>正面：收入质量高、可验证的集团客户案例；投资人最喜</td>
+</tr>
+<tr>
+<td><strong>L2 渠道/代理分成</strong></td>
+<td>托管方作为代理商向其托管校及外部学校分销，按回款分成</td>
+<td>借托管方的学校网络低成本获客；轻资产扩张</td>
+<td>渠道依赖（单一渠道收入占比过高是尽调红灯）；代理商压账期、窜价；服务交付与品牌口碑被渠道裹挟</td>
+<td>中性偏负：渠道收入折价；若占比 &gt;30% 后续融资会被追问独立性</td>
+</tr>
+<tr>
+<td><strong>L3 联合解决方案/联合品牌</strong></td>
+<td>"XX托管 × SaaS"联合智慧校园方案、联合样板校、联合投标</td>
+<td>深度场景打磨产品；样板效应强（参照松鼠Ai 5A基地、校宝百城百校）；仍无法律人格混同</td>
+<td>投入联合研发/驻场成本高；品牌绑定后对方学校出问题会反噬；需明确知识产权归属</td>
+<td>正面为主：有标杆案例与数据壁垒叙事，估值加分</td>
+</tr>
+<tr>
+<td><strong>L4 合资公司</strong></td>
+<td>双方出资设 JV，承接托管体系信息化订单</td>
+<td>锁定托管体系全部订单；JV 可独立融资</td>
+<td>关联交易问题显性化：JV 向托管方义务教育学校销售即触发"三公"合规成本甚至被禁；少数股东地位被动；JV 收入在并表口径下同样被打折</td>
+<td>偏负：投资人视 JV 收入为关联方收入，估值打折；退出复杂</td>
+</tr>
+<tr>
+<td><strong>L5 相互持股</strong></td>
+<td>SaaS 公司入股托管方，托管方入股 SaaS 公司</td>
+<td>最深绑定，托管方扩张即自带 SaaS 渗透</td>
+<td><strong>硬伤</strong>：①托管方旗下义务教育民办学校与 SaaS 公司构成利益关联方后交易受限（《民促法实施条例》），直接打击合作初衷；②SaaS 公司客户结构被解读为"股东输送"，其他教育集团客户会因竞业顾虑流失；③教育资产政策风险（民促法后续细则未落地，天立年报亦提示重大不确定性）传导至 SaaS 公司估值</td>
+<td>明显负面：独立性受损、客户集中+关联交易双重折价，美元/上市路径几乎关闭</td>
+</tr>
+</tbody>
+</table>
+<p><strong>贯穿性风险清单（对 SaaS 公司）</strong>：
+- <strong>渠道依赖</strong>：L2 以上档位需设"托管体系外收入占比"内部红线（建议 ≥50%）。
+- <strong>关联交易</strong>：义务教育学段是红线区；民办高中学段可在"公平公允公开 + 回避 + 公示 + 审计"下交易（天立关联企业统一采购降本 12% 即高中段合法操作案例，【二手】太平洋证券研报转引）。
+- <strong>数据合规</strong>：中小学生个人信息属敏感个人信息（《个人信息保护法》第 28 条），托管模式下数据处理者/委托处理关系须在协议中钉死；学情数据用于模型训练需单独授权；等保三级是集团招标硬门槛（春来集团招标明确要求等保三级 + 信创适配，【一手】）。
+- <strong>竞业</strong>：托管方若同时代理/自研竞品（参照天立启鸣对外商业化），须在协议中排除或限定。</p>
+<p><strong>建议路径</strong>：L1→L3 为主线（框架协议 + 联合样板 + 分学段合规销售），L2 慎用、设占比红线，L4/L5 在当前监管环境下不建议；若对方坚持股权合作，可探讨<strong>单向小额财务投资托管方</strong>（SaaS 公司入股托管方而非相互持股），并回避义务教育学段交易，但仍需律师出具关联交易专项意见。</p>
+<hr/>
+<h2 id="p6-5">5. 谈判要点</h2>
+<h3 id="p6-51">5.1 谈判前信息清单（向对方/市场核实）</h3>
+<ol>
+<li>托管学校清单：校名、学段（义务教育/高中/幼儿园）、办学性质（营利/非营利）、与托管方的法律关系（委托管理/特许经营/租赁）。</li>
+<li>各托管协议剩余年限、续约条件、托管费定价与支付节奏。</li>
+<li>各校在校生数、学费水平、近三年招生完成率（判断付费能力与续约概率）。</li>
+<li>现有信息化供应商与合同到期时间（替换成本与窗口）。</li>
+<li>集团是否有自研/自投教育科技公司（防"以合作之名行尽调之实"）。</li>
+<li>集团财务：托管费收入、账期、坏账；是否上市/拟上市（影响关联交易合规空间）。</li>
+<li>决策链：信息化预算由谁发起、谁审批（总部条线 vs 校董事会）。</li>
+</ol>
+<h3 id="p6-52">5.2 关键条款建议</h3>
+<table>
+<thead>
+<tr>
+<th>条款</th>
+<th>建议立场</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>排他性</td>
+<td>只接受"有限排他"：限品类、限区域、限 12–18 个月且绑定最低采购量（未达量自动失效）；拒绝全品类无限期排他</td>
+</tr>
+<tr>
+<td>账期</td>
+<td>SaaS 年费预付；项目制按 3-4-3（签约/上线/验收）付款；对托管方账期最长不超过 90 天并设逾期利息</td>
+</tr>
+<tr>
+<td>学校续约率归属</td>
+<td>明确"学校侧续约"与"集团框架续约"分别计价；托管协议终止不当然终止 SaaS 合同（与学校法人直签优先）</td>
+</tr>
+<tr>
+<td>数据权属</td>
+<td>学校及师生数据归学校/个人所有；SaaS 公司仅获委托处理权；脱敏统计数据用于产品改进需学校书面授权；合作终止后数据返还+删除义务</td>
+</tr>
+<tr>
+<td>退出机制</td>
+<td>任一方控制权变更（含托管方被并购/引入我方竞对）时的解约权；源代码/数据托管（escrow）条款按项目制谈判</td>
+</tr>
+<tr>
+<td>关联交易合规</td>
+<td>合同中加入合规陈述与条款：义务教育学校交易以第三方公允定价独立完成，托管方人员回避决策</td>
+</tr>
+</tbody>
+</table>
+<h3 id="p6-53-20">5.3 向对方提的 20 个关键问题</h3>
+<p><strong>业务底盘（1–7）</strong>
+1. 目前受托管理学校的完整清单（校名、学段、营利/非营利属性、在校生数）？
+2. 每份托管协议的期限、续约条款、托管费定价公式（固定/分成/保底+绩效）？
+3. 托管费实际回款情况：账期多长、有无拖欠、坏账率？
+4. 未来 3 年托管校网扩张计划：目标校数、目标区域、签约 pipeline？
+5. 集团自有学校与托管学校在采购决策上的权限划分是怎样的？信息化预算谁拍板？
+6. 各校目前的信息化/AI 供应商有哪些？合同何时到期？年支出多少？
+7. 集团是否设有或计划设立自己的教育科技公司？是否在外部代理其他教育产品？</p>
+<p><strong>合作意图（8–13）</strong>
+8. 贵方希望的合作形态是什么——采购、代理、联合方案，还是股权？各自期望达成什么？
+9. 提出"相互投资"的真实诉求是什么（绑定供应、财务投资、并表讲故事、还是上市规划）？
+10. 贵方自身是否在融资/上市进程中？如有，对我方的合规要求是什么？
+11. 合作落地后，首年能确保多少所学校上线？最低采购量能否写进协议？
+12. 义务教育阶段学校与我方的交易，贵方如何安排以满足"非关联方交易/三公"要求？
+13. 如果我方与贵方竞争对手的托管集团合作，贵方的态度？</p>
+<p><strong>商务与数据（14–20）</strong>
+14. 采购的付费主体是集团总部、托管方，还是各学校法人？预算从托管费还是学校经费列支？
+15. 可接受的定价模式：按校年费、按生均、还是项目制？心理价位区间？
+16. 账期与付款节点预期？能否接受 SaaS 年费预付？
+17. 学校师生数据的所有权、使用权、用于 AI 训练的授权边界，贵方立场是什么？
+18. 数据安全资质要求（等保级别、信创适配、本地化部署）有哪些硬性门槛？
+19. 合作终止场景如何设计：托管协议到期的学校，SaaS 合同如何处理？
+20. 排他性诉求的范围（品类/区域/期限）？作为对价，贵方给出的量、价或股权条件是什么？</p>
+<hr/>
+<h2 id="p6-6-sam">6. 机会评估：托管体系 SAM 粗估</h2>
+<p><strong>底盘（一手）</strong>：民办 K12 学校约 1.44 万所、在校生 1694 万（教育部 2024 公报）。</p>
+<p><strong>托管渗透率假设（估算）</strong>：参照头部样本（天立托管 18–23 所、海亮 27 所、世外 31 所、光正 10 所、成实外 7 所），全行业成规模托管方估计 50–100 家（无公开统计，估算），头部托管体系合计管理民办校 <strong>N ≈ 1000–3000 所</strong>（占民办 K12 总量 7–20%；华泰研报"头部市占率合计不到 10%"口径下取低值更稳妥）。</p>
+<p><strong>SAM 测算（估算，标注逻辑）</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>情景</th>
+<th>学校数 N</th>
+<th>校均在校生</th>
+<th>生均 AI SaaS 年付费</th>
+<th>SAM（年）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>保守</td>
+<td>1,000 所</td>
+<td>1,000 人</td>
+<td>100 元</td>
+<td><strong>1.0 亿元</strong></td>
+</tr>
+<tr>
+<td>中性</td>
+<td>2,000 所</td>
+<td>1,200 人</td>
+<td>150 元</td>
+<td><strong>3.6 亿元</strong></td>
+</tr>
+<tr>
+<td>乐观</td>
+<td>3,000 所</td>
+<td>1,200 人</td>
+<td>300 元</td>
+<td><strong>10.8 亿元</strong></td>
+</tr>
+</tbody>
+</table>
+<p>逻辑说明：①生均付费锚点——校宝集团级 SaaS 1.5–5 万元/校/年（约生均 15–50 元，管理类 SaaS），AI 教学类产品生均付费更高，按 100–300 元取区间（参照 ClassIn/科大讯飞类项目制摊销至生均的量级）；②校均规模 1000–1200 人参照托管校样本（海亮托管 27 校 4.39 万人 → 校均 1626 人；天立校网 13 万人/58 校 → 校均 2241 人，取保守值下修）；③该 SAM 为"托管体系内"可及市场，不含单体民办校直销与公办托管校（世外 31 所中 29 所为公办，公办托管校走政府采购口径，付款方为财政，需单独评估）。</p>
+<p><strong>结论</strong>：托管体系本身是一个 <strong>亿元级到十亿元级/年的利基 SAM</strong>——不足以单独支撑一家 SaaS 公司的全部增长，但作为"高决策效率、高续约确定性、自带样板效应"的渠道型市场，其战略价值大于账面 SAM：一单集团签约可带 10–30 校，获客成本远低于逐校直销，且托管集团扩张期（天立储备意向超 100 个学段、计划年增 30–40 个学段）自带增量。真正的 TAM 仍是 1.44 万所民办 K12 + 向公办托管校/区域教育局的延展。</p>
+<hr/>
+<h2 id="p6-_1">信源清单表</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>信源</th>
+<th>URL</th>
+<th>档位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>教育部《2024年全国教育事业发展统计公报》</td>
+<td><a href="https://big5.www.gov.cn/gate/big5/www.moe.gov.cn/jyb_sjzl/sjzl_fztjgb/202506/t20250611_1193760.html" rel="noopener noreferrer" target="_blank">https://big5.www.gov.cn/gate/big5/www.moe.gov.cn/jyb_sjzl/sjzl_fztjgb/202506/t20250611_1193760.html</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>2</td>
+<td>天立国际控股 2025 年度报告（HKEX）</td>
+<td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1230/2025123000329_c.pdf" rel="noopener noreferrer" target="_blank">https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1230/2025123000329_c.pdf</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>3</td>
+<td>天立国际控股 FY2025 年度业绩公告（公司官网）</td>
+<td><a href="https://www.tianlieducation.com/attachment/tianlieducation/files/2025/11/28/file_1764337554_on67r7n3.pdf" rel="noopener noreferrer" target="_blank">https://www.tianlieducation.com/attachment/tianlieducation/files/2025/11/28/file_1764337554_on67r7n3.pdf</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>4</td>
+<td>春来教育集团数智化建设项目预审公告</td>
+<td><a href="https://bid.chunlaiedu.com/yicai-base/th_project/publicProjectDetail.html?projectid=2c9680829a6b5952019b9672c2a216d1&amp;newsid=2c9680829a6b5952019b968176f916e0&amp;ten=tender" rel="noopener noreferrer" target="_blank">https://bid.chunlaiedu.com/yicai-base/th_project/publicProjectDetail.html?projectid=2c9680829a6b5952019b9672c2a216d1&amp;newsid=2c9680829a6b5952019b968176f916e0&amp;ten=tender</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>5</td>
+<td>巨鹿县新华学校智慧校园项目磋商公告</td>
+<td><a href="https://www.gxzbcg.cn/class2/893141.html" rel="noopener noreferrer" target="_blank">https://www.gxzbcg.cn/class2/893141.html</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>6</td>
+<td>深圳育才三中 AI 智慧校园设备购置招标公告</td>
+<td><a href="https://www.szns.gov.cn/bsfw/ztfw/jypx/tzgg28/zbzbgg/content/post_12877153.html" rel="noopener noreferrer" target="_blank">https://www.szns.gov.cn/bsfw/ztfw/jypx/tzgg28/zbzbgg/content/post_12877153.html</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>7</td>
+<td>合肥职院运动治疗实训室中标公告（ClassIn 单价 27.8 万）</td>
+<td><a href="http://www.ahzfcg.com.cn/cms/cmsNewsDetail/052c192564264b25ba05db5332dbae41" rel="noopener noreferrer" target="_blank">http://www.ahzfcg.com.cn/cms/cmsNewsDetail/052c192564264b25ba05db5332dbae41</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>8</td>
+<td>安徽财经大学未来学习中心中标公告（ClassIn 平台 64 万）</td>
+<td><a href="http://www.ahggzyjt.cn/jyjg/004002/004002002/20260330/38d7453d-200d-44b0-b0b8-a4c500a7987e.html" rel="noopener noreferrer" target="_blank">http://www.ahggzyjt.cn/jyjg/004002/004002002/20260330/38d7453d-200d-44b0-b0b8-a4c500a7987e.html</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>9</td>
+<td>学校委托管理协议书范本（托管费结构）</td>
+<td><a href="https://m.diyifanwen.com/fanwen/weituohetong/20986599.html" rel="noopener noreferrer" target="_blank">https://m.diyifanwen.com/fanwen/weituohetong/20986599.html</a></td>
+<td>一手（范本）</td>
+</tr>
+<tr>
+<td>10</td>
+<td>校宝在线官网</td>
+<td><a href="https://www.xiaobaoonline.com/" rel="noopener noreferrer" target="_blank">https://www.xiaobaoonline.com/</a></td>
+<td>一手（宣传口径）</td>
+</tr>
+<tr>
+<td>11</td>
+<td>希沃官网"了解希沃"</td>
+<td><a href="https://www.seewo.com/about/introduce" rel="noopener noreferrer" target="_blank">https://www.seewo.com/about/introduce</a></td>
+<td>一手（宣传口径）</td>
+</tr>
+<tr>
+<td>12</td>
+<td>ClassIn 官网定价页</td>
+<td><a href="https://www.eeo.cn/cn/pricing" rel="noopener noreferrer" target="_blank">https://www.eeo.cn/cn/pricing</a></td>
+<td>一手</td>
+</tr>
+<tr>
+<td>13</td>
+<td>科大讯飞智慧教育官网新闻（5万余所学校）</td>
+<td><a href="https://edu.iflytek.com/about-us/news/company-news/2551" rel="noopener noreferrer" target="_blank">https://edu.iflytek.com/about-us/news/company-news/2551</a></td>
+<td>一手（宣传口径）</td>
+</tr>
+<tr>
+<td>14</td>
+<td>21世纪经济报道：海亮教育轻资产转型</td>
+<td><a href="https://www.21jingji.com/article/20211125/herald/109c3d31b0365e43c4c4e266e85bf085.html" rel="noopener noreferrer" target="_blank">https://www.21jingji.com/article/20211125/herald/109c3d31b0365e43c4c4e266e85bf085.html</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>15</td>
+<td>新学说：民办教育集团托管公办校</td>
+<td><a href="https://www.xinxueshuo.cn/article/21428.html" rel="noopener noreferrer" target="_blank">https://www.xinxueshuo.cn/article/21428.html</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>16</td>
+<td>凤凰网："民托公"模式分析</td>
+<td><a href="https://i.ifeng.com/c/8GKHs29xDNM" rel="noopener noreferrer" target="_blank">https://i.ifeng.com/c/8GKHs29xDNM</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>17</td>
+<td>格隆汇：天立 FY25 业绩点评</td>
+<td><a href="https://m.gelonghui.com/news/5127710" rel="noopener noreferrer" target="_blank">https://m.gelonghui.com/news/5127710</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>18</td>
+<td>investing.com/智通财经：天立中报与托管市场空间</td>
+<td><a href="https://hk.investing.com/news/stock-market-news/article-913229" rel="noopener noreferrer" target="_blank">https://hk.investing.com/news/stock-market-news/article-913229</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>19</td>
+<td>远瞻慧库转太平洋证券天立深度报告</td>
+<td><a href="https://www.baogaobox.com/insights/250608000011635.html" rel="noopener noreferrer" target="_blank">https://www.baogaobox.com/insights/250608000011635.html</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>20</td>
+<td>弗若斯特沙利文教育信息化市场数据（招股书行业概览）</td>
+<td><a href="http://pdf.dfcfw.com/pdf/H2_AN202104301488825250_14.pdf" rel="noopener noreferrer" target="_blank">http://pdf.dfcfw.com/pdf/H2_AN202104301488825250_14.pdf</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>21</td>
+<td>中国报告大厅：教育信息化行业展望</td>
+<td><a href="https://cht.chinabgao.com/info/1297785.html" rel="noopener noreferrer" target="_blank">https://cht.chinabgao.com/info/1297785.html</a></td>
+<td>二手（聚合站，降权）</td>
+</tr>
+<tr>
+<td>22</td>
+<td>新浪财经：校宝×恒雅教育集团签约</td>
+<td><a href="https://finance.sina.com.cn/jjxw/2025-03-14/doc-inepqsvq9935961.shtml" rel="noopener noreferrer" target="_blank">https://finance.sina.com.cn/jjxw/2025-03-14/doc-inepqsvq9935961.shtml</a></td>
+<td>二手（通稿，降权）</td>
+</tr>
+<tr>
+<td>23</td>
+<td>四川经济网：校宝×灵通教育</td>
+<td><a href="https://www.scjjrb.com/2025/04/24/99432903.html" rel="noopener noreferrer" target="_blank">https://www.scjjrb.com/2025/04/24/99432903.html</a></td>
+<td>二手（通稿，降权）</td>
+</tr>
+<tr>
+<td>24</td>
+<td>中国日报：希沃 AI 课堂落地上海</td>
+<td><a href="https://ex.chinadaily.com.cn/exchange/partners/82/rss/channel/cn/columns/sz8srm/stories//WS67cfa597a310510f19eead81.html" rel="noopener noreferrer" target="_blank">https://ex.chinadaily.com.cn/exchange/partners/82/rss/channel/cn/columns/sz8srm/stories//WS67cfa597a310510f19eead81.html</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>25</td>
+<td>人民网：希沃 AI 教室落地石阡</td>
+<td><a href="https://m.people.cn/n4/2025/0327/c3521-21581434.html" rel="noopener noreferrer" target="_blank">https://m.people.cn/n4/2025/0327/c3521-21581434.html</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>26</td>
+<td>人民网安徽：科大讯飞 AI+教育</td>
+<td><a href="https://ah.people.com.cn/BIG5/n2/2025/0625/c227767-41271186.html" rel="noopener noreferrer" target="_blank">https://ah.people.com.cn/BIG5/n2/2025/0625/c227767-41271186.html</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>27</td>
+<td>中国日报财经：科大讯飞×民办教育西湖论坛</td>
+<td><a href="https://caijing.chinadaily.com.cn/a/202511/10/WS69119424a310ceca48b7bf31.html" rel="noopener noreferrer" target="_blank">https://caijing.chinadaily.com.cn/a/202511/10/WS69119424a310ceca48b7bf31.html</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>28</td>
+<td>亿欧：松鼠Ai×金培教育集团</td>
+<td><a href="https://www.iyiou.com/news/202507221103663" rel="noopener noreferrer" target="_blank">https://www.iyiou.com/news/202507221103663</a></td>
+<td>二手（通稿，降权）</td>
+</tr>
+<tr>
+<td>29</td>
+<td>腾讯深网：好未来/高思 ToB 业务</td>
+<td><a href="https://new.qq.com/rain/a/20190807001819" rel="noopener noreferrer" target="_blank">https://new.qq.com/rain/a/20190807001819</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>30</td>
+<td>人民网：好未来未来魔法校发布</td>
+<td><a href="https://capital.people.cn/n1/2018/0516/c406083-29992718.html" rel="noopener noreferrer" target="_blank">https://capital.people.cn/n1/2018/0516/c406083-29992718.html</a></td>
+<td>二手</td>
+</tr>
+<tr>
+<td>31</td>
+<td>校盈易等渠道评测站（SaaS 定价线索）</td>
+<td><a href="https://www.beiing.net/cjwt/fqxoiw.html" rel="noopener noreferrer" target="_blank">https://www.beiing.net/cjwt/fqxoiw.html</a> 等</td>
+<td>二手（D级渠道站，仅线索）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="p6-_2">数据缺口与存疑点</h2>
+<ol>
+<li><strong>托管行业总量无官方统计</strong>：全国民办学校托管方数量、托管学校总数无权威口径，N=1000–3000 为基于头部样本的估算，建议后续通过各省教育厅公示的委托管理备案信息逐省核实。</li>
+<li><strong>托管费水平差异大</strong>：公开范本（100–200 万/校/年）与天立推算（校均 300 万+/年）均为片段证据，且包含特许经营费；不同区域、学段差异未明。</li>
+<li><strong>校宝"40% 民办校渗透率"、26 万机构等为企业宣传口径</strong>，无第三方审计；其定价信息来自渠道评测站（D 级），未获官方价目表确认。</li>
+<li><strong>市场规模数据相互打架</strong>：弗若斯特沙利文（2024E 6114 亿）与中国报告大厅（2024 年 6464 亿）口径不同（含硬件与否不明）；人人文库转载的"K12 信息化 2200 亿""智慧校园装备 1860 亿"无法回溯艾瑞原文，均标存疑。</li>
+<li><strong>松鼠Ai 提分数据（+51.3 分等）为企业自报</strong>，虽有"艾瑞审核人机实验"表述但原始报告未公开获取，降权处理。</li>
+<li><strong>好未来/作业帮"双减"后 ToB 进全日制民办校的最新数据未找到公开披露</strong>，本报告未予采信任何相关推测。</li>
+<li><strong>天立启鸣云平台"接入 107 所学校、25 万师生"为集团口径</strong>（含自有校），其对外商业化收入未单独披露，无法评估托管集团自研 SaaS 的真实威胁度。</li>
+<li>海亮教育自美股退市后（2022 年完成私有化）托管业务最新规模未找到公开数据，第 1 节引用其 2021 财年口径，时间偏旧，已标注。</li>
+</ol></article>
+</section>
+</main>
+<div class="foot">
+    本合集由 6 份独立模块调研文件渲染而成，内容与 <code>research/*.md</code> 原文一致。<br/>
+    决策版汇总见《民办校托管行业尽调报告》。
+  </div>
+</div>
+<button class="to-top" id="toTop" title="回到顶部">↑</button>
+<script>
+(function(){
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('button.tab'));
+  var panels = Array.prototype.slice.call(document.querySelectorAll('.panel'));
+
+  function activate(id, push){
+    tabs.forEach(function(t){
+      var on = t.dataset.target === id;
+      t.classList.toggle('active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    panels.forEach(function(p){ p.hidden = (p.id !== id); });
+    if (push && location.hash !== '#' + id) history.replaceState(null, '', '#' + id);
+  }
+
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){ activate(t.dataset.target, true); window.scrollTo({top:0,behavior:'smooth'}); });
+  });
+
+  // 初始定位：优先 hash，其次第一个
+  var h = (location.hash || '').replace('#','');
+  var known = tabs.map(function(t){ return t.dataset.target; });
+  if (known.indexOf(h) === -1) activate(known[0], false); else activate(h, false);
+
+  // 跨文档锚点：点击目录里的 #pN-xxx 链接时自动切到对应 tab
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href^="#"]');
+    if (!a) return;
+    var id = a.getAttribute('href').slice(1);
+    var m = /^(p\d+)-/.exec(id);
+    if (m && known.indexOf(m[1]) !== -1){
+      activate(m[1], false);
+      var el = document.getElementById(id);
+      if (el) setTimeout(function(){ el.scrollIntoView({behavior:'smooth', block:'start'}); }, 60);
+      e.preventDefault();
+    }
+  });
+
+  var toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function(){
+    toTop.classList.toggle('show', window.scrollY > 500);
+  });
+  toTop.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+})();
+</script>
+</body>
+</html>

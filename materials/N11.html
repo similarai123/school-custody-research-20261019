@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>海亮科服 深度调研报告 · 2026-10-19</title>
+<style>
+  :root{
+    --ink:#1a2332; --sub:#5a6678; --line:#e3e7ee; --bg:#f6f8fb; --card:#ffffff;
+    --brand:#0b5fff; --brand-soft:#eaf1ff; --warn:#b45309; --warn-bg:#fef6e7;
+    --ok:#0f7b4d; --ok-bg:#e9f7f0; --red:#c0392b; --red-bg:#fdecea;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.75;font-size:15px}
+  .wrap{max-width:960px;margin:0 auto;padding:32px 20px 80px}
+  header.hero{background:linear-gradient(135deg,#0b5fff,#3d8bff);color:#fff;border-radius:16px;padding:36px 36px 30px;margin-bottom:28px}
+  header.hero h1{font-size:28px;letter-spacing:1px}
+  header.hero .sub{opacity:.9;margin-top:8px;font-size:14px}
+  header.hero .tags{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}
+  header.hero .tag{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);padding:3px 12px;border-radius:999px;font-size:12.5px}
+  h2{font-size:20px;margin:38px 0 14px;padding-left:12px;border-left:4px solid var(--brand)}
+  h3{font-size:16.5px;margin:22px 0 8px}
+  p{margin:8px 0}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:14px 0}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13.5px;background:#fff}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:#eef2f8;font-weight:600}
+  .ev{display:inline-block;font-size:11px;font-weight:700;padding:1px 7px;border-radius:4px;margin-right:5px;vertical-align:1px}
+  .ev-a{background:#dce9ff;color:#0b4fd6}
+  .ev-b{background:#e4f6ec;color:#0f7b4d}
+  .ev-c{background:#fff2d9;color:#b45309}
+  .ev-d{background:#fde7e4;color:#c0392b}
+  .callout{border-radius:10px;padding:14px 18px;margin:14px 0;font-size:14px}
+  .callout.warn{background:var(--warn-bg);border:1px solid #f0dfa8}
+  .callout.ok{background:var(--ok-bg);border:1px solid #bfe6d2}
+  .callout.red{background:var(--red-bg);border:1px solid #f3c5bf}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:720px){.grid2{grid-template-columns:1fr}}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .kpi .num{font-size:22px;font-weight:700;color:var(--brand)}
+  .kpi .lbl{font-size:12.5px;color:var(--sub);margin-top:2px}
+  ul,ol{margin:8px 0 8px 22px}
+  li{margin:4px 0}
+  .src-list{font-size:13px;color:var(--sub)}
+  .src-list li{margin:6px 0;word-break:break-all}
+  .conflict{background:#fff8ec;border-left:3px solid var(--warn);padding:8px 14px;margin:8px 0;font-size:13.5px;border-radius:0 8px 8px 0}
+  .footer{margin-top:40px;font-size:12.5px;color:var(--sub);border-top:1px solid var(--line);padding-top:16px}
+</style>
+<meta content="noindex,nofollow" name="robots"/><style>#material-library-bar{all:initial;display:block;position:relative;z-index:10000;background:#f2efe6;color:#293b35;border-bottom:1px solid #b8b9ad;padding:14px 4vw;font:15px/1.65 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}#material-library-bar a{color:#225e4b;text-decoration:underline;margin-right:18px}#material-library-bar .ml-note{display:block;padding:8px 0 0;color:#55462b;font-size:14px}#material-library-bar strong{font-weight:700} @media print{#material-library-bar{display:block!important;position:static!important}}
+/* 资料库手机阅读修正：只约束页面宽度，表格保留局部横向滚动。 */
+@media(max-width:720px){
+  #material-library-bar{box-sizing:border-box;max-width:100%;overflow-wrap:anywhere}
+  body{overflow-wrap:anywhere}
+  .wrap,.panel,.rp,.card,.rp .card,.pcard,.rp .pcard,.ans,.rp .ans,.body,.rp details .body,.scroll,.rp .scroll,nav.tabbar{min-width:0;max-width:100%}
+  .cards,.rp .cards{grid-template-columns:minmax(0,1fr)}
+  .cards>*,.rp .cards>*,.ansbox>*,.rp .ansbox>*{min-width:0}
+  table,.rp table{display:block;width:100%;max-width:100%;overflow-x:auto}
+  .scroll table,.rp .scroll table{display:table;max-width:none}
+  nav.toc a,.rp nav.toc a{white-space:normal;overflow-wrap:anywhere}
+  pre,img,svg,iframe{max-width:100%}
+}
+</style></head>
+<body><div id="material-library-bar"><a href="../index.html">返回全部材料</a><a href="../sources.html">来源明细</a><strong>N11 · 研究加工稿</strong><span class="ml-note">历史研究资料按原调研时点保留。本文为研究加工材料；完整来源见资料明细。关键纠错另行标示，其他外链未在本轮逐条重验。</span></div>
+<div class="wrap">
+<header class="hero">
+<h1>海亮科服 · 深度调研报告</h1>
+<div class="sub">浙江海亮科技服务股份有限公司 ｜ 海亮教育科技服务集团 ｜ 调研日期：2026-10-19 ｜ 证据分级：A官方机构 / B企业官方 / C权威媒体 / D商业渠道（待核）</div>
+<div class="tags">
+<span class="tag">教育科技独角兽（榜单口径）</span>
+<span class="tag">AI+教育 面向政府和学校</span>
+<span class="tag">面向个人的生涯规划</span>
+<span class="tag">县域教育振兴</span>
+<span class="tag">世界500强海亮集团旗下</span>
+</div>
+</header>
+<div class="callout ok">
+<b>一句话结论：</b>海亮科服是海亮集团在新民促法后推动教育业务转型的主要公司——2021年从纳斯达克退市、剥离义务教育学校后，以"AI+教育"政企服务（校内）+ "e生涯"生涯规划（校外 to C）双轮驱动，走"县域教育综合服务"差异化路线。2026年先后拿下"浙江首家教育科技独角兽"和"全球独角兽名录中国第124名"。<b>需甄别：独角兽身份来自榜单认定而非市场化融资估值，未见外部VC轮次；核心宣传数据（覆盖区县数）存在 99/153/200+/210+/310+ 五组口径并存；集团母公司净利润率接近 0%，提供资金支持的能力有限。</b>
+</div>
+<h2>一、确认公司主体与股权结构</h2>
+<div class="card">
+<table>
+<tr><th style="width:22%">事项</th><th>内容</th><th style="width:10%">证据</th></tr>
+<tr><td>运营主体</td><td><b>浙江海亮科技服务股份有限公司</b>，成立于 2021-10-15，法定代表人陈军伟（原海亮教育董事会主席兼CEO），注册资本 1.1 亿元，注册地杭州滨江区海亮大厦 2809 室</td><td><span class="ev ev-c">C</span></td></tr>
+<tr><td>集团控股主体</td><td><b>海亮教育科技服务集团有限公司</b>，成立于 2024-09-29，注册资本 3.3 亿元，注册地诸暨市店口镇（海亮集团内），法定代表人同为陈军伟</td><td><span class="ev ev-c">C</span></td></tr>
+<tr><td>政采签约主体</td><td><b>浙江海亮科技有限公司</b>（杭州滨江区海亮大厦4楼），多个政府采购合同的乙方</td><td><span class="ev ev-a">A</span></td></tr>
+<tr><td>控制链</td><td>隶属宁波哲韬投资控股有限公司 → 实际控制人<b>冯海良</b>（海亮集团创始人），集团旗下关联企业 214 家</td><td><span class="ev ev-c">C</span></td></tr>
+<tr><td>母公司</td><td>海亮集团：2026《财富》世界500强第 <b>433</b> 位（营收 374.7 亿美元，但净利润仅 1,140 万美元、净利率约 0%，员工 24,122 人）；2026 中国民企500强第 24 位（营收 2,693.4 亿元）</td><td><span class="ev ev-a">A</span></td></tr>
+</table>
+<p style="font-size:13px;color:var(--sub)">注：工商信息来自企业信息聚合平台（C级），建议正式引用前以国家企业信用信息公示系统复核。</p>
+</div>
+<h2>二、沿革时间线：从美股K12集团到教育科技独角兽</h2>
+<div class="card">
+<table>
+<tr><th style="width:16%">时间</th><th>事件</th><th style="width:8%">证据</th></tr>
+<tr><td>1995</td><td>冯海良创办诸暨海亮外国语学校，海亮教育起点</td><td><span class="ev ev-c">C</span></td></tr>
+<tr><td>2015</td><td>海亮教育登陆纳斯达克（HLG），国内首个美股基础教育集团</td><td><span class="ev ev-c">C</span></td></tr>
+<tr><td>2017.08</td><td>股价异常飙至 199,999.99 美元/股，"8分钟世界首富"乌龙事件</td><td><span class="ev ev-c">C</span></td></tr>
+<tr><td>2021.09</td><td>《民促法实施条例》生效，丧失 11 所义务教育学校控制权（占自有学校 64.7%），确认资产减值约 <b>2.52 亿元</b></td><td><span class="ev ev-c">C</span></td></tr>
+<tr><td>2021.10</td><td>浙江海亮科技服务股份有限公司成立（海亮科服主体诞生）</td><td><span class="ev ev-c">C</span></td></tr>
+<tr><td>2022.02</td><td>11 所义务教育学校捐赠给浙江嘉行慈善基金会（保持正常运营）</td><td><span class="ev ev-b">B</span></td></tr>
+<tr><td>2022.05-09</td><td>私有化：股权价值约 <b>3.689 亿美元</b>，14.31 美元/ADS（溢价 24.98%），2022-09-16 完成退市——新民促法后<b>第一家主动私有化退市的 K12 教育集团</b>；退市价较发行价涨 104.29%</td><td><span class="ev ev-a">A</span></td></tr>
+<tr><td>2022.10</td><td>入驻杭州滨江海亮科研大厦，诸暨+滨江双总部运行</td><td><span class="ev ev-b">B</span></td></tr>
+<tr><td>2026.04</td><td>第十届万物生长大会：入选浙江独角兽榜单，"<b>全国首家专注赋能学校的教育科技独角兽</b>、浙江首家教育科技独角兽"</td><td><span class="ev ev-c">C</span></td></tr>
+<tr><td>2026.08</td><td>"数据要素×"大赛浙江赛区人力资源与教育赛道<b>一等奖</b>（与蚂蚁、科大讯飞、海康威视等同场），获推全国总决赛</td><td><span class="ev ev-c">C</span></td></tr>
+<tr><td>2026.09</td><td>入选《全球独角兽企业数据分析报告(2026)》名录，<b>中国企业第 124 名</b>（独角兽工程院联合人大、清华等发布）</td><td><span class="ev ev-c">C</span></td></tr>
+</table>
+</div>
+<h2>三、业务模式拆解："一体双轮"</h2>
+<div class="grid2">
+<div class="card">
+<h3 style="margin-top:0">轮一：智慧教育政企服务（面向政府和学校的校内服务）</h3>
+<ul>
+<li><b>AI创思课堂</b>：「自主学习、合作学习、小老师制、课课达标、精准作业推送」五要素 + "三阶六环"流程，学生用"星学伴"平板上课；宣传称教师讲授时间从 45 分钟降至约 15 分钟 <span class="ev ev-b">B</span></li>
+<li><b>Hai Agent 平台</b>：2026 年推出的交互中枢，布局教师备课智能体 + 学生自学智能体 <span class="ev ev-c">C</span></li>
+<li>产品线：课堂精准教学、学生全面发展、教师专业提升、学校高效管理 4 大类 16 项产品 <span class="ev ev-d">D</span></li>
+<li><b>县域综合管理服务</b>：向县域公办校输出托管办学、师训干训、拔尖培优（双师强基、清北朋辈伴行）。案例：广西天等县、云南石屏、湖北建始（建始一中学生 700 分上北大）、山东嘉祥一中（宣传称培育出省高考状元）、青海海西州（清北零突破）、拉萨堆龙德庆区集团化办学、那曲援藏班 <span class="ev ev-c">C</span></li>
+</ul>
+</div>
+<div class="card">
+<h3 style="margin-top:0">轮二：生涯科技用户服务（面向个人的校外服务）</h3>
+<ul>
+<li><b>e生涯平台 + 自研生涯规划大模型</b>：数据层（升学政策库/职业库/专业库，接入教育考试院与高校招生数据）→ 模型层（规划场景整理为技能模块）→ 应用层（AI 搜集/查证/测算 + 真人规划师把关）<span class="ev ev-c">C</span></li>
+<li><b>72 条多元升学路径</b>：强基、综评、小语种、艺体、港澳升学等 <span class="ev ev-c">C</span></li>
+<li>落地口径（数据要素大赛口径）：14 省、60 余所学校、超 10 万名学生；核心功能深度使用率 60% <span class="ev ev-c">C</span></li>
+<li>国际升学：宣传 8 大国际班型、2000+ 合作院校、QS TOP100 录取 1,138 封 <span class="ev ev-d">D</span></li>
+<li>配套业务：课后服务、研学实践、智慧后勤、艺术服务 <span class="ev ev-c">C</span></li>
+</ul>
+</div>
+</div>
+<div class="callout warn">
+<b>商业模式判断：</b>海亮科服的竞争优势不在技术本身，而在"生于校园"的进入学校实际教学场景的机会——自有/托管学校是产品试验和展示基地（海亮教育 30+ 学校、近 6 万在校学生），再向县域公办学校在更多地区推广，靠"科技+服务+成果"交付（驻校服务+效果承诺+复购）维持客户合作。这与科大讯飞（技术驱动、渠道驱动）、飞象星球（产品驱动）的路径明显不同，更接近"办学集团输出管理能力"的逻辑延伸。
+</div>
+<h2>四、关键数据核对：主体、时间和统计范围</h2>
+<div class="card">
+<table>
+<tr><th style="width:20%">指标</th><th>并存口径（按时点）</th><th style="width:30%">核验结论</th></tr>
+<tr><td>业务覆盖区县数</td><td>99 区县/177 校/30 万师生（2025.07）→ 153 区县（2025）→ 200+ 区县（2026.04 大会/中国教育报）→ 210+ 区县（官网"关于我们"、中国教育报 2026.04）→ <b>310+ 区县</b>（官网首页最新，140+ 封感谢信）</td><td>取最新官方首页口径 <b>310+ 区县</b>，注明增速极快且各时点口径混用；"千万人次"是<b>人次</b>非人数 <span class="ev ev-b">B</span></td></tr>
+<tr><td>地方政府感谢信</td><td>120 余封 → 129 封（2026.04）→ 130 余封（关于我们页）→ 140 余封（首页最新）</td><td>口径随时间递增，引用须带时点 <span class="ev ev-b">B</span></td></tr>
+<tr><td>自有办学规模</td><td>海亮教育：30+ 小初高学校、30+ 幼儿园、40+ 人工智能教育机构、3 家特殊教育机构，在校学生约 6 万人</td><td>官方口径 <span class="ev ev-b">B</span></td></tr>
+<tr><td>独角兽估值</td><td>榜单只说"杭州 15 家企业估值超 170 亿元"，未单独披露海亮科服估值；<b>未见任何外部融资轮次公告</b></td><td><b>独角兽为榜单认定口径（估值≥10亿美元推定），非融资口径，具体估值无公开来源</b> <span class="ev ev-c">C</span></td></tr>
+<tr><td>退市前财务</td><td>2021 财年营收 13.758 亿元(+33.9%)——公司通稿称归母净利 4.83 亿(+38%)，人民日报客户端按年报核验为 <b>2.35 亿(-37.2%)</b>（含 2.53 亿义务教育减值）</td><td class="conflict" style="border:none;padding:6px">⚠️ 口径冲突：官方通稿 vs 媒体核验。建议采信含减值口径 2.35 亿 <span class="ev ev-c">C</span></td></tr>
+</table>
+</div>
+<h2>五、政府采购实证（可查真凭实据）</h2>
+<div class="card">
+<table>
+<tr><th>项目</th><th>采购方</th><th>金额</th><th>时间</th><th>证据</th></tr>
+<tr><td>基础教育提质培优项目（校本智能教研管理平台+综合素质评价服务）</td><td>四川若尔盖县教育局</td><td>81.52 万元 / 2 年</td><td>2026.09 签约</td><td><span class="ev ev-a">A</span> 中国政府采购网/四川公共资源交易网</td></tr>
+<tr><td>学生综合素质评价系统服务</td><td>黄山屯溪江南实验小学</td><td>9.7 万元 / 1 年</td><td>2025.11</td><td><span class="ev ev-a">A</span> 屯溪区政府网</td></tr>
+<tr><td>永川区"人工智能+教育"创新特色学校建设项目</td><td>重庆永川区教委</td><td><b>938.19 万元</b></td><td>2026.10 中标</td><td><span class="ev ev-d">D</span> 招标聚合站转载，建议重庆政府采购网复核原文</td></tr>
+</table>
+<p style="font-size:13.5px">另有永川区政府与海亮集团 2026.07 签署战略合作协议（共建"海亮科技渝西中心"）<span class="ev ev-b">B</span>。可见单县订单体量从十万级到近千万级不等，区域项目订单正在增加。</p>
+</div>
+<h2>六、风险与争议清单</h2>
+<div class="card">
+<ol>
+<li><b>政策合规背景</b>：公司诞生于民促法强监管（2021 年被迫剥离 64.7% 自有学校、减值 2.5 亿），义务教育学校已捐赠给嘉行慈善基金会——但基金会与集团的实际关联度、托管收费的合规边界，属长期观察项。<span class="ev ev-c">C</span></li>
+<li><b>独角兽身份的依据</b>：两次"独角兽"均为榜单/报告认定（万物生长大会、独角兽工程院），<b>无市场化融资估值支撑</b>；独角兽工程院为行业机构（中国发明协会等指导），非权威监管认定。<span class="ev ev-c">C</span></li>
+<li><b>母公司提供资金支持的能力</b>：海亮集团 2025 财年营收 374.7 亿美元但净利润仅 1,140 万美元（净利率≈0%），铜主业盈利极薄；冯海良家族财富从 2019 年 320 亿降至 2025 年 175 亿。<span class="ev ev-a">A</span></li>
+<li><b>历史舆情</b>：2017 年"8分钟世界首富"股价乌龙；2019-2022 年与诸暨荣怀学校互诉（商标侵权/不正当竞争/名誉权/商业诋毁，双方互索赔 300万-3021万）；关联公司现有司法案件 11 起、8 起为被告。<span class="ev ev-c">C</span></li>
+<li><b>退市前瑕疵</b>：曾因未及时提交半年报、未按期召开股东会被纳斯达克发不合规通知。<span class="ev ev-c">C</span></li>
+<li><b>to C 生涯规划赛道监管敏感</b>：升学规划付费服务近年争议高发（虚假宣传、高价咨询乱象），e生涯大模型<b>未检索到网信办生成式AI备案公开记录</b>——待核项。<span class="ev ev-d">D</span></li>
+<li><b>宣传效果待验证</b>："艺术生试点均分高 10 分""高考平均提分 19 分""山东嘉祥状元"等效果案例均来自企业供图报道，无第三方验证。<span class="ev ev-d">D</span></li>
+</ol>
+</div>
+<h2>七、对我们的启示（教育行业视角）</h2>
+<div class="callout ok">
+<ul style="margin:0 0 0 18px">
+<li><b>赛道定位</b>：海亮科服是"民办教育集团转型教育科技服务"跑得最靠前的样本——把自有学校变成产品试验基地，再利用县域教育均衡发展的政策机会（乡村振兴+人工智能+教育行动计划两项政策机会）。</li>
+<li><b>竞合关系</b>：面向政府的校内业务 面对手是科大讯飞、飞象星球、好未来；面向个人的生涯规划 面对手是百年育才、优志愿等。海亮的差异在"托管办学+驻校服务"的需要较多人员持续服务的模式，订单需要较多投入，但客户联系紧密。</li>
+<li><b>可借鉴打法</b>：①县域教育局单点突破→向更多地区推广的销售路径；②"感谢信""数据要素大赛奖""独角兽榜单"结合使用的政府关系与品牌背书组合；③校内数据入口→由校内服务延伸至校外个人生涯服务的收费路径。</li>
+<li><b>若作为合作/对标对象</b>：注意其"独角兽"是榜单口径，商务尽调应以政府采购合同、学校客户实地访谈为准，而非宣传口径的区县数。</li>
+</ul>
+</div>
+<h2>八、主要证据来源</h2>
+<div class="card">
+<ul class="src-list">
+<li><span class="ev ev-a">A</span>海亮教育私有化合并完成公告（美通社/公司新闻中心，2022-09-16）：hailiang-cn.mediaroom.com/2022-09-16</li>
+<li><span class="ev ev-a">A</span>中国政府采购网：若尔盖县基础教育提质培优项目成交公告（2026-09）：ccgp.gov.cn/cggg/dfgg/cjgg/202609/t20260915_27325817.htm</li>
+<li><span class="ev ev-a">A</span>四川省公共资源交易信息网合同公告（2026-09-23）：ggzyjy.sc.gov.cn</li>
+<li><span class="ev ev-a">A</span>屯溪区政府成交公告（2025-11-19）：ahtxq.gov.cn/zwgk/public/6616009/11939987.html</li>
+<li><span class="ev ev-a">A</span>财富中文网 2026 世界500强·海亮集团档案（第433位，营收374.7亿美元/净利1,140万美元）：fortunechina.com / caifuzhongwen.com</li>
+<li><span class="ev ev-b">B</span>海亮科技服务控股集团官网首页及"关于我们"：hailiangedu.com（310+区县/140+感谢信 vs 210+区县/130+感谢信两版口径并存）</li>
+<li><span class="ev ev-b">B</span>海亮集团官网新闻（堆龙德庆签约、渝西中心、援藏班等）：hailiang.com</li>
+<li><span class="ev ev-c">C</span>新华网浙江：海亮科服入选全球独角兽名录（2026-09-24）；县域教育振兴路径（2026-07-29）</li>
+<li><span class="ev ev-c">C</span>中新网浙江：教育科技赛道首现独角兽（2026-04-24）；浙江海亮科服入选全球独角兽名录（2026-09-25）</li>
+<li><span class="ev ev-c">C</span>科技日报："数据要素×"大赛浙江赛区一等奖（2026-09-01，e生涯落地14省60余校10万学生口径）</li>
+<li><span class="ev ev-c">C</span>人民日报客户端：体面退场·海亮教育的"最优解"；2021财年利润大降近四成（归母净利2.35亿口径）</li>
+<li><span class="ev ev-c">C</span>界面新闻：海亮股份年入833亿，"前绍兴首富"又双叒叕要IPO了（沿革与家族财富变动）</li>
+<li><span class="ev ev-c">C</span>中证网/中新经纬：海亮教育与荣怀教育互诉系列（2019-2020）</li>
+<li><span class="ev ev-d">D</span>百度百科"海亮科服"词条（产品数、人才数、国际升学录取数，待核）；安华招标网转载永川区938.19万中标公告（待核）</li>
+</ul>
+</div>
+<div class="footer">
+  调研人：小潮 🌊 ｜ 口径原则：保守优先，多口径并存时取最新官方口径并标注时点 ｜ 待核项：①e生涯大模型网信办备案；②永川项目政府采购网原文；③独角兽具体估值；④工商信息以国家企业信用信息公示系统为准。
+</div>
+</div>
+</body>
+</html>

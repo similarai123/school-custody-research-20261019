@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>快速情报简报 · 职业教育托管这门生意（样本：优蓝国际 YOUL.US）</title>
+<style>
+  :root{
+    --ink:#1a2332; --ink2:#4a5568; --ink3:#8494a8;
+    --bg:#f4f6f9; --card:#ffffff; --line:#e3e8ef;
+    --accent:#1f5fa8; --accent-bg:#eaf2fb;
+    --red:#c0392b; --red-bg:#fdecea;
+    --amber:#b7791f; --amber-bg:#fdf3e3;
+    --green:#1e7e4d; --green-bg:#e8f6ef;
+    --purple:#6b46c1; --purple-bg:#f0eafc;
+    --mono:"SF Mono",Menlo,Consolas,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.75;font-size:15px}
+  .wrap{max-width:1140px;margin:0 auto;padding:32px 24px 80px}
+  header.report-head{background:linear-gradient(135deg,#14324f 0%,#1f5fa8 100%);color:#fff;border-radius:16px;padding:38px 42px;margin-bottom:22px}
+  header.report-head .tag{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:2px 14px;font-size:12px;letter-spacing:1px;margin-bottom:14px}
+  header.report-head h1{font-size:26px;line-height:1.4;margin-bottom:10px}
+  header.report-head p.sub{opacity:.9;font-size:13.5px;max-width:900px}
+  header.report-head .meta{margin-top:16px;font-size:12.5px;opacity:.75;font-family:var(--mono)}
+  nav.toc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 24px;margin-bottom:26px;font-size:13.5px}
+  nav.toc b{color:var(--ink2);margin-right:8px}
+  nav.toc a{color:var(--accent);text-decoration:none;margin-right:16px;white-space:nowrap;line-height:2}
+  nav.toc a:hover{text-decoration:underline}
+  section{margin-bottom:34px}
+  h2.sec{font-size:20px;padding-left:14px;border-left:5px solid var(--accent);margin-bottom:14px;line-height:1.4}
+  h3{font-size:16px;margin:20px 0 8px;color:#14324f}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 26px}
+  .verdict{background:#14324f;color:#fff;border-radius:12px;padding:26px 30px;margin-bottom:22px}
+  .verdict h3{color:#ffd97a;margin:0 0 12px;font-size:16px}
+  .verdict p{font-size:14.5px;line-height:1.85;margin-bottom:10px}
+  .verdict b{color:#ffd97a}
+  .verdict .big{font-size:17px;line-height:1.7;margin-bottom:14px}
+  table{width:100%;border-collapse:collapse;font-size:13.2px;margin:12px 0;background:#fff}
+  th{background:#f0f4f9;text-align:left;padding:9px 11px;border:1px solid var(--line);color:#33475f;font-weight:600}
+  td{padding:9px 11px;border:1px solid var(--line);vertical-align:top}
+  tr:nth-child(even) td{background:#fafbfc}
+  .scroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:#fff;margin:14px 0}
+  .scroll table{margin:0;min-width:1000px;font-size:12.6px}
+  .scroll th,.scroll td{border-left:none;border-right:1px solid var(--line);border-top:none}
+  .scroll th{position:sticky;top:0;z-index:2;background:#e9eff7;white-space:nowrap}
+  .scroll td:first-child,.scroll th:first-child{position:sticky;left:0;z-index:1;background:#f7f9fc;font-weight:600;min-width:140px;box-shadow:1px 0 0 var(--line)}
+  .scroll th:first-child{z-index:3;background:#e9eff7}
+  .alert{border-radius:10px;padding:14px 18px;margin:14px 0;font-size:13.4px;line-height:1.75}
+  .alert.red{background:var(--red-bg);border:1px solid #f2c7c0}.alert.red b{color:var(--red)}
+  .alert.amber{background:var(--amber-bg);border:1px solid #eed9ae}.alert.amber b{color:var(--amber)}
+  .alert.green{background:var(--green-bg);border:1px solid #bfe3cf}.alert.green b{color:var(--green)}
+  .alert.blue{background:var(--accent-bg);border:1px solid #c4d9ef}.alert.blue b{color:var(--accent)}
+  .alert.purple{background:var(--purple-bg);border:1px solid #d6c7f0}.alert.purple b{color:var(--purple)}
+  .ev{display:inline-block;font-size:10.5px;font-family:var(--mono);padding:0 6px;border-radius:4px;white-space:nowrap;border:1px solid;margin-left:3px}
+  .ev-a{background:#e8f6ef;color:#1e7e4d;border-color:#bfe3cf}
+  .ev-b{background:#fdf3e3;color:#b7791f;border-color:#eed9ae}
+  .ev-c{background:#f1f3f6;color:#6b7787;border-color:#dde3ea}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:13px;margin:16px 0}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:15px 17px;position:relative}
+  .kpi .num{font-size:21px;font-weight:700;color:var(--accent);font-family:var(--mono);letter-spacing:-.5px;line-height:1.25}
+  .kpi .num.red{color:var(--red)}
+  .kpi .num.amber{color:var(--amber)}
+  .kpi .lbl{font-size:12.3px;color:var(--ink2);margin-top:4px;line-height:1.5}
+  .kpi .src{font-size:10.8px;color:var(--ink3);margin-top:6px;line-height:1.4}
+  a.ext{color:var(--accent);text-decoration:none;border-bottom:1px dotted #a8c4e0;word-break:break-all}
+  a.ext:hover{background:var(--accent-bg)}
+  a.ext::after{content:"↗";font-size:10px;margin-left:2px;opacity:.6}
+  .bars{margin:16px 0}
+  .bar-row{display:grid;grid-template-columns:190px 1fr 130px;gap:12px;align-items:center;margin-bottom:10px;font-size:13px}
+  @media(max-width:760px){.bar-row{grid-template-columns:1fr;gap:4px}.bar-row .bv{text-align:left}}
+  .bar-row .bl{color:#33475f;font-weight:600;text-align:right}
+  @media(max-width:760px){.bar-row .bl{text-align:left}}
+  .bar-track{background:#eef2f7;border-radius:6px;height:26px;position:relative;overflow:hidden}
+  .bar-fill{height:100%;border-radius:6px;display:flex;align-items:center;padding-left:9px;font-size:11.8px;color:#fff;font-family:var(--mono);white-space:nowrap}
+  .bv{font-family:var(--mono);font-size:12.5px;color:var(--ink2);text-align:right}
+  ul.tight,ol.tight{padding-left:22px;font-size:13.8px}
+  ul.tight li,ol.tight li{margin-bottom:7px}
+  .quote{background:#fbfcfd;border-left:3px solid var(--accent);border-radius:0 8px 8px 0;padding:12px 16px;margin:10px 0;font-size:13.2px;line-height:1.8;color:#2c3b4e}
+  .quote b{color:#14324f}
+  .quote .en{font-family:var(--mono);font-size:11.6px;color:#6b7787;display:block;margin-bottom:5px;line-height:1.6}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:14px 0}
+  @media(max-width:860px){.grid2{grid-template-columns:1fr}}
+  .box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;font-size:13.4px;line-height:1.75}
+  .box h4{margin:0 0 8px;font-size:14.5px;color:#14324f}
+  .box.ok{border-top:4px solid var(--green)}
+  .box.no{border-top:4px solid var(--red)}
+  .box.warn{border-top:4px solid var(--amber)}
+  .box .tagline{font-size:11.5px;font-family:var(--mono);color:var(--ink3);margin-bottom:8px}
+  .footnote{font-size:12px;color:var(--ink3);margin-top:10px}
+  hr.soft{border:none;border-top:1px dashed var(--line);margin:24px 0}
+  .num-big{font-family:var(--mono);font-weight:700}
+</style>
+<meta content="noindex,nofollow" name="robots"/><style>#material-library-bar{all:initial;display:block;position:relative;z-index:10000;background:#f2efe6;color:#293b35;border-bottom:1px solid #b8b9ad;padding:14px 4vw;font:15px/1.65 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}#material-library-bar a{color:#225e4b;text-decoration:underline;margin-right:18px}#material-library-bar .ml-note{display:block;padding:8px 0 0;color:#55462b;font-size:14px}#material-library-bar strong{font-weight:700} @media print{#material-library-bar{display:block!important;position:static!important}}
+/* 资料库手机阅读修正：只约束页面宽度，表格保留局部横向滚动。 */
+@media(max-width:720px){
+  #material-library-bar{box-sizing:border-box;max-width:100%;overflow-wrap:anywhere}
+  body{overflow-wrap:anywhere}
+  .wrap,.panel,.rp,.card,.rp .card,.pcard,.rp .pcard,.ans,.rp .ans,.body,.rp details .body,.scroll,.rp .scroll,nav.tabbar{min-width:0;max-width:100%}
+  .cards,.rp .cards{grid-template-columns:minmax(0,1fr)}
+  .cards>*,.rp .cards>*,.ansbox>*,.rp .ansbox>*{min-width:0}
+  table,.rp table{display:block;width:100%;max-width:100%;overflow-x:auto}
+  .scroll table,.rp .scroll table{display:table;max-width:none}
+  nav.toc a,.rp nav.toc a{white-space:normal;overflow-wrap:anywhere}
+  pre,img,svg,iframe{max-width:100%}
+}
+</style></head>
+<body><div id="material-library-bar"><a href="../index.html">返回全部材料</a><a href="../sources.html">来源明细</a><strong>L52 · 历史原稿 · 含重要纠错</strong><span class="ml-note">重要纠错：940万元是FY2025学校管理收入，不能除以2026年披露的37所学校得出精确单校单价；学校收学生学费；市场服务含校外业务，不能推断后勤利润或软件预算。 <a href="C01.html">职教校正版</a></span></div>
+<div class="wrap">
+<header class="report-head">
+<div class="tag">快速情报简报 · 第一轮 · 供决定是否深挖</div>
+<h1>职业教育托管这门生意能不能做<br/><span style="font-size:19px;opacity:.9">样本：优蓝国际（NASDAQ: YOUL）· 天坤教育 TOT 模式</span></h1>
+<p class="sub">方法：以优蓝国际的美国 SEC 法定披露（20-F / F-1 / 合同附件）为主证据，辅以政府采购、地方财政决算、教育局公示、国务院督查通报。企业与独立核验全程分列。<b>本简报不含推测——查不到的会写明"未找到"。</b></p>
+<div class="meta">调研日期 2026-10-14 ｜ 数据截止 2026-10-14 ｜ 一手来源：SEC 20-F(FY2025) / 海兴县合作办学协议 / 教育部·人社部统计公报 / 财政部 102 号令</div>
+</header>
+<nav class="toc">
+<b>目录</b>
+<a href="#s0">一句话结论</a><a href="#s1">1 最刺眼的数字</a><a href="#s2">2 钱到底从哪来</a><a href="#s3">3 根本矛盾</a><a href="#s4">4 与K12的差异</a><a href="#s5">5 合规：一开口三天花板</a><a href="#s6">6 优蓝公司本身</a><a href="#s7">7 判断</a><a href="#s8">8 缺口与下一步</a><a href="#s9">9 信源清单</a>
+</nav>
+<!-- ============ 一句话结论 ============ -->
+<section id="s0">
+<div class="verdict">
+<h3>一句话结论</h3>
+<p class="big"><b>职业教育整校托管不是"缩小版的 K12 托管"——它是另一门生意，而且政府付费这一头几乎是象征性的。</b></p>
+<p>优蓝托管 <b>37 所</b>公办中职，一年收到的<b>委托管理费只有 940 万元人民币</b>，摊到每所校约 <b>25 万元/年</b>。作为对照，上次调研的 K12 托管单校年费是 <b>100–500 万元</b>（义乌一个项目就 1975 万/年）。差 10–20 倍。</p>
+<p>真正在赚钱的是另外两块：<b>专业共建服务费</b>（向学生收，2,650 万/年，是管理费的 2.8 倍）和<b>校园后勤</b>（餐饮、宿舍、超市）。而优蓝自己在 20-F 里写得很直白——职教业务的定位是<b>"为劳务外包业务提供蓝领人才供给、增强客户粘性"</b>，也就是<b>人才蓄水池，不是利润中心</b>。</p>
+<p><b>给研究委托方/公司的直接含义：</b>K12 那条"把 SaaS 卖给托管方"的路子，在职教整校托管上<b>大概率走不通——托管方自己都没赚到钱，不会为系统付费</b>。职教赛道值得看的是<b>专业共建</b>，那是唯一带"课程/教学"属性、且存在真实付费意愿的板块，又恰好不受 K12 那两条红线约束。但它有一个死穴（见 §5）。</p>
+</div>
+</section>
+<!-- ============ 最刺眼的数字 ============ -->
+<section id="s1">
+<h2 class="sec">1 拿数字说话：政府付费这一头有多大？</h2>
+<div class="kpis">
+<div class="kpi">
+<div class="num">37 所</div>
+<div class="lbl">托管公办中职（20-F FY2025 口径）</div>
+<div class="src">SEC 20-F，2026-04-30 提交</div>
+</div>
+<div class="kpi">
+<div class="num red">940 万元</div>
+<div class="lbl">全年委托管理费收入（人民币）</div>
+<div class="src">20-F 业务章节，FY2025</div>
+</div>
+<div class="kpi">
+<div class="num red">≈25 万元/校·年</div>
+<div class="lbl">摊算单校管理费（派生数字）</div>
+<div class="src">940 万 ÷ 37 所，口径见下注</div>
+</div>
+<div class="kpi">
+<div class="num amber">2.43%</div>
+<div class="lbl">职业教育占集团总收入</div>
+<div class="src">20-F FY2025（4,510.8 万元）</div>
+</div>
+<div class="kpi">
+<div class="num">51.0%</div>
+<div class="lbl">职教分部毛利率（四业务中第二高）</div>
+<div class="src">20-F 分部附注 FY2025</div>
+</div>
+<div class="kpi">
+<div class="num red">-72.1%</div>
+<div class="lbl">职教收入 2023→2024 降幅</div>
+<div class="src">20-F MD&amp;A（公司解释见下）</div>
+</div>
+</div>
+<div class="card">
+<h3 style="margin-top:0">政府付费 vs K12 托管：同一件事，差一个数量级</h3>
+<div class="bars">
+<div class="bar-row">
+<div class="bl">优蓝 · 单校摊算</div>
+<div class="bar-track"><div class="bar-fill" style="width:5%;background:#c0392b">25 万</div></div>
+<div class="bv">25 万元/年</div>
+</div>
+<div class="bar-row">
+<div class="bl">K12 托管 · 区间下限</div>
+<div class="bar-track"><div class="bar-fill" style="width:20%;background:#1f5fa8">100 万</div></div>
+<div class="bv">100 万元/年</div>
+</div>
+<div class="bar-row">
+<div class="bl">K12 托管 · 区间上限</div>
+<div class="bar-track"><div class="bar-fill" style="width:100%;background:#14324f">500 万</div></div>
+<div class="bv">500 万元/年</div>
+</div>
+<div class="bar-row">
+<div class="bl">义乌福田二小（含品牌费）</div>
+<div class="bar-track"><div class="bar-fill" style="width:100%;background:#6b46c1">1975 万（超轴）</div></div>
+<div class="bv">1975 万元/年</div>
+</div>
+</div>
+<p class="footnote"><b>口径说明（必读）：</b>①前者是"37 所校合计 940 万 ÷ 37"的<b>摊算值</b>，且 20-F 的托管校数与管理费收入<b>未必严格对应同一批学校</b>，故仅作数量级参照，不可当精确单价引用。②后者来自上次 K12 调研，口径为"单校年托管费"，含不含品牌费/激励经费各家不同，同样禁止直接横比。③但即便按最宽松口径，两者的数量级差（10–20 倍）是成立的——这是本简报最稳的结论。</p>
+</div>
+<div class="alert red">
+<b>为什么职教收入还在掉？</b>公司自己的解释（20-F MD&amp;A）：职教收入 2023→2024 下降 72.1%，原因是 ①<b>"智能校园"一次性项目基本完成</b>（单项目 400–800 万的 IT/实训设备销售，多数 2023 年做完）；②<b>自营职业学校与职业培训业务被列为终止经营并处置</b>。也就是说，<b>2023 年那个好看的基数里，一大块是"卖设备"和"卖学校"，不是托管</b>。
+  </div>
+</section>
+<!-- ============ 钱从哪来 ============ -->
+<section id="s2">
+<h2 class="sec">2 钱到底从哪来：三源拆解</h2>
+<p style="font-size:13.6px;color:var(--ink2)">这是本轮最有价值的发现——把"职教托管"的钱按来源拆开，你会发现钱的分布跟直觉完全相反。</p>
+<div class="scroll">
+<table>
+<thead>
+<tr><th>收入来源</th><th>谁付钱</th><th>2025 年金额（人民币）</th><th>计价方式</th><th>占比/地位</th><th>信源</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><b>① 委托管理费</b><br/><span style="font-size:11.5px;color:#8494a8">TOT 主合同</span></td>
+<td><b>政府财政</b><br/><span style="font-size:11.5px;color:#8494a8">经学校公户支付</span></td>
+<td><b style="color:#c0392b">940 万元</b></td>
+<td><b>按在校生人头</b>收<br/><span style="font-size:11.5px;color:#8494a8">已核实：500 元/生·学期</span></td>
+<td>约 21%</td>
+<td><span class="ev ev-a">一手·20-F</span><span class="ev ev-a">一手·合同</span></td>
+</tr>
+<tr>
+<td><b>② 专业共建服务费</b></td>
+<td><b>学生/学校</b><br/><span style="font-size:11.5px;color:#8494a8">非政府</span></td>
+<td><b style="color:#1e7e4d">2,650 万元</b></td>
+<td><b>每生每学期 1,600–5,000 元</b></td>
+<td><b>约 59%</b><br/><span style="font-size:11.5px;color:#8494a8">是管理费的 2.8 倍</span></td>
+<td><span class="ev ev-a">一手·20-F</span></td>
+</tr>
+<tr>
+<td><b>③ 校园后勤服务</b><br/><span style="font-size:11.5px;color:#8494a8">餐饮/宿舍/超市/用品</span></td>
+<td><b>学生</b><br/><span style="font-size:11.5px;color:#8494a8">消费付费</span></td>
+<td><b style="color:#b7791f">金额未单列</b><br/><span style="font-size:11.5px;color:#8494a8">并入"市场服务"7,188 万</span></td>
+<td>食堂/超市托管经营</td>
+<td>与在线零售、员工福利混计，<b>无法拆分</b></td>
+<td><span class="ev ev-a">一手·20-F</span><span class="ev ev-a">一手·决算</span></td>
+</tr>
+<tr style="opacity:.72">
+<td>④ "智能校园"设备销售<br/><span style="font-size:11.5px;color:#8494a8">非经常性</span></td>
+<td>学校</td>
+<td>—<br/><span style="font-size:11.5px;color:#8494a8">多数已于 2023 完成</span></td>
+<td>单项目 400–800 万元</td>
+<td>一次性，不可持续</td>
+<td><span class="ev ev-a">一手·20-F</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="alert green">
+<b>三条可直接引用的结论：</b>
+<ul class="tight" style="margin:8px 0 0">
+<li><b>政府付费占比只有约 1/5。</b>"托管"这块招牌撑着 37 所学校的规模，但政府那头的钱是零头。<b>这门生意的现金流主体在学生身上，不在财政。</b></li>
+<li><b>专业共建才是主业。</b>每生每学期 1,600–5,000 元，2025 年 2,650 万元。它本质是"把课程/专业打包卖给学校和学生"，<b>这是唯一带教学属性、且真有付费意愿的板块</b>。</li>
+<li><b>后勤是隐形的大头，但拿不到数字。</b>优蓝把餐饮/宿舍收入并进了"市场服务"（与在线零售、员工福利混在一起），<b>无法单独拆出教育后勤的规模</b>——这是本行业最大的信息不透明处，也是现场尽调必须撬开的点。</li>
+</ul>
+</div>
+<h3>一手合同长什么样：海兴县那份（SEC 附件，法定披露文件）</h3>
+<div class="card">
+<p style="font-size:13.4px;margin-bottom:10px">优蓝把"海兴县职业教育中心合作办学协议"作为上市申报文件附件提交给了 SEC，所以我能看到合同原文。<b>这份合同解释了为什么在政府采购网上搜不到天坤的项目：</b></p>
+<div class="quote">
+<span class="en">"…the cooperation mode and the services provided are special, they are not subject to the regulation by the bidding law and government procurement law… do not require any bidding procedures."</span>
+<b>（合同原文）</b>"因合作模式与服务具有特殊性，<b>不受招标法与政府采购法约束，乙方提供的管理运营服务无需任何招标程序</b>。"
+      <div style="margin-top:8px;font-size:12.2px;color:#8494a8">来源：SEC Exhibit 10.12　<span class="ev ev-a">一手·法定披露合同</span></div>
+</div>
+<div class="scroll" style="margin-top:12px">
+<table style="min-width:820px">
+<thead><tr><th>合同要素</th><th>原文要点</th></tr></thead>
+<tbody>
+<tr><td><b>签约主体</b></td><td>甲方：海兴县人民政府；乙方：<b>浙江天坤书萱教育科技有限公司</b>（法定代表人王云雷）</td></tr>
+<tr><td><b>委托期限</b></td><td><b>20 年</b>（2023-07-17 至 2043-08-31），每 6 年综合评估一次；期满乙方享同等条件优先权</td></tr>
+<tr><td><b>管理费计价</b></td><td><b>按在校生人头</b>：2023 秋免收 → 2024 春新招生 <b>500 元/生·学期</b>（存量生 250 元）→ 2024 秋起全部 <b>500 元/生·学期</b> → 在校生达 1,500 人后降为 <b>400 元/生·学期</b></td></tr>
+<tr><td><b>付款安排</b></td><td>上学期费用于每年 <b>3 月 30 日、9 月 30 日前一次性支付</b>；<b>从学校公户扣除</b>，汇入乙方在当地设立的运营公司账户</td></tr>
+<tr><td><b>治理结构</b></td><td>学校管理理事会 5 人（甲方 3 人、乙方 2 人），<b>理事长由甲方任命</b>，秘书长由乙方任命；<b>重大事项由学校党总支会议决定</b></td></tr>
+<tr><td><b>招生与学籍</b></td><td>乙方<b>以公办学校名义</b>招生、办学、发布招生简章；<b>学籍与毕业证均以公办学校名义办理</b></td></tr>
+<tr><td><b>后勤设施</b></td><td>乙方使用学校后勤设备设施，<b>须向甲方/学校支付租赁费</b>；并须"填补学校常规运营经费的缺口"</td></tr>
+<tr><td><b>考核指标</b></td><td>设"品牌层面目标"等条目，<b>未见升学率/就业率硬性 KPI 明文</b>（公开文本相关段落被截断，标"未完整核验"）</td></tr>
+<tr><td><b>退出与交回</b></td><td>公开文本中<b>未见</b>明确的"期满交回"或提前终止具体条款 → <b>标为"未找到"</b></td></tr>
+</tbody>
+</table>
+</div>
+<div class="alert amber">
+<b>从中能读出三件事：</b>
+<br/>① <b>"以公办学校名义招生、学籍与毕业证走公办"</b>——受托方拿到的是<b>运营权</b>，不是办学主体资格。这跟 K12 托管"四权整体让渡即无效"的司法逻辑是同一方向：<b>越是把主体资格留在公办，越安全。</b>
+<br/>② <b>理事长（甲方任命）+ 党总支会议决定重大事项</b>——受托方的决策权被制度性限制。
+      <br/>③ <b>按人头收费 + 20 年长约</b>——这个组合意味着受托方的收益<b>完全绑在招生规模上</b>。第 3 节会说明，这恰恰是最危险的地方。
+    </div>
+</div>
+</section>
+<!-- ============ 根本矛盾 ============ -->
+<section id="s3">
+<h2 class="sec">3 根本矛盾：按人头收费的模型，撞上缩量的市场</h2>
+<p style="font-size:13.6px;color:var(--ink2)">这是我认为整份调研里最值得你知道的一件事——它同时解释了三件事：为什么天坤要不停找新学校、为什么文山市项目会失败、以及为什么"托管校数"这个指标本身不可信。</p>
+<div class="grid2">
+<div class="box no">
+<div class="tagline">矛盾的一方 · 商业模型</div>
+<h4>收入完全绑在"招生人数"上</h4>
+<ul class="tight" style="font-size:13.2px">
+<li>管理费：<b>500 元/生·学期</b>（已核实，合同原文）</li>
+<li>后勤消费（餐饮/宿舍/超市）：<b>按在读人数</b>产生</li>
+<li>专业共建：<b>每生每学期 1,600–5,000 元</b></li>
+</ul>
+<p style="margin-top:8px;font-size:13.2px">三条收入线<b>全部按人头计价</b>。学生多一个就多一份钱，少一个就少一份。<b>受托方没有定价权，只有"扩招"这一条增长路径。</b></p>
+</div>
+<div class="box no">
+<div class="tagline">矛盾的另一方 · 市场现实</div>
+<h4>中职本身在缩量</h4>
+<ul class="tight" style="font-size:13.2px">
+<li><b>中职招生连年下降（教育部口径·不含技工）</b>：2021 488.99 → 2022 484.78 → 2023 454.04 → <b>2024 418.33 万</b>，三年降 14.5%；若算 2019 同口径（457.42 万）→ 2024 降 8.5%<span class="ev ev-a">一手·教育部 2019-2024 历年统计公报</span></li>
+<li>中职在校生 2023→2024：1,298 万 → <b>1,229 万</b>（-5.32%）</li>
+<li>中职学校数 2023→2024：7,085 → <b>6,862 所</b>（-223 所）</li>
+<li>职普比"大体相当"已实质松动：陕西普高招生占比 69.19%、吉林 73.4%</li>
+<li>2024 年 9 月全国教育大会后，教育部改提<b>"少而精的中等职业教育"</b></li>
+</ul>
+</div>
+</div>
+<div class="alert red">
+<b>把两边合起来看：</b>受托方的商业模型要求"扩招"，而它接手的恰恰是<b>一个整体在萎缩、且大多位于中西部县域的学校系统</b>。这不是经营能力问题，是<b>结构性错配</b>。
+    <br/><br/><b>这解释了为什么天坤要不断找新学校（21→29→37 所）而不是把现有学校做深</b>——因为单校的天花板被学生的自然流失锁死了，只能靠"多拿几所"来维持总量增长。<b>这是土地掠夺式的增长，不是效率增长。</b>
+<br/><br/><b>也解释了一手失败案例：</b>文山市职业高级中学，2021-08 由天坤托管 15 年。文山市教体局 2024 年对政协提案的答复里写得非常直白——"被托管两年有余……<b>办学规模连年下滑，办学成效严重下降</b>"。在籍生从 2020 学年 1,832 人降到 2023 学年 1,159 人，招生从 603 人降到 419 人。而合同目标是 2024 年达到 4,000 人，官方明说"无法达到"。<span class="ev ev-a">一手·市教体局答复</span>
+</div>
+<div class="alert amber">
+<b>对我们的启示（这条比结论更值钱）：</b>如果你要评估任何一个"按人头收费的教育服务模型"，先问一句——<b>生源池是在扩大还是在收缩？</b>K12 高中段还有人口红利和政策保护（普高扩招），中职段是逆风。<b>同样一份托管合同，签在不同学段，商业价值可以差一个数量级。</b>
+</div>
+</section>
+<!-- ============ 与K12差异 ============ -->
+<section id="s4">
+<h2 class="sec">4 与 K12 托管的根本差异（对照上次调研）</h2>
+<div class="scroll">
+<table>
+<thead><tr><th>维度</th><th>职业教育托管（优蓝/天坤）</th><th>K12 初高中托管（天立/海亮/世外）</th><th>差异要点</th></tr></thead>
+<tbody>
+<tr>
+<td><b>政府付费能力</b></td>
+<td>单校摊算 <b>≈25 万元/年</b>（37 校合计 940 万）</td>
+<td>单校 <b>100–500 万元/年</b>；义乌 1975 万</td>
+<td><b>差 10–20 倍</b>。→ 决定"能不能卖 SaaS 给托管方"</td>
+</tr>
+<tr>
+<td><b>政策红线</b></td>
+<td><b>无"协议控制 + 关联交易"红线</b>：《民促法实施条例》§13/§45 仅约束义务教育民办校与非营利幼儿园<span class="ev ev-a">一手·法规</span></td>
+<td><b>两条硬红线</b>：§13 禁协议控制、§45 禁义务教育关联交易、§62 罚则含永久禁入</td>
+<td><b>职教的政策空间明显更宽</b>——这是真实的政策套利空间</td>
+</tr>
+<tr>
+<td><b>决策权天花板</b></td>
+<td><b>党组织领导的校长负责制</b>：公办校重大事项由党委/党总支决定，受托方只有管理经营权<span class="ev ev-a">一手·职教法§35</span></td>
+<td>"四权整体让渡即无效"（司法判准），但合同层面授权尺度差异大</td>
+<td>职教的限制<b>写在法律里且更硬</b>，不经合同谈判空间绕过</td>
+</tr>
+<tr>
+<td><b>市场趋势</b></td>
+<td><b>缩量</b>：中职招生 2019→2024 约 -30%，职普比松动</td>
+<td><b>有保护</b>：普高招生与在校生同步增长（2024 普高招生 1,036 万）</td>
+<td>职教是<b>逆风赛道</b>，K12 高中段顺风</td>
+</tr>
+<tr>
+<td><b>采购程序</b></td>
+<td>合同可约定<b>"不受招标法与政府采购法约束、无需招标"</b>（海兴合同原文）</td>
+<td>走政府采购公开招标/单一来源，公告可查</td>
+<td>职教<b>透明度低</b>：政采网查不到，尽调难度大得多</td>
+</tr>
+<tr>
+<td><b>合同期限</b></td>
+<td><b>15–20 年</b>长约（皖北 20 年、古蔺 20 年、海兴 20 年、文山 15 年）</td>
+<td>3–5 年为主（奉贤 5 年、长沙 6 年一轮）</td>
+<td>职教长约 = 收益更稳，但<b>与财政部 102 号令"购买服务合同一般≤1 年、最长≤3 年"存在张力</b>（见下）</td>
+</tr>
+<tr>
+<td><b>收入主体</b></td>
+<td><b>学生</b>（后勤消费 + 专业共建费，约占 4/5）</td>
+<td><b>政府财政</b>（委托管理费为主）</td>
+<td>职教本质是<b>面向学生的消费型生意</b>，不是 2G 生意</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="alert purple">
+<b>一个必须点出的术语问题：</b>天坤自称"<b>PPP 理论下的 TOT 合作办学模式</b>"。但财政部《政府和社会资本合作模式操作指南》（财金〔2014〕113 号）对 TOT 的定义是"政府将存量资产<b>所有权有偿转让</b>给社会资本……期满后<b>资产及其所有权</b>移交政府"——<b>核心是所有权转让</b>。而天坤始终坚持"国有资产性质不变"，<b>所有权从未转让</b>。按官方分类，它的做法更接近"<b>管理合同（MC）</b>"（政府保留所有权、只付管理费），而管理合同的官方建议期限是<b>不超过 3 年</b>。
+    <br/><br/>同时：<b>未找到任何证据表明天坤/优蓝的项目进入财政部或发改委的 PPP 项目库</b>。学者研究也指出，官方 PPP 库里的教育类项目（职教近 10 个）<b>都是基础设施建设融资</b>，没有"委托管理"类。<b>所以"PPP/TOT"在这里更像是一套对外话术，而不是一个关于交易结构的准确描述。</b>
+<br/><br/><b>为什么这对研究委托方重要：</b>如果将来有人拿"我们是 PPP/TOT 模式、有政策背书"来谈合作，这句话本身<b>不构成任何合规保证</b>。要看的还是合同：<b>谁是办学主体、谁收钱、期限多长、走不走招投标。</b>
+</div>
+</section>
+<!-- ============ 合规 ============ -->
+<section id="s5">
+<h2 class="sec">5 合规版图：一个真实开口，三道硬天花板</h2>
+<p style="font-size:13.6px;color:var(--ink2)">跟 K12 相比，职教的政策环境是"<b>开口更大，但天花板更硬</b>"。这个组合很少见，值得单独说。</p>
+<div class="box ok" style="margin-bottom:14px">
+<div class="tagline">开口 · 法律依据</div>
+<h4>✅ 整校托管有国家级依据，且没有 K12 那两条红线</h4>
+<ul class="tight">
+<li><b>合法依据的源头</b>是 2014 年《国务院关于加快发展现代职业教育的决定》（国发〔2014〕19 号）："探索公办和社会力量举办的职业院校<b>相互委托管理和购买服务</b>的机制。"<span class="ev ev-a">一手·法规</span><br/><span style="font-size:12.6px;color:#8494a8">注意：依据在"决定"里，不在 2022 年新《职业教育法》里——新法<b>没有</b>"委托管理"字样。</span></li>
+<li><b>《民促法实施条例》§13（协议控制）和 §45（关联交易）不适用于中职</b>。教育部 2021 年解读明确表示：高中阶段非营利民办校与职业教育、高等教育的非营利民办校，"即便被社会组织通过协议控制，对整体发展影响不大"。<span class="ev ev-a">一手·法规+解读</span></li>
+<li>第八条还允许"实施职业教育的公办学校可以吸引企业的资本、技术、管理等要素"——这是公办职校与社会资本合作的上位法依据。</li>
+</ul>
+</div>
+<h3>三道天花板（都是硬的）</h3>
+<div class="grid2">
+<div class="box warn">
+<div class="tagline">天花板一 · 治理</div>
+<h4>党组织领导的校长负责制</h4>
+<p>《职业教育法》第三十五条：<b>"公办职业学校实行中国共产党职业学校基层组织领导的校长负责制"</b>。</p>
+<p style="margin-top:8px">意即：受托方派出的只能叫"执行校长"，<b>重大事项必须经党委/党总支决策</b>。海兴合同也印证了——<b>理事长由甲方任命，重大事项由党总支会议决定</b>。</p>
+<p style="margin-top:8px"><b>结论：托管方的"控制权"远小于合同字面授权。</b>这一点跟 K12 司法上"四权整体让渡即无效"的判准方向一致，但职教是<b>预防性地写进了法律</b>。</p>
+</div>
+<div class="box warn">
+<div class="tagline">天花板二 · 采购程序</div>
+<h4>20 年长约 vs 购买服务 3 年上限</h4>
+<p>《政府购买服务管理办法》（财政部令第 102 号）第 24 条：政府购买服务合同履行期限<b>一般不超过 1 年</b>，可以签订不超过 <b>3 年</b>的合同。</p>
+<p style="margin-top:8px">而天坤的合同是 <b>15–20 年</b>，且海兴合同<b>自述"不受政府采购法约束、无需招标"</b>。</p>
+<p style="margin-top:8px"><b>这是整个模式里最脆的一环</b>——它靠"协议合作"这个定性绕开了采购程序，但<b>这个定性能否长期站得住，未见判例支撑</b>（标"未找到"）。</p>
+</div>
+<div class="box no">
+<div class="tagline">天花板三 · 实习（死穴）</div>
+<h4>实习人头费已被条文封死</h4>
+<p>教育部等八部门《职业学校学生实习管理规定》（教职成〔2021〕4 号）划了 <b>1 个"严禁" + 27 个"不得"</b>，其中第十九条：</p>
+<div class="quote" style="margin:8px 0">"职业学校和实习单位<b>不得向学生收取实习押金、培训费、实习报酬提成、管理费、实习材料费、就业服务费或者其他形式的实习费用</b>。"</div>
+<p>实习报酬还须"不低于同岗位试用期工资的 <b>80%</b>"、<b>按月足额货币发放</b>。</p>
+<p style="margin-top:8px"><b>为什么这是死穴：</b>职教服务商传统上最诱人的利润来源就是"组织学生实习→从企业或学生端抽成"。这条被明文堵死后，<b>任何以此为商业模式的方案都属于违规</b>。历史通报案例（盐城技师学院"人头费"、桂林舞蹈学校、南京交通科技学校等）全部踩在这一点上。<span class="ev ev-a">一手·国务院督查/央媒</span></p>
+</div>
+<div class="box no">
+<div class="tagline">附加约束 · 收费与后勤</div>
+<h4>向学生收费的合规边界在收紧</h4>
+<ul class="tight" style="font-size:13.2px">
+<li><b>服务性收费须自愿、非营利</b>；"学校不得在代收费中获取差价"、"代收费收入由学校全部转交提供服务的单位，不得计入学校收入"<span class="ev ev-a">五部门 2020</span></li>
+<li><b>食堂</b>：可委托承包，但须<b>公开招投标</b> + 持食品经营许可 + 建考核退出机制；<b>"实施营养改善计划的农村义务教育学校食堂不得对外承包或委托经营"</b>（对中职不适用，但风向明确）<span class="ev ev-a">教育部办公厅 2024 / 市场监管总局等 2025</span></li>
+<li><b>"中小学、幼儿园一般不得在校内设置小卖部、超市"</b>——优蓝的"校园超市"业务因此处在灰色地带</li>
+<li><b>免学费补助（中央 2,000 元/生·年）直接拨至学校，不进入企业账户</b> → 受托方无法从人头经费中分成，只能走合同明列的管理服务费<span class="ev ev-a">一手·财政部办法</span></li>
+</ul>
+</div>
+</div>
+</section>
+<!-- ============ 公司本身 ============ -->
+<section id="s6">
+<h2 class="sec">6 优蓝这家公司本身：值不值得当样本？</h2>
+<p style="font-size:13.6px;color:var(--ink2)">作为"职教托管唯一可研究的中概上市样本"，它有两面：<b>业务模式看得很清楚（因为要法定披露），但公司基本面问题不少。</b></p>
+<div class="card">
+<h3 style="margin-top:0">全样本对比：优蓝 vs K12 教育集团</h3>
+<div class="scroll" style="margin-top:6px">
+<table style="min-width:900px">
+<thead><tr><th>维度</th><th>优蓝国际 YOUL（FY2025）</th><th>天立国际控股 1773.HK（FY2025）</th><th>差异</th></tr></thead>
+<tbody>
+<tr><td><b>营收</b></td><td>人民币 18.54 亿元（US$265.2M）</td><td>人民币 35.89 亿元</td><td>约为天立一半</td></tr>
+<tr><td><b>收入结构</b></td><td><b>劳务外包 92.7%</b>；市场服务 3.9%；<b>职教 2.4%</b>；招聘 1.0%</td><td>综合教育服务 52.1%；产品销售 27.7%；综合后勤 17.1%；管理及特许经营费 3.2%</td><td><b>优蓝本质是人力资源公司</b>，不是教育公司</td></tr>
+<tr><td><b>综合毛利率</b></td><td><b>10.4%</b>（FY2024 14.5%、FY2023 14.7%，逐年下滑）</td><td><b>≈33.8%</b></td><td>优蓝是<b>低毛利走量</b>生意</td></tr>
+<tr><td><b>归母净利</b></td><td>人民币 0.43 亿元（净利率 2.3%）</td><td>—</td><td>薄利</td></tr>
+<tr><td><b>职教战略定位</b></td><td colspan="2"><b>20-F 原文：</b><span class="en" style="display:inline;font-family:var(--mono);font-size:11.6px;color:#6b7787">"our vocational education business functions as <b>the additional source of blue-collar talent</b> to address the labor demand of the corporate customers of our HR recruitment and employee management businesses, thereby <b>enhancing their stickiness</b>."</span><br/>中译：职教业务的作用是<b>为招聘与雇员管理业务的客户提供额外蓝领人才供给，增强其粘性</b>。<span class="ev ev-a">一手·20-F</span></td></tr>
+</tbody>
+</table>
+</div>
+<div class="alert blue">
+<b>所以回答"是利润中心还是蓄水池"：优蓝自己写的是蓄水池。</b>职教板块 2.4% 的收入 + 51% 的毛利额（约 2,300 万元）撑不起集团；公司董事长在采访里的原话也是——为搭建"<b>劳动力蓄水池</b>"，优蓝瞄准了产业链上游。<b>这意味着：职教托管在优蓝体系里被当作获客与供人入口，而不是要赚钱的业务。</b>如果它自己都不指望这块赚钱，那"卖给托管方 SaaS"的商业逻辑就更弱了。
+    </div>
+</div>
+<h3>规模口径漂移：五个互相矛盾的版本</h3>
+<div class="scroll">
+<table style="min-width:920px">
+<thead><tr><th>时间</th><th>口径</th><th>出处</th><th>性质</th></tr></thead>
+<tbody>
+<tr><td>2019-09</td><td>携手近 30 余个地方政府，创建<b>近 30 所</b> PPP 合作中职</td><td>王云雷教师节致辞</td><td><span class="ev ev-c">企业自述</span></td></tr>
+<tr><td>截至 2021</td><td>TOT 管理院校 <b>24 所</b> + 专业共建 36 个 + 技能培训 12 个，在校生近 5 万</td><td>天坤官网</td><td><span class="ev ev-c">企业自述</span></td></tr>
+<tr><td>2022-12</td><td>托管 <b>23 所</b> + 自营 1 所 + 专业共建 37 个 + 技能培训 9 所</td><td>港交所招股书</td><td><b><span class="ev ev-a">一手·法律文件</span></b></td></tr>
+<tr><td>2025-07（上市交割）</td><td>职校 <b>25 所</b> + 课程开发项目 <b>25 个</b></td><td>上市交割稿 / 6-K</td><td><b><span class="ev ev-a">一手·法律文件</span></b></td></tr>
+<tr><td>2026-04-14</td><td>仍是 <b>25 所 + 25 个</b></td><td>业绩会预告</td><td><b><span class="ev ev-a">一手</span></b></td></tr>
+<tr><td><b>2026-04-30</b></td><td><b>37 所 + 146 个项目</b></td><td><b>SEC 20-F</b></td><td><b><span class="ev ev-a">一手·年报</span></b></td></tr>
+<tr><td>当前</td><td>管理运营 <b>29 所</b> + 25 个专业建设项目 + 18 省 43 市县 + 注册学生 6.5 万</td><td>优蓝中文官网</td><td><span class="ev ev-c">企业自述</span></td></tr>
+<tr><td>截至 2025</td><td>中高职合作院校<b>近 100 所</b>，在籍学生超 10 万</td><td>天坤官网</td><td><span class="ev ev-c">企业自述</span></td></tr>
+<tr><td>2025–2026</td><td>直属中职 <b>60 余所</b>，管理在籍学生超 <b>20 万人</b></td><td>川商总会访谈</td><td><span class="ev ev-c">企业自述</span></td></tr>
+</tbody>
+</table>
+</div>
+<div class="alert red">
+<b>三处硬矛盾：</b>
+<br/>① <b>7 周内从 25 所变 37 所、25 个项目变 146 个项目</b>（2026-04-14 业绩会 → 2026-04-30 年报），这个增速不可能靠新签约实现——<b>几乎肯定是口径变更（把专业共建项目也算进来了）</b>。
+    <br/>② <b>中文官网说 29 所，英文年报说 37 所</b>，同一家公司同一时点两个数字。
+    <br/>③ <b>在校生数：中文官网 6.5 万 vs 川商总会口径 20 万，差 3 倍。</b>
+<br/><br/><b>跟海亮（54/84/177/178/201 所）是同一个套路——"托管校数"在职业教育领域同样不是一个可靠指标。</b>真正可靠的是营收和合同级证据。
+  </div>
+<h3>治理与市场信号（红旗）</h3>
+<div class="scroll">
+<table style="min-width:880px">
+<thead><tr><th>项目</th><th>事实</th><th>含义</th></tr></thead>
+<tbody>
+<tr><td><b>上市方式</b></td><td>2025-07-10 与 SPAC（Distoken Acquisition Corp）合并上市，PIPE 发行价 <b>$10.00/股</b>，募资约 2,700 万美元</td><td>De-SPAC 路径，非传统 IPO 承销</td></tr>
+<tr><td><b>股价</b></td><td>上市首日收盘 <b>$5.00</b>（盘中最高 $5.50）→ 近期约 <b>$0.31</b>，市值约 2,350–2,500 万美元，一年跌幅约 -83%</td><td>较发行价跌约 <b>97%</b></td></tr>
+<tr><td><b>纳斯达克警示</b></td><td><b>2026-07-27 收到"1 美元最低买入价"不合规通知</b>，合规期至 2027-01-25（可申请再延 180 天）</td><td>面临退市风险，<span class="ev ev-a">一手·公司公告</span></td></tr>
+<tr><td><b>审计与内控</b></td><td>审计机构 Onestop Assurance PAC（新加坡，PCAOB 6732）；因属"新兴成长公司"(EGC)<b>豁免 SOX 404(b) 审计师内控鉴证</b>；<b>自曝存在 1 项内控重大缺陷</b>——"缺乏足够熟悉美国 GAAP 与 SEC 报告要求的财务人员"，并称若做过正式评估"可能发现更多缺陷"</td><td><b>外部独立方未对内控出具意见</b>；公司自评已不达标</td></tr>
+<tr><td><b>治理变动</b></td><td>2025-11-21（上市后约 4 个月）<b>CFO 兼董事与独立董事/审计委员会主席双双辞任</b>，公司称"非因分歧"</td><td>上市初期核心财务与治理岗位同时更替</td></tr>
+<tr><td><b>股权结构</b></td><td><b>王云雷持股 14.7%，但持有 77.5% 投票权</b>（双层股权）</td><td>创始人绝对控制</td></tr>
+<tr><td><b>历史合规</b></td><td>自曝"过去<b>未为少数员工缴纳社保、未开立公积金账户</b>"，可能被要求补缴并加收滞纳金/罚款</td><td>用工合规历史瑕疵</td></tr>
+<tr><td><b>上市前资产剥离</b></td><td>2021-09-30 以换股方式剥离劳务派遣主体"蓝德实体"（14 家，占企业客户约 70%），回购 21,176,470 股 @ RMB6.5 ≈ <b>1.377 亿元</b>。招股书存在<b>两套说法</b>：一说蓝德股东对战略方向看法不同而退出，一说公司主动收缩<br/><span style="font-size:12px;color:#8494a8">注：剥离时蓝德业绩正上升（2021 前 9 月收入 3,740 万，毛利率约 25%）</span></td><td>剥离标的<b>当时比母公司业务更赚</b>，且说法不一</td></tr>
+<tr><td><b>关联办学信号</b></td><td>京山市：与公办校同址（轻机大道 26 号）的关联民办校"荆门市京山天坤职业技术学校"（举办者为上海书萱教育投资管理），<b>2025 年度年检为全市唯一"不合格单位"</b>（京山市教育局 2026-06-22）</td><td>公办托管校与关联民办校<b>同址办学</b>，需关注利益安排，<span class="ev ev-a">一手·教育局公示</span></td></tr>
+<tr><td><b>未找到</b></td><td>做空报告、集体诉讼、财务重述、审计师变更、SEC 执法调查——<b>均未找到</b></td><td>—</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- ============ 判断 ============ -->
+<section id="s7">
+<h2 class="sec">7 判断：这门生意能不能做</h2>
+<p style="font-size:13.6px;color:var(--ink2)">分三层回答，因为"职教托管"其实是三件不同的事，被一个词捆在一起了。</p>
+<div class="grid2">
+<div class="box no">
+<div class="tagline">第一层 · 政府付费型整校托管</div>
+<h4>❌ 不建议进入</h4>
+<ul class="tight" style="font-size:13.2px">
+<li>单校年费只有 K12 的 <b>1/10–1/20</b>，撑不起一个业务线</li>
+<li>市场在收缩：中职招生 5 年 -30%，且"少而精"是政策方向</li>
+<li>"党组织领导校长负责制"写进法律，<b>决策权天花板无法通过谈判突破</b></li>
+<li>收入靠人头，模型要求扩招，与市场趋势正相反</li>
+<li>已有官方认定失败的案例（文山市）</li>
+</ul>
+<p style="margin-top:8px"><b>它甚至有明确的失败路径：</b>接手一所县域中职 → 靠扩招维持人头收入 → 生源下滑 → 效果不达标 → 政府不续约或收回 → 前期的改造投入沉没。</p>
+</div>
+<div class="box ok">
+<div class="tagline">第二层 · 专业共建 / 教育服务</div>
+<h4>✅ 这才是真生意（也是最接近我们的位置）</h4>
+<ul class="tight" style="font-size:13.2px">
+<li><b>规模已经超过托管费</b>：2,650 万元/年 vs 管理费 940 万元，是 2.8 倍</li>
+<li>计价方式健康：<b>每生每学期 1,600–5,000 元</b>，按课程/专业定价，<b>有定价权</b>（不像管理费被政府压到 500 元/生·学期）</li>
+<li><b>带教学/课程属性</b> → 这是 AI 教育 SaaS 唯一能真正嵌入的接口</li>
+<li><b>不受 K12 那两条红线约束</b>（协议控制 + 关联交易）</li>
+<li>已经有真实需求方：校企共建、产业学院、二级学院</li>
+</ul>
+<p style="margin-top:8px"><b>但必须避开一个东西：实习人头费。</b>见 §5 死穴。</p>
+</div>
+</div>
+<div class="alert purple">
+<b>第三层 · 作为"劳动力蓄水池"</b>
+<p style="margin-top:6px">这是优蓝模式的最深层逻辑，也是它自己写进年报的：职教托管的价值不在赚钱，而在<b>源源不断地给下游劳务外包业务输送人力</b>。这一层的门槛是"你有下游变现端"——优蓝有 17.2 亿的劳务外包盘子来接这些人，所以它能忍受职教不赚钱。</p>
+<p style="margin-top:8px"><b>对研究委托方/公司的含义：我们大概率没有这个下游。所以这一层不适用，也不该被它的存在说服——</b>"人家 37 所学校"不等于"这门生意能赚钱"，它可能是用主业现金流在养一个入口。</p>
+</div>
+<div class="card" style="border-left:5px solid var(--red)">
+<h3 style="margin-top:0">对我们（AI 教育 SaaS）的直接结论</h3>
+<ol class="tight">
+<li><b>"把 SaaS 卖给职教托管方"这条路很窄。</b>托管方自己单校只收 25 万/年管理费，商业模式靠学生人头和后勤，<b>没有为管理软件付费的预算和习惯</b>。这跟 K12 完全相反——K12 托管有 100–500 万/校的政府付费，才有能力采购系统。</li>
+<li><b>要看就看专业共建。</b>它是纯"课程与教学"业务、按学生/课程收费、有定价权、不受 K12 红线约束。如果我们的产品能进"专业共建"的交付物（课程内容、教学平台、实训方案、质量评价），商业逻辑是通的。</li>
+<li><b>一条必须提前划清的红线：绝不碰实习环节的收费（押金/培训费/报酬提成/管理费/实习材料费/就业服务费）。</b>这是 27 个"不得"覆盖的区域，也是这个行业过去暴雷的集中区。<b>产品设计上就要做隔离</b>——可以服务"实习管理的信息化"，不能从实习里分成。</li>
+<li><b>真正的机会可能在"合规与质量可追溯"上。</b>这个行业现在最缺的是可核验的办学质量数据（文山案例就是效果无法达标），而政采/公办体系正在要求 KPI 化、可考核。做"结果可归因 + 合规留痕"的工具，比做"教学提分"更贴近这个行业的真实痛点。</li>
+</ol>
+</div>
+</section>
+<!-- ============ 缺口 ============ -->
+<section id="s8">
+<h2 class="sec">8 数据缺口与建议的下一步</h2>
+<div class="card">
+<h3 style="margin-top:0">本轮明确没找到的东西（不猜）</h3>
+<ul class="tight">
+<li><b>职教分部的经营利润。</b>20-F 只披露"分部业绩＝毛利"，<b>不披露分部经营利润/净利</b>。所以"托管业务到底赚不赚钱"在法律披露层面无解。</li>
+<li><b>学生餐饮/宿舍/用品的单独金额。</b>并入"市场服务"（与在线零售、员工福利混计），<b>无法拆出教育后勤的真实规模</b>。这是本行业最大的黑箱。</li>
+<li><b>政府委托协议是否"另行授权"向学生收费。</b>20-F 未披露，只提到"另签采购/供货协议"。<b>这是最需要现场尽调撬开的一点。</b></li>
+<li><b>37 所托管校的完整名单与逐校实时状态。</b>天坤官网列了 21 所，抽样核验 12 所后判断这是"历史合作 + 现在合作 + 仅签战略协议"的混合名单；<b>内蒙古经贸外语职业学院未找到任何独立合作证据</b>。</li>
+<li><b>任何政府公告明确宣布托管终止/学校被收回。</b>未找到。最接近的是文山市（官方认定失败但未终止）和京山关联民办校年检不合格。</li>
+<li><b>天坤/优蓝在财政部或发改委 PPP 项目库中的入库记录。</b>未找到（这本身就是结论）。</li>
+<li><b>TOT 合同里的升学率/就业率硬 KPI 明文、以及期满交回条款。</b>公开合同文本中未披露。</li>
+<li><b>接管后失败的托管项目是否真的会退出。</b>未见判例，制度上"能退"，实操上未见样本。</li>
+</ul>
+</div>
+<div class="card" style="border-left:5px solid var(--accent)">
+<h3 style="margin-top:0">建议下一步（按性价比排序）</h3>
+<ol class="tight">
+<li><b>先验一个假设：专业共建的付费方到底是谁、决策链多长。</b>如果是学生付费，那它的可持续性受生源和家庭支付能力约束；如果是学校/财政付费，逻辑就更像 K12。这一条决定我们能不能进。<b>优先度最高。</b></li>
+<li><b>挖厦门倍凡。</b>它是唯一有 A 股上市公司收购公告披露过财务/规模数据的整校托管玩家（2020 年披露"管理 26 所中高职、18 万生源"，后被科斯伍德拟收购未成）。<b>它的数据比优蓝的软文可信得多</b>，而且是独立第三方（收购方尽调）口径。</li>
+<li><b>横向比对"公办高职托管县域中职"这两个公办案例</b>（云南机电托管东川职中 12 年、新疆农职院托管洛浦县中职 4 轮 7 年）。它们不带商业动机，<b>效果数据反而可能更干净</b>——可以用来判断"托管到底有没有用"。</li>
+<li><b>如果要继续深入，我建议下一轮做"专业共建"专题</b>——把它从"职教托管"里单独拎出来研究：谁在做、怎么收费、合同长什么样、学生/学校的付费意愿和决策链、以及是否已有教育科技系统嵌入的先例。</li>
+</ol>
+</div>
+<div class="alert amber">
+<b>关于本次信源的可靠性：</b>本简报最重要的两个数字（37 所、940 万管理费、2,650 万专业共建费、51% 毛利率、10–20 倍差距）都来自<b>美国 SEC 法定披露文件</b>（20-F），可信度显著高于中国境内的企业软文和官网口径。
+    <br/><br/><b>但要诚实说明一个问题：</b>SEC 披露的"37 所"本身也不能全信——因为同一家公司 7 周前才说 25 所。所以本简报<b>不以"37 所"作为结论基础</b>，而以"政府付费只有千万级"这一量级判断作为结论基础——这个量级在多个独立信源上是一致的（管理费 940 万、专业共建 2,650 万、职教总收入 4,510 万）。
+  </div>
+</section>
+<!-- ============ 信源清单 ============ -->
+<section id="s9">
+<h2 class="sec">9 信源清单（关键几条，可直接点开核）</h2>
+<div class="alert green">
+<b>链接体检（2026-10-14 实测）：</b>下列链接均已逐条发起请求核对，<b>全部可访问</b>。特别说明：SEC 的两个链接用普通工具直接抓会返回 403，那是 SEC 的<a class="ext" href="https://www.sec.gov/os/webmaster-faq#developers" rel="noopener noreferrer" target="_blank">反爬策略</a>（要求声明 User-Agent），<b>用浏览器正常打开没问题</b>——不要误判为失效。
+  </div>
+<div class="grp" style="background:#f0f4f9;border-radius:8px;padding:7px 14px;font-size:13px;font-weight:600;color:#33475f;margin:22px 0 6px;display:inline-block">A 优蓝国际法定披露（美国 SEC）— 本简报主证据</div>
+<div class="card" style="padding:16px 22px">
+<ul class="tight" style="font-size:12.8px;line-height:2.05">
+<li><a class="ext" href="https://www.sec.gov/Archives/edgar/data/2028177/000121390026050196/ea0285866-20f_youlife.htm" rel="noopener noreferrer" target="_blank">优蓝国际 20-F 年报（FY2025，2026-04-30 提交）</a> ← <b>37 所托管校、940 万管理费、2,650 万专业共建费、51% 毛利率、10.4% 综合毛利率、内控重大缺陷、职教"蓄水池"定位，全部出自此文件</b></li>
+<li><a class="ext" href="https://www.sec.gov/Archives/edgar/data/2046376/000149315225008121/ex10-12.htm" rel="noopener noreferrer" target="_blank">SEC Exhibit 10.12 · 海兴县职业教育中心合作办学协议</a> ← <b>20 年期、500 元/生·学期、理事长与党总支条款、"不受招标法约束"原文</b></li>
+<li><a class="ext" href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=0002028177&amp;type=&amp;dateb=&amp;owner=include&amp;count=40" rel="noopener noreferrer" target="_blank">优蓝国际 EDGAR 全部申报文件索引（CIK 0002028177）</a> ← 想看别的合同附件/6-K 从这里进</li>
+<li><a class="ext" href="https://ir.youlife.cn/2026-07-29-Youlife-Announces-Receipt-of-Notification-Letter-from-Nasdaq" rel="noopener noreferrer" target="_blank">公司公告 · 收到纳斯达克 1 美元最低买入价不合规通知（2026-07-29）</a></li>
+<li><a class="ext" href="https://ir.youlife.cn/2026-06-02-Youlife-Announces-Vocational-Education-Expansion-Strategy" rel="noopener noreferrer" target="_blank">公司新闻稿 · 职教扩张战略（2026-06-02，37 所 + 146 项目口径）</a></li>
+<li><a class="ext" href="https://www.prnewswire.com/news-releases/youlife-group-inc-announces-the-closing-of-the-business-combination-and-listing-on-nasdaq-302501493.html" rel="noopener noreferrer" target="_blank">上市交割公告（2025-07-10 口径：25 所 + 25 项目）</a> ← 与年报 37 所对比用</li>
+</ul>
+</div>
+<div class="grp" style="background:#f0f4f9;border-radius:8px;padding:7px 14px;font-size:13px;font-weight:600;color:#33475f;margin:22px 0 6px;display:inline-block">B 政策法规原文（判断合规边界）</div>
+<div class="card" style="padding:16px 22px">
+<ul class="tight" style="font-size:12.8px;line-height:2.05">
+<li><a class="ext" href="https://www.gov.cn/zhengce/content/2014-06/22/content_8901.htm" rel="noopener noreferrer" target="_blank">国发〔2014〕19 号《国务院关于加快发展现代职业教育的决定》</a> ← <b>整校托管合法依据的源头条款（"探索公办和社会力量举办的职业院校相互委托管理和购买服务的机制"）</b></li>
+<li><a class="ext" href="https://tfs.mof.gov.cn/caizhengbuling/202001/t20200122_3463449.htm" rel="noopener noreferrer" target="_blank">财政部令第 102 号《政府购买服务管理办法》</a> ← <b>第 24 条：购买服务合同一般≤1 年、最长≤3 年（对照天坤 15–20 年长约）</b></li>
+<li><a class="ext" href="https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202201/t20220121_595541.html" rel="noopener noreferrer" target="_blank">教职成〔2021〕4 号《职业学校学生实习管理规定》</a> ← <b>1 严禁 + 27 不得，实习人头费封死（本行业死穴）</b></li>
+<li><a class="ext" href="https://www.moe.gov.cn/jyb_sjzl/sjzl_fztjgb/202506/t20250611_1193760.html" rel="noopener noreferrer" target="_blank">教育部 2024 年全国教育事业发展统计公报</a> ← <b>中职 6,862 所、在校生 1,229.33 万、招生 418.33 万</b></li>
+<li><a class="ext" href="https://www.gov.cn/gongbao/content/2020/content_5554566.htm" rel="noopener noreferrer" target="_blank">五部门《关于进一步加强和规范教育收费管理的意见》（2020）</a> ← <b>服务性收费须自愿非营利、代收费不得取差价</b></li>
+</ul>
+</div>
+<div class="grp" style="background:#f0f4f9;border-radius:8px;padding:7px 14px;font-size:13px;font-weight:600;color:#33475f;margin:22px 0 6px;display:inline-block">C 独立核验：政府文件与合同</div>
+<div class="card" style="padding:16px 22px">
+<ul class="tight" style="font-size:12.8px;line-height:2.05">
+<li><a class="ext" href="https://www.ynwss.gov.cn/wssrmzf/tabl/pc/content/content_1861581051132219392.html" rel="noopener noreferrer" target="_blank"><b>文山市教体局对政协提案的答复（2024-06-23）</b></a> ← <b>"被托管两年有余……办学规模连年下滑，办学成效严重下降"；在籍生 1,832→1,159 人</b>（本简报最有价值的失败证据）</li>
+<li><a class="ext" href="https://114.jingmen.gov.cn/art/2026/6/22/art_29029_1224109.html" rel="noopener noreferrer" target="_blank">京山市教育局 · 2025 年度民办学校年检结果（2026-06-22）</a> ← 关联民办校"荆门市京山天坤职业技术学校"为唯一不合格单位</li>
+<li><a class="ext" href="http://www.laibin.gov.cn/xxgk/fdzdgknr/zdlyxxgk_1/czyjs/bmjs/bmjs_2023/P020250616664931351538.pdf" rel="noopener noreferrer" target="_blank">来宾职业教育中心学校 2023 年度部门决算（PDF）</a> ← <b>政府文件明确写"托管学校食堂和超市营运"（后勤收益的一手证据）</b></li>
+<li><a class="ext" href="https://jyt.jiangxi.gov.cn/jxjyw/sqs455/content/content_1868948503446872064.html" rel="noopener noreferrer" target="_blank">江西省教育厅 · 上栗县职专 + 厦门倍凡托管（"三不变 + 三分开"框架）</a> ← 另一个整校托管玩家的合规范式</li>
+<li><a class="ext" href="https://www.peopleapp.com/rmharticle/30025600627" rel="noopener noreferrer" target="_blank">人民日报 · 新疆农职院整体托管洛浦县中职</a>（公办托管县域中职的长期样本）</li>
+<li><a class="ext" href="https://paper.jyb.cn/zgjyb/html/2026-01/08/content_144747_19199816.htm" rel="noopener noreferrer" target="_blank">《中国教育报》· 云南机电职业技术学院托管东川职中"东川模式"</a></li>
+<li><a class="ext" href="https://news.cctv.com/2020/11/06/ARTIDF5wDcjPttoiLvGQVMYU201106.shtml" rel="noopener noreferrer" target="_blank">央视 · 国务院第七次大督查通报（南京交通科技学校 + 新领航，假借合作办学违规招生）</a> ← 反面样本</li>
+<li><a class="ext" href="https://china.cnr.cn/gdgg/20210518/t20210518_525489592.shtml" rel="noopener noreferrer" target="_blank">央广网 · 盐城技师学院强制实习"人头费"事件</a> ← 实习死穴的现实案例</li>
+</ul>
+</div>
+<div class="grp" style="background:#f0f4f9;border-radius:8px;padding:7px 14px;font-size:13px;font-weight:600;color:#33475f;margin:22px 0 6px;display:inline-block">D 企业自述（须打折看，此处仅列供对照口径漂移）</div>
+<div class="card" style="padding:16px 22px">
+<ul class="tight" style="font-size:12.8px;line-height:2.05">
+<li><a class="ext" href="https://www.youlife.cn/?aboutus%2F=" rel="noopener noreferrer" target="_blank">优蓝国际中文官网"关于我们"</a> ← 当前说"29 所 + 25 个专业建设项目 + 18 省 43 市县 + 6.5 万注册学生"（与年报 37 所不符）</li>
+<li><a class="ext" href="http://www.tkzyjy.com/?page_id=3577" rel="noopener noreferrer" target="_blank">天坤教育"多元化办学"页 · 21 所合作办学院校清单</a> ← 抽样核验后判断为"历史合作 + 现在合作 + 仅签战略协议"的混合名单</li>
+<li><a class="ext" href="https://www.tkzyjy.com/?page_id=703" rel="noopener noreferrer" target="_blank">天坤教育官网（"截至 2025"口径：中高职合作院校近 100 所、在籍超 10 万）</a></li>
+</ul>
+<p class="footnote">同一份清单里另有 2022 年港交所招股书口径（23 所 + 1 自营 + 37 专业共建 + 9 技能培训），可与上述数字并排对照——<b>五个版本互相矛盾，见 §6。</b></p>
+</div>
+</section>
+<hr class="soft"/>
+<p class="footnote" style="text-align:center">快速情报简报（第一轮）· 2026-10-14 ｜ 样本：优蓝国际（NASDAQ: YOUL）/ 天坤国际教育集团 ｜ 配套底稿：职业教育托管_政策与行业底座尽调.md<br/>主证据：SEC 20-F (FY2025) / SEC Exhibit 10.12 海兴县合作办学协议 / 教育部·人社部统计公报 / 财政部令第102号 / 教职成〔2021〕4号</p>
+</div>
+</body>
+</html>

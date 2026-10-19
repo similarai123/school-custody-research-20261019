@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>民办学校整体委托管理行业 · 尽调级调研报告（2026.10）</title>
+<style>
+  :root{
+    --ink:#1a2332; --ink2:#4a5568; --ink3:#8494a8;
+    --bg:#f4f6f9; --card:#ffffff; --line:#e3e8ef;
+    --accent:#1f5fa8; --accent-bg:#eaf2fb;
+    --red:#c0392b; --red-bg:#fdecea;
+    --amber:#b7791f; --amber-bg:#fdf3e3;
+    --green:#1e7e4d; --green-bg:#e8f6ef;
+    --mono:"SF Mono",Menlo,Consolas,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.75;font-size:15px}
+  .wrap{max-width:1080px;margin:0 auto;padding:32px 24px 80px}
+  header.report-head{background:linear-gradient(135deg,#14324f 0%,#1f5fa8 100%);color:#fff;border-radius:16px;padding:40px 44px;margin-bottom:28px}
+  header.report-head .tag{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:2px 14px;font-size:12px;letter-spacing:1px;margin-bottom:14px}
+  header.report-head h1{font-size:28px;line-height:1.4;margin-bottom:10px}
+  header.report-head p.sub{opacity:.85;font-size:14px;max-width:820px}
+  header.report-head .meta{margin-top:18px;font-size:12.5px;opacity:.7;font-family:var(--mono)}
+  nav.toc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 24px;margin-bottom:28px;font-size:13.5px}
+  nav.toc b{color:var(--ink2);margin-right:8px}
+  nav.toc a{color:var(--accent);text-decoration:none;margin-right:16px;white-space:nowrap;line-height:2}
+  nav.toc a:hover{text-decoration:underline}
+  section{margin-bottom:34px}
+  h2.sec{font-size:21px;padding-left:14px;border-left:5px solid var(--accent);margin-bottom:16px;line-height:1.4}
+  h3{font-size:16.5px;margin:22px 0 10px;color:#14324f}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px 28px}
+  .verdict{background:#14324f;color:#fff;border-radius:12px;padding:28px 32px}
+  .verdict h3{color:#ffd97a;margin:0 0 14px;font-size:17px}
+  .verdict ol{padding-left:20px}
+  .verdict li{margin-bottom:12px;font-size:14.5px;line-height:1.8}
+  .verdict li b{color:#ffd97a}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin:20px 0}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .kpi .num{font-size:24px;font-weight:700;color:var(--accent);font-family:var(--mono);letter-spacing:-.5px}
+  .kpi .lbl{font-size:12.5px;color:var(--ink2);margin-top:4px;line-height:1.5}
+  .kpi .src{font-size:11px;color:var(--ink3);margin-top:6px}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0;background:#fff}
+  th{background:#f0f4f9;text-align:left;padding:9px 12px;border:1px solid var(--line);color:#33475f;font-weight:600;white-space:nowrap}
+  td{padding:9px 12px;border:1px solid var(--line);vertical-align:top}
+  tr:nth-child(even) td{background:#fafbfc}
+  .alert{border-radius:10px;padding:14px 18px;margin:14px 0;font-size:13.5px;line-height:1.7}
+  .alert.red{background:var(--red-bg);border:1px solid #f2c7c0}
+  .alert.red b{color:var(--red)}
+  .alert.amber{background:var(--amber-bg);border:1px solid #eed9ae}
+  .alert.amber b{color:var(--amber)}
+  .alert.green{background:var(--green-bg);border:1px solid #bfe3cf}
+  .alert.green b{color:var(--green)}
+  .alert.blue{background:var(--accent-bg);border:1px solid #c4d9ef}
+  .alert.blue b{color:var(--accent)}
+  .tag-src{display:inline-block;font-size:10.5px;font-family:var(--mono);padding:0 6px;border-radius:4px;vertical-align:middle;margin-left:4px;white-space:nowrap}
+  .t1{background:#e8f6ef;color:#1e7e4d;border:1px solid #bfe3cf}
+  .t2{background:#eaf2fb;color:#1f5fa8;border:1px solid #c4d9ef}
+  .t3{background:#fdf3e3;color:#b7791f;border:1px solid #eed9ae}
+  .t4{background:#fdecea;color:#c0392b;border:1px solid #f2c7c0}
+  ul.tight,ol.tight{padding-left:22px;font-size:14px}
+  ul.tight li,ol.tight li{margin-bottom:7px}
+  .ladder{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:14px 0}
+  .rung{border-radius:10px;padding:14px 16px;font-size:12.8px;border:1px solid var(--line);background:#fff}
+  .rung h4{font-size:14px;margin-bottom:6px}
+  .rung.ok{border-top:4px solid var(--green)}
+  .rung.warn{border-top:4px solid var(--amber)}
+  .rung.no{border-top:4px solid var(--red)}
+  .rung .r{font-size:11.5px;font-weight:700;margin-top:8px;display:block}
+  .rung.ok .r{color:var(--green)} .rung.warn .r{color:var(--amber)} .rung.no .r{color:var(--red)}
+  .footnote{font-size:12px;color:var(--ink3);margin-top:10px}
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:760px){.two-col{grid-template-columns:1fr}}
+  details{margin:10px 0;border:1px solid var(--line);border-radius:10px;background:#fff;padding:0}
+  details summary{cursor:pointer;padding:12px 18px;font-weight:600;font-size:14px;color:#33475f}
+  details .body{padding:0 18px 16px;font-size:13.5px}
+  .strike-note{font-size:12.5px;color:var(--ink3)}
+  hr.soft{border:none;border-top:1px dashed var(--line);margin:22px 0}
+</style>
+<meta content="noindex,nofollow" name="robots"/><style>#material-library-bar{all:initial;display:block;position:relative;z-index:10000;background:#f2efe6;color:#293b35;border-bottom:1px solid #b8b9ad;padding:14px 4vw;font:15px/1.65 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}#material-library-bar a{color:#225e4b;text-decoration:underline;margin-right:18px}#material-library-bar .ml-note{display:block;padding:8px 0 0;color:#55462b;font-size:14px}#material-library-bar strong{font-weight:700} @media print{#material-library-bar{display:block!important;position:static!important}}
+/* 资料库手机阅读修正：只约束页面宽度，表格保留局部横向滚动。 */
+@media(max-width:720px){
+  #material-library-bar{box-sizing:border-box;max-width:100%;overflow-wrap:anywhere}
+  body{overflow-wrap:anywhere}
+  .wrap,.panel,.rp,.card,.rp .card,.pcard,.rp .pcard,.ans,.rp .ans,.body,.rp details .body,.scroll,.rp .scroll,nav.tabbar{min-width:0;max-width:100%}
+  .cards,.rp .cards{grid-template-columns:minmax(0,1fr)}
+  .cards>*,.rp .cards>*,.ansbox>*,.rp .ansbox>*{min-width:0}
+  table,.rp table{display:block;width:100%;max-width:100%;overflow-x:auto}
+  .scroll table,.rp .scroll table{display:table;max-width:none}
+  nav.toc a,.rp nav.toc a{white-space:normal;overflow-wrap:anywhere}
+  pre,img,svg,iframe{max-width:100%}
+}
+</style></head>
+<body><div id="material-library-bar"><a href="../index.html">返回全部材料</a><a href="../sources.html">来源明细</a><strong>L48 · 历史研究底稿</strong><span class="ml-note">历史研究资料按原调研时点保留。本文为研究加工材料；完整来源见资料明细。关键纠错另行标示，其他外链未在本轮逐条重验。</span></div>
+<div class="wrap">
+<header class="report-head">
+<div class="tag">尽调级 · 决策版</div>
+<h1>民办学校整体委托管理行业调研报告</h1>
+<p class="sub">委托背景：AI 教育 SaaS 公司（客户以民办 K12 学校为主）的销售代理商经营民办校托管业务，提出含相互投资在内的合作意向。本报告回答三个问题：这个行业是什么、能不能碰、以什么姿势碰。</p>
+<div class="meta">调研日期 2026-10-08 ｜ 6 个并行调研模块 · 170+ 条分级信源 ｜ 证据口径：一手 / 二手 / 估算 全程标注</div>
+</header>
+<nav class="toc">
+<b>目录</b>
+<a href="#c0">核心结论</a><a href="#c1">1 政策红线</a><a href="#c2">2 行业与商业模式</a><a href="#c3">3 竞争格局</a><a href="#c4">4 交易结构与定价</a><a href="#c5">5 重点省份</a><a href="#c6">6 SaaS 机会</a><a href="#c7">7 行动建议</a><a href="#c8">8 认知勘误表</a><a href="#c9">9 数据缺口</a><a href="#c10">附录</a>
+</nav>
+<!-- ============ 核心结论 ============ -->
+<section id="c0">
+<h2 class="sec">核心结论</h2>
+<div class="verdict">
+<h3>七条判断（按决策权重排序）</h3>
+<ol>
+<li><b>相互投资（相互持股）不建议做。</b>三个独立模块交叉验证指向同一硬伤：《民促法实施条例》第 45 条禁止义务教育民办学校与"利益关联方"交易。一旦双方相互持股，托管方旗下义务教育学校向你们采购 SaaS 即可能落入关联交易禁令——<b>合作初衷（借托管方渠道卖 SaaS）会因交易结构本身而自我瓦解</b>，还会把你们存量义务教育客户拖入合规审查。且教育科技公司 × 民办教育集团相互持股<b>无公开先例</b>，估值无锚。</li>
+<li><b>这个行业真实、在增长，但比叙事小得多。</b>券商测算潜在空间 60–127 亿元/年（假设驱动，非实际市场）；按头部公司实际托管收入推算，当前全行业实际收入量级约 <b>10–30 亿元/年</b>（估算）。任何"百亿赛道"话术都应打回对方用"实际托管校数 × 单校收费"自证。</li>
+<li><b>义务教育段是这个行业的绝对禁区，且已被司法判例坐实。</b>条例 §13 禁止以兼并收购/协议控制方式控制义务教育民办校，§45 禁止其发生任何关联交易，§62 罚则含 1–5 年直至<b>永久行业禁入</b>。"全托管"合同被法院认定为变相出租办学许可证而<b>无效</b>（广州芳华案、(2024)皖13民终3268 号等）。代理商的存量托管合同需逐份对照排查。</li>
+<li><b>行业的增长引擎已从"民办校花钱买管理"变成"地方政府花钱买县中"。</b>头部玩家（海亮 178 校、北师大系 70–80 校）服务对象以<b>公办校</b>为主，财政买单。纯民办校之间的市场化托管细分<b>高度碎片化、无垄断者</b>——代理商自称的"行业地位"无法用公开排名佐证，必须单独尽调。</li>
+<li><b>可行路径：L1 框架协议 → L3 联合方案，先业务验证 1–2 个学年。</b>行业通行实践（科大讯飞、校宝在线、松鼠Ai 案例）全部停留在"框架协议 + 样板校 + 分校落地"三步。若对方坚持资本绑定，可转债/期权优于换股，且交易对手只能是托管方公司，合同明确不穿透任何学校法人财产与学费现金流。</li>
+<li><b>托管体系对你们的真实价值是"渠道效率"，不是"市场容量"。</b>托管体系 SAM 估算 1–10.8 亿元/年（利基），但一单集团签约可带 10–30 所学校，获客效率远超逐校直销。战略价值 &gt; 账面收入。</li>
+<li><b>尽调一票否决项（任一命中即终止谈投资）：</b>① 实控人/母体存在大额被执行、股权冻结或涉诉；② 托管学校学费被归集挪用、预缴折扣激进回款；③ 存量合同属"全托管"结构（四权让渡）；④ 旗下学校以义务教育学段为主；⑤ 学校未完成分类登记、资产权属不清。</li>
+</ol>
+</div>
+<div class="kpis">
+<div class="kpi"><div class="num">1.44万所</div><div class="lbl">民办 K12 学校总数（标的池）</div><div class="src">教育部2024公报 · 一手</div></div>
+<div class="kpi"><div class="num">588万</div><div class="lbl">民办普高在校生（占20.14%）——唯一逆势增长学段</div><div class="src">教育部2024公报 · 一手</div></div>
+<div class="kpi"><div class="num">100–500万</div><div class="lbl">单校年托管费常见量级（元）</div><div class="src">判例+研报多源互证</div></div>
+<div class="kpi"><div class="num">50–60%</div><div class="lbl">托管业务毛利率（研报口径）</div><div class="src">招商证券 · 二手</div></div>
+<div class="kpi"><div class="num">10–30亿</div><div class="lbl">全行业当前实际托管收入（元/年，估算）</div><div class="src">头部公司推算 · 估算</div></div>
+<div class="kpi"><div class="num">&lt;10%</div><div class="lbl">头部玩家合计市占率——早期分散格局</div><div class="src">华泰证券假设 · 二手</div></div>
+</div>
+</section>
+<!-- ============ 1 政策红线 ============ -->
+<section id="c1">
+<h2 class="sec">1 ｜ 政策红线：哪里能做、哪里碰不得</h2>
+<div class="card">
+<h3>1.1 学段 × 可行性总表（已逐条核对法规原文）</h3>
+<table>
+<tr><th>学段</th><th>营利性</th><th>并购/协议控制</th><th>关联交易</th><th>委托管理可行性</th></tr>
+<tr><td><b>义务教育（小学/初中）</b></td><td>禁止<span class="tag-src t1">民促法§19</span></td><td><b style="color:var(--red)">全面禁止</b><span class="tag-src t1">条例§13</span></td><td><b style="color:var(--red)">一律禁止</b><span class="tag-src t1">条例§45</span></td><td style="background:var(--red-bg)"><b>整体委托管理基本不可行</b>——托管费本身即可能构成违法关联交易，罚则含永久行业禁入（§62）</td></tr>
+<tr><td>非营利性幼儿园</td><td>—</td><td><b style="color:var(--red)">禁止</b><span class="tag-src t1">条例§13 + 学前教育法§35</span></td><td>允许但须公允+披露</td><td style="background:var(--red-bg)">不可做控制型托管（禁令已升级为法律，2025-06-01 施行）</td></tr>
+<tr><td>营利性幼儿园</td><td>可</td><td>可（上市公司禁入）</td><td>允许但须公允+披露</td><td style="background:var(--amber-bg)">谨慎可做；普惠园收费政府指导价</td></tr>
+<tr><td>非营利性高中</td><td>—</td><td>未列入§13禁令</td><td>允许但须公允+披露+年审</td><td style="background:var(--amber-bg)">可做但收益受限——不得"直接或间接取得办学收益"，定价公允性被重点审查</td></tr>
+<tr><td><b>营利性高中 / 中职</b></td><td>可</td><td>未列入§13禁令</td><td>允许但须公允+披露+年审</td><td style="background:var(--green-bg)"><b>政策空间最大</b>；职业教育有明确政策鼓励（条例§7/§9）</td></tr>
+</table>
+<p class="footnote">注：条例 = 《民办教育促进法实施条例》（国务院令第741号，2021-09-01 施行）；"三公"= 公开、公平、公允 + 规范决策 + 信息披露 + 年度审查（条例§45）。</p>
+<h3>1.2 司法实践：合同效力的分水岭</h3>
+<table>
+<tr><th>案件</th><th>结构</th><th>结果</th><th>档位</th></tr>
+<tr><td>广州芳华中小学承包协议案（(2014)穗荔法民二初字第1200号，二审维持）</td><td>整体"承包"给个人经营、收承包费</td><td><b style="color:var(--red)">无效</b>——实质是出租办学许可证</td><td>一手（行政复议决定书转述生效判决）</td></tr>
+<tr><td>(2024)皖13民终3268号（安徽灵璧某中专）</td><td>资产+资质整体移交，受托方年付学校100万、财务独立</td><td><b style="color:var(--red)">无效</b>——名为托管实为出租资质，托管费诉求驳回</td><td>一手（判决书评析）</td></tr>
+<tr><td>山师附中幸福柳分校系列案</td><td>托管费/租赁费直接付给学校出资人</td><td><b style="color:var(--red)">5份协议全部无效</b>——变相分配非营利法人财产</td><td>一手（判决书评析）</td></tr>
+<tr><td>湖南某学校高中部托管案（对照组）</td><td>仅高中部教学托管，学校保留人事/财务/公章</td><td><b style="color:var(--green)">有效</b>——受托方私收学费构成根本违约，判解除</td><td>一手（律师引述生效判例）</td></tr>
+</table>
+<div class="alert red"><b>效力分水岭：决策权、财务控制权、公章、办学主导权"四权"不得整体让渡。</b>办学资质、招生名义、收费账户、决策权仍归学校的"管理服务输出型"托管一般有效；"全托管"、以托管方名义招生收费、按结余高比例分成或固定高额承包费的模式，高概率被认定无效且托管费不受保护。<b>谈判前务必调取代理商存量合同底稿逐份对照。</b></div>
+<h3>1.3 其他关键政策事实</h3>
+<ul class="tight">
+<li><b>"公参民"已封死</b>：2021 年八部委通知后不得新设，存量转公或切割；代理商托管校若有"公参民"历史或仍用公办品牌，存在遗留风险。<span class="tag-src t1">一手</span></li>
+<li><b>公办资源不得进入此模式</b>：安徽（皖教基〔2025〕2号）明确"不得将公办学校委托非公办学校、民营企业管理"；公办校不得以品牌输出取酬（条例§7）。<span class="tag-src t1">一手</span></li>
+<li><b>分类登记"纸面到期、实际悬置"</b>：浙江/河南规定 2022 年底截止但地方"尚未启动注册"（上市公司公告证实）；广东不设过渡期、未选按非营利对待。"2026 年底全国大限"传言<b>未获官方证实</b>（行业协会人士公开辟谣）。含义：目标学校法人属性与资产权属长期不确定，是投资尽调最大暗礁。<span class="tag-src t1">一手+二手</span></li>
+<li><b>举办者变更属行政许可</b>：相互投资若触及举办者法人控股权变化，须备案公示（条例§12）；学校分立合并、举办者变更均须审批（民促法§53-54）——不是纯商业交易。<span class="tag-src t1">一手</span></li>
+</ul>
+</div>
+</section>
+<!-- ============ 2 行业与商业模式 ============ -->
+<section id="c2">
+<h2 class="sec">2 ｜ 行业大盘与商业模式</h2>
+<div class="card">
+<h3>2.1 这个生意是怎么来的：政策创造的"合规出口"</h3>
+<p style="font-size:14px">2016 民促法修法确立分类管理、禁止义务教育营利 → 教育集团借 VIE+服务费变现 → 2018 送审稿预警 → <b>2021 实施条例封堵义务教育并购并表</b> → 重资产模式终结，"管理费模式"成为唯一合规的规模化变现路径。标志性事件：海亮剥离 11 所义务教育学校（减值 2.52 亿）、私有化退市、转型县域托管；天立托管从 FY23 的 7 校扩至 2025 秋签约 23 校。<b>结论：托管从"并表工具"演变为独立商业模式，行业只有约 4 年真实历史。</b></p>
+<h3>2.2 市场规模：叙事 vs 现实</h3>
+<table>
+<tr><th>口径</th><th>数值</th><th>性质</th></tr>
+<tr><td>民办教育大盘（2024）</td><td>15.28 万所学校、4621.59 万在校生；其中民办 K12 约 1.44 万所、1694 万在校生</td><td><span class="tag-src t1">一手</span> 教育部公报</td></tr>
+<tr><td>华泰证券测算</td><td>公办中小学长尾 1%（2,112 所）× 2 学段 × 300 万 = <b>约 127 亿元/年</b></td><td><span class="tag-src t3">估算</span> 券商情景假设</td></tr>
+<tr><td>华西证券测算</td><td>每地级市 2 校 × 2-3 学段 × 400-500 万 = <b>约 60–90 亿元/年</b></td><td><span class="tag-src t3">估算</span> 券商情景假设</td></tr>
+<tr><td>当前实际收入（本报告推算）</td><td>头部 3-4 家合计托管校 200-400 所 × 单校 100-500 万 → <b>约 10–30 亿元/年</b></td><td><span class="tag-src t3">估算</span></td></tr>
+<tr><td>弗若斯特沙利文托管细分测算</td><td><b>未找到公开数据</b>——流传"百亿"口径均为券商假设，无机构正式测算背书</td><td>—</td></tr>
+</table>
+<div class="alert amber"><b>谈判提示：</b>若代理商用"百亿赛道"为自身估值/合作要价背书，要求其提供"实际托管校数 × 单校收费 × 剩余合同年限"的收入底稿，而非行业空间叙事。</div>
+<h3>2.3 五种业态与收费结构</h3>
+<table>
+<tr><th>业态</th><th>委托方</th><th>收费方式</th><th>代表</th></tr>
+<tr><td>① 整校委托运营（民办校）</td><td>地产商/国企/城投/基金</td><td>品牌使用费 + 学费/利润分成</td><td>平和×光华（2024到期和平分手）</td></tr>
+<tr><td>② 轻资产管理输出（县域为主）</td><td>县政府/教育局、举办者</td><td>按学段固定管理费（小/初/高约 300/400/500 万元/年）+ 绩效<span class="tag-src t2">招商证券</span></td><td>海亮"明德兴教"、天立</td></tr>
+<tr><td>③ 政府委托管理公办校</td><td>地方教育局</td><td>财政预算支付固定托管费</td><td>上海世外托管嘉定/无锡公办校</td></tr>
+<tr><td>④ 品牌授权（不驻团队）</td><td>学校举办者</td><td>品牌授权费</td><td>天立特许早教模式</td></tr>
+<tr><td>⑤ 课程+管理团队输出</td><td>学校</td><td>服务费/课程费</td><td>海亮"海班慧""鸿儒教研"</td></tr>
+</table>
+<p style="font-size:14px"><b>盈利逻辑</b>：把已验证的办学体系以近零边际资本投入复制（vs 自建校 2.5–5 亿/所），成本主要是每校约 5 人派驻团队人力，净利率可达 50%+（天立 FY23 约 57%<span class="tag-src t2">华西/招商</span>），收入为多年期合同、抗周期。<b>需求主力</b>：地方政府（县中振兴政绩）、无办学能力的资产方、新建校冷启动、生存承压的县域民办校。</p>
+</div>
+</section>
+<!-- ============ 3 竞争格局 ============ -->
+<section id="c3">
+<h2 class="sec">3 ｜ 竞争格局：两类"头部"与密集的风险样本</h2>
+<div class="card">
+<h3>3.1 玩家分级（按管理输出校数，口径已做三查）</h3>
+<table>
+<tr><th>梯队</th><th>玩家</th><th>托管/管理输出校数</th><th>主服务对象</th><th>关键财务/状态</th></tr>
+<tr><td rowspan="2"><b>第一梯队<br/>（公办为主）</b></td><td>海亮教育科技服务集团（已私有化）</td><td><b>178 所</b>（县域综合管理服务，23省88县，2025.11）<br/><span class="strike-note">另有官网177所/自荐240+所两口径，勿混用</span></td><td>公办县域校</td><td>非上市无公开报表；FY2021 营收 13.76 亿（退市前）</td></tr>
+<tr><td>北师大教育集团</td><td><b>约 70–80 所</b>（合作办学，20余省）</td><td>公办为主</td><td>白名单制，2021 后不再新批民办冠名</td></tr>
+<tr><td rowspan="4"><b>第二梯队<br/>（上市公司）</b></td><td>天立国际（1773.HK）</td><td><b>18 所</b>（FY2025末）；2025秋签约 23 所/40 学段</td><td>民办高中+公办托管</td><td>FY2025 管理及特许费 <b>1.16 亿（+93.9%）</b>；托管毛利率 50–60%<span class="tag-src t2">研报</span></td></tr>
+<tr><td>成实外教育（1565.HK）</td><td>13 所（含7所幼儿园，K12整校托管实际约6所）</td><td>民办</td><td>FY2025 管理费收入 2161 万（占比仅2%）；杠杆率 249% 偏高</td></tr>
+<tr><td>为明教育（非上市）</td><td>自营15校为主，兼做委托管理；学生5万+</td><td>民办</td><td>"实体办学+管理输出"混合型</td></tr>
+<tr><td>华东师大/东北师大等高校系</td><td>58 所 / 14–15 所（合作办学）</td><td>公办</td><td>与市场化托管方在县域公办赛道直接竞争</td></tr>
+<tr><td><b>腰尾部</b></td><td>数以百计区域性托管公司</td><td>1–5 所/家，无公开统计</td><td>民办</td><td><b>纠纷高发区，无权威榜单——代理商大概率在此层</b></td></tr>
+</table>
+<div class="alert blue"><b>口径纠错：睿见教育 = 光正教育</b>（6068.HK，2022 年前后更名），FY2025 收入仅 1.31 亿（三年复合 -22%），是收缩样本而非扩张样本——做玩家清单时勿重复计算。</div>
+<h3>3.2 风险样本（2024–2026 密集出险）</h3>
+<table>
+<tr><th>案例</th><th>事实</th><th>教训</th></tr>
+<tr><td>博实乐（原NYSE:BEDU）</td><td>2025-12-16 私有化退市；退市市值约 6675 万美元，较发行价跌逾 94%</td><td>政策切断义务教育并表 + 母公司（碧桂园系）流动性传导</td></tr>
+<tr><td>枫叶教育（1317.HK）</td><td>1.25 亿美元可转债无法兑付（外汇管制无法汇出），长期停牌；学校 31→27 所</td><td>重资产+高杠杆模式终局</td></tr>
+<tr><td>深圳厚德书院（2024-07）</td><td>母体邦德集团被执行约 3.6 亿，学费被当集团"内部银行"抽走；欠租超千万，关停，800 名学生政府分流</td><td><b>死因是"治理"不是"经营"</b>：学校现金流被母体归集</td></tr>
+<tr><td>北京一土致知（2025年末）</td><td>品牌方承担对方 4200 万历史债务 + 50% 股权质押对赌；现金流断裂、欠薪断供</td><td>合作前历史债务与财务尽调不足的典型</td></tr>
+<tr><td>21世纪教育（1598.HK）</td><td>VIE 核心资产破产重整，停牌超 7 个月，2025-09 政府接管</td><td>第三方（含供应商）会被欠款与舆情牵连</td></tr>
+</table>
+<div class="alert red"><b>爆雷共性（多案例互证）</b>：① 举办者/母体把学校当资金池；② 领先信号 = 预缴折扣促销、学费进个人账户、供餐/租金欠付、实控人大额被执行；③ 最终兜底方是地方政府，合作第三方被欠款+舆情双杀。<b>对托管方的尽调，实控人信用与资金流向比学校经营数据更重要。</b></div>
+<h3>3.3 格局判断（2025–2026）</h3>
+<ul class="tight">
+<li>重资产办学整体出清后期（出生人口下降 + 公办普高扩招，天立 FY2026 招生增速已从 30% 降至 8%）；<b>轻资产输出处于政策驱动型扩张期</b>，但买单方是地方财政 → 账期与廉政合规风险上升。</li>
+<li>"民办校整体托管"细分<b>无公开数据可证的垄断者，高度碎片化</b>——代理商的行业地位必须单独尽调，无法借公开排名佐证。</li>
+<li>收费基准锚点：天立民办高中托管单校约 644 万/年、单学段约 289 万/年（FY2025 华西测算）<span class="tag-src t2">二手</span>；成实外单校约 166 万/年（含幼儿园，偏轻服务）<span class="tag-src t3">估算</span>；海亮 FY2021 倒算约 222 万/校/年<span class="tag-src t3">估算</span>。<b>可用此区间校验代理商报价与其声称收入的合理性。</b></li>
+</ul>
+</div>
+</section>
+<!-- ============ 4 交易结构 ============ -->
+<section id="c4">
+<h2 class="sec">4 ｜ 交易结构、财务与合作先例</h2>
+<div class="card">
+<h3>4.1 托管合同典型结构与定价基准</h3>
+<table>
+<tr><th>要素</th><th>市场实践</th><th>合规要点</th></tr>
+<tr><td>期限</td><td>常见 3–15 年，以 5–10 年居多；到期设"后续管理期"</td><td>期限过长（如15年）放大解约争议</td></tr>
+<tr><td>固定管理费</td><td>公办托管 300–500 万/学段/年（财政拨款）<span class="tag-src t2">招商证券</span></td><td>公办托管费须走财政购买服务程序</td></tr>
+<tr><td>固定+绩效</td><td>基础费 100–200 万/年阶梯 + 结余 25% 封顶绩效（合同范本口径）</td><td>结余分成比例过高触发"变相分配"认定</td></tr>
+<tr><td>结余分成</td><td>判例样本：托管方支配结余 60–70%（晋中案）</td><td><b>义务教育非营利校中合规风险极高</b></td></tr>
+<tr><td>学费比例分成</td><td>机制存在（澎湃报道），<b>统一市场区间未找到公开数据</b></td><td>按学费为基数从学校抽成 ≈ 年检红线</td></tr>
+<tr><td>权责</td><td>校长由托管方委派、骨干教师带入；董事会席位按委托关系分配</td><td>"四权"（决策/财务/公章/办学主导）不得整体让渡</td></tr>
+</table>
+<h3>4.2 教育科技公司 × 民办教育集团：公开先例的全部形态</h3>
+<p style="font-size:14px">对科大讯飞、校宝在线、松鼠Ai、网易有道、好未来、ClassIn、希沃的逐一排查结论：<b>公开合作 100% 停留在业务层——"战略合作框架协议 + 产品采购 + 样板校授牌"，未找到任何一起与民办 K12 教育集团股权互换/互相持股的公开披露案例。</b><span class="tag-src t1">排查结论</span></p>
+<div class="alert amber"><b>含义：</b>相互投资属"吃螃蟹"交易——无估值锚、无合规范式可抄，定价与条款需自创框架，且需律师出具关联交易专项意见。这本身不构成"不能做"的理由，但构成"不值得第一个做"的理由。</div>
+<h3>4.3 五种合作结构对比（SaaS 公司 × 托管方）</h3>
+<div class="ladder">
+<div class="rung ok"><h4>A 纯业务框架</h4>框架协议+按校采购+样板校（讯飞/校宝模式）。零资本风险，行业成熟范式。<span class="r">✓ 推荐起点</span></div>
+<div class="rung ok"><h4>B 渠道分成</h4>托管方作渠道按回款分成。锁定校网渠道，利益一致。<span class="r">✓ 可做，设占比红线（建议托管体系外收入≥50%）</span></div>
+<div class="rung warn"><h4>C 合资公司</h4>JV 承接托管体系订单。治理僵局风险；向义务教育校销售即触发关联交易合规成本。<span class="r">△ 谨慎</span></div>
+<div class="rung no"><h4>D 股权互换</h4>无公开先例、估值无锚；触发义务教育关联交易禁令，合作初衷自我瓦解；对方爆雷即沉没+声誉牵连。<span class="r">✗ 不建议</span></div>
+<div class="rung warn"><h4>E 可转债/期权</h4>先债后股、先观察后下注。1–2 学年业务验证+尽调完成后再行权；需管理费应收账款质押+实控人连带担保补足（托管方轻资产、可抵押物极少）。<span class="r">△ 资本绑定的唯一可讨论形态</span></div>
+</div>
+<div class="alert red"><b>任何结构的铁律：</b>交易对手只能是托管方公司（企业法人），合同明确"不介入任何学校法人财产、学费账户与办学结余分配"；与其旗下义务教育学校分别按公允原则独立签约，托管方人员回避决策。</div>
+<details>
+<summary>附：与托管方谈合作前的尽调问题清单（20 条，完整版见 04 模块原始文件）</summary>
+<div class="body">
+<b>财务与信用</b>：① 近三年审计报告/银行流水/纳税申报、应收账款账龄；② 实控人及母体全部负债、被执行/限高/股权冻结记录；③ 是否向旗下学校借款、占用学费、以学校资产对外担保；④ 是否预缴折扣、个人账户收款；⑤ 托管费定价结构有无以学费为基数抽成。<br/>
+<b>学校资产与合同</b>：⑥ 全部托管学校清单（学段/人数/学费/剩余合同期）；⑦ 每份合同底稿对照"四权"与无效要素；⑧ 土地校舍权属；⑨ 保证金/质押安排现状；⑩ 有无股权质押对赌、历史债务承担条款（一土×致知式）。<br/>
+<b>合规与监管</b>：⑪ 义务教育学校与托管方是否构成利益关联方、如何过年审；⑫ 办学许可证/年检/收费备案是否齐备；⑬ 当地教育局既往监管记录；⑭ 未成年人数据合规与 app 备案。<br/>
+<b>实控人与治理</b>：⑮ 实控人教育履历与其他产业敞口（地产/金融）；⑯ 决策机制与一言堂程度；⑰ 核心校长团队劳动关系归属与离职率——<b>托管业务的真正资产是人</b>。<br/>
+<b>业务可行性</b>：⑱ 各校现有信息化供应商与替换成本；⑲ 其声称"可排他导入"的校网中，多少所其合同实际赋予采购决策权；⑳ 托管权丧失时我方已部署产品与应收款的处置（要求"校随合同走"补偿/回购条款）。
+      </div>
+</details>
+</div>
+</section>
+<!-- ============ 5 重点省份 ============ -->
+<section id="c5">
+<h2 class="sec">5 ｜ 重点省份：浙江 / 广东 / 河南</h2>
+<div class="card">
+<table>
+<tr><th>维度</th><th>浙江</th><th>广东</th><th>河南</th></tr>
+<tr><td>民办教育体量（2024）<span class="tag-src t1">一手</span></td><td>中小学+中职约 542 所/65 万在校生</td><td><b>1.45 万所/675 万（全国第一）</b></td><td>1.69 万所/522 万；<b>民办高中 552 所/81.8 万（全国罕见）</b></td></tr>
+<tr><td>义务教育民办占比</td><td>小学 4.6%/初中 8.6%，持续压减</td><td>纯民办仅 <b>3.37%</b>（276.73 万在校生中 222.51 万是政府购买学位——<b>名义规模虚高约 5 倍</b>）</td><td>市级口径已压至 5% 以内</td></tr>
+<tr><td>分类登记</td><td>2022 年底截止，但执行拖延（"尚未启动注册"）</td><td><b>不设过渡期，未选按非营利对待</b>——悬置状态全国最特殊</td><td>高校 2022 年底；其他学段时限下放地市，程序不明</td></tr>
+<tr><td>监管松紧</td><td>宽容（教共体覆盖 97% 公办校，省级推广）；宁波 2026 新规：义务教育关联交易=年检直接不合格</td><td><b>最严</b>：5% 刚性压减 + 政府购买学位 + "公办团队进驻民办校"（东莞常平 2025）</td><td>义务教育压减刚性；对"政府引进集团托管公办校"持欢迎态度（海亮周口 2025 样板）</td></tr>
+<tr><td>托管主战场</td><td>公办校托管 + 民办高中（约 30 万在校生）</td><td>民办高中/中职（近 70 万）+ 政府购买服务</td><td>县域公办托管 + 民办高中</td></tr>
+<tr><td><b>若对方学校集中于此，核心风险</b></td><td>托管费被认定"变相分配结余/关联交易"的年检风险；标的法人属性不确定</td><td><b>市场规模误判</b>（八成是购买学位）；分类悬置下股权/收益权几乎无法穿透；公办进驻挤出市场化托管</td><td><b>标的存续风险</b>：生源净流出全国第一 + 年检停办常态化（信阳一年拟停 88 所）；托管合同与应收账款两三年内可能蒸发</td></tr>
+</table>
+<div class="alert amber"><b>共性发现：义务教育段托管主导权已收归政府。</b>浙江教共体、广东"公办进驻民办"、河南"政府引进海亮"三种模式都表明——可持续的托管生意越来越以政府为甲方，纯民办校之间的市场化托管空间在收窄。<b>请先确认代理商的托管校网到底是"政府为甲方"还是"民办举办者为甲方"，这决定其收入的合规性与持续性。</b></div>
+</div>
+</section>
+<!-- ============ 6 SaaS 机会 ============ -->
+<section id="c6">
+<h2 class="sec">6 ｜ 对你们的 SaaS 机会评估</h2>
+<div class="card">
+<div class="two-col">
+<div>
+<h3>渠道价值（真实存在）</h3>
+<ul class="tight">
+<li>托管方派驻校长、掌握日常运营与预算建议权，<b>一单集团签约可带 10–30 所学校</b>，获客效率远超逐校直销；</li>
+<li>已验证打法："集团框架协议 + 样板校授牌 + 分校区落地"（校宝×恒雅 5 校、松鼠Ai×金培）；</li>
+<li>集团统一招标形态存在（春来集团数智化招标，硬门槛：等保三级+信创适配）；</li>
+<li>定价锚点：SaaS 订阅 0.3–5 万/校/年；项目制平台 28–96 万/套（ClassIn 中标样本）。</li>
+</ul>
+</div>
+<div>
+<h3>SAM 粗估（托管体系内，估算）</h3>
+<table>
+<tr><th>情景</th><th>托管校数</th><th>生均年付费</th><th>SAM/年</th></tr>
+<tr><td>保守</td><td>1,000 所</td><td>100 元</td><td><b>1.0 亿</b></td></tr>
+<tr><td>中性</td><td>2,000 所</td><td>150 元</td><td><b>3.6 亿</b></td></tr>
+<tr><td>乐观</td><td>3,000 所</td><td>300 元</td><td><b>10.8 亿</b></td></tr>
+</table>
+<p class="footnote">利基市场，不足以单独支撑增长；真正的 TAM 仍是 1.44 万所民办 K12 + 公办托管校/教育局延展。</p>
+</div>
+</div>
+<div class="alert red"><b>两个必须防守的威胁：</b>① <b>托管集团有"自研 SaaS"选项</b>——天立启鸣云平台已接入 107 校、25 万师生并明确对外商业化（FY2025 年报），谈判中须防"以合作行尽调"，协议中排除或限定其竞业；② <b>科大讯飞等巨头已公开进攻民办校市场</b>（2025-11 民办教育西湖论坛推 AI 学伴方案）——窗口期存在但不会太长。</div>
+<div class="alert green"><b>数据合规红线：</b>中小学生个人信息属敏感个人信息（个保法§28）；托管模式下数据处理者/委托处理关系须在协议钉死；学情数据用于模型训练需单独授权；等保三级是集团招标硬门槛。</div>
+</div>
+</section>
+<!-- ============ 7 行动建议 ============ -->
+<section id="c7">
+<h2 class="sec">7 ｜ 综合研判与行动建议</h2>
+<div class="card">
+<h3>总体研判</h3>
+<p style="font-size:14.5px">民办校托管是政策创造的、仅有约 4 年真实历史的早期行业：商业模式成立（高毛利、轻资产、多年期合同），但盘子小（实际收入 10–30 亿/年估算）、格局散（无垄断者）、风险密（暴雷样本频出）、买单方转向财政。<b>对你们的正确定位：一个高获客效率的渠道型利基市场 + 一个信息不透明的谈判对手</b>——不是投资标的，至少现在不是。</p>
+<h3>建议行动序列</h3>
+<table>
+<tr><th>阶段</th><th>动作</th><th>通过/终止标准</th></tr>
+<tr><td><b>第一步<br/>（谈判前）</b></td><td>向代理商发出尽调信息请求：托管校完整清单（校名/学段/性质/在校生/剩余合同期）、存量合同底稿、近三年财务、实控人征信涉诉。对照第 4 节 20 条清单与"一票否决项"核查</td><td>命中任一否决项 → 退回纯代理关系；义务教育校占比过高（&gt;50%）→ 合作上限锁死 L1</td></tr>
+<tr><td><b>第二步<br/>（0–6 月）</b></td><td>签 L1 集团框架协议：选 1–2 所民办高中做样板校（规避义务教育学段），定价/账期/数据权属按第 6 节条款立场锁定</td><td>样板校上线率、续费意向、回款账期达标</td></tr>
+<tr><td><b>第三步<br/>（6–18 月）</b></td><td>升级 L3 联合方案/联合样板，扩至其校网；设"托管体系外收入 ≥50%"内部红线；协议排除对方自研/代理竞品</td><td>集团框架续约 + 校均产出达标</td></tr>
+<tr><td><b>第四步<br/>（18 月+，可选）</b></td><td>仅当 1–2 学年业务验证通过且尽调干净：可讨论 E 类可转债/期权（单向、小额、托管方公司层面），律师出具关联交易专项意见。<b>相互持股（D）在任何时点都不建议</b></td><td>—</td></tr>
+</table>
+<h3>谈判桌上的关键条款立场</h3>
+<ul class="tight">
+<li><b>排他</b>：只接受有限排他（限品类/限区域/限 12–18 个月 + 绑定最低采购量，未达量自动失效）；拒绝全品类无限期排他。</li>
+<li><b>账期</b>：SaaS 年费预付；项目制 3-4-3 付款；对托管方账期 ≤90 天 + 逾期利息。</li>
+<li><b>合同存续</b>：托管协议终止不当然终止 SaaS 合同——优先与学校法人直签；要求"校随合同走"的补偿/回购条款。</li>
+<li><b>合规陈述</b>：义务教育学校交易以第三方公允定价独立完成，托管方人员回避决策——写进合同。</li>
+<li><b>防尽调</b>：对方若索要超出业务需要的产品/客户/财务信息，警惕其自研意图（参照天立启鸣路径）。</li>
+</ul>
+</div>
+</section>
+<!-- ============ 8 勘误表 ============ -->
+<section id="c8">
+<h2 class="sec">8 ｜ 认知勘误表（调研前常见假设 vs 核验结果）</h2>
+<div class="card">
+<table>
+<tr><th>常见假设</th><th>核验结果</th><th>依据</th></tr>
+<tr><td>"民办校托管是百亿级大市场"</td><td><b>↓ 下修</b>：60–127 亿/年是券商情景假设的"潜在空间"；当前实际收入估算仅 10–30 亿/年</td><td>华泰/华西研报 vs 头部公司实际托管收入推算</td></tr>
+<tr><td>"托管方主要服务民办学校"</td><td><b>✗ 不成立</b>：头部（海亮 178 校、北师大 70–80 校）主服务公办校；纯民办校托管细分碎片化、无垄断者</td><td>模块 03 玩家清单 + 模块 05 三省验证</td></tr>
+<tr><td>"相互投资是深度绑定的好方式"</td><td><b>✗ 不成立</b>：义务教育关联交易禁令 + 无公开先例 + 估值无锚；行业通行实践全部停留在业务层</td><td>条例§45 + 讯飞/校宝/松鼠Ai 案例排查</td></tr>
+<tr><td>"托管合同签了就有保障"</td><td><b>✗ 不成立</b>："全托管"合同司法实践高概率无效，托管费诉求不受保护</td><td>广州芳华案、(2024)皖13民终3268号、幸福柳案</td></tr>
+<tr><td>"2026 年底是分类登记全国大限"</td><td><b>未证实</b>：教育部无此文件，行业协会人士公开辟谣；但地方（广东 2025–2026）正在收口</td><td>模块 01 辟谣核验 + 广东省教育厅公告</td></tr>
+<tr><td>"睿见教育和光正教育是两家公司"</td><td><b>✗ 不成立</b>：同一公司（6068.HK，2022 年前后更名）</td><td>港交所年报</td></tr>
+<tr><td>"广东民办义务教育 276 万在校生都是市场化盘子"</td><td><b>✗ 虚高约 5 倍</b>：其中 222.51 万是政府购买学位，纯市场化约 54 万</td><td>广东省 2024 教育统计公报（一手）</td></tr>
+</table>
+</div>
+</section>
+<!-- ============ 9 数据缺口 ============ -->
+<section id="c9">
+<h2 class="sec">9 ｜ 数据缺口与下一步</h2>
+<div class="card">
+<ul class="tight">
+<li><b>代理商自身数据（最重要缺口）</b>：其托管校清单、合同底稿、财务、实控人信用——本次调研全部基于公开信息，<b>对方的一切声称均未核验</b>。拿到材料后可做针对性核查。</li>
+<li><b>托管行业总量无官方统计</b>：全国托管学校总数、托管方数量无权威口径；建议后续用"政府采购网 · 公办学校托管 · 中标"口径另行摸底。</li>
+<li><b>无弗若斯特沙利文级细分测算</b>：如需正式市场规模数据（融资/董事会用途），建议购买定制数据。</li>
+<li><b>学费比例分成的统一区间缺失</b>：公开渠道仅有机制描述，精确区间需调取真实合同底稿或行业访谈。</li>
+<li><b>分类登记完成率三省均无官方汇总</b>：直接影响标的法人属性判断，需逐校查登记状态。</li>
+<li><b>海亮私有化后财务全貌缺失</b>：管理输出收入、单价、利润率无公开数据。</li>
+<li><b>若告知代理商业务所在省份与其公司名</b>，可追加：该公司工商/涉诉/实控人穿透核查 + 该省托管备案实操细则。</li>
+</ul>
+</div>
+</section>
+<!-- ============ 10 附录 ============ -->
+<section id="c10">
+<h2 class="sec">附录 ｜ 方法与原始文件</h2>
+<div class="card">
+<p style="font-size:13.5px"><b>方法</b>：6 个独立调研模块并行执行（政策合规 / 行业大盘 / 竞争格局 / 交易结构 / 重点省份 / SaaS 机会），主调回收后做跨模块互证与冲突仲裁。信源三档：一手（法规原文/年报/判决书/政府文件）、二手（券商研报/权威媒体）、估算（推算，标注逻辑）；软文与聚合站一律降权。各模块末尾附完整信源清单（170+ 条，含 URL）。</p>
+<table>
+<tr><th>原始文件</th><th>内容</th></tr>
+<tr><td class="strike-note">research/01-policy-compliance.md</td><td>政策与合规红线：法规条款原文、学段差异、判例、分类登记、2024-2026 动态</td></tr>
+<tr><td class="strike-note">research/02-market-business-model.md</td><td>行业大盘与商业模式：业态分类、规模测算、收费结构、发展历程、供需分析</td></tr>
+<tr><td class="strike-note">research/03-competitive-landscape.md</td><td>竞争格局：四类玩家清单与画像、海亮/天立标杆深拆、暴雷案例库</td></tr>
+<tr><td class="strike-note">research/04-deal-structure.md</td><td>交易结构：合同结构判例、托管方财务、合作先例、五种结构对比、20 条尽调清单</td></tr>
+<tr><td class="strike-note">research/05-provinces.md</td><td>重点省份：浙江/广东/河南规模、地方规定、案例、松紧度（42 条信源）</td></tr>
+<tr><td class="strike-note">research/06-saas-opportunity.md</td><td>SaaS 机会：客户画像、案例、市场规模、合作阶梯、谈判 20 问</td></tr>
+</table>
+<p class="footnote">免责说明：本报告基于 2026-10-08 前公开信息，供内部决策参考，不构成法律意见或投资建议；涉及具体交易结构请咨询执业律师。标注"估算"的数据不应直接用于对外引用。</p>
+</div>
+</section>
+</div>
+</body>
+</html>

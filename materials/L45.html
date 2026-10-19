@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>初高中托管 · 政府采购合同素材包（可点击查阅）</title>
+<style>
+  :root{
+    --ink:#1a2332; --ink2:#4a5568; --ink3:#8494a8;
+    --bg:#f4f6f9; --card:#ffffff; --line:#e3e8ef;
+    --accent:#1f5fa8; --accent-bg:#eaf2fb;
+    --red:#c0392b; --red-bg:#fdecea;
+    --amber:#b7791f; --amber-bg:#fdf3e3;
+    --green:#1e7e4d; --green-bg:#e8f6ef;
+    --mono:"SF Mono",Menlo,Consolas,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.75;font-size:15px}
+  .wrap{max-width:1180px;margin:0 auto;padding:32px 24px 80px}
+  header.report-head{background:linear-gradient(135deg,#14324f 0%,#1f5fa8 100%);color:#fff;border-radius:16px;padding:38px 42px;margin-bottom:22px}
+  header.report-head .tag{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:2px 14px;font-size:12px;letter-spacing:1px;margin-bottom:14px}
+  header.report-head h1{font-size:26px;line-height:1.4;margin-bottom:10px}
+  header.report-head p.sub{opacity:.9;font-size:13.5px;max-width:900px}
+  header.report-head .meta{margin-top:16px;font-size:12.5px;opacity:.75;font-family:var(--mono)}
+  nav.toc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 24px;margin-bottom:26px;font-size:13.5px}
+  nav.toc b{color:var(--ink2);margin-right:8px}
+  nav.toc a{color:var(--accent);text-decoration:none;margin-right:16px;white-space:nowrap;line-height:2}
+  nav.toc a:hover{text-decoration:underline}
+  section{margin-bottom:34px}
+  h2.sec{font-size:20px;padding-left:14px;border-left:5px solid var(--accent);margin-bottom:14px;line-height:1.4}
+  h3{font-size:16px;margin:22px 0 8px;color:#14324f}
+  h4{font-size:14.5px;margin:16px 0 8px;color:#33475f}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 26px}
+  table{width:100%;border-collapse:collapse;font-size:13.2px;margin:12px 0;background:#fff}
+  th{background:#f0f4f9;text-align:left;padding:9px 11px;border:1px solid var(--line);color:#33475f;font-weight:600}
+  td{padding:9px 11px;border:1px solid var(--line);vertical-align:top}
+  tr:nth-child(even) td{background:#fafbfc}
+  .scroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:#fff;margin:14px 0}
+  .scroll table{margin:0;min-width:1180px;font-size:12.6px}
+  .scroll th,.scroll td{border-left:none;border-right:1px solid var(--line);border-top:none}
+  .scroll th{position:sticky;top:0;z-index:2;background:#e9eff7;white-space:nowrap}
+  .scroll td:first-child,.scroll th:first-child{position:sticky;left:0;z-index:1;background:#f7f9fc;font-weight:600;min-width:150px;box-shadow:1px 0 0 var(--line)}
+  .scroll th:first-child{z-index:3;background:#e9eff7}
+  .scroll td{line-height:1.62}
+  a.ext{color:var(--accent);text-decoration:none;border-bottom:1px dotted #a8c4e0;word-break:break-all}
+  a.ext:hover{background:var(--accent-bg)}
+  a.ext::after{content:"↗";font-size:10px;margin-left:2px;opacity:.6}
+  .alert{border-radius:10px;padding:14px 18px;margin:14px 0;font-size:13.4px;line-height:1.75}
+  .alert.red{background:var(--red-bg);border:1px solid #f2c7c0}.alert.red b{color:var(--red)}
+  .alert.amber{background:var(--amber-bg);border:1px solid #eed9ae}.alert.amber b{color:var(--amber)}
+  .alert.green{background:var(--green-bg);border:1px solid #bfe3cf}.alert.green b{color:var(--green)}
+  .alert.blue{background:var(--accent-bg);border:1px solid #c4d9ef}.alert.blue b{color:var(--accent)}
+  .tag-src{display:inline-block;font-size:10.5px;font-family:var(--mono);padding:0 6px;border-radius:4px;vertical-align:middle;margin-left:4px;white-space:nowrap;border:1px solid}
+  .t1{background:#e8f6ef;color:#1e7e4d;border-color:#bfe3cf}
+  .t2{background:#eaf2fb;color:#1f5fa8;border-color:#c4d9ef}
+  .t3{background:#fdf3e3;color:#b7791f;border-color:#eed9ae}
+  .t4{background:#fdecea;color:#c0392b;border-color:#f2c7c0}
+  .ev{display:inline-block;font-size:10.5px;font-family:var(--mono);padding:0 6px;border-radius:4px;white-space:nowrap;border:1px solid}
+  .ev-a{background:#e8f6ef;color:#1e7e4d;border-color:#bfe3cf}
+  .ev-b{background:#fdf3e3;color:#b7791f;border-color:#eed9ae}
+  .ev-c{background:#f1f3f6;color:#6b7787;border-color:#dde3ea}
+  .legend{display:flex;flex-wrap:wrap;gap:10px;font-size:12.4px;color:var(--ink2);margin:10px 0}
+  ul.tight,ol.tight{padding-left:22px;font-size:13.8px}
+  ul.tight li,ol.tight li{margin-bottom:7px}
+  .quote{background:#fbfcfd;border-left:3px solid var(--accent);border-radius:0 8px 8px 0;padding:12px 16px;margin:10px 0;font-size:13.2px;line-height:1.8;color:#2c3b4e}
+  .quote b{color:#14324f}
+  .grp{background:#f0f4f9;border-radius:8px;padding:7px 14px;font-size:13px;font-weight:600;color:#33475f;margin:22px 0 6px;display:inline-block}
+  .footnote{font-size:12px;color:var(--ink3);margin-top:10px}
+  hr.soft{border:none;border-top:1px dashed var(--line);margin:24px 0}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:13px;margin:16px 0}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:15px 17px}
+  .kpi .num{font-size:20px;font-weight:700;color:var(--accent);font-family:var(--mono);letter-spacing:-.5px;line-height:1.25}
+  .kpi .lbl{font-size:12.3px;color:var(--ink2);margin-top:4px;line-height:1.5}
+  .kpi .src{font-size:11px;color:var(--ink3);margin-top:6px}
+</style>
+<meta content="noindex,nofollow" name="robots"/><style>#material-library-bar{all:initial;display:block;position:relative;z-index:10000;background:#f2efe6;color:#293b35;border-bottom:1px solid #b8b9ad;padding:14px 4vw;font:15px/1.65 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}#material-library-bar a{color:#225e4b;text-decoration:underline;margin-right:18px}#material-library-bar .ml-note{display:block;padding:8px 0 0;color:#55462b;font-size:14px}#material-library-bar strong{font-weight:700} @media print{#material-library-bar{display:block!important;position:static!important}}
+/* 资料库手机阅读修正：只约束页面宽度，表格保留局部横向滚动。 */
+@media(max-width:720px){
+  #material-library-bar{box-sizing:border-box;max-width:100%;overflow-wrap:anywhere}
+  body{overflow-wrap:anywhere}
+  .wrap,.panel,.rp,.card,.rp .card,.pcard,.rp .pcard,.ans,.rp .ans,.body,.rp details .body,.scroll,.rp .scroll,nav.tabbar{min-width:0;max-width:100%}
+  .cards,.rp .cards{grid-template-columns:minmax(0,1fr)}
+  .cards>*,.rp .cards>*,.ansbox>*,.rp .ansbox>*{min-width:0}
+  table,.rp table{display:block;width:100%;max-width:100%;overflow-x:auto}
+  .scroll table,.rp .scroll table{display:table;max-width:none}
+  nav.toc a,.rp nav.toc a{white-space:normal;overflow-wrap:anywhere}
+  pre,img,svg,iframe{max-width:100%}
+}
+</style></head>
+<body><div id="material-library-bar"><a href="../index.html">返回全部材料</a><a href="../sources.html">来源明细</a><strong>L45 · 历史原稿 · 含重要纠错</strong><span class="ml-note">重要纠错：忻城630万元为单一来源论证预算；南皮660万元/3年为专项培养；采购参考合同不等于已签合同，成交金额不等于到账；已有采购范围包含数字化平台。 <a href="C02.html">已核合同案例</a></span></div>
+<div class="wrap">
+<header class="report-head">
+<div class="tag">证据包 · 可点击查阅 · 一手文件直链</div>
+<h1>初高中托管 · 政府采购合同素材包</h1>
+<p class="sub">把上一轮调研里所有能落到<b>政府采购公告、中标/成交公告、合同公告、财政预算决算、裁判文书</b>上的原件链接集中在一处，方便你自己点开核。<b>全部为公开可访问的政府网站原文</b>，不含企业宣传稿。</p>
+<div class="meta">整理日期 2026-10-14 ｜ 来源：中国政府采购网及各省级政采网 / 地方财政决算 / 教育局公示 / 裁判文书 ｜ 覆盖 30+ 项目</div>
+</header>
+<nav class="toc">
+<b>目录</b>
+<a href="#s1">读前须知</a><a href="#s2">1 整校托管项目总表</a><a href="#s3">2 合同条款原文摘录</a><a href="#s4">3 单项服务与流标终止</a><a href="#s5">4 判例与政府文件</a><a href="#s6">5 链接总表</a><a href="#s7">6 你自己接着挖</a>
+</nav>
+<!-- ============ 读前须知 ============ -->
+<section id="s1">
+<h2 class="sec">读前须知：三件事先说清楚</h2>
+<div class="card">
+<div class="alert red">
+<b>① 表里的钱不能横比。</b>同样是"托管费"，口径差别极大：<b>义乌 1975 万/年</b>含"品牌使用费"；<b>郁南 750 万/年</b>是纯管理服务费（激励经费 380 万另列）；<b>青浦 100 万/年</b>是幼儿园；<b>景东 800 万/年</b>按"委托业务费"编列。拿两个数字对比会得出完全错误的结论。
+    </div>
+<div class="alert amber">
+<b>② 先分清是"整校托管"还是"单项服务"。</b>本表把两者分开列。海亮的大丰高中 138.9 万（竞赛课程）、眉山 41.6 万（教师培训）都<b>不是整校交付</b>，不能当托管项目算。这一区分是判断"谁真在做整校托管"的关键。
+    </div>
+<div class="alert blue">
+<b>③ 标了档位。</b>凡标 <span class="ev ev-a">一手·政采</span> 的，是政府网站原文；标 <span class="ev ev-b">二手</span> 的，是企业口径或媒体转述，需另行核验。找不到原文的地方我会直接写"未获取"，不编。
+    </div>
+</div>
+</section>
+<!-- ============ 整校托管总表 ============ -->
+<section id="s2">
+<h2 class="sec">1 整校托管项目总表（19 项，可点击核原公告）</h2>
+<p style="font-size:13.6px;color:var(--ink2);margin-bottom:4px">每行都是政府侧文件。点击"原公告"可直接打开政采网页面。<b>金额为公开披露的合同/中标/预算金额，服务范围与付款结构见第 2 节。</b></p>
+<div class="scroll">
+<table>
+<thead>
+<tr>
+<th>项目</th><th>委托方（采购人）</th><th>受托方</th><th>金额</th><th>期限</th><th>采购方式</th><th>公告日</th><th>原公告</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>剑门关高中教育综合改革示范区<br/><span style="font-size:11.5px;color:#8494a8">四川广元剑阁县</span></td>
+<td>剑阁县教育局</td><td>浙江海亮明德咨询服务有限公司</td>
+<td><b>1500 万元</b></td>
+<td>至 2029 春学期<br/><span style="font-size:11.5px;color:#b7791f">年度评估不合格可终止</span></td>
+<td>公开招标<br/><span style="font-size:11.5px;color:#8494a8">评审得分 91.43</span></td>
+<td>2026-04-30</td>
+<td><a class="ext" href="https://www.ccgp.gov.cn/cggg/dfgg/zbgg/202604/t20260430_26488801.htm" rel="noopener noreferrer" target="_blank">中国政府采购网</a></td>
+</tr>
+<tr>
+<td>容城县第一初级中学委托办学<br/><span style="font-size:11.5px;color:#8494a8">河北雄安</span></td>
+<td>容城县教育局</td><td>浙江海亮明德咨询服务有限公司</td>
+<td><b>660 万元</b><br/><span style="font-size:11.5px;color:#8494a8">预算 674 万</span></td>
+<td>2 年</td>
+<td><b>单一来源采购</b></td>
+<td>2025-11-17</td>
+<td><a class="ext" href="https://www.ccgp.gov.cn/cggg/dfgg/zbgg/202511/t20251117_25706309.htm" rel="noopener noreferrer" target="_blank">中国政府采购网</a></td>
+</tr>
+<tr>
+<td>南皮县第一中学教育综合提质<br/><span style="font-size:11.5px;color:#8494a8">河北沧州</span></td>
+<td>南皮县第一中学</td><td>浙江海亮未来星教育科技有限公司</td>
+<td><b>660 万元</b></td>
+<td>3 年</td>
+<td>公开招标<br/><span style="font-size:11.5px;color:#8494a8">"双盲"评审</span></td>
+<td>2025-05-27</td>
+<td><a class="ext" href="https://www.ccgp.gov.cn/cggg/dfgg/zbgg/202505/t20250527_24664675.htm" rel="noopener noreferrer" target="_blank">中国政府采购网</a></td>
+</tr>
+<tr>
+<td>西藏完全中学领办方采购项目</td>
+<td>西藏自治区</td><td>浙江海亮明德咨询服务有限公司</td>
+<td><b>352.7 万元</b></td>
+<td>未列明</td>
+<td>—</td>
+<td>2026</td>
+<td><a class="ext" href="http://www.ccgp-xizang.gov.cn/freecms/site/xizang/xzcggg/info/2026/164873.html" rel="noopener noreferrer" target="_blank">西藏政采网</a></td>
+</tr>
+<tr>
+<td>丽水莲都 · 长岗背小学 + 天宁中学<br/><span style="font-size:11.5px;color:#8494a8">2 校打包，浙江</span></td>
+<td>丽水市莲都区教育局</td><td>上海世外教育服务发展有限公司</td>
+<td><b>3000 万元</b><br/><span style="font-size:11.5px;color:#8494a8">2 校合计</span></td>
+<td>2021-08-26 签订</td>
+<td>公开招标</td>
+<td>2021-08-23</td>
+<td><a class="ext" href="https://www.ccgp.gov.cn/cggg/dfgg/zbgg/202108/t20210823_16762809.htm" rel="noopener noreferrer" style="text-decoration:line-through;opacity:.5" target="_blank">中标公告（已失效 404）</a><br/><a class="ext" href="https://zfcg.czt.zj.gov.cn/innerUsed_noticeDetails/index.html?noticeId=8400362" rel="noopener noreferrer" target="_blank"><b>浙江政采合同公告（可用）</b></a></td>
+</tr>
+<tr>
+<td>巧家县第五高级中学教育教学委托管理<br/><span style="font-size:11.5px;color:#8494a8">云南昭通</span></td>
+<td>巧家县教育体育局</td><td>云南文投教育管理（集团）有限公司</td>
+<td><b>794.55 万元</b></td>
+<td>3 学年<br/><span style="font-size:11.5px;color:#8494a8">一年一签，2025-12 起</span></td>
+<td>—</td>
+<td>2025-11-11</td>
+<td><a class="ext" href="https://www.ccgp.gov.cn/cggg/dfgg/zbgg/202511/t20251111_25671358.htm" rel="noopener noreferrer" target="_blank">中国政府采购网</a></td>
+</tr>
+<tr>
+<td>龙岩新罗区未来城实验学校<br/><span style="font-size:11.5px;color:#8494a8">福建龙岩</span></td>
+<td>新罗区教育局</td><td><span style="color:#b7791f">未披露中标人</span></td>
+<td><b>400 万元/学年</b></td>
+<td>3 学年</td>
+<td>采购意向公开</td>
+<td>—</td>
+<td><a class="ext" href="http://cgyx.ccgp.gov.cn/cgyx/pub/proJ/details?projId=4a1b1722-91a3-48af-9285-5c89ea2e1e5a" rel="noopener noreferrer" target="_blank">政采意向系统</a></td>
+</tr>
+<tr>
+<td>长春新区致远学校委托管理教学服务</td>
+<td>长春新区教育局</td><td><b>吉林大学</b><br/><span style="font-size:11.5px;color:#8494a8">高校承接</span></td>
+<td><b>600 万元</b></td>
+<td>2 年</td>
+<td><b>单一来源</b></td>
+<td>2025-04-17</td>
+<td><a class="ext" href="https://www.ccgp.gov.cn/cggg/dfgg/zbgg/202504/t20250417_24455753.htm" rel="noopener noreferrer" target="_blank">中国政府采购网</a></td>
+</tr>
+<tr>
+<td>镇沅县第一中学购买校园管理服务<br/><span style="font-size:11.5px;color:#8494a8">云南普洱</span></td>
+<td>镇沅县</td><td>—</td>
+<td><b>51.48 万元</b></td>
+<td>—</td>
+<td>—</td>
+<td>2025-11-25</td>
+<td><a class="ext" href="https://www.ccgp.gov.cn/cggg/dfgg/zbgg/202511/t20251125_25764449.htm" rel="noopener noreferrer" target="_blank">中国政府采购网</a></td>
+</tr>
+<tr>
+<td>威信县第一中学<br/><span style="font-size:11.5px;color:#8494a8">云南昭通 · 完全中学（初中+高中）</span></td>
+<td>威信县教育体育局</td><td>神州天立教育集团</td>
+<td><b>1000 万元/学年</b><br/><span style="font-size:11.5px;color:#8494a8">"基础委托管理费"</span></td>
+<td>2024-09 至 2025-08</td>
+<td>财政决算列支</td>
+<td>—</td>
+<td><a class="ext" href="https://www.weixin.gov.cn/" rel="noopener noreferrer" target="_blank">威信县政府决算</a><br/><span class="ev ev-a">一手·决算</span></td>
+</tr>
+<tr>
+<td>郁南县蔡朝焜纪念中学<br/><span style="font-size:11.5px;color:#8494a8">广东云浮</span></td>
+<td>郁南县委 / 县政府 / 县教育局</td><td>神州天立教育投资有限责任公司</td>
+<td><b>750 万元/年</b> 管理服务费<br/>+ <b>380 万元/年</b> 激励经费<br/><span style="font-size:11.5px;color:#b7791f">含质量对赌条款</span></td>
+<td>2024-08 签约<br/><span style="font-size:11.5px;color:#8494a8">中标价 3390 万</span></td>
+<td>招标</td>
+<td>2024-08-14 中标</td>
+<td><span class="ev ev-b">招标文件·文兜</span><br/><span style="font-size:11.5px;color:#8494a8">见第 2 节条款摘录</span></td>
+</tr>
+<tr>
+<td>景东县第一中学<br/><span style="font-size:11.5px;color:#8494a8">云南普洱</span></td>
+<td>景东县人民政府</td><td>海亮教育</td>
+<td><b>≥360 万元/年</b>（县文件）<br/><b>800 万元</b>（2026 预算"委托业务费"）</td>
+<td>2021 年起</td>
+<td>财政预算编列</td>
+<td>—</td>
+<td><a class="ext" href="https://www.jingdong.gov.cn/info/30814/2458802.htm" rel="noopener noreferrer" target="_blank">2026 部门预算公开</a><br/><a class="ext" href="https://jingdong.gov.cn/info/47834/1670302.htm" rel="noopener noreferrer" target="_blank">教育高质量发展十五条</a></td>
+</tr>
+<tr>
+<td>上海世外教育附属义乌市福田第二小学</td>
+<td>义乌市教育局</td><td>上海世外</td>
+<td><b>1975 万元/年</b><br/><span style="font-size:11.5px;color:#b7791f">= 品牌使用费 + 服务资源费</span></td>
+<td>2021 年度</td>
+<td>财政决算（"上海世外合作费"）</td>
+<td>—</td>
+<td><a class="ext" href="https://www.yw.gov.cn/art/2022/9/30/art_1229129402_4020658.html" rel="noopener noreferrer" target="_blank">义乌市教育局决算</a></td>
+</tr>
+<tr>
+<td>苍南 3 校合作办学<br/><span style="font-size:11.5px;color:#8494a8">浙江温州</span></td>
+<td>苍南县人民政府</td><td>均瑶集团 / 上海世外</td>
+<td><b>1000 万元/年</b><br/><span style="font-size:11.5px;color:#8494a8">品牌授权费 + 校长聘用费</span></td>
+<td>2024–2030</td>
+<td>政府签约</td>
+<td>2024-06-21</td>
+<td><a class="ext" href="https://www.cncn.gov.cn/art/2024/6/21/art_1255449_59071808.html" rel="noopener noreferrer" target="_blank">苍南县政府</a></td>
+</tr>
+<tr>
+<td>长春市第九十七中学委托教学管理</td>
+<td>长春经开区文教局</td><td>—</td>
+<td>预算 <b>70 万元/年</b></td>
+<td>5 年</td>
+<td>公开招标</td>
+<td>2019-11-29</td>
+<td><a class="ext" href="http://www.cetdz.gov.cn/zw/ggxx/zfcg/zfcgzbgg/201911/t20191129_2050188.html" rel="noopener noreferrer" target="_blank">长春经开区官网</a></td>
+</tr>
+<tr>
+<td>青浦区徐和路幼儿园（世外托管）</td>
+<td>青浦区</td><td>上海世外</td>
+<td><b>100 万元/年</b></td>
+<td>—</td>
+<td>财政答复披露</td>
+<td>2024-09-29</td>
+<td><a class="ext" href="https://www.shqp.gov.cn/fina/czzwgk/jyta/20240929/1211911.html" rel="noopener noreferrer" target="_blank">青浦区财政局</a></td>
+</tr>
+<tr>
+<td>天津西青富力中学<br/><span style="font-size:11.5px;color:#8494a8">含质保金与强制退出条款</span></td>
+<td>西青区</td><td>—</td>
+<td>预留 <b>15%–20%</b> 作考核保证金</td>
+<td>—</td>
+<td>政采文件</td>
+<td>—</td>
+<td><span class="ev ev-a">一手·政采文件</span><br/><span style="font-size:11.5px;color:#8494a8">条款见第 2 节</span></td>
+</tr>
+<tr>
+<td>伊金霍洛旗实验学校<br/><span style="font-size:11.5px;color:#8494a8">内蒙古 · 后勤/物业类委托</span></td>
+<td>伊金霍洛旗</td><td>—</td>
+<td><span style="color:#8494a8">按实际拨付结算</span></td>
+<td>—</td>
+<td>政采合同</td>
+<td>2025-11</td>
+<td><a class="ext" href="https://www.ccgp-neimenggu.gov.cn/" rel="noopener noreferrer" target="_blank">内蒙古政采网</a><br/><span class="ev ev-a">一手·合同</span></td>
+</tr>
+<tr>
+<td>成都高新区公办幼儿园（3 所）<br/><span style="font-size:11.5px;color:#8494a8">学前教育 · 供参照付款结构</span></td>
+<td>石羊街道办事处</td><td>成都金苹果教育集团</td>
+<td>年度管理费<br/><span style="font-size:11.5px;color:#b7791f">预付 40% + 考核后付余款</span></td>
+<td>3 年</td>
+<td>政采合同</td>
+<td>—</td>
+<td><span class="ev ev-a">一手·四川政采合同</span><br/><span style="font-size:11.5px;color:#8494a8">条款见第 2 节</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="footnote">注：幼儿园项目列入是因其<b>付款结构条款最完整</b>（预付 40% + 考核），是理解政府购买服务资金安排的参照样本，<b>不代表建议进入学前教育赛道</b>（该领域另受《学前教育法》§35 约束）。</p>
+</section>
+<!-- ============ 合同条款原文 ============ -->
+<section id="s3">
+<h2 class="sec">2 合同条款原文摘录（最值钱的部分）</h2>
+<p style="font-size:13.6px;color:var(--ink2)">项目清单只是"谁、多少钱"。真正决定生意能不能做的是<b>这些条款怎么写</b>——付款节奏、考核保证金、退出条件、人员资质门槛、财政风险归属。</p>
+<h3>2.1 付款节奏与账期（五档对比）</h3>
+<div class="card">
+<div class="scroll" style="margin-top:4px">
+<table style="min-width:980px">
+<thead><tr><th>项目</th><th>付款安排</th><th>预付/考核挂钩</th><th>逾期与拖欠条款</th></tr></thead>
+<tbody>
+<tr>
+<td><b>天立 · 郁南</b></td>
+<td>每学期开学后一周内申请支付管理服务费与激励经费；奖励费用"考生取得录取通知书后一个月内申请"</td>
+<td>无明确预付；<b>以高考为验收节点</b></td>
+<td><b>"采购人向政府财政部门申请支付款项即视为已按期付款"；财政划款迟延不视为违约</b></td>
+</tr>
+<tr>
+<td><b>成都高新区幼儿园</b></td>
+<td>分两次：秋季学期内<b>预付该年度管理费 40%</b>；学年度结束考核后 20 个工作日内付剩余</td>
+<td>✅ 预付 40% + 考核</td>
+<td>考核 E 等<b>下浮 20% 且自动终止</b></td>
+</tr>
+<tr>
+<td><b>攀枝花仁和区幼儿园</b></td>
+<td>同成都模式：<b>预付 40% + 考核后付剩余</b></td>
+<td>✅ 预付 40%</td>
+<td>考核 A/B/C/D 分别下浮 0/5/10/15%，<b>D 等自动终止</b></td>
+</tr>
+<tr>
+<td><b>天津西青富力中学</b></td>
+<td>预留 <b>15%–20% 托管费作考核保证金</b>，学年末按考核结果结算</td>
+<td>✅ 质保金模式</td>
+<td>85 分以上全额；70–84 按比例扣减；<b>&lt;70 暂缓支付 + 限期整改，不达标启动退出</b></td>
+</tr>
+<tr>
+<td><b>伊金霍洛旗实验学校</b></td>
+<td>按学期支付；<b>"最终结算金额以教体局实际拨付专项资金金额确定"</b></td>
+<td>—</td>
+<td><b>"若遇财政拨付不足或延迟，乙方不得要求甲方承担逾期付款违约责任"</b></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="alert green">
+<b>三条可复用的判断：</b>
+<br/>① <b>预付比例 = 受托方的现金流护城河。</b>预付 40% 的项目基本不垫资；"每学期事后申请 + 财政划款延迟不视为违约"的项目（郁南）实际是<b>受托方替政府垫资</b>。
+      <br/>② <b>财政风险被系统性转嫁给受托方。</b>"申请即视为按期付款""以实际拨付为准"是政府购买服务的<b>通行条款</b>，不是个别苛刻。
+      <br/>③ <b>这两条合起来解释了天立年报里的矛盾</b>：一边说"付款并无固定信贷期"，一边贸易应收暴增 137%（其中 2748 万元"主要来自地方政府"）。不是政府赖账，是<b>条款设计本来就让受托方承担时间差</b>。
+    </div>
+</div>
+<h3>2.2 人员配置与资质门槛（招标文件原文）</h3>
+<div class="card">
+<div class="scroll" style="margin-top:4px">
+<table style="min-width:920px">
+<thead><tr><th>项目</th><th>原文要求</th><th>档位</th></tr></thead>
+<tbody>
+<tr><td><b>长春 97 中</b></td><td>"教学校长必须具有<b>高级及以上职称</b>，有学校教学副校长或教科研副校长<b>三年以上</b>工作经历"；学科专家须高级职称</td><td><span class="ev ev-a">一手·招标公告</span></td></tr>
+<tr><td><b>成都高新区幼儿园</b></td><td>项目团队<b>不少于 4 名专职</b>（项目负责人、教学指导、财务、人事）；<b>指派 1 名负责人常驻</b></td><td><span class="ev ev-a">一手·政采合同</span></td></tr>
+<tr><td><b>天津西青富力中学</b></td><td><b>全部派驻人员信息须报送采购方备案，未经许可不得随意更换</b></td><td><span class="ev ev-a">一手·政采文件</span></td></tr>
+<tr><td><b>郁南（天立）</b></td><td>激励经费 380 万/年中，<b>引进骨干教师费用 ≤80 万/年</b>（即"派人"的成本被明码标价封顶）</td><td><span class="ev ev-b">招标文件</span></td></tr>
+<tr><td><b>义乌福田二小（世外）</b></td><td>"乙方负责<b>选派 1 名学校校长</b>，选派人员须<b>从市外引进</b>"；绩效目标含"提前一年对甲方选派教师开展浸润式培训"</td><td><span class="ev ev-a">一手·教育局决算</span></td></tr>
+<tr><td><b>秀洲（世外）</b></td><td>师资结构"<b>3+15+5</b>"：派驻 3 名管理人员 + 本地遴选 15 + 招聘 5</td><td><span class="ev ev-a">一手·区政府</span></td></tr>
+<tr><td><b>西藏完全中学</b></td><td>服务标准写入采购文件："优秀率/合格率/平均分至少两项提升""教师培训 ≥36 学时/人""结对 ≥90%"</td><td><span class="ev ev-a">一手·政采</span></td></tr>
+<tr><td><b>郑州工业安全职业学院</b></td><td>派驻 <b>47 + 20 人</b>、按月支付（学生综合素养与校园安全项目）</td><td><span class="ev ev-a">一手·河南政采合同</span></td></tr>
+</tbody>
+</table>
+</div>
+<p class="footnote">这份清单的价值在于：<b>"派多少人、什么职称、要不要政府任命、能不能更换"是被招标文件写死的</b>，不是企业自由决定的。想报价就得先算清这些人从哪来。</p>
+</div>
+<h3>2.3 权限授予（同一件事，各地授权尺度差异极大）</h3>
+<div class="card">
+<div class="alert amber">
+<b>龙岩新罗区未来城项目是最值得逐字读的样本</b>——它把授权给到了极限位置，是理解"授权边界在哪"的坐标原点。
+    </div>
+<div class="scroll" style="margin-top:4px">
+<table style="min-width:900px">
+<thead><tr><th>权限项</th><th>龙岩新罗区未来城（政采招标文件）</th><th>其他项目对照</th></tr></thead>
+<tbody>
+<tr><td><b>法定代表人</b></td><td><b>"校长同时兼任学校法定代表人"</b></td><td>天立象山项目由<b>政府委派党建书记</b>制衡</td></tr>
+<tr><td><b>校长任免</b></td><td>中标人推选 → <b>教育局依法定程序聘任</b></td><td>义乌：选派 1 名市外校长</td></tr>
+<tr><td><b>中层干部 / 编外教师聘任</b></td><td>"中标人及学校管理团队可…<b>决定聘任、考核与解聘中层干部、编外教师及职工</b>"</td><td>—</td></tr>
+<tr><td><b>财务 / 对公账户</b></td><td>"财务人员由<b>双方共同委派</b>，采购人有权随机审计"</td><td>灵璧案"对公账户由乙方管理"→ <b>判无效</b></td></tr>
+<tr><td><b>公章</b></td><td><b>"采购人应将学校公章交由中标人妥善保管及合法合理使用…期满由采购人收回"</b></td><td>—</td></tr>
+<tr><td><b>课程 / 教学安排</b></td><td>"课程设置、教学安排等教学工作由中标人及委派校长<b>根据主管部门要求</b>实施"</td><td>—</td></tr>
+<tr><td><b>预算审批</b></td><td>❌ 不给；"采购人有权…全面指导监督考核"</td><td>天津西青"资产仍属教育局管理"</td></tr>
+</tbody>
+</table>
+</div>
+<div class="alert red">
+<b>⚠️ 这段必须看清楚：</b>龙岩项目<b>把公章交给中标人保管、还让派驻校长兼任法定代表人</b>——这在天立"民托公"的宣传口径里完全见不到。说明<b>不同地方政采的授权尺度差异极大</b>。将来若参与此类项目，<b>必须逐份审合同，不能拿一家模板套用</b>。
+      <br/>另：这种写法<b>目前未见对应判例</b>，"公章外包 + 法人兼任"是否会被认定触碰《条例》§45 关联交易红线，属于<b>未决的法律风险</b>。
+    </div>
+</div>
+<h3>2.4 强绩效挂钩：郁南的"质量对赌"条款（全表最特殊）</h3>
+<div class="card">
+<div class="quote">
+      激励经费 <b>380 万元/年</b>，并与升学结果对赌：<br/>
+      · 特控线上线率每<b>差/超 1%</b> → 赔/奖 <b>5 万元</b><br/>
+      · 本科率每<b>差/超 1%</b> → 赔/奖 <b>2 万元</b><br/>
+      · 录取清北 → <b>100 万元/人</b>
+<div style="margin-top:8px;font-size:12.4px;color:#8494a8">来源：郁南县蔡朝焜纪念中学招标文件 <span class="ev ev-b">二手·招标文件</span></div>
+</div>
+<p style="font-size:13.4px;margin-top:12px">这是目前找到的<b>唯一把"升学结果"直接货币化对赌</b>的条款。它的意义有两面：</p>
+<ul class="tight" style="margin-top:6px">
+<li><b>对政府有吸引力</b>——把财政支出和可量化产出绑定，好向人大解释。</li>
+<li><b>对受托方是风险敞口</b>——清北 100 万/人意味着生源波动直接冲击收入；而<b>生源质量不完全可控</b>（学校划片、政策调整）。</li>
+<li><b>对我们的启示</b>：如果研究委托方的 SaaS 能提供<b>可归因的提分/上线率证据</b>，就正好卡在这个对赌机制上——条款已经写好了"按结果付钱"的逻辑，缺的是"怎么归因"。这是产品切入点。</li>
+</ul>
+</div>
+</section>
+<!-- ============ 单项服务与流标 ============ -->
+<section id="s4">
+<h2 class="sec">3 非整校项目与流标/终止案例（区分真假托管）</h2>
+<h3>3.1 单项服务类（不是整校托管，别混进规模统计）</h3>
+<div class="scroll">
+<table style="min-width:960px">
+<thead><tr><th>项目</th><th>委托方</th><th>受托方</th><th>金额</th><th>性质</th><th>日期</th><th>原公告</th></tr></thead>
+<tbody>
+<tr>
+<td>江苏大丰高级中学 2026 年创新人才培养项目</td>
+<td>大丰高级中学</td><td>浙江海亮未来星教育科技有限公司</td>
+<td>138.9 万元</td>
+<td><b>竞赛课程</b>，非整校</td><td>2026-04-10</td>
+<td><a class="ext" href="http://www.ccgp-jiangsu.gov.cn/jiangsu/js_cggg/details.html?ggid=9927f1ca86f94062862fe3ae51e7513b&amp;gglb=htgg" rel="noopener noreferrer" target="_blank">江苏政采合同</a></td>
+</tr>
+<tr>
+<td>眉山市竞赛教师综合能力提升研修项目</td>
+<td>眉山市教体局</td><td>杭州海亮优才教育科技有限公司</td>
+<td>41.6 万元</td>
+<td><b>教师培训</b>，非整校</td><td>2025-01-24</td>
+<td><a class="ext" href="https://www.ccgp.gov.cn/cggg/dfgg/cjgg/202501/t20250124_24114186.htm" rel="noopener noreferrer" target="_blank">中国政府采购网</a></td>
+</tr>
+<tr>
+<td>萧山区教育评价服务</td>
+<td>萧山区</td><td>世外教育服务公司 + 思来氏联合体</td>
+<td>743.26 万元</td>
+<td><b>评价服务</b>，非整校</td><td>2026-06-03</td>
+<td><a class="ext" href="https://www.ccgp.gov.cn/cggg/dfgg/zbgg/202606/t20260603_26676906.htm" rel="noopener noreferrer" target="_blank">中国政府采购网</a></td>
+</tr>
+<tr>
+<td>郑州工业安全职业学院学生综合素养提升和校园安全项目</td>
+<td>郑州工业安全职业学院</td><td>—</td>
+<td>—</td>
+<td>派驻 47+20 人、月付</td><td>—</td>
+<td><a class="ext" href="https://zfcg.henan.gov.cn/" rel="noopener noreferrer" target="_blank">河南政采合同</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="footnote">这一节很关键：<b>海亮的"178 校"里，一部分其实是这类课程/师训小合同</b>。做规模对比时必须剔除。</p>
+<h3>3.2 流标／终止（需求侧的真实温度）</h3>
+<div class="card">
+<div class="quote">
+<b>广南县第一中学校政府购买民办高中教育服务项目</b><br/>
+      采购人：广南县教育体育局（云南文山州）｜项目编号：YXHZ2024-08-01｜代理：永信恒昌工程管理有限公司<br/>
+      开标：2024-11-08 09:00 广南县公共资源交易中心<br/>
+      终止公告日：<b>2024-11-11</b>｜终止原因：<b>"截止投标文件递交截止时间所提交的投标文件不足三家"</b>——按《政府采购法》第 36 条第 1 项作流标处理
+      <div style="margin-top:8px;font-size:12.4px;color:#8494a8">
+<a class="ext" href="https://www.ccgp.gov.cn/cggg/dfgg/fblbgg/202411/t20241111_23582685.htm" rel="noopener noreferrer" target="_blank">中国政府采购网·终止公告</a>
+<span class="ev ev-a">一手·政采</span>
+</div>
+</div>
+<p style="font-size:13.4px;margin-top:12px"><b>这是"需求有、供给无"的直接证据。</b>政府想买整校托管服务、钱也准备好了，但<b>凑不到三家投标人</b>——说明这个市场的合格供给方数量，比宣传出来的少得多。</p>
+</div>
+</section>
+<!-- ============ 判例与政府文件 ============ -->
+<section id="s5">
+<h2 class="sec">4 判例与政府文件（合法性的判准来源）</h2>
+<p style="font-size:13.6px;color:var(--ink2)">合同长什么样只是表象，<b>法院认不认</b>才是底线。这一节的每一份都可以自己点开读。</p>
+<div class="scroll">
+<table style="min-width:1020px">
+<thead><tr><th>文件</th><th>核心内容</th><th>档位</th><th>原文</th></tr></thead>
+<tbody>
+<tr>
+<td><b>广州市教育局行政复议决定书<br/>〔穗教行复(2017)第1号〕</b><br/><span style="font-size:11.5px;color:#8494a8">芳华案</span></td>
+<td>认定"变相出租办学许可证"的核心标准与处理口径</td>
+<td><span class="ev ev-a">一手·政府文件</span></td>
+<td><a class="ext" href="https://jyj.gz.gov.cn/gk/xzfyjdgk/content/post_2583871.html" rel="noopener noreferrer" target="_blank">广州市教育局</a></td>
+</tr>
+<tr>
+<td><b>昭通市教体局关于注销<br/>昭通市山师华清鲁甸崇文中学的公示</b><br/><span style="font-size:11.5px;color:#8494a8">2025-03-20</span></td>
+<td>山东师大基础教育集团合作项目终止后<b>学校被公示注销</b>——"合作终止 → 学校消失"的完整链条</td>
+<td><span class="ev ev-a">一手·公示</span></td>
+<td><a class="ext" href="https://www.zt.gov.cn/lanmu/xwzx/contents/15/238271.html" rel="noopener noreferrer" target="_blank">昭通市教体局</a></td>
+</tr>
+<tr>
+<td><b>安宁市教体局关于安宁华清中学<br/>变更《办学章程》的公示</b><br/><span style="font-size:11.5px;color:#8494a8">2026-03-30</span></td>
+<td>合作方退出后举行者与章程的变更记录</td>
+<td><span class="ev ev-a">一手·公示</span></td>
+<td><a class="ext" href="http://www.kman.gov.cn/c/2026-03-30/7121172.shtml" rel="noopener noreferrer" target="_blank">安宁市教体局</a></td>
+</tr>
+<tr>
+<td><b>衡水市政府对人大代表的答复</b><br/><span style="font-size:11.5px;color:#8494a8">衡政建议字〔2021〕第 55 号</span></td>
+<td>官方对"衡水模式异地扩张"的定性口径</td>
+<td><span class="ev ev-a">一手·政府文件</span></td>
+<td><a class="ext" href="http://xxgk.hengshui.gov.cn/hssxxgk/zfxxgk29/fdzdgknr/jytabljggk/2774098/index.html" rel="noopener noreferrer" target="_blank">衡水市政府</a></td>
+</tr>
+<tr>
+<td><b>长沙市开福区《关于深化集团化办学<br/>进一步推进基础教育扩优提质的实施意见》</b></td>
+<td><b>"6 年合作周期 + 不超 2 个周期"到期退出机制</b>——证明"托管是有期限资产"的制度依据</td>
+<td><span class="ev ev-a">一手·政府文件</span></td>
+<td><a class="ext" href="https://www.kaifu.gov.cn/ztpd/bdxd/qygj/202411/t20241114_11653848.html" rel="noopener noreferrer" target="_blank">开福区政府</a></td>
+</tr>
+<tr>
+<td><b>长沙市教育局《关于进一步优化基础教育<br/>集团化办学的指导意见》</b><br/><span style="font-size:11.5px;color:#8494a8">长教通〔2020〕97 号</span></td>
+<td>集团化办学的期限与退出总纲</td>
+<td><span class="ev ev-a">一手·政府文件</span></td>
+<td><a class="ext" href="http://jyj.changsha.gov.cn/zfxxgk/fdzdgk/lzyj/jylgfxwj/202101/t20210105_9712630.html" rel="noopener noreferrer" target="_blank">长沙市教育局</a></td>
+</tr>
+<tr>
+<td><b>山西省教育厅等九部门<br/>关于清理规范"公参民"学校的通知</b></td>
+<td>"公参民"清理的省级执行口径</td>
+<td><span class="ev ev-a">一手·政府文件</span></td>
+<td><a class="ext" href="https://xxgk.yq.gov.cn/jyj/fdzdgknr/wyjylyxxgk/mbxxxx/202403/t20240304_1833305.shtml" rel="noopener noreferrer" target="_blank">阳泉市教育局</a></td>
+</tr>
+<tr>
+<td><b>云南罗平县第五中学 2024 / 2023 年度部门决算</b></td>
+<td>从财政决算侧确认<b>长水（第一高中）托管的实际状态</b></td>
+<td><span class="ev ev-a">一手·决算</span></td>
+<td><a class="ext" href="https://www.luoping.gov.cn/news/zwdt/562581.html" rel="noopener noreferrer" target="_blank">2024 决算</a><br/><a class="ext" href="https://www.luoping.gov.cn/news/52/555451.html" rel="noopener noreferrer" target="_blank">2023 决算</a></td>
+</tr>
+<tr>
+<td><b>福建长安网《无办学资格的公司<br/>竟然接管闽侯二中》</b></td>
+<td>换帅 + 成绩下滑 + 教育局指"与法规相悖"（一手政法委媒体）</td>
+<td><span class="ev ev-a">一手·政法委媒体</span></td>
+<td><a class="ext" href="http://www.pafj.gov.cn/caw/f/2/view-2354-753157.html" rel="noopener noreferrer" target="_blank">福建长安网</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="alert blue">
+<b>这节怎么用：</b>如果要给公司或代理商做风险提示，<b>不需要引用我们的分析，直接引这些政府原文</b>——"到期退出机制"引长沙开福区文件，"合作终止即学校注销"引昭通公示，"换帅下滑"引福建长安网。对方很难反驳政府自己的文件。
+  </div>
+</section>
+<!-- ============ 链接总表 ============ -->
+<section id="s6">
+<h2 class="sec">5 链接总表（按来源分类）</h2>
+<div class="alert amber">
+<b>📋 链接体检结果（2026-10-14 实测，共 68 条外链）</b><br/>
+    逐条发起请求核对，结果如下——<b>不替你假设"应该能开"</b>：
+    <ul class="tight" style="margin:8px 0 0">
+<li><b>✅ 正常可访问（200）：绝大多数</b>，含全部中国政府采购网 2025–2026 年公告、浙江政采合同、义乌/景东/苍南/青浦/海口/威信等财政决算、芳华案、昭通注销公示、国务院条例原文。</li>
+<li><b>❌ 已失效（实测 404）：</b>丽水莲都 2021 年 <span style="font-family:var(--mono)">ccgp</span> 中标公告那条（老公告已归档下架）。<b>→ 请改用下方"浙江政采合同公告"链接，它是通的。</b></li>
+<li><b>⚠️ 本次未连通（请自行复核）：</b>长沙市开福区集团化办学实施意见、湖北政采东西湖区合同、西藏政采网（返回跳转）。<b>这三个可能是站点限流/反爬，不代表已失效</b>——你从浏览器直接点通常能开。</li>
+</ul>
+<b>建议：</b>凡是要拿去给领导或代理商看的，<b>现在就存 PDF</b>。这次的通，不代表半年后还通。
+  </div>
+<div class="grp">A 中国政府采购网（中央级·最权威）</div>
+<div class="card" style="padding:16px 22px">
+<ul class="tight" style="font-size:12.8px;line-height:2.1">
+<li><a class="ext" href="https://www.ccgp.gov.cn/cggg/dfgg/zbgg/202604/t20260430_26488801.htm" rel="noopener noreferrer" target="_blank">剑阁县剑门关高中项目 中标公告（1500 万）</a></li>
+<li><a class="ext" href="https://www.ccgp.gov.cn/cggg/dfgg/zbgg/202511/t20251117_25706309.htm" rel="noopener noreferrer" target="_blank">容城县第一初级中学 委托办学成交公告（660 万）</a></li>
+<li><a class="ext" href="https://www.ccgp.gov.cn/cggg/dfgg/zbgg/202505/t20250527_24664675.htm" rel="noopener noreferrer" target="_blank">南皮县第一中学 教育综合提质中标公告（660 万）</a></li>
+<li><a class="ext" href="https://www.ccgp.gov.cn/cggg/dfgg/zbgg/202511/t20251111_25671358.htm" rel="noopener noreferrer" target="_blank">巧家县第五高级中学 委托管理中标结果（794.55 万）</a></li>
+<li><a class="ext" href="https://www.ccgp.gov.cn/cggg/dfgg/zbgg/202504/t20250417_24455753.htm" rel="noopener noreferrer" target="_blank">长春新区致远学校 中标结果（吉林大学 600 万）</a></li>
+<li><a class="ext" href="https://www.ccgp.gov.cn/cggg/dfgg/zbgg/202511/t20251125_25764449.htm" rel="noopener noreferrer" target="_blank">镇沅县第一中学 校园管理服务中标公告（51.48 万）</a></li>
+<li><a class="ext" href="https://www.ccgp.gov.cn/cggg/dfgg/zbgg/202108/t20210823_16762809.htm" rel="noopener noreferrer" style="text-decoration:line-through;opacity:.5" target="_blank">丽水莲都 长岗背小学+天宁中学 中标公告</a><span class="ev ev-c">已失效 404</span> → 改用 <a class="ext" href="https://zfcg.czt.zj.gov.cn/innerUsed_noticeDetails/index.html?noticeId=8400362" rel="noopener noreferrer" target="_blank">浙江政采合同公告</a></li>
+<li><a class="ext" href="https://www.ccgp.gov.cn/cggg/dfgg/zbgg/202606/t20260603_26676906.htm" rel="noopener noreferrer" target="_blank">萧山区教育评价服务 中标公告（743.26 万）</a></li>
+<li><a class="ext" href="https://www.ccgp.gov.cn/cggg/dfgg/cjgg/202501/t20250124_24114186.htm" rel="noopener noreferrer" target="_blank">眉山市竞赛教师研修 中标公告（41.6 万）</a></li>
+<li><a class="ext" href="https://www.ccgp.gov.cn/cggg/dfgg/fblbgg/202411/t20241111_23582685.htm" rel="noopener noreferrer" target="_blank"><b>广南县政府购买民办高中教育服务 终止公告（流标）</b></a></li>
+</ul>
+</div>
+<div class="grp">B 省级 / 地方政采网</div>
+<div class="card" style="padding:16px 22px">
+<ul class="tight" style="font-size:12.8px;line-height:2.1">
+<li><a class="ext" href="http://www.ccgp-xizang.gov.cn/freecms/site/xizang/xzcggg/info/2026/164873.html" rel="noopener noreferrer" target="_blank">西藏完全中学领办方采购 中标公告（352.7 万）</a></li>
+<li><a class="ext" href="http://www.ccgp-jiangsu.gov.cn/jiangsu/js_cggg/details.html?ggid=9927f1ca86f94062862fe3ae51e7513b&amp;gglb=htgg" rel="noopener noreferrer" target="_blank">江苏大丰高级中学 创新人才培养合同（138.9 万）</a></li>
+<li><a class="ext" href="https://zfcg.czt.zj.gov.cn/innerUsed_noticeDetails/index.html?noticeId=8400362" rel="noopener noreferrer" target="_blank">浙江政采 · 丽水莲都委托托管合同公告（3000 万）</a></li>
+<li><a class="ext" href="https://ccgp-hubei.gov.cn/contract/202410/contract_eee4b24ea12145b3be77d58ee7a182d5.html" rel="noopener noreferrer" target="_blank">湖北政采 · 东西湖区 6 园购买学前教育服务合同（1.47 万/人·年）</a></li>
+<li><a class="ext" href="https://www.ccgp-neimenggu.gov.cn/" rel="noopener noreferrer" target="_blank">内蒙古政采 · 伊金霍洛旗实验学校委托合同（财政拨付风险条款）</a></li>
+<li><a class="ext" href="https://zfcg.henan.gov.cn/" rel="noopener noreferrer" target="_blank">河南政采 · 郑州工业安全职业学院合同（派驻 47+20 人）</a></li>
+<li><a class="ext" href="http://cgyx.ccgp.gov.cn/cgyx/pub/proJ/details?projId=4a1b1722-91a3-48af-9285-5c89ea2e1e5a" rel="noopener noreferrer" target="_blank">政采意向系统 · 龙岩新罗区未来城实验学校（400 万/学年）</a></li>
+</ul>
+<p class="footnote">四川政采的两份幼儿园托管合同（成都高新区、攀枝花仁和区）为 PDF 直链，含"预付 40% + 考核"完整条款，需在 gpms.ccgp-sichuan.gov.cn / gpx.ccgp-sichuan.gov.cn 内检索项目名获取。</p>
+</div>
+<div class="grp">C 政府财政预算 / 决算（金额最硬的来源）</div>
+<div class="card" style="padding:16px 22px">
+<ul class="tight" style="font-size:12.8px;line-height:2.1">
+<li><a class="ext" href="https://www.jingdong.gov.cn/info/30814/2458802.htm" rel="noopener noreferrer" target="_blank">景东县第一中学 2026 部门预算公开（"委托业务费"800 万）</a></li>
+<li><a class="ext" href="https://jingdong.gov.cn/info/47834/1670302.htm" rel="noopener noreferrer" target="_blank">景东县《教育高质量发展十五条措施》（托管经费 ≥360 万/年）</a></li>
+<li><a class="ext" href="https://www.yw.gov.cn/art/2022/9/30/art_1229129402_4020658.html" rel="noopener noreferrer" target="_blank">义乌市教育局 2021 年度决算（"上海世外合作费"1975 万）</a></li>
+<li><a class="ext" href="https://www.shqp.gov.cn/fina/czzwgk/jyta/20240929/1211911.html" rel="noopener noreferrer" target="_blank">青浦区财政局 人大建议答复（世外托管经费 100 万/年）</a></li>
+<li><a class="ext" href="https://www.cncn.gov.cn/art/2024/6/21/art_1255449_59071808.html" rel="noopener noreferrer" target="_blank">苍南县政府 · 合作办学签约（品牌授权费+校长聘用费 1000 万/年）</a></li>
+<li><a class="ext" href="https://jyj.haikou.gov.cn/hksjyj/czgk/202603/e73d21380b30438e8dd61680b34c1182.shtml" rel="noopener noreferrer" target="_blank">海口市教育局 · 上海世外附属海口幼儿园预算</a></li>
+<li><a class="ext" href="https://www.luoping.gov.cn/news/zwdt/562581.html" rel="noopener noreferrer" target="_blank">罗平县第五中学 2024 年度部门决算（长水托管状态）</a></li>
+<li>威信县第一中学 2025 年度部门决算（天立基础委托管理费 1000 万）· weixin.gov.cn <span class="ev ev-a">一手·决算</span>（站内检索"威信县第一中学 部门决算"）</li>
+</ul>
+</div>
+<div class="grp">D 政府文件 / 判例 / 公示</div>
+<div class="card" style="padding:16px 22px">
+<ul class="tight" style="font-size:12.8px;line-height:2.1">
+<li><a class="ext" href="https://jyj.gz.gov.cn/gk/xzfyjdgk/content/post_2583871.html" rel="noopener noreferrer" target="_blank">广州市教育局 行政复议决定书〔穗教行复(2017)第1号〕（芳华案）</a></li>
+<li><a class="ext" href="https://www.zt.gov.cn/lanmu/xwzx/contents/15/238271.html" rel="noopener noreferrer" target="_blank">昭通市教体局 · 注销山师华清鲁甸崇文中学公示（2025-03-20）</a></li>
+<li><a class="ext" href="http://www.kman.gov.cn/c/2026-03-30/7121172.shtml" rel="noopener noreferrer" target="_blank">安宁市教体局 · 安宁华清中学变更办学章程公示（2026-03-30）</a></li>
+<li><a class="ext" href="https://www.kaifu.gov.cn/ztpd/bdxd/qygj/202411/t20241114_11653848.html" rel="noopener noreferrer" target="_blank">长沙市开福区 · 深化集团化办学实施意见（6 年周期/不超 2 周期）</a></li>
+<li><a class="ext" href="https://www.yuhua.gov.cn/zwgk97/jcxxgk/zdmslyxx/jyxx/jylyzc/202501/t20250117_11721732.html" rel="noopener noreferrer" target="_blank">长沙市教育局 · 集团化办学扩优提质实施意见</a></li>
+<li><a class="ext" href="http://jyj.changsha.gov.cn/zfxxgk/fdzdgk/lzyj/jylgfxwj/202101/t20210105_9712630.html" rel="noopener noreferrer" target="_blank">长沙市教育局 · 长教通〔2020〕97 号</a></li>
+<li><a class="ext" href="http://www.pafj.gov.cn/caw/f/2/view-2354-753157.html" rel="noopener noreferrer" target="_blank">福建长安网 · 无办学资格的公司竟然接管闽侯二中</a></li>
+<li><a class="ext" href="http://xxgk.hengshui.gov.cn/hssxxgk/zfxxgk29/fdzdgknr/jytabljggk/2774098/index.html" rel="noopener noreferrer" target="_blank">衡水市政府 · 衡政建议字〔2021〕第 55 号</a></li>
+<li><a class="ext" href="https://www.gov.cn/zhengce/content/2021-05/14/content_5606463.htm" rel="noopener noreferrer" target="_blank">国务院 · 《民办教育促进法实施条例》（2021-05-14）</a></li>
+<li><a class="ext" href="https://www.moe.gov.cn/jyb_sjzl/sjzl_zcfg/zcfg_jyfl/202204/t20220421_620261.html" rel="noopener noreferrer" target="_blank">教育部 · 《中华人民共和国民办教育促进法》</a></li>
+</ul>
+</div>
+<div class="grp">E 涉及"托管生态里有没有系统"的关键一份</div>
+<div class="card" style="padding:16px 22px">
+<ul class="tight" style="font-size:12.8px;line-height:2.1">
+<li><a class="ext" href="https://www.cninfo.com.cn/new/disclosure/detail?announcementId=1225264714" rel="noopener noreferrer" target="_blank">爱建集团 关联交易公告（世外智慧教育科技 2024/2025 财务数据：2025 净利 754 万元）</a></li>
+</ul>
+<p class="footnote">这是<b>全样本里唯一有独立审计财务数据的教育科技子公司</b>——用来证明"教育科技系统在集团内可以独立核算/独立盈利"。同时也是"AI 系统尚未进入托管合同标的"这一缺口的对照系。</p>
+</div>
+</section>
+<!-- ============ 自己接着挖 ============ -->
+<section id="s7">
+<h2 class="sec">6 你自己接着挖（检索式与入口）</h2>
+<div class="card">
+<h3 style="margin-top:0">三个入口网站</h3>
+<ul class="tight">
+<li><b>中国政府采购网</b>（ccgp.gov.cn）→ "地方公告"→ 选省份 → 关键词。这是最全的入口。</li>
+<li><b>财政部政府采购意向公开系统</b>（cgyx.ccgp.gov.cn）→ 能提前看到<b>还没招标的项目和预算</b>，是找新机会的窗口。</li>
+<li><b>地方政府网站</b> → 搜"部门预算公开""部门决算公开" → 找"委托业务费""购买教育服务"科目。金额比公告更硬。</li>
+</ul>
+<h3>直接可用的检索式</h3>
+<div class="quote" style="font-family:var(--mono);font-size:12.2px;line-height:1.9">
+      委托管理 + 中学<br/>
+      委托办学 服务项目<br/>
+      教育教学委托管理 中标<br/>
+      学校管理服务 采购<br/>
+      教育综合提质<br/>
+      领办 办学 采购<br/>
+      委托业务费 决算 中学<br/>
+      购买民办高中教育服务
+    </div>
+<h3>三个检索技巧</h3>
+<ul class="tight">
+<li><b>用"提质""领办""示范"这类政绩词搜</b>，比"托管"命中率高——政府采购公告的标题不写"托管"，写"教育综合提质服务项目"（南皮）、"领办方采购"（西藏）、"综合改革示范区"（剑阁）。</li>
+<li><b>看采购方式：单一来源</b>（容城、长春致远）说明<b>竞争不足</b>，这类项目的价格谈判空间和续约确定性往往更值得关注。</li>
+<li><b>只查一次不够。</b>同一项目要先看"意向公开"（预算）→ 再看"招标公告"（要求）→ 再看"中标公告"（金额）→ 最后看"合同公告"（条款）。四份文件条款详略差别很大，合同公告最全。</li>
+</ul>
+<div class="alert red">
+<b>最后提醒一句（已有实例）：</b>上面已经出现<b>一条真失效</b>——丽水莲都 2021 年的 ccgp 中标公告，实测打开就是 404（老公告被归档下架），我给它划了删除线并换上了仍可用的浙江政采合同链接。
+      <br/>所以：<b>凡是对决策关键的那几份，现在就存 PDF。</b>政采网的老公告会定期归档、地方网站会改版，这次能开不等于半年后能开。
+    </div>
+</div>
+</section>
+<hr class="soft"/>
+<p class="footnote" style="text-align:center">证据包 · 2026-10-14 整理 ｜ 与《初高中托管调研-决策报告.html》《初高中托管调研-完整合集.html》配套使用 ｜ 所有链接均为公开政府网站，按档位标注：一手 / 二手</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>风险清单 · 我们会在哪里踩坑、违规或有敞口</title>
+<style>
+  :root{
+    --ink:#1a2332; --ink2:#4a5568; --ink3:#8494a8;
+    --bg:#f4f6f9; --card:#ffffff; --line:#e3e8ef;
+    --accent:#1f5fa8; --accent-bg:#eaf2fb;
+    --red:#c0392b; --red-bg:#fdecea;
+    --amber:#b7791f; --amber-bg:#fdf3e3;
+    --green:#1e7e4d; --green-bg:#e8f6ef;
+    --purple:#6b46c1; --purple-bg:#f0eafc;
+    --mono:"SF Mono",Menlo,Consolas,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.75;font-size:15px}
+  .wrap{max-width:1140px;margin:0 auto;padding:32px 24px 80px}
+  header.report-head{background:linear-gradient(135deg,#4a1b0c 0%,#c0392b 100%);color:#fff;border-radius:16px;padding:38px 42px;margin-bottom:22px}
+  header.report-head .tag{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:2px 14px;font-size:12px;letter-spacing:1px;margin-bottom:14px}
+  header.report-head h1{font-size:26px;line-height:1.4;margin-bottom:10px}
+  header.report-head p.sub{opacity:.92;font-size:13.5px;max-width:900px}
+  header.report-head .meta{margin-top:16px;font-size:12.5px;opacity:.75;font-family:var(--mono)}
+  nav.toc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 24px;margin-bottom:26px;font-size:13.5px}
+  nav.toc b{color:var(--ink2);margin-right:8px}
+  nav.toc a{color:var(--accent);text-decoration:none;margin-right:16px;white-space:nowrap;line-height:2}
+  nav.toc a:hover{text-decoration:underline}
+  section{margin-bottom:34px}
+  h2.sec{font-size:20px;padding-left:14px;border-left:5px solid var(--red);margin-bottom:14px;line-height:1.4}
+  h3{font-size:16px;margin:20px 0 8px;color:#4a1b0c}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 26px}
+  .verdict{background:#4a1b0c;color:#fff;border-radius:12px;padding:26px 30px;margin-bottom:22px}
+  .verdict h3{color:#ffd97a;margin:0 0 12px;font-size:16px}
+  .verdict p{font-size:14.5px;line-height:1.85;margin-bottom:10px}
+  .verdict b{color:#ffd97a}
+  .verdict .big{font-size:17px;line-height:1.7;margin-bottom:14px}
+  table{width:100%;border-collapse:collapse;font-size:13.2px;margin:12px 0;background:#fff}
+  th{background:#f0f4f9;text-align:left;padding:9px 11px;border:1px solid var(--line);color:#33475f;font-weight:600}
+  td{padding:9px 11px;border:1px solid var(--line);vertical-align:top}
+  tr:nth-child(even) td{background:#fafbfc}
+  .scroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:#fff;margin:14px 0}
+  .scroll table{margin:0;min-width:1020px;font-size:12.6px}
+  .scroll th,.scroll td{border-left:none;border-right:1px solid var(--line);border-top:none}
+  .scroll th{position:sticky;top:0;z-index:2;background:#e9eff7;white-space:nowrap}
+  .scroll td:first-child,.scroll th:first-child{position:sticky;left:0;z-index:1;background:#f7f9fc;font-weight:600;min-width:150px;box-shadow:1px 0 0 var(--line)}
+  .scroll th:first-child{z-index:3;background:#e9eff7}
+  .alert{border-radius:10px;padding:14px 18px;margin:14px 0;font-size:13.4px;line-height:1.75}
+  .alert.red{background:var(--red-bg);border:1px solid #f2c7c0}.alert.red b{color:var(--red)}
+  .alert.amber{background:var(--amber-bg);border:1px solid #eed9ae}.alert.amber b{color:var(--amber)}
+  .alert.green{background:var(--green-bg);border:1px solid #bfe3cf}.alert.green b{color:var(--green)}
+  .alert.blue{background:var(--accent-bg);border:1px solid #c4d9ef}.alert.blue b{color:var(--accent)}
+  .alert.purple{background:var(--purple-bg);border:1px solid #d6c7f0}.alert.purple b{color:var(--purple)}
+  .ev{display:inline-block;font-size:10.5px;font-family:var(--mono);padding:0 6px;border-radius:4px;white-space:nowrap;border:1px solid;margin-left:3px}
+  .ev-a{background:#e8f6ef;color:#1e7e4d;border-color:#bfe3cf}
+  .ev-b{background:#fdf3e3;color:#b7791f;border-color:#eed9ae}
+  .ev-c{background:#f1f3f6;color:#6b7787;border-color:#dde3ea}
+  .lv{display:inline-block;font-size:10.5px;font-family:var(--mono);padding:0 6px;border-radius:4px;white-space:nowrap;color:#fff}
+  .lv.hi{background:#c0392b}.lv.mid{background:#b7791f}.lv.lo{background:#6b7787}
+  a.ext{color:var(--accent);text-decoration:none;border-bottom:1px dotted #a8c4e0;word-break:break-all}
+  a.ext:hover{background:var(--accent-bg)}
+  a.ext::after{content:"↗";font-size:10px;margin-left:2px;opacity:.6}
+  ul.tight,ol.tight{padding-left:22px;font-size:13.8px}
+  ul.tight li,ol.tight li{margin-bottom:7px}
+  .quote{background:#fbfcfd;border-left:3px solid var(--red);border-radius:0 8px 8px 0;padding:12px 16px;margin:10px 0;font-size:13.2px;line-height:1.8;color:#2c3b4e}
+  .quote b{color:#4a1b0c}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:14px 0}
+  @media(max-width:860px){.grid2{grid-template-columns:1fr}}
+  .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin:14px 0}
+  .box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;font-size:13.4px;line-height:1.75}
+  .box h4{margin:0 0 8px;font-size:14.5px;color:#4a1b0c}
+  .box.ok{border-top:4px solid var(--green)}
+  .box.no{border-top:4px solid var(--red)}
+  .box.warn{border-top:4px solid var(--amber)}
+  .box .tagline{font-size:11.5px;font-family:var(--mono);color:var(--ink3);margin-bottom:8px}
+  .footnote{font-size:12px;color:var(--ink3);margin-top:10px}
+  hr.soft{border:none;border-top:1px dashed var(--line);margin:24px 0}
+  .chk{list-style:none;padding-left:0;font-size:13.6px}
+  .chk li{position:relative;padding-left:26px;margin-bottom:9px;line-height:1.65}
+  .chk li::before{content:"";position:absolute;left:0;top:4px;width:13px;height:13px;border:1.5px solid #9db4cc;border-radius:3px}
+  .grp{font-size:13px;font-weight:600;color:#33475f;margin:16px 0 6px}
+</style>
+<meta content="noindex,nofollow" name="robots"/><style>#material-library-bar{all:initial;display:block;position:relative;z-index:10000;background:#f2efe6;color:#293b35;border-bottom:1px solid #b8b9ad;padding:14px 4vw;font:15px/1.65 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}#material-library-bar a{color:#225e4b;text-decoration:underline;margin-right:18px}#material-library-bar .ml-note{display:block;padding:8px 0 0;color:#55462b;font-size:14px}#material-library-bar strong{font-weight:700} @media print{#material-library-bar{display:block!important;position:static!important}}
+/* 资料库手机阅读修正：只约束页面宽度，表格保留局部横向滚动。 */
+@media(max-width:720px){
+  #material-library-bar{box-sizing:border-box;max-width:100%;overflow-wrap:anywhere}
+  body{overflow-wrap:anywhere}
+  .wrap,.panel,.rp,.card,.rp .card,.pcard,.rp .pcard,.ans,.rp .ans,.body,.rp details .body,.scroll,.rp .scroll,nav.tabbar{min-width:0;max-width:100%}
+  .cards,.rp .cards{grid-template-columns:minmax(0,1fr)}
+  .cards>*,.rp .cards>*,.ansbox>*,.rp .ansbox>*{min-width:0}
+  table,.rp table{display:block;width:100%;max-width:100%;overflow-x:auto}
+  .scroll table,.rp .scroll table{display:table;max-width:none}
+  nav.toc a,.rp nav.toc a{white-space:normal;overflow-wrap:anywhere}
+  pre,img,svg,iframe{max-width:100%}
+}
+</style></head>
+<body><div id="material-library-bar"><a href="../index.html">返回全部材料</a><a href="../sources.html">来源明细</a><strong>L53 · 历史研究底稿</strong><span class="ml-note">历史研究资料按原调研时点保留。本文为研究加工材料；完整来源见资料明细。关键纠错另行标示，其他外链未在本轮逐条重验。</span></div>
+<div class="wrap">
+<header class="report-head">
+<div class="tag">集中版 · 合并此前散落在各轮回复与报告中的风险提示</div>
+<h1>我们会在哪里踩坑、违规或有敞口<br/><span style="font-size:19px;opacity:.92">五大类，共 30 个具体风险点，每点都配触发动作与实例</span></h1>
+<p class="sub">这份清单回答的不是"托管这门生意有什么风险"，而是<b>"我们"自己下场时，具体会在哪一步出事</b>。每条都写清：怎么踩的、后果是什么、依据在哪。法规条文均核对过原文；查不到的会写明"未找到"。</p>
+<div class="meta">整理日期 2026-10-14 ｜ 依据：法律法规原文 / 教育部与财政部文件 / 生效判决 ｜ 与《初高中托管调研-决策报告》《职教托管-快速情报简报》配套阅读</div>
+</header>
+<nav class="toc">
+<b>目录</b>
+<a href="#s0">先统一：我们是谁</a>
+<a href="#s1">一 牌照与备案</a>
+<a href="#s2">二 数据与个人信息</a>
+<a href="#s3">三 进校行为与推广</a>
+<a href="#s4">四 合作·股权·利益冲突</a>
+<a href="#s5">五 合同与持续性</a>
+<a href="#s6">六 进场前自查清单</a>
+<a href="#s7">七 信源</a>
+</nav>
+<!-- ============ 先统一：我们是谁 ============ -->
+<section id="s0">
+<h2 class="sec">先统一：清单里的"我们"指谁</h2>
+<div class="card">
+<p style="font-size:14px">之前的风险提示之所以显得散，一个原因是<b>它们其实属于三个完全不同的身份，风险来源不一样</b>。混在一起看，会误以为"托管有 20 个风险点"；拆开看，每个身份真正要守的线并不多。</p>
+</div>
+<div class="grid3">
+<div class="box no">
+<div class="tagline">IDENTITY A</div>
+<h4>AI 教育 SaaS 供应商</h4>
+<p>产品进民办 K12 或中职学校，学校/家长付费。风险来自<b>备案、数据、进校推广</b>这三块——这类风险是"平时没事、一查就成事故"。</p>
+<p style="margin-top:8px;font-size:12.5px;color:var(--ink3)">对应本清单：第一、二、三类</p>
+</div>
+<div class="box warn">
+<div class="tagline">IDENTITY B</div>
+<h4>托管方的合作方 / 潜在股东</h4>
+<p>代理商本身就是民办校托管方，提出含相互投资的合作意向。风险来自<b>关联交易认定、对方合同无效的传导、尽调失职</b>。</p>
+<p style="margin-top:8px;font-size:12.5px;color:var(--ink3)">对应本清单：第四类</p>
+</div>
+<div class="box ok">
+<div class="tagline">IDENTITY C</div>
+<h4>（假设）自己下场做托管</h4>
+<p>两个报告已建议不做。若要做，风险是<b>办学许可证、义务教育关联交易、财务账户</b>——一票否决级。</p>
+<p style="margin-top:8px;font-size:12.5px;color:var(--ink3)">对应本清单：第五类 + 《决策报告》第 1 节</p>
+</div>
+</div>
+<div class="alert blue">
+<b>怎么用这份清单：</b>先定位自己当下是哪个身份（多数时候是 A 和 B 同时存在），只重点看对应章节；第六节的自查清单可以直接拿去问合作方，或者问自己。
+  </div>
+</section>
+<hr class="soft"/>
+<!-- ============ 一 牌照与备案 ============ -->
+<section id="s1">
+<h2 class="sec">一 牌照与备案：能不能合法进场</h2>
+<p style="font-size:13.8px;margin-bottom:6px">这一类的共同点是：<b>没出事的时候完全无感，一旦学校被审计、被检查，第一个被翻出来的就是它。</b>而且它有个残酷特征——办备案需要时间前置，等你要投标了才想起办，赶不上。</p>
+<div class="scroll">
+<table>
+<thead>
+<tr><th style="width:5%">编号</th><th style="width:20%">风险点</th><th style="width:25%">触发动作（怎么踩的）</th><th style="width:25%">后果</th><th style="width:25%">依据与例子</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>R1.1</td>
+<td>教育移动应用未做提供者备案 <span class="lv hi">高危</span></td>
+<td>产品有 App / 小程序，面向师生家长，直接卖给学校，但从未备案</td>
+<td>① 学校按制度<b>本不该选用未备案的 App</b>，你一旦被查，学校和你一起被通报；② 备案前置是 ICP 备案 + 等保定级备案，缺一办不下来；③ 被列入黑名单后<b>6 个月内不得再申请</b>——等于半年不能做生意</td>
+<td>《教育移动互联网应用程序备案管理办法》教技厅〔2019〕3 号：第 8 条（学校应选用已备案应用）、第 9 条（前置条件）、第 24 条（黑名单 + 6 个月）<span class="ev ev-a">法规原文</span></td>
+</tr>
+<tr>
+<td>R1.2</td>
+<td>判断不了自己算不算"教育移动应用"</td>
+<td>以为自己是"通用工具"就不用备案</td>
+<td>定性错了，整个合规前提都错</td>
+<td>官方口径：以教职工、学生、家长为主要用户、以教育学习为主要场景的就要备案。"教育钉钉"算（为教育做了个性化开发），有道词典不算，但<b>有道少儿词典算</b>。判断看两点：有没有学历教育相关、职教部门是否指导管理 <span class="ev ev-a">法规原文</span></td>
+</tr>
+<tr>
+<td>R1.3</td>
+<td>生成式 AI 服务的适用范围误判 <span class="lv mid">中危</span></td>
+<td>把"校内 B 端版"顺手开放成"家长可自行注册试用"的公开版，性质变了却没重新做合规</td>
+<td>一旦构成"向境内公众提供生成式 AI 服务"，第 17 条要求（具舆论属性或社会动员能力时）<b>安全评估 + 算法备案</b>；未做即违规</td>
+<td>《生成式人工智能服务管理暂行办法》（七部门令第 15 号，2023-08-15 施行）第 2 条：<b>"研发、应用生成式人工智能技术，未向境内公众提供生成式人工智能服务的，不适用本办法"</b>；第 17 条 <span class="ev ev-a">法规原文</span></td>
+</tr>
+<tr>
+<td>R1.4</td>
+<td>ICP 备案 / 等保定级备案滞后</td>
+<td>先上线跑数据、后补备案；等保测评压到验收前才开始</td>
+<td>备案办不下来连带 R1.1 全部不成立；发生数据安全事件时责任加重</td>
+<td>等保测评通常需要数月排期，必须前置进项目排期，不能当收尾动作 <span class="ev ev-c">实务提示</span></td>
+</tr>
+<tr>
+<td>R1.5</td>
+<td>涉经营电信业务却无对应许可</td>
+<td>做的其实是互联网信息服务业务（B25），却按"软件产品销售"报备</td>
+<td>超范围经营；政采资格审查时被否</td>
+<td>八部门《意见》：涉及经营电信业务的，还应当申请电信业务经营许可 <span class="ev ev-a">法规原文</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="alert amber">
+<b>最容易踩的其实是 R1.2 的定性。教材教辅类、家校沟通类、作业批改类、AI 答疑类——几乎全部落入"教育移动应用"定义。</b>"我们是给学校用的内部系统、不面向公众"这个说法，在备案这件事上<b>不成立</b>：备案分"提供者备案"和"使用者备案"，学校用的正是后者，而前者是你的义务。
+  </div>
+</section>
+<hr class="soft"/>
+<!-- ============ 二 数据与个人信息 ============ -->
+<section id="s2">
+<h2 class="sec">二 数据与个人信息：罚款最重、最容易被忽视的一块</h2>
+<p style="font-size:13.8px;margin-bottom:6px">这一类是<b>唯一可能直接产生行政处罚甚至刑事风险</b>的板块，也是 AI 教育产品最容易"默认违规"的地方——很多做法在技术上是顺手的，在法律上是不行的。</p>
+<div class="scroll">
+<table>
+<thead>
+<tr><th style="width:5%">编号</th><th style="width:20%">风险点</th><th style="width:25%">触发动作</th><th style="width:25%">后果</th><th style="width:25%">依据与例子</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>R2.1</td>
+<td>未满 14 周岁：两个义务只做了一个 <span class="lv hi">高危</span></td>
+<td>认为"学校统一采购，同意由学校解决"，没做监护人同意链路，更没有"专门的个人信息处理规则"</td>
+<td>① 缺监护人同意 → 违法处理敏感个人信息；② 缺专门规则同样单独违法。<b>这是两条独立义务，做一条不算合规</b></td>
+<td>《个人信息保护法》第 31 条：处理不满 14 周岁未成年人个人信息，<b>应当取得父母或其他监护人同意</b>，<b>并应当制定专门的个人信息处理规则</b>；第 28 条将其列为敏感个人信息；第 29/30 条要求单独同意并告知必要性 <span class="ev ev-a">法规原文</span></td>
+</tr>
+<tr>
+<td>R2.2</td>
+<td>用了人脸、声纹、课堂行为识别 <span class="lv hi">高危</span></td>
+<td>做人脸考勤、课堂专注度分析、情绪识别摄像头</td>
+<td>敏感个人信息需单独同意；公共场所图像采集与个人身份识别设备的使用受严格限制</td>
+<td>《个保法》第 26 条：公共场所安装图像采集、个人身份识别设备须为维护公共安全所必需，且遵守国家有关规定。教育场景比商业场景更敏感 <span class="ev ev-a">法规原文</span></td>
+</tr>
+<tr>
+<td>R2.3</td>
+<td>为了"模型优化"全量留存学生输入</td>
+<td>把学生的作文、答题、对话记录默认存下来用于训练/分析，且能识别到具体人</td>
+<td>直接违反"不得收集非必要个人信息、不得非法留存能够识别使用者身份的输入信息和使用记录、不得非法向他人提供"</td>
+<td>《生成式人工智能服务管理暂行办法》第 11 条 <span class="ev ev-a">法规原文</span>。这条是很多 AI 学习产品的默认做法，也是最高危的一条</td>
+</tr>
+<tr>
+<td>R2.4</td>
+<td>产品直接调用境外模型 API 处理学生数据</td>
+<td>学生作文、答题原文出境到境外服务商，未做评估也没在合同里说明</td>
+<td>可能触发数据出境安全评估 / 标准合同 / 认证义务；学校数据合规审查通不过</td>
+<td>《个保法》第 38 条（出境三条路径之一）；第 39 条（向境外提供须单独同意）<span class="ev ev-a">法规原文</span></td>
+</tr>
+<tr>
+<td>R2.5</td>
+<td>角色划分没写进合同</td>
+<td>数据出事时说不清"谁处理者、谁受托者"，合同里没有数据条款、没有退出删除约定</td>
+<td>事故发生时责任归属不明，供应商往往被推为第一责任人</td>
+<td>《个保法》第 21 条（委托处理须约定目的、期限、处理方式、保护措施、双方权责）。建议合同必写：数据权属 / 委托关系 / 安全事件通报 / 退出时删除与导出 <span class="ev ev-a">法规原文</span></td>
+</tr>
+<tr>
+<td>R2.6</td>
+<td>收集使用未成年人信息未取得监护人同意授权</td>
+<td>注册环节用"勾选即同意"覆盖所有用户，含未成年人</td>
+<td>违反八部门《意见》"规范数据管理"要求</td>
+<td>八部门《意见》：<b>"按照'后台实名、前台自愿'的原则对注册用户进行身份信息认证…收集使用未成年人信息应当取得监护人同意、授权"</b> <span class="ev ev-a">法规原文</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="alert red">
+<b>举一个具体的踩坑场景：</b>产品里有一个"AI 批改作文"功能。学生拍照上传 → 图片传到你的服务器 → 你调了境外大模型的接口做分析 → 结果存进数据库用于后续模型优化 → 学生能看到历史记录。<br/>
+    这一个动作链，同时踩到：R2.1（未满 14 岁没做监护人同意）、R2.4（数据出境）、R2.3（留存可识别记录用于优化）。<b>功能没做错，是链路上的默认设置错了。</b>
+</div>
+</section>
+<hr class="soft"/>
+<!-- ============ 三 进校行为与推广 ============ -->
+<section id="s3">
+<h2 class="sec">三 进校行为与商业推广：教育行业特有红线</h2>
+<p style="font-size:13.8px;margin-bottom:6px">这一类是<b>和研究委托方现有业务（竞赛强基、职教升学）最直接相关</b>的一块，而且它的特点是——违规不需要"做坏事"，只需要"没走审批流程"。</p>
+<div class="scroll">
+<table>
+<thead>
+<tr><th style="width:5%">编号</th><th style="width:20%">风险点</th><th style="width:25%">触发动作</th><th style="width:25%">后果</th><th style="width:25%">依据与例子</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>R3.1</td>
+<td>"进校园活动"未经县级及以上教育部门审批备案 <span class="lv hi">最高危</span></td>
+<td>以为"公益讲座 / 免费测评 / 学科宣讲 / 竞赛说明会"不算活动，直接跟校长谈好就进校</td>
+<td>未经批准的活动<b>一律禁止</b>；已批准的活动若与备案情况不符也要立即制止并上报</td>
+<td>教育部《关于严禁商业广告、商业活动进入中小学校和幼儿园的紧急通知》教基厅函〔2018〕77 号：各类进入校园或组织中小学生参加的活动，<b>由县级及以上教育行政部门审批，实行备案管理</b> <span class="ev ev-a">法规原文</span></td>
+</tr>
+<tr>
+<td>R3.2</td>
+<td>产品界面里出现商业推广 <span class="lv hi">高危</span></td>
+<td>免费工具界面里放了自家付费课程入口、第三方广告、"XX 教育冠名"、品牌水印</td>
+<td>属于"变相发布广告"，学校要抵制、教育部门要查处</td>
+<td>同上通知：坚决禁止任何形式的商业广告、商业活动进入中小学和幼儿园，重点排查利用教材、教辅、练习册、文具、教具、校服、校车等发布或变相发布广告。<b>起因就是菏泽"红领巾印商业广告"事件</b> <span class="ev ev-a">法规原文</span></td>
+</tr>
+<tr>
+<td>R3.3</td>
+<td>让老师向家长推销 / 按销量给老师提成 <span class="lv hi">最高危</span></td>
+<td>"让班主任在家长群推一下"、"按成交给老师返点"</td>
+<td>同时踩三条线：变相商业广告进校园 + 向教师<b>摊派销售任务</b> + 商业贿赂。一旦被举报，是师德与商业合规的双重事故</td>
+<td>同上通知明确查处"给学校、教师、学生摊派任何购买、销售任务" <span class="ev ev-a">法规原文</span></td>
+</tr>
+<tr>
+<td>R3.4</td>
+<td>给采购经办人 / 校领导"答谢费""顾问费"</td>
+<td>以咨询费、劳务费、返点等形式给到关键人，或通过第三方公司走账</td>
+<td>构成商业贿赂：行政处罚 + 列入失信；情节严重追究刑责。且一旦被查，已签合同全部可被质疑</td>
+<td>《反不正当竞争法》禁止以财物或其他手段贿赂交易相对方工作人员等以谋取交易机会。<b>教育系统采购腐败通报中，这类占比最高</b> <span class="ev ev-a">法规原文</span></td>
+</tr>
+<tr>
+<td>R3.5</td>
+<td>产品实质构成学科类校外培训</td>
+<td>产品是"学生课后自己付费在线学学科内容"，却包装成"校内教学辅助系统"</td>
+<td>学科类线上培训已需"备改审"取得资质、登记非营利；无资质即违规</td>
+<td>线上学科类机构从 263 家压减到 34 家，<b>压减率 87.07%</b>，已完成备改审的全部登记为非营利性机构 <span class="ev ev-b">政府答复函</span>。<b>关键区分：卖给学校在校内用 = 校内；学生课后自行付费在线学 = 校外线上培训</b></td>
+</tr>
+<tr>
+<td>R3.6</td>
+<td>AI 生成内容未审核直接推给学生 <span class="lv mid">中危</span></td>
+<td>生成式问答、AI 讲解、AI 出题的结果没有审核环节</td>
+<td>内容事故一旦发生，进校资格直接归零，且不可挽回</td>
+<td>《生成式人工智能服务管理暂行办法》第 4 条（内容须坚持社会主义核心价值观、不得生成违法内容、须防歧视）、第 14 条（发现违法内容须停止生成、整改、报告）<span class="ev ev-a">法规原文</span></td>
+</tr>
+<tr>
+<td>R3.7</td>
+<td>宣传中承诺升学 / 提分结果</td>
+<td>销售话术或物料里出现"提分 XX 分""保过""升学率提升 XX%"</td>
+<td>教育、培训广告不得对升学、通过考试或对培训效果作出明示或暗示的保证性承诺</td>
+<td>《广告法》第 24 条 <span class="ev ev-a">法规原文</span>。注意：郁南那份合同里"清北一人奖 100 万"是<b>政府侧对赌条款</b>，政府可以对赌，你自己不能对家长承诺结果</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="alert amber">
+<b>一句总结这一节：</b>在教育行业，"能不能进校"和"进了校能不能推"是两件事。<b>进校靠审批备案，推广靠不越线。</b>很多同行出事都不是产品问题，而是把"进校"当成了纯商务关系。
+  </div>
+</section>
+<hr class="soft"/>
+<!-- ============ 四 合作·股权·利益冲突 ============ -->
+<section id="s4">
+<h2 class="sec">四 合作、股权与利益冲突：跟托管方绑定那一层</h2>
+<p style="font-size:13.8px;margin-bottom:6px">这一节对应的正是最初那件事——代理商本身是民办校托管方，提出含相互投资的合作意向。这里最大的认知陷阱是：<b>你以为是"渠道合作 + 财务投资"，法律上可能是"关联交易"或"无效合同的接盘方"。</b></p>
+<div class="scroll">
+<table>
+<thead>
+<tr><th style="width:5%">编号</th><th style="width:20%">风险点</th><th style="width:25%">触发动作</th><th style="width:25%">后果</th><th style="width:25%">依据与例子</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>R4.1</td>
+<td>相互持股 + 卖货给同一批学校 = 关联交易 <span class="lv hi">最高危</span></td>
+<td>你持有代理商股份，同时你的 SaaS 卖给代理商托管的学校；如果其中含<b>义务教育阶段民办校</b></td>
+<td>直接撞《民促法实施条例》第 45 条（义务教育民办校禁止关联交易）；罚则含<b>永久行业禁入</b>。这是本项目最硬的一条红线</td>
+<td>《民办教育促进法实施条例》第 45 条、第 62 条。<b>判断顺序：先查它托管的校里有没有义务教育段，再看股权关系</b> <span class="ev ev-a">法规原文</span></td>
+</tr>
+<tr>
+<td>R4.2</td>
+<td>按"托管校数"给代理商估值 <span class="lv hi">高危</span></td>
+<td>用"存量 N 所学校 × 单校价值"作为换股或投资的对价基础</td>
+<td>若其底层合同因"全托管 + 资质移交 + 账户自管"被判<b>自始无效</b>，它就没有合法托管权 → 承诺给你的渠道在法律上不存在 → 对价基础为空。灵璧案的受托方连自己的管理费都被驳回</td>
+<td>灵璧案〔(2024)皖 13 民终 3268 号〕、广州芳华案〔穗教行复(2017)第 1 号〕、开封伯伦案。<b>尽调动作：先要 3 份代表性合同（可脱敏），不看校数看条款</b> <span class="ev ev-b">生效判决</span></td>
+</tr>
+<tr>
+<td>R4.3</td>
+<td>尽调失职 → 被认定"明知或应知"</td>
+<td>没核合同结构就签合作、就付款、就对外背书</td>
+<td>合作方一旦出事（处罚 / 诉讼 / 合同无效），你很难主张"不知情"；存在连带责任与声誉风险</td>
+<td>上市公司因合作方违规被牵连的案例并不少见。建议：把尽调过程留痕（问询记录、尽调清单、回复），这本身就是免责证据 <span class="ev ev-c">实务提示</span></td>
+</tr>
+<tr>
+<td>R4.4</td>
+<td>渠道单点化：合作方被禁入</td>
+<td>把销售渠道全押在一个托管方身上，或把它的校数写进自己的增长预测</td>
+<td>代理商一旦被处罚（含行业禁入），渠道<b>一夜消失</b>，且你已投入的定制开发、账期全部沉没</td>
+<td>《民促法实施条例》第 62 条罚则含永久行业禁入。<b>对冲：任何单一合作方贡献不超过总收入的一定比例</b> <span class="ev ev-a">法规原文</span></td>
+</tr>
+<tr>
+<td>R4.5</td>
+<td>竞业与保密边界 <span class="lv mid">个人层面</span></td>
+<td>用任职期间接触的客户清单、报价、项目信息做自己的调研/咨询/SaaS 副业</td>
+<td>可能触碰劳动合同的竞业限制或保密义务；使用任职单位信息可能构成侵犯商业秘密</td>
+<td>提醒：<b>做同赛道业务前，先看自己的劳动合同条款</b>；明确区分"个人身份"与"任职单位身份"；不拿任职单位的案例与客户做自己业务的背书 <span class="ev ev-c">提示</span></td>
+</tr>
+<tr>
+<td>R4.6</td>
+<td>撮合业务的双边利益冲突</td>
+<td>同时向合作双方收费或收资源，未向任何一方披露</td>
+<td>被认定为利益冲突后，合作关系破裂，且可能构成对双方的违约</td>
+<td>做法：<b>书面披露 + 双边知情同意 + 明确自己的服务边界与报酬来源</b>。撮合类项目的价值恰在于双方都信任你的中立性，一旦隐性收费被发现，这个价值就没了 <span class="ev ev-c">提示</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="alert red">
+<b>这一节里，R4.1 和 R4.2 是"能不能做"的问题，R4.3–R4.6 是"怎么做才安全"的问题。</b><br/>
+    如果代理商托管的学校里有义务教育段，而你们又要相互持股、又要卖 SaaS 给这些学校——<b>这个结构不是"有风险"，是法律上禁止的</b>，不该做方案设计，该直接换结构。
+  </div>
+</section>
+<hr class="soft"/>
+<!-- ============ 五 合同与持续性 ============ -->
+<section id="s5">
+<h2 class="sec">五 合同与持续性：能签，但会死在哪</h2>
+<p style="font-size:13.8px;margin-bottom:6px">前四类是"违规风险"，这一类是"商业风险"。它不会让你被罚，但会让你<b>签了一堆合同、最后收不到钱或客户消失</b>。</p>
+<div class="scroll">
+<table>
+<thead>
+<tr><th style="width:5%">编号</th><th style="width:20%">风险点</th><th style="width:25%">触发动作</th><th style="width:25%">后果</th><th style="width:25%">依据与例子</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>R5.1</td>
+<td>把客户当"永久资产" <span class="lv hi">高危</span></td>
+<td>按"存量校数"做 LTV / 续费率假设，把它当经常性收入</td>
+<td>托管校普遍是 <b>3–5 年项目制</b>，到期要重新招标；公参民清理会直接消灭标的；义务教育民办校受"5% 以内"约束持续压减</td>
+<td>南山为明学校 25 年历史、口碑不差，2025-04-06 仍被终止、学生并入公办。<b>客户消失不是它经营失败，是标的本身被政策清零</b> <span class="ev ev-b">政府文件</span></td>
+</tr>
+<tr>
+<td>R5.2</td>
+<td>用合同金额做现金流预测</td>
+<td>忽略了付款结构里的预付比例、质保金、和"财政延迟不视为违约"条款</td>
+<td>账面收入好看，实际回款被拖半年以上；现金流断裂发生在你最不缺订单的时候</td>
+<td>政采合同常见：预付 40% + 考核后付余款、留 15–20% 质保金、<b>"申请支付即视为按期付款"</b>。天立 FY2025 贸易应收 +137%，远超校数增长 +80% <span class="ev ev-b">政采合同</span></td>
+</tr>
+<tr>
+<td>R5.3</td>
+<td>按"长约"规划，忽略服务合同期限上限</td>
+<td>看到托管项目讲 10 年、20 年，就按长约做产能与人力规划</td>
+<td>政府购买服务合同一般<b>不超过 3 年</b>，到期需重新采购；长约在合规层面站不稳</td>
+<td>财政部令第 102 号《政府购买服务管理办法》。<b>长约的实际含义是"预期"，不是"确定"</b> <span class="ev ev-a">法规原文</span></td>
+</tr>
+<tr>
+<td>R5.4</td>
+<td>主体形态不够格</td>
+<td>以个人或个体工商户身份签大额进校合同、参与政采</td>
+<td>政采供应商资格审查普遍要求法人资格、财务报表、纳税与社保记录、类似业绩——个人几乎<b>过不了</b>；个体工商户是<b>无限责任</b></td>
+<td>对照：灵璧 / 芳华 / 伯伦三案中，受托方以自然人形态出现时，基本只能走私下协议，天然落入违法结构区 <span class="ev ev-b">判例</span></td>
+</tr>
+<tr>
+<td>R5.5</td>
+<td>训练数据与生成内容的版权来源</td>
+<td>抓取教辅、题库、真题用于训练；生成内容里出现他人版权作品</td>
+<td>被索赔；更严重的是<b>进校审查时被质疑内容来源合法性</b>，直接影响资格</td>
+<td>《生成式人工智能服务管理暂行办法》第 7 条：使用具有合法来源的数据和基础模型，<b>不得侵害他人依法享有的知识产权</b> <span class="ev ev-a">法规原文</span></td>
+</tr>
+<tr>
+<td>R5.6</td>
+<td>对赌条款签到自己头上</td>
+<td>为了拿单，接受"效果不达标就退款/赔款"的对赌</td>
+<td>教育效果受生源、师资、管理多重影响，<b>不可控变量远多于可控变量</b>；对赌违约概率高</td>
+<td>郁南项目把升学结果货币化（特控线每差 1% 赔 5 万、清北一人奖 100 万）——那是<b>受托方对政府的对赌</b>，因为它同时掌握教学与管理。你若只提供工具却接下结果对赌，是把别人的风险搬到自己身上 <span class="ev ev-b">招标文件</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="alert green">
+<b>反过来说，这一节也指出了我们的机会所在：</b>正因为托管方自己面临 R5.1（客户是有期限资产）和 R5.2（回款被拖），他们才真正需要"降本 + 结果可视化"的工具——这正好对应你 SaaS 的定位。<b>但前提是把交付物定义清楚：卖工具和效果，不接结果对赌。</b>
+</div>
+</section>
+<hr class="soft"/>
+<!-- ============ 六 自查清单 ============ -->
+<section id="s6">
+<h2 class="sec">六 进场前自查清单（可直接拿去问自己，或问合作方）</h2>
+<p style="font-size:13.8px;margin-bottom:10px">把上面 30 个风险点压缩成能当场问出口的问题。左边问自己，右边问合作方。</p>
+<div class="grid2">
+<div class="box no">
+<h4>问自己（身份 A）</h4>
+<div class="grp">备案</div>
+<ul class="chk">
+<li>我们的 App / 小程序做<b>教育移动应用提供者备案</b>了吗？备案号能在公示平台查到吗？</li>
+<li>ICP 备案、等保定级备案都办完了吗？等保测评排期进计划了吗？</li>
+<li>有没有面向公众（家长可自行注册）的版本？如果有，生成式 AI 的安全评估与算法备案做了吗？</li>
+</ul>
+<div class="grp">数据</div>
+<ul class="chk">
+<li>有没有"不满 14 周岁未成年人个人信息处理的<b>专门</b>规则"？（不是通用隐私政策）</li>
+<li>监护人同意的链路，是产品里可执行、可留痕的吗？</li>
+<li>学生输入会被留存用于优化吗？能识别到具体人吗？</li>
+<li>有没有调用境外模型 API 处理学生数据？数据流向写清楚了吗？</li>
+<li>合同里写了数据权属、委托关系、事件通报、退出删除吗？</li>
+</ul>
+<div class="grp">进校</div>
+<ul class="chk">
+<li>产品界面上有没有任何形式的推广、付费入口、品牌冠名？</li>
+<li>每一次进校活动，是走县级及以上教育部门审批备案，还是"跟校长谈好了"？</li>
+<li>有没有老师向家长推销、或按销量给老师返点的安排？</li>
+<li>销售物料里有没有"提分""保过""升学率"这类承诺？</li>
+</ul>
+</div>
+<div class="box warn">
+<h4>问合作方（身份 B）</h4>
+<div class="grp">主体与资格</div>
+<ul class="chk">
+<li>签托管合同的主体是<b>法人还是自然人</b>？</li>
+<li>它参与过政府采购吗？能不能提供中标公告或合同公告？</li>
+</ul>
+<div class="grp">合同结构（要 3 份可脱敏样本）</div>
+<ul class="chk">
+<li>费用流方向：是"委托方 → 受托方"（政府/学校付管理费），还是"受托方 → 委托方"（你付租金）？</li>
+<li>合同里有没有出现"办学许可证""办学资质"的移交、出借字样？</li>
+<li>对公账户由谁管理？学费是否必须进学校对公账户？</li>
+<li>公章、法定代表人、人事任免、预算审批分别归谁？</li>
+<li>有没有"全托管""全权承包"这类表述？</li>
+</ul>
+<div class="grp">学段与合规</div>
+<ul class="chk">
+<li>它托管的学校名单里，<b>有没有义务教育阶段</b>的民办校？（这决定 R4.1 是不是红线）</li>
+<li>有没有历史上是"公参民"、或至今仍在用公办品牌与资源的学校？</li>
+<li>合同期限、到期时间、已终止的项目，能提供完整清单吗？</li>
+</ul>
+<div class="grp">利益安排</div>
+<ul class="chk">
+<li>相互投资的对价基础是什么？是"校数"还是"经审计的收入"？</li>
+<li>如果它的托管合同被判无效，我们已投入的定制开发和账期怎么处理？</li>
+</ul>
+</div>
+</div>
+<div class="alert purple">
+<b>一票否决项（出现任意一条，不要继续设计方案，先换结构）：</b>
+<ol class="tight" style="margin-top:8px">
+<li>合作方托管的学校里有义务教育阶段民办校，且你们之间存在股权或关联关系；</li>
+<li>代表性托管合同里同时出现"反向付费 + 资质移交 + 对公账户由受托方管理"三件套；</li>
+<li>要你们接受"教学结果对赌"（提分、升学率、上线人数）作为付款条件；</li>
+<li>要你们用老师向家长推销、或给老师返点来获客。</li>
+</ol>
+</div>
+</section>
+<hr class="soft"/>
+<!-- ============ 七 信源 ============ -->
+<section id="s7">
+<h2 class="sec">七 信源清单（法规原文均可直接点开核对）</h2>
+<div class="grp">A 法律与行政法规（一手·法规原文）</div>
+<ul class="tight">
+<li><a class="ext" href="https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm" rel="noopener noreferrer" target="_blank">《中华人民共和国个人信息保护法》全文（国家网信办）</a> — 第 21、26、28、29、30、31、38、39 条</li>
+<li><a class="ext" href="https://www.gov.cn/zhengce/zhengceku/202307/content_6891752.htm" rel="noopener noreferrer" target="_blank">《生成式人工智能服务管理暂行办法》全文（七部门令第 15 号，2023-08-15 施行）</a> — 第 2、4、7、10、11、12、14、17 条</li>
+<li><a class="ext" href="https://www.gov.cn/zhengce/content/2021-05/14/content_5606463.htm" rel="noopener noreferrer" target="_blank">《中华人民共和国民办教育促进法实施条例》（2021 修订）</a> — 第 13、45、62 条</li>
+<li>《中华人民共和国广告法》第 24 条（教育、培训广告不得对升学、通过考试或培训效果作保证性承诺）— 现行文本可在<a class="ext" href="https://flk.npc.gov.cn/" rel="noopener noreferrer" target="_blank">国家法律法规数据库</a>检索</li>
+</ul>
+<div class="grp">B 部门规章与规范性文件（一手·政府文件）</div>
+<ul class="tight">
+<li><a class="ext" href="https://www.moe.gov.cn/srcsite/A16/s3342/201911/t20191122_409333.html" rel="noopener noreferrer" target="_blank">《教育移动互联网应用程序备案管理办法》教技厅〔2019〕3 号</a> — 第 2、8、9、24 条</li>
+<li><a class="ext" href="https://www.moe.gov.cn/srcsite/A16/moe_784/201908/t20190829_396505.html" rel="noopener noreferrer" target="_blank">《教育部等八部门关于引导规范教育移动互联网应用有序健康发展的意见》教技函〔2019〕55 号</a> — 规范数据管理部分</li>
+<li><a class="ext" href="https://www.moe.gov.cn/srcsite/A06/s7053/201810/t20181012_351283.html" rel="noopener noreferrer" target="_blank">《教育部办公厅关于严禁商业广告、商业活动进入中小学校和幼儿园的紧急通知》教基厅函〔2018〕77 号</a></li>
+<li><a class="ext" href="https://app.eduyun.cn/" rel="noopener noreferrer" target="_blank">教育移动互联网应用程序备案管理平台（可自查备案状态与公示名单）</a></li>
+</ul>
+<div class="grp">C 生效判决与政府文件（一手·裁判与公告）</div>
+<ul class="tight">
+<li>灵璧案〔(2024)皖 13 民终 3268 号〕— 全托管 + 资质移交 + 对公账户自管 + 反向付费 → 协议自始无效</li>
+<li>广州芳华案〔穗教行复(2017)第 1 号〕— 出租办学许可证 → 承包协议无效（另查明 646.6 万学费入个人账户）</li>
+<li>开封伯伦案（2013）— "更名"规避审批 → 实为出租办学许可证，合同无效</li>
+<li>深圳南山为明学校终止（南山区教育局学生接收方案，2025-04-06）</li>
+</ul>
+<div class="grp">D 本清单不覆盖、需要另行核实的部分</div>
+<ul class="tight">
+<li><b>《反不正当竞争法》商业贿赂条款的现行条号</b>：该法近年有修订，本次未逐字核对现行文本的条号与表述，引用前建议在<a class="ext" href="https://flk.npc.gov.cn/" rel="noopener noreferrer" target="_blank">国家法律法规数据库</a>核对最新版本。</li>
+<li><b>地方性细则</b>：教辅、竞赛、进校活动的具体审批流程，各省市有差异，需按落地省份单独确认。</li>
+<li><b>教育 App 备案的实操门槛</b>：等保定级与测评的实际周期、费用，未做调研，需向测评机构询价。</li>
+<li><b>你自身劳动合同的竞业与保密条款</b>：只有你能确认，这里只能给出提示，无法代为判断。</li>
+</ul>
+<p class="footnote" style="margin-top:16px">风险等级标注为编者判断（依据后果严重程度与发生概率），不是官方口径。标 <span class="ev ev-a">法规原文</span> 的条目已核对条文；标 <span class="ev ev-c">实务提示</span> 的为经验性建议，不构成法律意见。具体方案落地前建议由专业律师复核。</p>
+</section>
+<hr class="soft"/>
+<p style="text-align:center;font-size:12.5px;color:var(--ink3);line-height:1.9">
+集中版风险清单 · 2026-10-14 ｜ 与《初高中托管调研-决策报告》《职教托管-快速情报简报》配套<br/>
+配套底稿：research/mgmtops/M1–M7 ｜ 政采证据：初高中托管-政采合同素材包.html
+</p>
+</div>
+</body>
+</html>
