@@ -1,6 +1,6 @@
 # 学校托管行业研究
 
-按专业行研与市场尽调的问题划分六个独立模块，共36章。每个模块正文只回答其范围内的问题，历史合集和公司混合长稿保留在原稿索引。
+按研究方向分为六个分类，共46个完整Tab。保留原有43个公开Tab，并将3份原先仅在清单中的集团深挖报告提升为Tab。各Tab沿用完整原稿，报告之间的交叉内容保留；财报研报提供15组原件与配套文本。
 
 - [研究首页](https://similarai123.github.io/school-custody-research-20261019/)
 - [行业大盘与商业模式](https://similarai123.github.io/school-custody-research-20261019/modules/market.html)

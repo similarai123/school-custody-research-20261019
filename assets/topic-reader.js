@@ -104,6 +104,10 @@
     function embeddedHtml(tab, absoluteHref) {
       const viewportHeight = Math.max(320, Math.min(1000, window.innerHeight - 90));
       const injected = `<base href="${escapeAttribute(absoluteHref)}">` +
+        `<script>(()=>{const original=history.replaceState;history.replaceState=function(state,title,url){` +
+        `if(arguments.length<3)return original.apply(this,arguments);` +
+        `const next=location.protocol==='about:'&&typeof url==='string'&&url.startsWith('#')?new URL(url,location.href).href:url;` +
+        `return original.call(this,state,title,next);};})();<\/script>` +
         `<meta name="topic-material-id" content="${escapeAttribute(tab.id)}">` +
         `<style id="topic-frame-adjustments">` +
         `html,body{height:auto!important;min-height:0!important;overflow-y:visible!important;scroll-behavior:auto!important}` +
