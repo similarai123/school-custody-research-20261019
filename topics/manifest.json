@@ -1,0 +1,386 @@
+[
+  {
+    "id": "vocational",
+    "title": "职教托管",
+    "path": "topics/vocational.html",
+    "members": [
+      "C01",
+      "L51",
+      "L52"
+    ],
+    "tabs": [
+      {
+        "id": "C01",
+        "label": "核验校正版",
+        "href": "../materials/C01.html"
+      },
+      {
+        "id": "L51",
+        "label": "政策与行业底稿",
+        "href": "../materials/L51.html"
+      },
+      {
+        "id": "L52",
+        "label": "历史简报",
+        "href": "../materials/L52.html"
+      }
+    ]
+  },
+  {
+    "id": "k12",
+    "title": "初高中托管",
+    "path": "topics/k12.html",
+    "members": [
+      "L08",
+      "L13",
+      "L14",
+      "L46",
+      "L47",
+      "L53",
+      "D02",
+      "D03"
+    ],
+    "tabs": [
+      {
+        "id": "L47",
+        "label": "完整调研",
+        "href": "../materials/L47.html"
+      },
+      {
+        "id": "L46",
+        "label": "决策报告",
+        "href": "../materials/L46.html"
+      },
+      {
+        "id": "L08",
+        "label": "政策底座",
+        "href": "../materials/L08.html"
+      },
+      {
+        "id": "L13",
+        "label": "退出案例",
+        "href": "../materials/L13.html"
+      },
+      {
+        "id": "L14",
+        "label": "可复制性",
+        "href": "../materials/L14.html"
+      },
+      {
+        "id": "L53",
+        "label": "风险清单",
+        "href": "../materials/L53.html"
+      },
+      {
+        "id": "D02",
+        "label": "人口趋势",
+        "href": "../materials/D02.html"
+      },
+      {
+        "id": "D03",
+        "label": "招生测算",
+        "href": "../materials/D03.html"
+      }
+    ]
+  },
+  {
+    "id": "private",
+    "title": "民办校整体托管",
+    "path": "topics/private.html",
+    "members": [
+      "L01",
+      "L02",
+      "L03",
+      "L04",
+      "L05",
+      "L06",
+      "L07",
+      "L48",
+      "L49",
+      "L50"
+    ],
+    "tabs": [
+      {
+        "id": "L01",
+        "label": "完整合集",
+        "href": "../materials/L01.html"
+      },
+      {
+        "id": "L48",
+        "label": "尽调报告",
+        "href": "../materials/L48.html"
+      },
+      {
+        "id": "L50",
+        "label": "模块合集",
+        "href": "../materials/L50.html"
+      },
+      {
+        "id": "L02",
+        "label": "政策合规",
+        "href": "../materials/L02.html"
+      },
+      {
+        "id": "L03",
+        "label": "行业与模式",
+        "href": "../materials/L03.html"
+      },
+      {
+        "id": "L04",
+        "label": "竞争格局",
+        "href": "../materials/L04.html"
+      },
+      {
+        "id": "L05",
+        "label": "交易结构",
+        "href": "../materials/L05.html"
+      },
+      {
+        "id": "L06",
+        "label": "重点省份",
+        "href": "../materials/L06.html"
+      },
+      {
+        "id": "L07",
+        "label": "AI合作",
+        "href": "../materials/L07.html"
+      }
+    ]
+  },
+  {
+    "id": "groups",
+    "title": "教育集团与交付",
+    "path": "topics/groups.html",
+    "members": [
+      "L09",
+      "L11",
+      "L12",
+      "L15",
+      "L16",
+      "L17",
+      "L18",
+      "L19",
+      "L20",
+      "L21",
+      "L22",
+      "L23",
+      "L24",
+      "L25",
+      "L26",
+      "L27",
+      "L28",
+      "L29",
+      "L30",
+      "L31",
+      "L32",
+      "L33",
+      "L34",
+      "L35",
+      "L36",
+      "L37",
+      "L38",
+      "L39",
+      "L40",
+      "L41",
+      "L42",
+      "L43",
+      "L44",
+      "N02",
+      "N03",
+      "N04",
+      "N05",
+      "N06",
+      "N07",
+      "N08",
+      "N09",
+      "N10",
+      "N12"
+    ],
+    "tabs": [
+      {
+        "id": "N10",
+        "label": "交付全景",
+        "href": "../materials/N10.html"
+      },
+      {
+        "id": "N12",
+        "label": "客户分类",
+        "href": "../materials/N12.html"
+      },
+      {
+        "id": "N02",
+        "label": "天立",
+        "href": "../materials/N02.html"
+      },
+      {
+        "id": "N03",
+        "label": "世外",
+        "href": "../materials/N03.html"
+      },
+      {
+        "id": "N04",
+        "label": "长水／一高",
+        "href": "../materials/N04.html"
+      },
+      {
+        "id": "N05",
+        "label": "高校品牌",
+        "href": "../materials/N05.html"
+      },
+      {
+        "id": "N06",
+        "label": "公办名校",
+        "href": "../materials/N06.html"
+      },
+      {
+        "id": "N07",
+        "label": "高校托管",
+        "href": "../materials/N07.html"
+      },
+      {
+        "id": "N08",
+        "label": "地方国资",
+        "href": "../materials/N08.html"
+      },
+      {
+        "id": "N09",
+        "label": "商业集团",
+        "href": "../materials/N09.html"
+      },
+      {
+        "id": "finance",
+        "label": "财报研报",
+        "href": "../all-materials.html"
+      }
+    ]
+  },
+  {
+    "id": "hailiang",
+    "title": "海亮专题",
+    "path": "topics/hailiang.html",
+    "members": [
+      "N01",
+      "N11",
+      "N13",
+      "N14",
+      "N15",
+      "N16",
+      "L10",
+      "D01"
+    ],
+    "tabs": [
+      {
+        "id": "N13",
+        "label": "交付与规模",
+        "href": "../materials/N13.html"
+      },
+      {
+        "id": "N11",
+        "label": "科服深度研究",
+        "href": "../materials/N11.html"
+      },
+      {
+        "id": "N01",
+        "label": "交付机制",
+        "href": "../materials/N01.html"
+      },
+      {
+        "id": "L10",
+        "label": "历史深挖",
+        "href": "../materials/L10.html"
+      },
+      {
+        "id": "N14",
+        "label": "能力全景",
+        "href": "../materials/N14.html"
+      },
+      {
+        "id": "N15",
+        "label": "产品服务",
+        "href": "../materials/N15.html"
+      },
+      {
+        "id": "D01",
+        "label": "学校名单",
+        "href": "../materials/D01.html"
+      },
+      {
+        "id": "N16",
+        "label": "官网数据",
+        "href": "../materials/N16.html"
+      }
+    ]
+  },
+  {
+    "id": "contracts",
+    "title": "合同与采购原件",
+    "path": "topics/contracts.html",
+    "members": [
+      "C02",
+      "L45",
+      "R01",
+      "R02"
+    ],
+    "tabs": [
+      {
+        "id": "C02",
+        "label": "官方核验版",
+        "href": "../materials/C02.html"
+      },
+      {
+        "id": "L45",
+        "label": "历史素材包",
+        "href": "../materials/L45.html"
+      },
+      {
+        "id": "R01",
+        "label": "容城原件",
+        "href": "../materials/R01.html"
+      },
+      {
+        "id": "R02",
+        "label": "南皮原件",
+        "href": "../materials/R02.html"
+      }
+    ]
+  },
+  {
+    "id": "interviews",
+    "title": "访谈与内部材料",
+    "path": "topics/interviews.html",
+    "members": [
+      "P01",
+      "P02",
+      "P03",
+      "P04",
+      "P05"
+    ],
+    "tabs": [
+      {
+        "id": "P01",
+        "label": "一高访谈",
+        "href": "https://wcng60ba718p.feishu.cn/docx/ZSo9dMClMo78DnxSxkvcQq6Kn5b"
+      },
+      {
+        "id": "P02",
+        "label": "天亮纪要",
+        "href": "https://wcng60ba718p.feishu.cn/docx/Rn2vdXTiCoD59bx9urycn586nif"
+      },
+      {
+        "id": "P03",
+        "label": "合作模式访谈",
+        "href": "https://wcng60ba718p.feishu.cn/docx/EjgHdKqK4ocCKmxcm3GcNTwZnHc"
+      },
+      {
+        "id": "P04",
+        "label": "单校测算",
+        "href": "https://wcng60ba718p.feishu.cn/docx/Nh6OdllHRoxNs7xBX2PclvYMn5c"
+      },
+      {
+        "id": "P05",
+        "label": "协议对照",
+        "href": "https://wcng60ba718p.feishu.cn/wiki/Qk3EwJUeqi8Nw8k1lVpcNW11nAd#doxcnn1aKW3uewoPqMXlZP6ObFb"
+      }
+    ]
+  }
+]

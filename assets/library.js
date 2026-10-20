@@ -187,5 +187,7 @@
   nodes.categories.addEventListener('click', (event) => { const button = event.target.closest('[data-category]'); if (!button) return; state.category = button.dataset.category; render(); });
   byId('reset-filters').addEventListener('click', resetFilters);
   nodes.retry.addEventListener('click', loadLibrary);
+  const inventory = byId("original-inventory");
+  if (inventory && (state.query || state.category !== "all" || state.filter !== "all" || state.historyOnly || window.location.hash === "#library-main")) inventory.open = true;
   loadLibrary();
 })();
