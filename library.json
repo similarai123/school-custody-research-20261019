@@ -1,9 +1,9 @@
 {
   "meta": {
-    "title": "学校托管研究资料库",
+    "title": "学校托管行业研究 · 原稿索引",
     "builtDate": "2026-10-19",
     "originalInventoryCount": 53,
-    "totalItems": 81,
+    "totalItems": 76,
     "bodyPages": 75,
     "originalSourceLinks": 442,
     "pdfPages": 437,
@@ -5500,76 +5500,6 @@
       "tags": [],
       "originalName": "高中生源至2035-两情景测算.csv",
       "status": "情景测算",
-      "sourceLinks": []
-    },
-    {
-      "id": "P01",
-      "title": "一高讨论 · 文字记录",
-      "category": "访谈与协议",
-      "kind": "飞书链接",
-      "date": "2026-10",
-      "chars": 0,
-      "summary": "访谈原文，按原飞书权限访问。",
-      "path": "https://wcng60ba718p.feishu.cn/docx/ZSo9dMClMo78DnxSxkvcQq6Kn5b",
-      "tags": [],
-      "originalName": "",
-      "status": "保留原访问权限",
-      "sourceLinks": []
-    },
-    {
-      "id": "P02",
-      "title": "天亮讨论 · 智能纪要",
-      "category": "访谈与协议",
-      "kind": "飞书链接",
-      "date": "2026-10",
-      "chars": 0,
-      "summary": "用户确认的正确入口；AI生成纪要，按原飞书权限访问。",
-      "path": "https://wcng60ba718p.feishu.cn/docx/Rn2vdXTiCoD59bx9urycn586nif",
-      "tags": [],
-      "originalName": "",
-      "status": "保留原访问权限",
-      "sourceLinks": []
-    },
-    {
-      "id": "P03",
-      "title": "托管校合作模式调研 · 文字记录",
-      "category": "访谈与协议",
-      "kind": "飞书链接",
-      "date": "2026-10",
-      "chars": 0,
-      "summary": "访谈原文，按原飞书权限访问。",
-      "path": "https://wcng60ba718p.feishu.cn/docx/EjgHdKqK4ocCKmxcm3GcNTwZnHc",
-      "tags": [],
-      "originalName": "",
-      "status": "保留原访问权限",
-      "sourceLinks": []
-    },
-    {
-      "id": "P04",
-      "title": "单校UE与现金流 · 详细测算与协议条款",
-      "category": "访谈与协议",
-      "kind": "飞书链接",
-      "date": "2026-10",
-      "chars": 0,
-      "summary": "一高分项成本、天亮专用账户、资金缺口及敏感性表；按原飞书权限访问。",
-      "path": "https://wcng60ba718p.feishu.cn/docx/Nh6OdllHRoxNs7xBX2PclvYMn5c",
-      "tags": [],
-      "originalName": "",
-      "status": "保留原访问权限",
-      "sourceLinks": []
-    },
-    {
-      "id": "P05",
-      "title": "天亮AI实验班协议1与协议2 · 条款对照",
-      "category": "访谈与协议",
-      "kind": "飞书链接",
-      "date": "2026-10",
-      "chars": 0,
-      "summary": "未签约单价和具体合作条件保留原访问权限；不上传协议原件至公开站点。",
-      "path": "https://wcng60ba718p.feishu.cn/wiki/Qk3EwJUeqi8Nw8k1lVpcNW11nAd#doxcnn1aKW3uewoPqMXlZP6ObFb",
-      "tags": [],
-      "originalName": "",
-      "status": "保留原访问权限",
       "sourceLinks": []
     }
   ]

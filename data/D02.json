@@ -1,0 +1,103 @@
+{
+  "birth": [
+    {
+      "year": 2012,
+      "value": 1973,
+      "source": "special"
+    },
+    {
+      "year": 2014,
+      "value": 1897,
+      "source": "special"
+    },
+    {
+      "year": 2016,
+      "value": 1883,
+      "source": "special"
+    },
+    {
+      "year": 2020,
+      "value": 1202,
+      "source": "special"
+    },
+    {
+      "year": 2021,
+      "value": 1062,
+      "source": "special"
+    },
+    {
+      "year": 2022,
+      "value": 956,
+      "source": "special"
+    },
+    {
+      "year": 2023,
+      "value": 902,
+      "source": "b2023"
+    },
+    {
+      "year": 2024,
+      "value": 954,
+      "source": "b2024"
+    },
+    {
+      "year": 2025,
+      "value": 792,
+      "source": "b2025"
+    }
+  ],
+  "education": [
+    {
+      "year": 2023,
+      "primary": 1877.88,
+      "junior": 1754.63,
+      "senior": 967.8,
+      "graduates": 1623.58
+    },
+    {
+      "year": 2024,
+      "primary": 1616.63,
+      "junior": 1848.75,
+      "senior": 1036.2,
+      "graduates": 1698.24
+    },
+    {
+      "year": 2025,
+      "primary": 1461.74,
+      "junior": 1852.81,
+      "senior": 1074.93,
+      "graduates": 1723.74
+    }
+  ],
+  "sources": {
+    "special": [
+      "国家统计局公开人口专题：图表5（出生人口数，1980—2022年）",
+      "https://www.stats.gov.cn/zs/tjwh/tjkw/tjzl/202304/P020230419425666818737.pdf"
+    ],
+    "b2023": [
+      "国家统计局：2023年统计公报",
+      "https://www.stats.gov.cn/xxgk/sjfb/tjgb2020/202402/t20240229_1947923.html"
+    ],
+    "b2024": [
+      "国家统计局：2024年人口数据解读",
+      "https://www.stats.gov.cn/sj/sjjd/202501/t20250117_1958337.html"
+    ],
+    "b2025": [
+      "国家统计局：2025年统计公报",
+      "https://www.stats.gov.cn/sj/zxfbhjd/202602/t20260228_1962662.html"
+    ],
+    "e2023": [
+      "教育部：2023年教育事业统计公报",
+      "https://hudong.moe.gov.cn/jyb_sjzl/sjzl_fztjgb/202410/t20241024_1159002.html"
+    ],
+    "e2024": [
+      "教育部：2024年教育事业统计公报",
+      "https://hudong.moe.gov.cn/jyb_sjzl/sjzl_fztjgb/202506/t20250611_1193760.html"
+    ],
+    "e2025": [
+      "教育部：2025年教育事业统计公报",
+      "https://hudong.moe.gov.cn/jyb_sjzl/sjzl_fztjgb/202607/t20260706_1442870.html"
+    ]
+  },
+  "date": "2026-10-15"
+}

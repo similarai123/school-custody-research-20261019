@@ -343,44 +343,5 @@
         "href": "../materials/R02.html"
       }
     ]
-  },
-  {
-    "id": "interviews",
-    "title": "访谈与内部材料",
-    "path": "topics/interviews.html",
-    "members": [
-      "P01",
-      "P02",
-      "P03",
-      "P04",
-      "P05"
-    ],
-    "tabs": [
-      {
-        "id": "P01",
-        "label": "一高访谈",
-        "href": "https://wcng60ba718p.feishu.cn/docx/ZSo9dMClMo78DnxSxkvcQq6Kn5b"
-      },
-      {
-        "id": "P02",
-        "label": "天亮纪要",
-        "href": "https://wcng60ba718p.feishu.cn/docx/Rn2vdXTiCoD59bx9urycn586nif"
-      },
-      {
-        "id": "P03",
-        "label": "合作模式访谈",
-        "href": "https://wcng60ba718p.feishu.cn/docx/EjgHdKqK4ocCKmxcm3GcNTwZnHc"
-      },
-      {
-        "id": "P04",
-        "label": "单校测算",
-        "href": "https://wcng60ba718p.feishu.cn/docx/Nh6OdllHRoxNs7xBX2PclvYMn5c"
-      },
-      {
-        "id": "P05",
-        "label": "协议对照",
-        "href": "https://wcng60ba718p.feishu.cn/wiki/Qk3EwJUeqi8Nw8k1lVpcNW11nAd#doxcnn1aKW3uewoPqMXlZP6ObFb"
-      }
-    ]
   }
 ]
